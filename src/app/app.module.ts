@@ -3,15 +3,14 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { MatBadgeModule} from '@angular/material/badge';
-import { MatIconModule} from '@angular/material/icon';
-import { MatButtonModule} from '@angular/material/button';
-
+import { MaterialModule } from './material.module';
 import { AppRoutingModule } from './app-routing.module';
+
 import { AppComponent } from './app.component';
 import { ProductListComponent } from './product-list/product-list.component';
 import { LoginComponent } from './login/login.component';
 import { PreloadAllModules, Route, RouterModule } from '@angular/router';
+
 import { RegisterComponent } from './register/register.component';
 import { HomeComponent } from './home/home.component';
 import { ContactComponent } from './contact/contact.component';
@@ -28,12 +27,14 @@ import { ProductShowComponent } from './product-show/product-show.component';
 import { EventFilterPipe } from './pipes/event-filter.pipe';
 import { ProdcutUpdateComponent } from './prodcut-update/prodcut-update.component';
 import { PaymentComponent } from './payment/payment.component';
+import { InputErrorsExample } from './components/login-material/login-material.component';
 
 const APP_ROUTES: Route[] = [
   { path: 'home', component: HomeComponent },
   { path: 'products', component: ProductShowComponent },
   { path: 'products/:id', component: ProductDetailsComponent },
   { path: 'login', component: LoginComponent },
+  { path: 'material-login', component: InputErrorsExample },
   { path: 'register', component: RegisterComponent },
   { path: 'contact', component: ContactComponent },
   { path: 'cart', component: CartComponent },
@@ -65,7 +66,8 @@ const APP_ROUTES: Route[] = [
     ProductShowComponent,
     EventFilterPipe,
     ProdcutUpdateComponent,
-    PaymentComponent
+    PaymentComponent,
+    InputErrorsExample,
   ],
   imports: [
     BrowserModule,
@@ -74,10 +76,8 @@ const APP_ROUTES: Route[] = [
     BrowserAnimationsModule,
     HttpClientModule,
     FormsModule,
-    MatButtonModule,
-    MatBadgeModule,
-    MatIconModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MaterialModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

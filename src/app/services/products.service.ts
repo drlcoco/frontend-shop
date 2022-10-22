@@ -48,7 +48,6 @@ export class ProductsService {
   }
 
   crearEvento(producto: IProduct): Observable<IProduct> {
-    /* return this.http.post<Responses>(`/evento`, evento).pipe(map(resp => resp.evento)); */
     return this.http.post<Responses>('http://localhost:8000/api/products' , producto).pipe(
 			map(resp => {
 				return resp.producto;

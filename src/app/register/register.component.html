@@ -1,7 +1,7 @@
  <!-- <app-canvas-cart></app-canvas-cart> -->
  <div class="row text-center text-white justify-content-center">
   <div class="col-8 d-flex flex-column">
-     <form action="" method="POST" class="m-5 needs-validation" #registerForm = "ngForm" (ngSubmit)="onSubmit(registerForm)"  novalidate>
+     <form action="" method="POST" class="m-5 needs-validation" #registerForm = "ngForm" (ngSubmit)="addUser(fileUpload)"  novalidate>
       <div class="row text-center justify-content-center mt-5">
         <div
           class="col-8 d-flex flex-column justify-content-center align-self-center m-3">
@@ -133,6 +133,21 @@
            /> <small *ngIf="password !==  password2 && password2.touched" class=" invalid-feedback d-flex">La contraseña no coincide</small>
          </div> -->
        </div>
+       <div class="mb-3 row">
+        <label for="password" [ngStyle]="{'color': !ngImagen.valid?'red':'green'}" class="col-sm-2 col-form-label">Imagen</label>
+        <input type="file" class="file-upload form-control" #fileUpload name="image" [(ngModel)]="user.image"
+          #ngImagen="ngModel"
+          [ngClass]="{'is-valid':ngImagen.touched && ngImagen.valid, 'is-invalid': ngImagen.touched && !ngImagen.valid}"
+          (change)="changeImage(fileUpload)" required />
+          <div class="col-10">
+            <div *ngIf="ngImagen.touched && ngImagen.invalid" class="alert alert-danger">
+              Introduzca la imagen*
+            </div>
+          </div>
+      </div>
+      <div class="text-center mt-2">
+        <img [src]="preview" alt="" id="preview" width="250">
+      </div>
        <div class="alert alert-success" *ngIf="status == 'success'">
         Ha sido registrado correctamente <a class="btn btn-primary" [routerLink]="['/login']">Logueate</a>
        </div>

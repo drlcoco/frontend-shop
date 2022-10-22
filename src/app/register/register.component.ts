@@ -9,11 +9,10 @@ import { UserService } from '../services/user.service';
   templateUrl: './register.component.html',
   styleUrls: ['./register.component.css']
 })
-export class RegisterComponent implements OnInit {
+export class RegisterComponent {
 
   pageTitle:string = "Regístrate";
-  user:IUser ={
-    id:0,
+  user:IUser = {
     name:"",
     surname:"",
     phone:0,
@@ -24,30 +23,41 @@ export class RegisterComponent implements OnInit {
     image:""
   };
   status: string = "";
+  public preview: string | undefined;
 
   constructor(private userService: UserService) {
   }
 
-  ngOnInit(): void {
-  }
-
-  onSubmit(form: NgForm){
+  addUser(fileInput: HTMLInputElement){
     console.log(this.user);
     this.userService.register(this.user).subscribe(
-      response => {
-        if(response.status == "success"){
-          this.status = response.status;
-          form.reset();
-        }else{
-          this.status = 'error';
-        }
-      },
-      error => {
-        this.status = 'error';
-        console.log(error);
-
-      }
+      (result)=>{
+        alert("Se ha añadido el usuario correctamente");
+        /* this.route.navigate(["products"]) */},
+      (error)=>console.log("Los datos no son válidos!!!")
     )
+    this.user = {
+      name:"",
+      surname:"",
+      phone:0,
+      address:"",
+      role:"user",
+      email:"",
+      password:"",
+      image:""
+    };
+  }
+
+  changeImage(fileInput:HTMLInputElement) {
+    if (!fileInput.files || fileInput.files.length === 0) {
+      return;
+    }
+    const reader: FileReader = new FileReader();
+    reader.readAsDataURL(fileInput.files[0]);
+    reader.addEventListener('loadend', (e) => {
+      this.user.image = reader.result as string;
+      this.preview = reader.result as string;
+    });
   }
 
   // Example starter JavaScript for disabling form submissions if there are invalid fields
@@ -70,5 +80,4 @@ function () {
       }, false)
     })
 }
-
 }
