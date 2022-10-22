@@ -1,0 +1,441 @@
+<app-canvas-cart></app-canvas-cart>
+<div class="container-fluid fluid" >
+  <div class="row fluid ">
+    <div class="col text-center fluid">
+      <div class="row fluid">
+        <div class="col figure box" id="zoom">
+          <!-- <img src="assets/2.png" class="image portada" id="imagen" @animateImage> -->
+          <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop" loading="lazy" class="hero__video">
+            <source src="assets/video.mp4" type="video/mp4">
+          </video>
+          <div class="capa align-self-end" @animateList>
+            <h1 class="text-danger mt-5 titulo fs-1 font" >Patinetes</h1>
+            <hr class="hr-light">
+            <h1 class="text-light mt-3 fs-1 titulo1 font">Pure-Electric</h1>
+            <div class="col-6 mx-auto botonPortada">
+              <a class="btn btn-lg btn-primary " role="button" [routerLink]="['/products']">Comprar Ahora</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- <div class="row uno align-items-start mt-3">
+  <div class="d-grid gap-2 col-6 mx-auto my-auto  justify-content-center">
+    <h1  class="text-center text-white" >hhhhhhhh</h1>
+  </div>
+</div> -->
+<div class="container-fluid">
+  <div class="row m-5 justify-content-center">
+    <div class="col-sm-5 justify-content-center">
+      <div class="card text-center image">
+        <div class="card-body">
+          <h2 class="card-title">Comprar Patinetes</h2>
+          <p class="card-text">
+            With supporting text below as a natural lead-in to additional
+            content.
+          </p>
+          <a href="#" class="btn btn-lg btn-outline-primary" role="button" [routerLink]="['login']">Comprar Ahora</a>
+        </div>
+        <img
+          src="/assets/patinete1.jpg"
+          class="card-img-bottom figure"
+          alt="..."
+          height="250"
+        />
+      </div>
+    </div>
+    <div class="col-sm-5">
+      <div class="card text-center image">
+        <div class="card-body">
+          <h5 class="card-title">Alquilar patinetes</h5>
+          <p class="card-text">
+            With supporting text below as a natural lead-in to additional
+            content.
+          </p>
+          <a href="#" class="btn btn-lg btn-outline-primary" role="button" [routerLink]="['login']">Alquilar Ahora</a>
+        </div>
+        <img
+          src="/assets/patinete3.jpg"
+          class="card-img-bottom image"
+          alt="..."
+          height="250"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+<!-- <div class="row dos align-items-center text-center text-light">
+  <div class="col-6 mx-auto">
+    <a href="#" class="mt-2 btn btn-lg btn-outline-light " role="button" [routerLink]="['login']">Comprar Ahora</a>
+  </div>
+  <div class="col-6 mx-auto">
+    <a href="#" class="mt-2 btn btn-lg btn-outline-light" role="button" [routerLink]="['login']">Alquilar Ahora</a>
+  </div>
+</div> -->
+<!-- cards -->
+<div class="row blanco align-items-center">
+  <div class="col-12 text-center mt-5">
+    <h2>Productos destacados</h2>
+  </div>
+  <div class="col">
+    <div
+      id="carouselExampleSlidesOnly"
+      class="carousel slide blanco"
+      data-bs-ride="carousel"
+    >
+      <div class="carousel-inner" >
+        <div class="carousel-item active">
+          <div class="row justify-content-center blanco david">
+            <div class="col-10">
+              <div
+                class="row mt-5 row-cols-1 row-cols-md-3 row-cols-lg-4 row-cols-xl-4 row-cols-xxl-g-2"
+              >
+                <!-- card 1 -->
+                <div class="col">
+                  <div class="card mb-4 figure">
+                    <img
+                      src="assets/terra-mitica.jpg"
+                      class="card-img-top image "
+                      alt="..."
+                      width="200"
+                      height="200"
+                    />
+                    <div class="card-body">
+                      <h5 class="card-title">
+                        Terra Mítica
+                        <span class="badge bg-secondary">Nuevo</span>
+                      </h5>
+                      <p class="card-text">
+                        Disfuta de un día increíble en el Parque Temático Terra
+                        Mítica Benidorm
+                      </p>
+                    </div>
+                    <div class="card-footer bg-light align-items-strech">
+                      <a href="#" class="btn btn-primary col-12 juego"
+                        >¡Compra ya!</a
+                      >
+                    </div>
+                  </div>
+                </div>
+                <!-- card 2 -->
+                <div class="col">
+                  <div class="card mb-4 figure">
+                    <img
+                      src="assets/aqualandia.jpg"
+                      class="card-img-top image"
+                      alt="..."
+                      width="200"
+                      height="200"
+                    />
+                    <div class="card-body">
+                      <h5 class="card-title">
+                        Aqualandia <span class="badge bg-danger">-33%</span>
+                      </h5>
+                      <p class="card-text">
+                        Disfuta de un día increíble en el Parque Acuático
+                        Aqualandia Benidorm
+                      </p>
+                    </div>
+                    <div class="card-footer bg-light align-items-strech">
+                      <a href="#" class="btn btn-primary col-12 juego"
+                        >¡Compra ya!</a
+                      >
+                    </div>
+                  </div>
+                </div>
+                <!-- card 3 -->
+                <div class="col">
+                  <div class="card mb-4 figure">
+                    <img
+                      src="assets/3a.jpg"
+                      class="card-img-top image"
+                      alt="..."
+                      width="200"
+                      height="200"
+                    />
+                    <div class="card-body">
+                      <h5 class="card-title">Mundomar</h5>
+                      <p class="card-text">
+                        Disfuta de un día increíble en el Parque Animal Mundomar de
+                        Benidorm
+                      </p>
+                    </div>
+                    <div class="card-footer bg-light align-items-strech">
+                      <a href="#" class="btn btn-primary col-12 juego"
+                        >¡Compra ya!</a
+                      >
+                    </div>
+                  </div>
+                </div>
+                <!-- card 4 -->
+                <div class="col">
+                  <div class="card mb-4 figure">
+                    <img
+                      src="assets/surf.png"
+                      class="card-img-top image"
+                      alt="..."
+                      width="200"
+                      height="200"
+                    />
+                    <div class="card-body">
+                      <h5 class="card-title">Surf</h5>
+                      <p class="card-text">
+                        Clases de Surf de Inicio para grupos, y de Tecnificación
+                        para perfeccionar tu Surf.
+                      </p>
+                    </div>
+                    <div class="card-footer bg-light align-items-strech">
+                      <a href="#" class="btn btn-primary col-12 juego"
+                        >¡Compra ya!</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="row justify-content-center blanco david">
+            <div class="col-10">
+              <div
+                class="row mt-5 row-cols-1 row-cols-md-3 row-cols-lg-4 row-cols-xl-4 row-cols-xxl-g-2"
+              >
+                <!-- card 1 -->
+                <div class="col">
+                  <div class="card mb-4 figure">
+                    <img
+                      src="assets/motoagua.jpeg"
+                      class="card-img-top image"
+                      alt="..."
+                      width="200"
+                      height="200"
+                    />
+                    <div class="card-body">
+                      <h5 class="card-title">
+                        Jet Ski <span class="badge bg-secondary">Nuevo</span>
+                      </h5>
+                      <p class="card-text">
+                        Disfruta de una excursión en moto de agua por el Parque
+                        Natural de Serra Helada
+                      </p>
+                    </div>
+                    <div class="card-footer bg-light align-items-strech">
+                      <a href="#" class="btn btn-primary col-12 juego"
+                        >¡Compra ya!</a
+                      >
+                    </div>
+                  </div>
+                </div>
+                <!-- card 2 -->
+                <div class="col">
+                  <div class="card mb-4 figure">
+                    <img
+                      src="assets/barco.jpg"
+                      class="card-img-top image"
+                      alt="..."
+                      width="200"
+                      height="200"
+                    />
+                    <div class="card-body">
+                      <h5 class="card-title">
+                        Alquiler de Barco
+                        <span class="badge bg-danger">-33%</span>
+                      </h5>
+                      <p class="card-text">
+                        Disfruta de un día único navegando con tu barco de
+                        alquiler, con o sin patrón
+                      </p>
+                    </div>
+                    <div class="card-footer bg-light align-items-strech">
+                      <a href="#" class="btn btn-primary col-12 juego"
+                        >¡Compra ya!</a
+                      >
+                    </div>
+                  </div>
+                </div>
+                <!-- card 3 -->
+                <div class="col">
+                  <div class="card mb-4 figure">
+                    <img
+                      src="assets/buceo.png"
+                      class="card-img-top image"
+                      alt="..."
+                      width="200"
+                      height="200"
+                    />
+                    <div class="card-body">
+                      <h5 class="card-title">
+                        Buceo <span class="badge bg-secondary">Nuevo</span>
+                      </h5>
+                      <p class="card-text">
+                        Explora el fondo marino con amigos y disfruta de una
+                        inmersión única
+                      </p>
+                    </div>
+                    <div class="card-footer bg-light align-items-strech">
+                      <a href="#" class="btn btn-primary col-12 juego"
+                        >¡Compra ya!</a
+                      >
+                    </div>
+                  </div>
+                </div>
+                <!-- card 4 -->
+                <div class="col">
+                  <div class="card mb-4 figure">
+                    <img
+                      src="assets/patinete1.jpg"
+                      class="card-img-top image"
+                      alt="..."
+                      width="200"
+                      height="200"
+                    />
+                    <div class="card-body">
+                      <h5 class="card-title">
+                        Patinete Eléctrico
+                        <span class="badge bg-secondary">Nuevo</span>
+                      </h5>
+                      <p class="card-text">
+                        Alquila tu Patinete Eléctrico, o Reserva una visita
+                        guiada por toda la Ciudad
+                      </p>
+                    </div>
+                    <div class="card-footer bg-light align-items-strech">
+                      <a href="#" class="btn btn-primary col-12 juego"
+                        >¡Compra ya!</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="row justify-content-center blanco david">
+            <div class="col-10">
+              <div
+                class="row mt-5 row-cols-1 row-cols-md-3 row-cols-lg-4 row-cols-xl-4 row-cols-xxl-g-2"
+              >
+                <!-- card 1 -->
+                <div class="col">
+                  <div class="card mb-4 figure">
+                    <img
+                      src="assets/paddle.png"
+                      class="card-img-top image"
+                      alt="..."
+                      width="200"
+                      height="200"
+                    />
+                    <div class="card-body">
+                      <h5 class="card-title">
+                        Paddle Surf
+                        <span class="badge bg-secondary">Nuevo</span>
+                      </h5>
+                      <p class="card-text">
+                        Disfruta de una excursión a las cuevas del Parque
+                        Natural Serra Helada en Paddle Surf
+                      </p>
+                    </div>
+                    <div class="card-footer bg-light align-items-strech">
+                      <a href="#" class="btn btn-primary col-12 juego"
+                        >¡Compra ya!</a
+                      >
+                    </div>
+                  </div>
+                </div>
+                <!-- card 2 -->
+                <div class="col">
+                  <div class="card mb-4 figure">
+                    <img
+                      src="assets/kayaks.png"
+                      class="card-img-top image"
+                      alt="..."
+                      width="200"
+                      height="200"
+                    />
+                    <div class="card-body">
+                      <h5 class="card-title">
+                        Kayaks <span class="badge bg-danger">-33%</span>
+                      </h5>
+                      <p class="card-text">
+                        Disfruta de una excursión a las cuevas del Parque
+                        Natural Serra Helada en Kayak
+                      </p>
+                    </div>
+                    <div class="card-footer bg-light align-items-strech">
+                      <a href="#" class="btn btn-primary col-12 juego"
+                        >¡Compra ya!</a
+                      >
+                    </div>
+                  </div>
+                </div>
+                <!-- card 3 -->
+                <div class="col">
+                  <div class="card mb-4 figure">
+                    <img
+                      src="assets/quads.png"
+                      class="card-img-top image"
+                      alt="..."
+                      width="200"
+                      height="200"
+                    />
+                    <div class="card-body">
+                      <h5 class="card-title">Quads</h5>
+                      <p class="card-text">
+                        Disfruta de una excursión por el Parque Natural Serra
+                        Helada en Quad
+                      </p>
+                    </div>
+                    <div class="card-footer bg-light align-items-strech">
+                      <a href="#" class="btn btn-primary col-12 juego"
+                        >¡Compra ya!</a
+                      >
+                    </div>
+                  </div>
+                </div>
+                <!-- card 4 -->
+                <div class="col">
+                  <div class="card mb-4 figure">
+                    <img
+                      src="assets/buggy.png"
+                      class="card-img-top image"
+                      alt="..."
+                      width="200"
+                      height="200"
+                    />
+                    <div class="card-body">
+                      <h5 class="card-title">
+                        Buggys <span class="badge bg-secondary">Nuevo</span>
+                      </h5>
+                      <p class="card-text">
+                        Disfruta de una excursión por el Parque Natural Serra
+                        Helada en Buggy
+                      </p>
+                    </div>
+                    <div class="card-footer bg-light align-items-strech">
+                      <a href="#" class="btn btn-primary col-12 juego"
+                        >¡Compra ya!</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row dos align-items-center text-center text-light bg-light ">
+  <div class="col color">
+    <img
+      src="assets/comunitat.png"
+      class="img-fluid dos"
+      alt="Responsive image"
+    />
+  </div>
+</div>

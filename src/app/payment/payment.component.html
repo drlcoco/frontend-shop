@@ -1,0 +1,40 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col">
+      <div class="m-5 text-center">
+        <h1 class="text-light">-</h1>
+        <table class="table table-light table-striped mt-5" *ngIf="productosAPagar && productosAPagar.length; else elseBlock">
+          <thead>
+            <tr>
+              <th scope="col">Imagen</th>
+              <th scope="col">Producto</th>
+              <th scope="col">Precio</th>
+              <th scope="col">Cantidad</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let producto of productosAPagar;">
+              <td><img src="{{producto.image}}" width="50" height="50"></td>
+              <td>{{producto.title}}</td>
+              <td>{{producto.price}}</td>
+              <td>{{this.cantidad}}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="text-center">
+        <a class="btn  btn-primary btn-lg mb-5" role="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"><i class="d-lg-none d-xl-inline bi bi-cart text-white"></i> Pagar {{calcularTotal()}}€<span class="badge rounded-pill bg-danger"></span></a>
+      </div>
+
+      <div class="row justify-content-center">
+        <div class="col align-items-center">
+          <ng-template #elseBlock><h1 class="text-light text-center position-absolute bottom-50 end-50 ">No hay productos disponibles</h1></ng-template>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+

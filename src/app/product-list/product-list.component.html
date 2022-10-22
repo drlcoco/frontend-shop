@@ -1,0 +1,276 @@
+<!-- <p>product-list works!</p>
+<div class="card">
+  <div class="card-header bg-primary text-white">{{ title }}</div>
+  <div class="card-block">
+    <div class="table-responsive">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>{{ headers.description }}</th>
+            <th>{{ headers.price }}</th>
+            <th>{{ headers.available }}</th>
+          </tr>
+        </thead>
+        <tbody>
+          Aquí van los productos. Por ahora se queda vacío
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div> -->
+<!-- <app-canvas-cart></app-canvas-cart> -->
+<!-- <div class="row mt-2">
+  <div class="col">
+    <ul class="breadcrumb">
+      <li class="breadcrumb-item"><a href="#">Componentes</a></li>
+      <li class="breadcrumb-item active">CPU</li>
+    </ul>
+  </div>
+</div> -->
+<div class="row">
+  <div class="col-lg-3 col-xl-2 mt-2" @animateList>
+    <form class="row g-2">
+      <div class="col-sm-4 col-lg-12">
+        <div class="border rounded-3 bg-light p-2">
+          <h5>Marca</h5>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="AMD" id="AMD" checked>
+            <label class="form-check-label" for="AMD">AMD</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="Intel" id="Intel">
+            <label class="form-check-label" for="Intel">Intel</label>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-4 col-lg-12">
+        <div class="border rounded-3 bg-light p-2 h-100">
+          <h5>Frecuencia <small class="text-muted">(Mhz)</small></h5>
+          <div class="input-group">
+            <input type="text" class="form-control" placeholder="Min" id="min-freq">
+            <span class="input-group-text">-</span>
+            <input type="text" class="form-control" placeholder="Max" id="max-freq">
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-4 col-lg-12">
+        <div class="border rounded-3 bg-light p-2 h-100">
+          <h5 class=" ">Precio <small class="text-muted">(EUR)</small></h5>
+          <div class="input-group">
+            <input type="text" class="form-control" placeholder="Min" id="min-price">
+            <span class="input-group-text">-</span>
+            <input type="text" class="form-control" placeholder="Max" id="max-price">
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+  <div class="col-lg-9 col-xl-8 mt-2">
+    <div class="row row-cols-1 row-cols-md-3 row-cols-xxl-4">
+      <div class="col mb-1">
+        <div class="card h-100">
+          <div class="row g-0">
+            <div class="col-4 col-md-12 d-flex justify-content-center align-items-center">
+              <img src="./assets/login3.jpg" class="img-fluid" alt="ryzen 5 CPU">
+            </div>
+            <div class="col-8 col-md-12">
+              <div class="card-body">
+                <h5 class="card-title">AMD Ryzen 5 5600X</h5>
+                <ul>
+                  <li>3.7GHz</li>
+                  <li>6 nucleos</li>
+                  <li>12 hilos</li>
+                  <li>64KB caché L1</li>
+                </ul>
+                <p class="card-text text-center">296.90€</p>
+                <a href="#" class="btn btn-success w-100">Comprar</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col mb-1">
+        <div class="card h-100">
+          <div class="row g-0">
+            <div class="col-4 col-md-12 d-flex justify-content-center align-items-center">
+              <img src="./assets/login3.jpg" class="img-fluid" alt="ryzen 7 CPU">
+            </div>
+            <div class="col-8 col-md-12">
+              <div class="card-body">
+                <h5 class="card-title text-center">AMD Ryzen 7 3800X</h5>
+                <ul>
+                  <li>3.9GHz</li>
+                  <li>8 nucleos</li>
+                  <li>16 hilos</li>
+                  <li>512KB caché L1</li>
+                </ul>
+                <p class="card-text text-center">
+                  <span class="text-danger">299.90€</span> <s class="text-muted">410.50€</s>
+                </p>
+                <a href="#" class="btn btn-success w-100">Comprar</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col mb-1">
+        <div class="card h-100">
+          <div class="row g-0">
+            <div class="col-4 col-md-12 d-flex justify-content-center align-items-center">
+              <img src="./assets/login3.jpg" class="img-fluid" alt="ryzen 5 CPU">
+            </div>
+            <div class="col-8 col-md-12">
+              <div class="card-body">
+                <h5 class="card-title">AMD Ryzen 5 5600X</h5>
+                <ul>
+                  <li>3.7GHz</li>
+                  <li>6 nucleos</li>
+                  <li>12 hilos</li>
+                  <li>64KB caché L1</li>
+                </ul>
+                <p class="card-text text-center">296.90€</p>
+                <a href="#" class="btn btn-success w-100">Comprar</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col mb-1">
+        <div class="card h-100">
+          <div class="row g-0">
+            <div class="col-4 col-md-12 d-flex justify-content-center align-items-center">
+              <img src="./assets/login3.jpg" class="img-fluid" alt="ryzen 7 CPU">
+            </div>
+            <div class="col-8 col-md-12">
+              <div class="card-body">
+                <h5 class="card-title text-center">AMD Ryzen 7 3800X</h5>
+                <ul>
+                  <li>3.9GHz</li>
+                  <li>8 nucleos</li>
+                  <li>16 hilos</li>
+                  <li>512KB caché L1</li>
+                </ul>
+                <p class="card-text text-center">
+                  <span class="text-danger">299.90€</span> <s class="text-muted">410.50€</s>
+                </p>
+                <a href="#" class="btn btn-success w-100">Comprar</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col mb-1">
+        <div class="card h-100">
+          <div class="row g-0">
+            <div class="col-4 col-md-12 d-flex justify-content-center align-items-center">
+              <img src="./assets/login3.jpg" class="img-fluid" alt="ryzen 5 CPU">
+            </div>
+            <div class="col-8 col-md-12">
+              <div class="card-body">
+                <h5 class="card-title">AMD Ryzen 5 5600X</h5>
+                <ul>
+                  <li>3.7GHz</li>
+                  <li>6 nucleos</li>
+                  <li>12 hilos</li>
+                  <li>64KB caché L1</li>
+                </ul>
+                <p class="card-text text-center">296.90€</p>
+                <a href="#" class="btn btn-success w-100">Comprar</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col mb-1">
+        <div class="card h-100">
+          <div class="row g-0">
+            <div class="col-4 col-md-12 d-flex justify-content-center align-items-center">
+              <img src="./assets/login3.jpg" class="img-fluid" alt="ryzen 7 CPU">
+            </div>
+            <div class="col-8 col-md-12">
+              <div class="card-body">
+                <h5 class="card-title text-center">AMD Ryzen 7 3800X</h5>
+                <ul>
+                  <li>3.9GHz</li>
+                  <li>8 nucleos</li>
+                  <li>16 hilos</li>
+                  <li>512KB caché L1</li>
+                </ul>
+                <p class="card-text text-center">
+                  <span class="text-danger">299.90€</span> <s class="text-muted">410.50€</s>
+                </p>
+                <a href="#" class="btn btn-success w-100">Comprar</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col mb-1">
+        <div class="card h-100">
+          <div class="row g-0">
+            <div class="col-4 col-md-12 d-flex justify-content-center align-items-center">
+              <img src="./assets/login3.jpg" class="img-fluid" alt="ryzen 5 CPU">
+            </div>
+            <div class="col-8 col-md-12">
+              <div class="card-body">
+                <h5 class="card-title">AMD Ryzen 5 5600X</h5>
+                <ul>
+                  <li>3.7GHz</li>
+                  <li>6 nucleos</li>
+                  <li>12 hilos</li>
+                  <li>64KB caché L1</li>
+                </ul>
+                <p class="card-text text-center">296.90€</p>
+                <a href="#" class="btn btn-success w-100">Comprar</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col mb-1">
+        <div class="card h-100">
+          <div class="row g-0">
+            <div class="col-4 col-md-12 d-flex justify-content-center align-items-center redondo">
+              <img src="./assets/login3.jpg" class="img-fluid" alt="ryzen 7 CPU">
+            </div>
+            <div class="col-8 col-md-12">
+              <div class="card-body">
+                <h5 class="card-title text-center">AMD Ryzen 7 3800X</h5>
+                <ul>
+                  <li>3.9GHz</li>
+                  <li>8 nucleos</li>
+                  <li>16 hilos</li>
+                  <li>512KB caché L1</li>
+                </ul>
+                <p class="card-text text-center">
+                  <span class="text-danger">299.90€</span> <s class="text-muted">410.50€</s>
+                </p>
+                <a href="#" class="btn btn-success w-100">Comprar</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-xl-2 mt-2">
+    <div class="row flex-row flex-xl-column h-100 border rounded-3 bg-light">
+      <div class="col d-flex align-items-center">
+        <a href="#"><img class="img-fluid" src="./assets/Intel_logo.svg" alt="Intel logo"/></a>
+      </div>
+      <div class="col d-flex align-items-center">
+        <a href="#"><img class="img-fluid" src="./assets/AMD_logo.svg" alt="AMD logo"/></a>
+      </div>
+      <div class="col d-flex align-items-center">
+        <a href="#"><img class="img-fluid" src="./assets/NVIDIA_logo.svg" alt="NVIDIA logo"/></a>
+      </div>
+      <div class="col d-flex align-items-center">
+        <a href="#"><img class="img-fluid" src="./assets/gskill_logo.svg" alt="GSKILL logo"/></a>
+      </div>
+      <div class="col d-flex align-items-center">
+        <a href="#"><img class="img-fluid" src="./assets/msi_logo.svg" alt="MSI logo"/></a>
+      </div>
+    </div>
+  </div>
+  <app-product-show></app-product-show>
+</div>

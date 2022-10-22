@@ -1,0 +1,100 @@
+<div class="container-fluid p-0">
+  <nav class="navbar  navbar-expand-lg  scrolling-navbar navbar-dark bg-dark">
+    <div class="container-lg">
+      <a class="navbar-brand text-decoration-none text-primary fs-4 fw-bold " href="javascript:void(0)" @animateList><img src="assets/patinete2.png" width="35" alt="logo"> Drive-Electric </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar"><span class="navbar-toggler-icon text-warning"></span></button>
+      <div id="mynavbar" class="collapse navbar-collapse">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link fs-6 text-light " [routerLink]="['home']" [routerLinkActive]="['active']"><i class="d-lg-none d-xl-inline bi bi-house "></i> Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link fs-6 text-light " [routerLink]="['contact']" [routerLinkActive]="['active']"><i class="d-lg-none d-xl-inline bi bi-telephone "></i> Contacto</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link fs-6 text-light " [routerLink]="['add']" [routerLinkActive]="['active']"><i class="d-lg-none d-xl-inline bi bi-telephone "></i> Añadir</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link fs-6 text-light " [routerLink]="['payment']" [routerLinkActive]="['active']"><i class="d-lg-none d-xl-inline bi bi-telephone "></i> Pagar</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link fs-6 text-light dropdown-toggle " data-bs-toggle="dropdown" href="javascript:void(0)"><i class="d-lg-none d-xl-inline bi bi-gear "></i> Productos</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item text-dark" [routerLink]="['products']" [routerLinkActive]="['active']"><i class="d-lg-none d-xl-inline bi bi-cpu "></i>Compra</a></li>
+              <li><a class="dropdown-item text-dark" [routerLink]="['rent']" [routerLinkActive]="['active']"><i class="d-lg-none d-xl-inline bi bi-motherboard "></i> Alquiler</a></li>
+            </ul>
+          </li>
+        </ul>
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link fs-6 text-light " [routerLink]="['login']" [routerLinkActive]="['active']"><i class="d-lg-none d-xl-inline bi bi-laptop "></i> Login</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link fs-6 text-light " [routerLink]="['register']" [routerLinkActive]="['active']"><i class="d-lg-none d-xl-inline bi bi-pc-display-horizontal "></i> Registro</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link fs-6 text-light dropdown-toggle " data-bs-toggle="dropdown" href="javascript:void(0)"><i class="d-lg-none d-xl-inline bi bi-person "></i> {{ user }}</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" [routerLink]="['login']" [routerLinkActive]="['active']"><i class="d-lg-none d-xl-inline bi bi-pencil "></i> Mi Cuenta</a></li>
+              <li><a class="dropdown-item" href="#"><i class="d-lg-none d-xl-inline bi bi-truck "></i> Mis Pedidos</a></li>
+              <li><a class="dropdown-item" [routerLink]="['contact']" [routerLinkActive]="['active']"><i class="d-lg-none d-xl-inline bi bi-question-circle text-white"></i> Contacto</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="#"><i class="d-lg-none d-xl-inline bi bi-power "></i> Cerrar Sesión</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="btn  btn-outline-primary fs-6 text-light" role="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight" ><i class="d-lg-none d-xl-inline bi bi-cart "></i> Carrito <span class="" [matBadge]="updateBadge()" [matBadgeHidden]="productosAdd === 0" matBadgeColor="accent" matBadgeOverlap="false"></span></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</div>
+
+
+
+
+<!-- <div class="container-fluid p-0">
+  <nav class="navbar navbar-expand-lg">
+    <a class="navbar-brand" href="#">
+      <i class="fas fa-book-reader fa-2x mx-3"></i>Books</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+      aria-label="Toggle navigation">
+      <i class="fas fa-align-right text-light"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <div class="mr-auto"></div>
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">HOME
+            <span class="sr-only">(current)</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">COURSE</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">PRICE</a>
+        </li>
+        <li class="nav-item dropdown">
+          <div class="dropdown">
+            <a href="#" class="nav-link">PAGES</a>
+            <div class="dropdown-content">
+              <a href="#">Generic</a>
+              <a href="#">Element</a>
+            </div>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">FACT</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">ABOUT</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</div> -->
+

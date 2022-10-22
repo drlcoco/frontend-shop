@@ -1,0 +1,88 @@
+<div class="col m-4">
+  <div class="card">
+    <div class="row ">
+      <div
+        class="col-12 justify-content-center align-items-center"
+      >
+        <a
+          class="nav-link"
+          [routerLink]="['/products', inputProducto.id]"
+          [routerLinkActive]="['active']"
+          ><img
+
+          [src]="inputProducto.image"
+            [ngStyle]="{ 'height.px': imgHeight }"
+            class="card-img-top img-fluid"
+        /></a>
+      </div>
+      <div class="col-12">
+        <div class="card-body">
+          <a
+            class="nav-link"
+            [routerLink]="['products/', inputProducto.id]"
+            [routerLinkActive]="['active']"
+            ><h5 class="card-title">
+              {{ inputProducto.title | titlecase }}
+            </h5></a
+          >
+          <ul>
+            <li [innerText]="inputProducto.description"></li>
+            <li [innerText]="inputProducto.stock"></li>
+          </ul>
+          <p class="card-text text-center">
+            <span class="text-danger">{{
+              inputProducto.price | currency: "EUR"
+            }}</span>
+            <s class="text-muted"> 410.50€</s>
+          </p>
+          <!-- Button trigger modal -->
+          <a
+            class="btn btn-primary w-100"
+            data-bs-toggle="modal"
+            data-bs-target="#exampleModal"
+            (click)="addProduct()"
+            >Añadir al Carrito</a
+          >
+
+          <!-- Modal -->
+          <div
+            class="modal fade"
+            id="exampleModal"
+            tabindex="-1"
+            aria-labelledby="exampleModalLabel"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">
+                    Producto añadido al carrito
+                  </h5>
+                  <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                  ></button>
+                </div>
+                <div class="modal-body">...</div>
+                <div class="modal-footer">
+                  <button
+                    type="button"
+                    class="btn btn-secondary"
+                    data-bs-dismiss="modal"
+                  >
+                    Close
+                  </button>
+                  <button type="button" class="btn btn-primary">
+                    Save changes
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

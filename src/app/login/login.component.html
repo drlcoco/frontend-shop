@@ -1,0 +1,114 @@
+<app-canvas-cart></app-canvas-cart>
+  <div class="row text-center text-white justify-content-center">
+      <div class="col-8 d-flex flex-column">
+        <!-- <div class="borde">
+          <form>
+              <h1 class="text-dark">Login</h1>
+              <div class="form_group">
+                  <input type="text" id="name" class="form_input" placeholder=" ">
+                  <label for="name" class="form_label">Usuario</label>
+              </div>
+              <div class="form_group">
+                  <input type="text" id="apellido" class="form_input" placeholder=" ">
+                  <label for="apellido" class="form_label">Contraseña</label>
+              </div>
+          </form>
+      </div> -->
+        <form action="" method="POST" class="m-5" #loginForm = "ngForm">
+            <div class="row text-center justify-content-center mt-4">
+              <div
+                class="col-8 d-flex flex-column justify-content-center align-self-center m-5">
+                <h1 class="text-dark">Login</h1>
+              </div>
+            </div>
+            <div class="mb-3 row">
+              <label for="email" [ngStyle]="{'color': !email.valid?'red':'green'}" class="col-sm-2 col-form-label">Email </label>
+              <div class="col-sm-10">
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  [ngClass]="{'is-valid': email.valid, 'is-invalid': !email.valid && email.touched}"
+                  class="form-control mt-2"
+                  placeholder="Email"
+                  value=""
+                  #email = "ngModel"
+                  [(ngModel)] = "user.email"
+                  required
+                  pattern="[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])"
+                /> <small *ngIf="!email.valid && email.touched" class=" invalid-feedback d-flex">El email no es válido</small>
+              </div>
+            </div>
+            <div class="mb-3 row">
+              <label for="password" [ngStyle]="{'color': !password.valid?'red':'green'}" class="col-sm-2 col-form-label">Password</label>
+              <div class="col-sm-10">
+                <input
+                  type="password"
+                  name="password"
+                  id="password"
+                  [ngClass]="{'is-valid': password.valid, 'is-invalid': !password.valid && password.touched}"
+                  class="form-control mt-2"
+                  placeholder="Password"
+                  value=""
+                  #password = "ngModel"
+                  [(ngModel)] = "user.password"
+                  required
+                  pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}"
+                /> <small *ngIf="!password.valid && password.touched" class=" invalid-feedback d-flex">La contraseña no es válida</small>
+              </div>
+            </div>
+           <div class="mb-3 row justify-content-center">
+            <div class="col-sm-3">
+              <button type="submit" [disabled]="loginForm.invalid" class="btn rounded" [routerLink]="['register']" [routerLinkActive]="['active']"><img
+              src="assets/login2.jpg"
+              alt="logo"
+              class="imgLogin rounded mt-2"/>
+              </button>
+            </div>
+           </div>
+          <div class="row">
+                  <div class="d-grid gap-2 col-6 mx-auto mt-4">
+                      <h2 class="text-secondary">No tienes cuenta? Regístrate!!!</h2>
+                      <a class="text-primary nav-link" [routerLink]="['register']" [routerLinkActive]="['active']" [routerLink]="['/register']"><img
+                        src="assets/register.jpg"
+                        alt="logo"
+                        class="rounded imgLogin"/></a>
+                  </div>
+          </div>
+          </form>
+
+          <!-- <form name="">
+            <h3 class="dark-grey-text text-center">
+              <strong>Write to us:</strong>
+            </h3>
+            <hr>
+
+            <div class="md-form">
+              <i class="fas fa-user prefix grey-text"></i>
+              <input type="text" id="form3" class="form-control">
+              <label for="form3">Your name</label>
+            </div>
+            <div class="md-form">
+              <i class="fas fa-envelope prefix grey-text"></i>
+              <input type="text" id="form2" class="form-control">
+              <label for="form2">Your email</label>
+            </div>
+
+            <div class="md-form">
+              <i class="fas fa-pencil-alt prefix grey-text"></i>
+              <textarea type="text" id="form8" class="md-textarea"></textarea>
+              <label for="form8">Your message</label>
+            </div>
+
+            <div class="text-center">
+              <button class="btn btn-indigo">Send</button>
+              <hr>
+              <fieldset class="form-check">
+                <input type="checkbox" class="form-check-input" id="checkbox1">
+                <label for="checkbox1" class="form-check-label dark-grey-text">Subscribe me to the newsletter</label>
+              </fieldset>
+            </div>
+
+          </form> -->
+      </div>
+  </div>

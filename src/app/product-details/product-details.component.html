@@ -1,0 +1,11 @@
+<div class="col-6 superior">
+  <img [src]="productoDetails.image">
+</div>
+<div class="col-6 productDetails" *ngIf="productoDetails; else elseBlock">
+  <app-product-item [inputProducto]="productoDetails" class=""></app-product-item>
+</div>
+<ng-template #elseBlock>
+  <h1 class="alert" role="alert">
+    No se ha creado ningún producto
+  </h1>
+</ng-template>

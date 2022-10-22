@@ -1,0 +1,154 @@
+ <!-- <app-canvas-cart></app-canvas-cart> -->
+ <div class="row text-center text-white justify-content-center">
+  <div class="col-8 d-flex flex-column">
+     <form action="" method="POST" class="m-5 needs-validation" #registerForm = "ngForm" (ngSubmit)="onSubmit(registerForm)"  novalidate>
+      <div class="row text-center justify-content-center mt-5">
+        <div
+          class="col-8 d-flex flex-column justify-content-center align-self-center m-3">
+          <h1 class="text-dark">Registro</h1>
+        </div>
+      </div>
+        <div class="mb-3 row">
+         <label for="name" [ngStyle]="{'color': !name.valid?'red':'green'}" class="col-sm-2 col-form-label">Nombre </label>
+         <div class="col-sm-10">
+           <input
+             type="text"
+             name="name"
+             id="name"
+             [ngClass]="{'is-valid': name.valid, 'is-invalid': !name.valid && name.touched}"
+             class="form-control mt-2"
+             placeholder="Nombre"
+             value=""
+             #name = "ngModel"
+             [(ngModel)] = "user.name"
+             required
+             pattern="[a-zA-ZÀ-ÿ\s]{1,40}"
+           /> <small *ngIf="!name.valid && name.touched" class=" invalid-feedback d-flex is-invalid">El nombre no es válido</small>
+         </div>
+       </div>
+       <div class="mb-3 row">
+         <label for="surname" [ngStyle]="{'color': !surname.valid?'red':'green'}" class="col-sm-2 col-form-label">Apellidos </label>
+         <div class="col-sm-10">
+           <input
+             type="text"
+             name="surname"
+             id="surname"
+             [ngClass]="{'is-valid': surname.valid, 'is-invalid': !surname.valid && surname.touched}"
+             class="form-control mt-2"
+             placeholder="Apellidos"
+             value=""
+             #surname = "ngModel"
+             [(ngModel)] = "user.surname"
+             required
+             pattern="[a-zA-ZÀ-ÿ\s]{1,60}"
+           /> <small *ngIf="!surname.valid && surname.touched" class=" invalid-feedback d-flex">Los apellidos no son válidos</small>
+         </div>
+       </div>
+       <div class="mb-3 row">
+         <label for="address" [ngStyle]="{'color': !address.valid?'red':'green'}" class="col-sm-2 col-form-label">Dirección </label>
+         <div class="col-sm-10">
+           <input
+             type="text"
+             name="address"
+             id="address"
+             [ngClass]="{'is-valid': address.valid, 'is-invalid': !address.valid && address.touched}"
+             class="form-control mt-2"
+             placeholder="Dirección"
+             value=""
+             #address = "ngModel"
+             [(ngModel)] = "user.address"
+             required
+             pattern="[a-zA-Z0-9\_\-\,\ ]{4,68}"
+           /> <small *ngIf="!address.valid && address.touched" class=" invalid-feedback d-flex">La dirección no es válida</small>
+         </div>
+       </div>
+       <div class="mb-3 row">
+        <label for="address" [ngStyle]="{'color': !phone.valid?'red':'green'}" class="col-sm-2 col-form-label">Teléfono</label>
+         <div class="col-sm-10">
+           <input
+             type="number"
+             name="phone"
+             id="phone"
+             [ngClass]="{'is-valid': phone.valid, 'is-invalid': !phone.valid && phone.touched}"
+             class="form-control mt-2"
+             placeholder="000000000"
+             value=""
+             #phone = "ngModel"
+             [(ngModel)] = "user.phone"
+             required
+             pattern="(\+?( |-|\.)?\d{1,4}( |-|\.)?)?(\(?\d{3}\)?|\d{3})( |-|\.)?(\d{3}( |-|\.)?\d{3})"
+           /> <small *ngIf="!phone.valid && phone.touched" class=" invalid-feedback d-flex">El teléfono no es válido</small>
+         </div>
+       </div>
+       <div class="mb-3 row">
+        <label for="email" [ngStyle]="{'color': !email.valid?'red':'green'}" class="col-sm-2 col-form-label">Email </label>
+        <div class="col-sm-10">
+          <input
+            type="email"
+            name="email"
+            id="email"
+            [ngClass]="{'is-valid': email.valid, 'is-invalid': !email.valid && email.touched}"
+            class="form-control mt-2"
+            placeholder="Email"
+            value=""
+            #email = "ngModel"
+            [(ngModel)] = "user.email"
+            required
+            pattern="[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])"
+          /> <small *ngIf="!email.valid && email.touched" class=" invalid-feedback d-flex">El email no es válido</small>
+        </div>
+      </div>
+       <div class="mb-3 row">
+         <label for="password" [ngStyle]="{'color': !password.valid?'red':'green'}" class="col-sm-2 col-form-label">Password</label>
+         <div class="col-sm-10">
+           <input
+             type="password"
+             name="password"
+             id="password"
+             [ngClass]="{'is-valid': password.valid, 'is-invalid': !password.valid && password.touched}"
+             class="form-control mt-2"
+             placeholder="Password"
+             value=""
+             #password = "ngModel"
+             [(ngModel)] = "user.password"
+             required
+             pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}"
+           /> <small *ngIf="!password.valid && password.touched" class=" invalid-feedback d-flex">La contraseña no es válida, debe contener al menos 8 caracteres entre mayúsculas, minúsculas y números</small>
+         </div>
+         <!-- <label for="password2" class="col-sm-2 col-form-label"
+           >Verify Password
+         </label>
+         <div class="col-sm-4">
+           <input
+             type="password"
+             name="password2"
+             id="password2"
+             class="form-control"
+             placeholder="Verify Password"
+             value=""
+             #password2 = "ngModel"
+             [(ngModel)] = "password2"
+             required
+             pattern="/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$/gm"
+           /> <small *ngIf="password !==  password2 && password2.touched" class=" invalid-feedback d-flex">La contraseña no coincide</small>
+         </div> -->
+       </div>
+       <div class="alert alert-success" *ngIf="status == 'success'">
+        Ha sido registrado correctamente <a class="btn btn-primary" [routerLink]="['/login']">Logueate</a>
+       </div>
+       <div class="alert alert-danger" *ngIf="status == 'error'">
+        Error!!! No ha sido registrado correctamente, inténtelo de nuevo
+       </div>
+       <div class="mb-3 row justify-content-center">
+        <div class="col-sm-3">
+          <button type="submit" [disabled]="registerForm.invalid" class="btn rounded"><img
+          src="assets/register.jpg"
+          alt="logo"
+          class="imgLogin rounded mx-auto d-block"/>
+          </button>
+        </div>
+       </div>
+     </form>
+   </div>
+ </div>
+
