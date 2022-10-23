@@ -1,4 +1,4 @@
-*{
+/* *{
   margin: 0;
   padding: 0;
 }
@@ -79,7 +79,6 @@ section .color:nth-child(3){
 
 .form_input{
   width: 100%;
-  /* font-family: inherit; */
   font-size: 1rem;
   color: grey;
   padding: .6em .3em;
@@ -113,4 +112,25 @@ section .color:nth-child(3){
 
 .text-dark{
   font-size: 52px;
+}
+
+ */
+
+ .container-fluid{
+  background: #ffe259;
+  background: linear-gradient(to right, #ffa751, #ffe259);
+ }
+
+.imageLogin{
+  background-image: url('../../assets/2.png');
+  background-position: center center;
+  background-repeat: no-repeat;
+  max-height: 90vh;
+  overflow: hidden;
+}
+
+.boxShadow{
+  border: 1px solid;
+  padding: 10px;
+  box-shadow: 15px 10px #888888;
 }
