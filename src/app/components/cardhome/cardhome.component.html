@@ -1,0 +1,47 @@
+<!-- <div class="box-home h-100">
+  <div class="slide-img">
+    <img [src]="inputProducto.image" alt="1">
+    <div class="overlay">
+      <a href="" class="buy-btn">Buy Now</a>
+    </div>
+  </div>
+  <div class="detail-box"></div>
+  <div class="type">
+    <a href="#">{{ inputProducto.title }}</a>
+    <span>{{ inputProducto.description}}</span>
+  </div>
+  <a href="/" class="price">{{ inputProducto.price}}</a>
+</div> -->
+
+
+<!-- <mat-card class="example-card m-4">
+  <a class="nav-link" [routerLink]="['/products', inputProducto.id]">
+    <mat-card-header>
+      <div mat-card-avatar class="example-header-image"></div>
+      <mat-card-title>{{ inputProducto.title }}</mat-card-title>
+      <mat-card-subtitle>Stock: {{ inputProducto.stock}}</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+      <img mat-card-image [src]="inputProducto.image" alt="Photo">
+      <p>{{ inputProducto.description}}</p>
+      <p>Precio: {{ inputProducto.price}}</p>
+    </mat-card-content>
+  </a>
+    <mat-card-actions>
+      <button mat-button class="">COMPRAR</button>
+      <button mat-button>SHARE</button>
+    </mat-card-actions>
+</mat-card> -->
+
+<div class="card-body">
+  <a class="nav-link" [routerLink]="['/products', inputProducto.id]">
+    <div class="card">
+      <div class="face front">
+        <img mat-card-image [src]="inputProducto.image" alt="Photo">
+        <h1>{{ inputProducto.title }}</h1>
+      </div>
+    </div>
+  </a>
+</div>
+<a class="nav-link" [routerLink]="['/products', inputProducto.id]">
+

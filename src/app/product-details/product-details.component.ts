@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+/* import Swal from "sweetalert2";
+ */import Swal from 'sweetalert2/dist/sweetalert2.js';
 import { IProduct } from '../interfaces/i-product';
 import { ProductsService } from '../services/products.service';
 
@@ -27,10 +29,10 @@ export class ProductDetailsComponent implements OnInit {
     this.productsService.getEvento(id)
       .subscribe(
         p => this.productoDetails = p,
-        error => console.error(error)
+        error => console.log("Error")
+
       );
       console.log(this.productoDetails);
-
   }
 
 }

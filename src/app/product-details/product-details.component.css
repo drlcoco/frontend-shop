@@ -24,3 +24,18 @@
   align-self: center;
   width: 50%;
 }
+
+img:hover{
+  overflow: hidden;
+  transform: scale(1.001);
+  transition: all 200ms ease-out;
+  box-shadow: 0px 15px 25px rgba(0,0,0,0.8);
+}
+
+h2{
+  font-size: 28px;
+}
+
+p{
+  font-size: 18px;
+}

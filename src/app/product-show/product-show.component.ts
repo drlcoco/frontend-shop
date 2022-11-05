@@ -14,11 +14,7 @@ export class ProductShowComponent implements OnInit {
   filterSearch: string = '';
   ProductsService: any;
 
-  //Evento vacío para comprobar el if else. Si está vacío muestra -No hay eventos disponibles-
-  //eventos:IEvento[] = [];
-
   constructor(private productosService : ProductsService) {}
-
 
   ordenarStock(enlaceEvento: Event) {
     enlaceEvento.preventDefault();
@@ -27,6 +23,7 @@ export class ProductShowComponent implements OnInit {
       return a.stock - b.stock;
     })
   }
+
   ordenarPrecio(enlaceEvento: Event) {
     enlaceEvento.preventDefault();
     this.filterSearch = "";
@@ -42,7 +39,7 @@ export class ProductShowComponent implements OnInit {
   } */
 
   ngOnInit(): void {
-    /* this.EventosServiceService.getEventos().subscribe(
+    /* this.productosService.getEventos().subscribe(
       (      event: IEvento[]) => this.eventos = event,
       (      error: any) => console.error(error),
       () => console.log('Events loaded')
@@ -52,7 +49,7 @@ export class ProductShowComponent implements OnInit {
       resp =>{
         console.log(resp);
         this.productos = resp;
-        console.log(this.productos);
+        console.log('...Cargando '+this.productos);
       }
     )
   }

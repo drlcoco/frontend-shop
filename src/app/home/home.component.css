@@ -1,4 +1,30 @@
 header{
-  margin-top: 60px;
+  margin-top: 90px;
 }
+
+.firstbox{
+  max-width: 500vw;
+}
+
+.secondbox{
+  background: linear-gradient(to right, #fafaf9, #dcdcd9);
+}
+
+.container{
+  max-width: 100%;
+}
+.cS-hidden {
+  height: 1px;
+  opacity: 0;
+  filter: alpha(opacity=0);
+  overflow: hidden;
+}
+.scroller{
+  width: 100%;
+  overflow-x: scroll;
+}
+.item{
+  width: 400px;
+}
+
 

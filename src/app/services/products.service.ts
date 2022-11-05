@@ -19,16 +19,29 @@ export class ProductsService {
 
   constructor(private http: HttpClient) { }
 
+  getHomeProducts(): Observable<IProduct[]> {
+    let options = {
+      headers: new HttpHeaders().set('Authorization', localStorage.getItem('token') as string)
+    };
+    const productoURL = 'http://localhost:8000/api/products';
+    return this.http.get<IProduct[]>(productoURL).pipe(
+      map(response => response = this.productos.filter(resp => resp.price > 0))
+    );
+  }
+
   getEventos(): Observable<IProduct[]> {
     let options = {
       headers: new HttpHeaders().set('Authorization', localStorage.getItem('token') as string)
     };
-    /* return this.http.get<{productos : IProduct[]}>(this.productoURL, options).pipe(
-      retry(3),
-      map(response => response.productos)
-    ); */
     const productoURL = 'http://localhost:8000/api/products';
-    return this.http.get<IProduct[]>(productoURL);
+    return this.http.get<IProduct[]>(productoURL).pipe(
+      retry(3),
+      map(response => response),
+      catchError(
+        (resp:HttpErrorResponse)=> throwError(`Error obteniendo
+        productos. Código de servidor: ${resp.status}. Mensaje: ${resp.message}`)
+      )
+    );
   }
 
   getEvento(id:number): Observable<IProduct> {

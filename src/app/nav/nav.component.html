@@ -1,5 +1,5 @@
 <div class="container-fluid p-0">
-  <nav class="navbar  navbar-expand-lg  scrolling-navbar navbar-dark bg-dark">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark scrolling-navbar ">
     <div class="container-lg">
       <a class="navbar-brand text-decoration-none text-primary fs-4 fw-bold " href="javascript:void(0)" @animateList><img src="assets/patinete2.png" width="35" alt="logo"> Drive-Electric </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar"><span class="navbar-toggler-icon text-warning"></span></button>
@@ -32,7 +32,7 @@
           <li class="nav-item">
             <a class="nav-link fs-6 text-light " [routerLink]="['register']" [routerLinkActive]="['active']"><i class="bi bi-unlock-fill"></i> Registro</a>
           </li>
-          <li class="nav-item dropdown">
+          <li class="nav-item dropdown" *ngIf="user">
             <a class="nav-link fs-6 text-light dropdown-toggle " data-bs-toggle="dropdown" href="javascript:void(0)"><i class="d-lg-none d-xl-inline bi bi-person "></i> {{ user }}</a>
             <ul class="dropdown-menu">
               <li><a class="dropdown-item" [routerLink]="['login']" [routerLinkActive]="['active']"><i class="d-lg-none d-xl-inline bi bi-pencil "></i> Mi Cuenta</a></li>

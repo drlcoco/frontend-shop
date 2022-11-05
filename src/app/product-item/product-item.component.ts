@@ -50,7 +50,6 @@ export class ProductItemComponent implements OnInit {
       this.addedProducts = this.storageService.getCart();
       this.productosService.productos = this.storageService.getCart();
     }
-    console.log(this.inputProducto.image);
   }
 
   addProduct(){

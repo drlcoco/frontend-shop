@@ -22,16 +22,11 @@
   </form>
 </nav>
 
-<div
-  class=" card h-100 custom-shadow rounded card-custom"
-  *ngIf="productos && productos.length; else elseBlock"
->
+<div class="custom-shadow rounded card-custom"
+  *ngIf="productos && productos.length; else elseBlock">
   <!-- Aquí listaremos los productos -->
   <div class="row">
-    <div
-      class="col-xs-12 col-md-4 col-lg-3 h-100"
-      *ngFor="let producto of productos | eventFilter: filterSearch"
-    >
+    <div class="col-xs-12 col-md-4 col-lg-3" *ngFor="let producto of productos | eventFilter: filterSearch">
       <app-product-item [inputProducto]="producto"></app-product-item>
     </div>
   </div>

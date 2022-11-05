@@ -3,14 +3,14 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { MaterialModule } from './material.module';
+import { MaterialExampleModule } from './material.module';
+import { MatNativeDateModule } from '@angular/material/core';
 import { AppRoutingModule } from './app-routing.module';
+import { PreloadAllModules, Route, RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { ProductListComponent } from './product-list/product-list.component';
 import { LoginComponent } from './login/login.component';
-import { PreloadAllModules, Route, RouterModule } from '@angular/router';
-
 import { RegisterComponent } from './register/register.component';
 import { HomeComponent } from './home/home.component';
 import { ContactComponent } from './contact/contact.component';
@@ -28,6 +28,8 @@ import { EventFilterPipe } from './pipes/event-filter.pipe';
 import { ProdcutUpdateComponent } from './prodcut-update/prodcut-update.component';
 import { PaymentComponent } from './payment/payment.component';
 import { InputErrorsExample } from './components/login-material/login-material.component';
+import { CardhomeComponent } from './components/cardhome/cardhome.component';
+import { SwalComponent } from './components/swal/swal.component';
 
 const APP_ROUTES: Route[] = [
   { path: 'home', component: HomeComponent },
@@ -68,6 +70,8 @@ const APP_ROUTES: Route[] = [
     ProdcutUpdateComponent,
     PaymentComponent,
     InputErrorsExample,
+    CardhomeComponent,
+    SwalComponent
   ],
   imports: [
     BrowserModule,
@@ -77,7 +81,8 @@ const APP_ROUTES: Route[] = [
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
-    MaterialModule,
+    MaterialExampleModule,
+    MatNativeDateModule
   ],
   providers: [],
   bootstrap: [AppComponent]
