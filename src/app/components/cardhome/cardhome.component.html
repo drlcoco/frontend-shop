@@ -38,7 +38,7 @@
     <div class="card">
       <div class="face front">
         <img mat-card-image [src]="inputProducto.image" alt="Photo">
-        <h1>{{ inputProducto.title }}</h1>
+        <h1>{{ inputProducto.title }} <br><span *ngIf="inputProducto.price > 700" class="badge bg-primary">New</span></h1>
       </div>
     </div>
   </a>

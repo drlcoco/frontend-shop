@@ -1,3 +1,4 @@
+import { SocialAuthService, SocialUser } from '@abacritt/angularx-social-login';
 import { animate, keyframes, state, style, transition, trigger } from '@angular/animations';
 import { Component, Input, OnInit, Output } from '@angular/core';
 import { IProduct } from '../interfaces/i-product';
@@ -28,22 +29,33 @@ export class NavComponent implements OnInit {
 
   addedProducts:IProduct[] = [];
   @Input() productosAdd:number = 0;
-  user:string = 'David';
+  user: SocialUser | undefined;
+  loggedIn: boolean | undefined;
 
-  constructor(private productosService:ProductsService, private storageService: StorageService) { }
+  constructor(private productosService:ProductsService,
+              private storageService: StorageService,
+              private authService: SocialAuthService) { }
 
   ngOnInit(): void {
     this.productosService.disparador.subscribe(data => {
       console.log(data);
       this.addedProducts.push(data);
       this.productosService.setNumbadge(this.addedProducts.length);
-    })
+    });
+    this.authService.authState.subscribe((user) => {
+      this.user = user;
+      this.loggedIn = (user != null);
+    });
   }
 
   updateBadge(){
     /* this.productosAdd = this.productosService.printBadge(); */
     this.productosAdd = this.storageService.getCart().length;
     return this.productosAdd;
+  }
+
+  signOut(): void {
+    this.authService.signOut();
   }
 
 }

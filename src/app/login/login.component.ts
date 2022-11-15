@@ -1,6 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { Form } from '@angular/forms';
 import { IUser } from '../interfaces/i-user';
+import { SocialAuthService, SocialUser } from "@abacritt/angularx-social-login";
+import { FacebookLoginProvider } from "@abacritt/angularx-social-login";
+import { GoogleLoginProvider } from "@abacritt/angularx-social-login";
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -10,8 +14,11 @@ import { IUser } from '../interfaces/i-user';
 })
 export class LoginComponent implements OnInit {
 
+  user: SocialUser | undefined;
+  loggedIn: boolean | undefined;
+
   pageTitle:string = "Regístrate";
-  user:IUser ={
+  localUser:IUser ={
     id:0,
     name:"",
     surname:"",
@@ -23,22 +30,38 @@ export class LoginComponent implements OnInit {
     image:""
   };
 
-  constructor() { }
+  constructor(private authService: SocialAuthService, private router:Router) { }
 
   ngOnInit(): void {
+    this.authService.authState.subscribe((user) => {
+      this.user = user;
+      this.loggedIn = (user != null);
+    });
   }
 
   onSubmit(form: Form){
-    console.log(this.user);
+    console.log(this.localUser);
   }
 
-  /* signInWithFB(): void {
+  signInWithGoogle(): void {
+    this.authService.signIn(GoogleLoginProvider.PROVIDER_ID);
+  }
+
+  signInWithFB(): void {
     this.authService.signIn(FacebookLoginProvider.PROVIDER_ID);
   }
 
   signOut(): void {
     this.authService.signOut();
-  } */
+  }
+
+  refreshToken(): void {
+    this.authService.refreshAuthToken(GoogleLoginProvider.PROVIDER_ID);
+  }
+
+  redirect(){
+    this.router.navigate(["products"]);
+  }
 
   // Example starter JavaScript for disabling form submissions if there are invalid fields
   function () {

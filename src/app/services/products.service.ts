@@ -74,7 +74,7 @@ export class ProductsService {
   }
 
   deleteEvent(id:number){
-    return this.http.delete<Responses>(this.productoURL + "/" + id).subscribe(
+    return this.http.delete<Responses>('http://localhost:8000/api/products' + "/" + id).subscribe(
       (result)=>console.log("Se ha ELIMINADO correctamente el producto: " + id),
       (error)=>console.log("Error al borrar el producto!!! "+ id)
     )

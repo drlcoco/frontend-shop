@@ -67,4 +67,9 @@ export class ProductItemComponent implements OnInit {
     return this.productosAdd;
   }
 
+  offer(price: number){
+    price = price * 1.1;
+    return price.toFixed(2);
+  }
+
 }

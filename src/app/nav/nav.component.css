@@ -14,6 +14,8 @@
   color: black;
 } */
 
-/* .navbar{
-  background-color: rgba(184, 185, 249, 0.6);
-} */
+.navbar{
+  z-index: 999;
+  /* background-color: rgba(184, 185, 249, 0.6); */
+  background: rgba(5, 5, 5, 0.855);
+}

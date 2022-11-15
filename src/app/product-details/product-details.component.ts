@@ -10,6 +10,7 @@ import { ProductsService } from '../services/products.service';
   templateUrl: './product-details.component.html',
   styleUrls: ['./product-details.component.css']
 })
+
 export class ProductDetailsComponent implements OnInit {
 
   productoDetails: IProduct = {
@@ -26,13 +27,24 @@ export class ProductDetailsComponent implements OnInit {
 
   ngOnInit(): void {
     const id = this.route.snapshot.params["id"] as number; // Recibimos parámetro
+    this.productoDetails.id = id;
     this.productsService.getEvento(id)
       .subscribe(
         p => this.productoDetails = p,
         error => console.log("Error")
-
       );
-      console.log(this.productoDetails);
+  }
+
+  deleteProducto(){
+    console.log(this.route.snapshot.params["id"]);
+
+    this.productsService.deleteEvent(this.route.snapshot.params["id"]);
+    alert('Se ha eliminado correctamente!!!');
+  }
+
+  offer(price: number){
+    price = price * 1.1;
+    return price.toFixed(2);
   }
 
 }

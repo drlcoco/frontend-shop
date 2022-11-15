@@ -1,7 +1,7 @@
-<div class="row mt-3">
-  <div class="col-xs-12 col-lg-5 text-xs-center d-flex flex-column align-items-center px-xs-4 ps-xl-5">
+<div class="row mt-5">
+  <div class="col-xs-12 col-lg-5 text-xs-center d-flex flex-column align-items-center px-xs-4 ps-xl-5 mt-5 mb-3">
     <div class="col-xs-12 col-lg-8 ps-xl-5 ">
-      <h1 class="my-auto px-xs-4 ps-md-5">{{productoDetails.title}}</h1>
+      <h1 class="my-auto px-xs-4 ps-md-5 fs-1">{{productoDetails.title}}</h1>
     </div>
   </div>
 </div>
@@ -12,13 +12,14 @@
 </div>
 <div class="row">
   <div class="col-xs-12 col-lg-5 d-flex flex-column  justify-content-center align-items-center mx-xs-5 ps-xl-5"
-    *ngIf="productoDetails.stock >0 ; else elseBlock">
+    *ngIf="productoDetails.stock >0 ; else noStock">
     <div class="col-xs-10 col-lg-8 px-5 ps-xl-5 mx-xs-auto">
       <h2 class="ps-xs-5 text-xs-center ps-xl-5">{{productoDetails.description}}</h2>
     </div>
     <div class="col-xs-12 col-lg-8 ps-xl-5 mt-2">
       <h3 class="text-primary ps-md-5">
         {{productoDetails.price | currency: "EUR"}}
+        <s class="text-muted "> {{ offer(productoDetails.price) }} €</s>
       </h3>
     </div>
     <div class="col-xs-12 col-lg-8 ps-xl-5  mt-2">
@@ -35,9 +36,10 @@
       <button class="btn btn-primary" type="button">Añadir al Carrito</button>
       <button class="btn btn-dark mt-2" type="button">Pagar</button>
       <button class="btn btn-primary mt-2" type="button" [routerLink]="['/products']">Volver</button>
+      <button class="btn btn-danger mt-2" type="button" [routerLink]="['/products']" (click)="deleteProducto()">Borrar Producto</button>
     </div>
   </div>
-  <ng-template #elseBlock>
+  <ng-template #noStock>
     <div class="col-xs-12 col-lg-5 d-flex flex-column align-items-center mt-5 ps-xl-5">
       <div class="col-xs-12 col-lg-8 ps-xl-5  bg-danger">
         <h1 class="alert rounded" role="alert">
@@ -46,7 +48,7 @@
       </div>
     </div>
   </ng-template>
-  <div class="col-xs-12 col-lg-7 py-5 px-xl-5 pe-lg-5">
-    <img mat-card-image [src]="productoDetails.image" class="w-100 h-100 rounded-3" alt="Photo">
+  <div class="col-xs-12 col-lg-7 py-5 px-xl-5 pe-lg-5 imgContainer ms-xl-5">
+    <img mat-card-image [src]="productoDetails.image" class="sizeImage rounded-3" alt="Photo">
   </div>
 </div>

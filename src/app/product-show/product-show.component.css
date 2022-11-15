@@ -2,9 +2,17 @@
 {
   background-color: rgb(223, 233, 233);
 }
+
 .navbar{
-  margin-top: 65px;
+  /* z-index: 999; */
+  background: rgba(5, 5, 5, 0.855);
 }
+
+.filter{
+  margin-top: 60px;
+  padding-left: 287px;
+}
+
 /* img{
   height: 4vh;
 }

@@ -15,15 +15,20 @@
 .font{
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
-.navbar{
+/* .navbar{
   z-index: 999;
+  background: rgba(8, 9, 12, 0.8);
+} */
+ul > li > a:hover{
+  border-radius: 6px;
+  background-color: rgb(2, 69, 202);
 }
-li > a:hover{
+/* li > a:hover{
   background: rgb(207, 204, 217);
   color: #000;
   text-shadow: #000;
   border-radius: 8px;
-}
+} */
 .backimage{
   min-height: 100vh;
   background-color: rgb(29, 29, 32);

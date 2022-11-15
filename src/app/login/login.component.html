@@ -1,116 +1,12 @@
 <!-- <app-canvas-cart></app-canvas-cart> -->
-  <!-- <div class="row text-center text-white justify-content-center">
-    <div class="col-8 d-flex flex-column">
-      <form action="" method="POST" class="m-5" #loginForm="ngForm">
-        <div class="row text-center justify-content-center mt-4">
-          <div
-            class="col-8 d-flex flex-column justify-content-center align-self-center m-5"
-          >
-            <h1 class="text-dark">Inicio de sesión</h1>
-          </div>
-        </div>
-        <div class="mb-3 row">
-          <label
-            for="email"
-            [ngStyle]="{ color: !email.valid ? 'red' : 'green' }"
-            class="col-sm-2 col-form-label"
-            >Email
-          </label>
-          <div class="col-sm-10">
-            <input
-              type="email"
-              name="email"
-              id="email"
-              [ngClass]="{
-                'is-valid': email.valid,
-                'is-invalid': !email.valid && email.touched
-              }"
-              class="form-control mt-2"
-              placeholder="Email"
-              value=""
-              #email="ngModel"
-              [(ngModel)]="user.email"
-              required
-              pattern="[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])"
-            />
-            <small
-              *ngIf="!email.valid && email.touched"
-              class="invalid-feedback d-flex"
-              >El email no es válido</small
-            >
-          </div>
-        </div>
-        <div class="mb-3 row">
-          <label
-            for="password"
-            [ngStyle]="{ color: !password.valid ? 'red' : 'green' }"
-            class="col-sm-2 col-form-label"
-            >Password</label
-          >
-          <div class="col-sm-10">
-            <input
-              type="password"
-              name="password"
-              id="password"
-              [ngClass]="{
-                'is-valid': password.valid,
-                'is-invalid': !password.valid && password.touched
-              }"
-              class="form-control mt-2"
-              placeholder="Password"
-              value=""
-              #password="ngModel"
-              [(ngModel)]="user.password"
-              required
-              pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}"
-            />
-            <small
-              *ngIf="!password.valid && password.touched"
-              class="invalid-feedback d-flex"
-              >La contraseña no es válida</small
-            >
-          </div>
-        </div>
-        <div class="mb-3 row justify-content-center">
-          <div class="col-sm-3">
-            <button
-              type="submit"
-              [disabled]="loginForm.invalid"
-              class="btn rounded"
-              [routerLink]="['register']"
-              [routerLinkActive]="['active']"
-            >
-              <img
-                src="assets/login2.jpg"
-                alt="logo"
-                class="imgLogin rounded mt-2"
-              />
-            </button>
-          </div>
-        </div>
-        <div class="row">
-          <div class="d-grid gap-2 col-6 mx-auto mt-4">
-            <h2 class="text-secondary">No tienes cuenta? Regístrate!!!</h2>
-            <a
-              class="text-primary nav-link"
-              [routerLink]="['register']"
-              [routerLinkActive]="['active']"
-              [routerLink]="['/register']"
-              ><img src="assets/register.jpg" alt="logo" class="rounded imgLogin"
-            /></a>
-          </div>
-        </div>
-      </form>
-    </div>
-  </div> -->
-<div class="container-fluid">
+<div class="container-fluid mt-5">
   <div class="row boxShadow">
     <div class="col bg d-none d-lg-block imageLogin my-5 ms-5 rounded"></div>
-    <div class="col align-items-stretch my-5 mx-xs-1 me-lg-5 rounded bg-white">
+    <div class="col align-items-stretch my-5 mx-xs-1 me-lg-5 rounded bg-white boxShadow">
       <div class="text-end mt-2">
         <img src="../../assets/patinete2.png" width="35" alt="logo" class="me-5 rounded">
       </div>
-      <h1 class="fs-4 fw-bold text-center pt-3">Bienvenido</h1>
+      <h1 class="fs-4 fw-bold text-center pt-3" *ngIf="!user">Bienvenido</h1>
       <form action="" method="POST" class="m-5" #loginForm="ngForm">
         <div class="mb-4">
           <label
@@ -131,7 +27,7 @@
               placeholder="Introduzca el correo electrónico"
               value=""
               #email="ngModel"
-              [(ngModel)]="user.email"
+              [(ngModel)]="localUser.email"
               required
               pattern="[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])"
             />
@@ -160,7 +56,7 @@
               placeholder="Introduzca la contraseña"
               value=""
               #password="ngModel"
-              [(ngModel)]="user.password"
+              [(ngModel)]="localUser.password"
               required
               pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}"
             />
@@ -191,12 +87,12 @@
         </div>
       </form>
 
-      <div class="container my-5 px-5 w-100">
+      <div class="container mb-5 px-5 w-100">
         <div class="row text-center">
-          <div class="col-12 mb-2">Iniciar Sesión</div>
+          <div class="col-12 mb-3">Inicia sesión con Google</div>
         </div>
         <div class="row">
-          <div class="col">
+          <!-- <div class="col">
             <button class="btn btn-outline-primary w-100 my-1">
               <div class="row align-items-center">
                 <div class="col-2">
@@ -207,16 +103,18 @@
                 <div class="col-10 text-center">Facebook</div>
               </div>
             </button>
-          </div>
-          <div class="col">
-            <button class="btn btn-outline-danger w-100 my-1">
+          </div> -->
+          <div class="col-12 d-flex justify-content-center align-items-center">
+            <!-- <button class="btn btn-outline-danger w-100 my-1" (click)="signInWithGoogle()">
               <div class="row align-items-center">
                 <div class="col-2">
                   <img class="rounded-3" src="../../assets/google.png" alt="foto" width="32">
                 </div>
                 <div class="col-10 text-center">Google</div>
               </div>
-            </button>
+            </button> -->
+            <asl-google-signin-button type='standard' size='large' data-theme="filled_black" (click)="redirect()">
+            </asl-google-signin-button>
           </div>
         </div>
       </div>

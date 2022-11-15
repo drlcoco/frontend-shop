@@ -25,7 +25,7 @@ export class InputErrorStateMatcherExample {
  */
 
 import {Component} from '@angular/core';
-import {FormControl, Validators} from '@angular/forms';
+import {UntypedFormControl, Validators} from '@angular/forms';
 
 /**
  * @title Input with error messages
@@ -36,5 +36,5 @@ import {FormControl, Validators} from '@angular/forms';
   styleUrls: ['login-material.component.css'],
 })
 export class InputErrorsExample {
-  emailFormControl = new FormControl('drlcoco@hotmail.com', [Validators.required, Validators.email]);
+  emailFormControl = new UntypedFormControl('drlcoco@hotmail.com', [Validators.required, Validators.email]);
 }

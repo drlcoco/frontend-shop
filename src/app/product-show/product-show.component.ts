@@ -31,27 +31,17 @@ export class ProductShowComponent implements OnInit {
       return a.price - b.price;
     })
   }
-  /* deleteEvent(evento: IEvento){
-    this.eventos = this.eventos.filter((e)=> evento.title.toLocaleLowerCase()!=e.title.toLocaleLowerCase());
-  } */
-  /* crearEvento(evento:IEvento){
-    this.eventos.push(evento);
-  } */
 
   ngOnInit(): void {
-    /* this.productosService.getEventos().subscribe(
-      (      event: IEvento[]) => this.eventos = event,
-      (      error: any) => console.error(error),
-      () => console.log('Events loaded')
-    ); */
-
     this.productosService.getEventos().subscribe(
       resp =>{
         console.log(resp);
         this.productos = resp;
         console.log('...Cargando '+this.productos);
+      },
+      error =>{console.log(error);
       }
     )
   }
-
+  
 }
