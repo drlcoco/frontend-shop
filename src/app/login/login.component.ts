@@ -5,6 +5,8 @@ import { SocialAuthService, SocialUser } from "@abacritt/angularx-social-login";
 import { FacebookLoginProvider } from "@abacritt/angularx-social-login";
 import { GoogleLoginProvider } from "@abacritt/angularx-social-login";
 import { Router } from '@angular/router';
+import { UserService } from '../services/user.service';
+import { JwtInterface } from '../interfaces/jwt-interface';
 
 
 @Component({
@@ -14,12 +16,22 @@ import { Router } from '@angular/router';
 })
 export class LoginComponent implements OnInit {
 
-  user: SocialUser | undefined;
+  socialUser: SocialUser | undefined;
   loggedIn: boolean | undefined;
-
   pageTitle:string = "Regístrate";
+  private token: string = '';
+
+  userToShow: IUser ={
+    name:"",
+    surname:"",
+    phone:0,
+    address:"",
+    role:"user",
+    email:"",
+    password:"",
+    image:""
+  };
   localUser:IUser ={
-    id:0,
     name:"",
     surname:"",
     phone:0,
@@ -30,18 +42,19 @@ export class LoginComponent implements OnInit {
     image:""
   };
 
-  constructor(private authService: SocialAuthService, private router:Router) { }
+  constructor(private authService: SocialAuthService, private userService: UserService, private router:Router) { }
 
   ngOnInit(): void {
     this.authService.authState.subscribe((user) => {
-      this.user = user;
+      this.socialUser = user;
       this.loggedIn = (user != null);
+      this.redirect();
     });
   }
 
-  onSubmit(form: Form){
+  /* onSubmit(form: Form){
     console.log(this.localUser);
-  }
+  } */
 
   signInWithGoogle(): void {
     this.authService.signIn(GoogleLoginProvider.PROVIDER_ID);
@@ -60,7 +73,39 @@ export class LoginComponent implements OnInit {
   }
 
   redirect(){
-    this.router.navigate(["products"]);
+    this.router.navigate(["/products"]);
+  }
+
+  sendLogin(){
+    if(this.localUser){
+      /* this.userToShow = Object.assign({}, this.localUser); */
+      this.userService.login(this.localUser).subscribe(
+        (res)=>{
+          console.log(res);
+          /* this.localUser = res.dataUser; */
+          this.token = res.token;
+          this.saveToken(this.token);
+          this.userService.eventEmitter.emit(res);
+        },
+        (error)=>console.log("Los datos no son válidos!!!"+error)
+      )
+      this.localUser = {
+        name:"",
+        surname:"",
+        phone:0,
+        address:"",
+        role:"",
+        email:"",
+        password:"",
+        image:""
+      };
+
+    }
+  }
+
+  private saveToken(token:string): void{
+    localStorage.setItem('token', token);
+    this.token = token;
   }
 
   // Example starter JavaScript for disabling form submissions if there are invalid fields

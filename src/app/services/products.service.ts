@@ -56,7 +56,7 @@ export class ProductsService {
         productos. Código de servidor: ${resp.status}. Mensaje: ${resp.message}`)
       )
     ); */
-    const productoURL = 'http://localhost:8000/api/products';
+    /* const productoURL = 'http://localhost:8000/api/products'; */
     return this.http.get<IProduct>(`${this.productoURL}/${id}`);
   }
 
@@ -74,7 +74,7 @@ export class ProductsService {
   }
 
   deleteEvent(id:number){
-    return this.http.delete<Responses>('http://localhost:8000/api/products' + "/" + id).subscribe(
+    return this.http.delete<Responses>(this.productoURL + "/" + id).subscribe(
       (result)=>console.log("Se ha ELIMINADO correctamente el producto: " + id),
       (error)=>console.log("Error al borrar el producto!!! "+ id)
     )

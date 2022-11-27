@@ -11,7 +11,7 @@
           <li class="nav-item">
             <a class="nav-link fs-6 text-light " [routerLink]="['contact']" [routerLinkActive]="['active']"><i class="d-lg-none d-xl-inline bi bi-telephone "></i> Contacto</a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item" *ngIf="this.localUser.role === 'admin'">
             <a class="nav-link fs-6 text-light " [routerLink]="['add']" [routerLinkActive]="['active']"><i class="d-lg-none d-xl-inline bi bi-telephone "></i> Añadir</a>
           </li>
           <li class="nav-item">
@@ -26,8 +26,8 @@
           </li>
         </ul>
         <ul class="navbar-nav ms-auto d-flex align-items-center">
-          <li class="nav-item mx-2" *ngIf="!user">
-            <a class="nav-link fs-6 text-light " [routerLink]="['login']" [routerLinkActive]="['active']"><i class="bi bi-lock-fill"></i> Login</a>
+          <li class="nav-item mx-2" *ngIf="!user && !authUser">
+            <a class="nav-link fs-6 text-light " [routerLink]="['login']" [routerLinkActive]="['active']" (click)="checkUser()"><i class="bi bi-lock-fill"></i> Login</a>
           </li>
           <!-- <li class="nav-item" *ngIf="!user">
             <a class="nav-link fs-6 text-light " [routerLink]="['register']" [routerLinkActive]="['active']"><i class="bi bi-unlock-fill"></i> Registro</a>
@@ -39,6 +39,20 @@
               <li><a class="dropdown-item" [routerLink]="['login']" [routerLinkActive]="['active']"><i class="d-lg-none d-xl-inline bi bi-pencil "></i> Mi Cuenta</a></li>
               <li><a class="dropdown-item" href="#"><i class="d-lg-none d-xl-inline bi bi-truck "></i> Mis Pedidos</a></li>
               <li><a class="dropdown-item" [routerLink]="['contact']" [routerLinkActive]="['active']"><i class="d-lg-none d-xl-inline bi bi-question-circle text-white" *ngIf="!user"></i> Contacto</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="#"><i class="d-lg-none d-xl-inline bi bi-power"
+                (click)="signOut()"></i> Cerrar Sesión</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown my-0" *ngIf="this.authUser">
+            <img src="{{ this.authUser.image }}" class="rounded-3 d-inline my-auto" width="30">
+            <a class="nav-link fs-6 text-light dropdown-toggle d-inline mx-2" data-bs-toggle="dropdown" href="javascript:void(0)">{{ this.authUser.name }}</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" [routerLink]="['login']" [routerLinkActive]="['active']"><i class="d-lg-none d-xl-inline bi bi-pencil "></i> Mi Cuenta</a></li>
+              <li><a class="dropdown-item" href="#"><i class="d-lg-none d-xl-inline bi bi-truck "></i> Mis Pedidos</a></li>
+              <li><a class="dropdown-item" [routerLink]="['contact']" [routerLinkActive]="['active']"><i class="d-lg-none d-xl-inline bi bi-question-circle text-white" *ngIf="!localUser"></i> Contacto</a></li>
               <li>
                 <hr class="dropdown-divider">
               </li>

@@ -6,8 +6,8 @@
       <div class="text-end mt-2">
         <img src="../../assets/patinete2.png" width="35" alt="logo" class="me-5 rounded">
       </div>
-      <h1 class="fs-4 fw-bold text-center pt-3" *ngIf="!user">Bienvenido</h1>
-      <form action="" method="POST" class="m-5" #loginForm="ngForm">
+      <h1 class="fs-4 fw-bold text-center pt-3">Bienvenido</h1>
+      <form action="" method="POST" class="m-5" #loginForm="ngForm" (ngSubmit)="sendLogin()">
         <div class="mb-4">
           <label
             for="email"
@@ -71,9 +71,8 @@
             type="submit"
             [disabled]="loginForm.invalid"
             class="btn btn-primary"
-            [routerLink]="['register']"
-            [routerLinkActive]="['active']"
-          >Iniciar Sesión</button>
+          >Iniciar Sesión
+          </button>
         </div>
         <div class="my-3">
           <span>No tienes cuenta? <a

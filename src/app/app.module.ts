@@ -35,6 +35,7 @@ import { PaymentComponent } from './payment/payment.component';
 import { InputErrorsExample } from './components/login-material/login-material.component';
 import { CardhomeComponent } from './components/cardhome/cardhome.component';
 import { SwalComponent } from './components/swal/swal.component';
+import { AdminGuard } from './guards/admin.guard';
 
 const APP_ROUTES: Route[] = [
   { path: 'home', component: HomeComponent },
@@ -47,7 +48,7 @@ const APP_ROUTES: Route[] = [
   { path: 'cart', component: CartComponent },
   { path: 'rent', component: ProductRentComponent },
   { path: 'products/update/:id', component: ProductoUpdateComponent },
-  { path: 'add', component: ProductoAddComponent },
+  { path: 'add', component: ProductoAddComponent, canActivate: [AdminGuard] },
   { path: 'payment', component: PaymentComponent },
   { path:'/', redirectTo:'/home', pathMatch:'full'},
   { path:'**', redirectTo:'/home', pathMatch:'full'}
@@ -81,7 +82,7 @@ const APP_ROUTES: Route[] = [
   imports: [
     BrowserModule,
     AppRoutingModule,
-    RouterModule.forRoot(APP_ROUTES, {preloadingStrategy: PreloadAllModules}),
+    RouterModule.forRoot(APP_ROUTES, {preloadingStrategy: PreloadAllModules, scrollPositionRestoration:'enabled'}),
     BrowserAnimationsModule,
     HttpClientModule,
     FormsModule,
