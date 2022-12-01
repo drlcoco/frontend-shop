@@ -31,16 +31,6 @@ export class PaymentComponent implements OnInit {
       this.productosAPagar = this.storageService.getCart();
       this.productosService.productos = this.storageService.getCart();
     }
-    /* this.productosService.disparador.subscribe(data => {
-      console.log(data);
-      this.productosService.addProduct(data);
-      this.productosAPagar.push(data);
-      console.log(this.productosAPagar);
-      /* this.total += data.price; */
-      /*this.calcPrice();
-    }) */
-
-    /* this.badgeNumber = this.productosAPagar.length; */
   }
 
   calcPrice (){

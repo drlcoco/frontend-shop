@@ -29,8 +29,7 @@ export class CartComponent implements OnInit {
       console.log(this.addedProducts);
       /* this.total += data.price; */
       this.calcularTotal();
-    })
-
+    });
     this.badgeNumber = this.addedProducts.length;
   }
 
@@ -51,8 +50,6 @@ export class CartComponent implements OnInit {
           this.storageService.setCart(this.productosService.productos);
           console.log(this.productosService.productos.length);
           console.log(this.storageService.getCart().length);
-
-
           break;
         }
     }

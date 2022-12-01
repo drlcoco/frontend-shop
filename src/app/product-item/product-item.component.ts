@@ -4,6 +4,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { IProduct } from '../interfaces/i-product';
 import { ProductsService } from '../services/products.service';
 import { StorageService } from '../services/storage.service';
+import { UserService } from '../services/user.service';
 
 @Component({
   selector: 'app-product-item',
@@ -34,16 +35,13 @@ export class ProductItemComponent implements OnInit {
   @Output() addedProducts:IProduct[] = [];
 
   productosAdd:number = 0;
-
   imgHeight:number = 200;
 
-  constructor(private productosService:ProductsService, private router:Router, private route:ActivatedRoute, private storageService: StorageService) { }
-
-  deleteProducto(){
-    this.productosService.deleteEvent(this.inputProducto.id as number);
-    alert('Se ha eliminado correctamente!!!');
-    this.router.navigate(['../home']);
-  }
+  constructor(private productosService:ProductsService,
+              private router:Router,
+              private route:ActivatedRoute,
+              private storageService: StorageService,
+              private userService: UserService) { }
 
   ngOnInit(): void {
     if(this.storageService.existCart()) {
@@ -58,9 +56,15 @@ export class ProductItemComponent implements OnInit {
     this.storageService.setCart(this.productosService.productos);
   }
 
-  /* edit(){
-    this.router.navigate(["update/:id"]);
-  } */
+  deleteProduct(){
+    this.productosService.deleteEvent(this.inputProducto.id as number);
+    alert('Se ha eliminado correctamente!!!');
+    this.router.navigate(['../home']);
+  }
+
+  updateProduct(){
+
+  }
 
   updateBadge(){
     this.productosAdd = this.productosService.productos.length;

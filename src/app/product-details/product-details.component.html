@@ -33,10 +33,16 @@
       </p>
     </div>
     <div class="d-grid gap-2 col-6  my-4 ps-xl-5">
-      <button class="btn btn-primary" type="button">Añadir al Carrito</button>
-      <button class="btn btn-dark mt-2" type="button">Pagar</button>
-      <button class="btn btn-primary mt-2" type="button" [routerLink]="['/products']">Volver</button>
-      <button class="btn btn-danger mt-2" type="button" [routerLink]="['/products']" (click)="deleteProducto()">Borrar Producto</button>
+      <ng-container *ngIf="!this.authUser || this.authUser.role !== 'admin'">
+        <button class="btn btn-primary" type="button" (click)="addProduct()">Añadir al Carrito</button>
+        <button class="btn btn-dark mt-2" type="button">Pagar</button>
+        <button class="btn btn-primary mt-2" type="button" [routerLink]="['/products']">Volver</button>
+      </ng-container>
+      <ng-container *ngIf="this.authUser.role === 'admin'">
+        <button class="btn btn-danger mt-2" type="button" [routerLink]="['/products']" (click)="deleteProduct()">Borrar Producto</button>
+        <button class="btn btn-success mt-2" type="button" [routerLink]="['/products']" (click)="updateProduct()">Editar Producto</button>
+        <button class="btn btn-primary mt-2" type="button" [routerLink]="['/products']">Volver</button>
+      </ng-container>
     </div>
   </div>
   <ng-template #noStock>

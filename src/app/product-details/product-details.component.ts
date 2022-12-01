@@ -1,9 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-/* import Swal from "sweetalert2";
- */import Swal from 'sweetalert2/dist/sweetalert2.js';
+import Swal from "sweetalert2";
 import { IProduct } from '../interfaces/i-product';
 import { ProductsService } from '../services/products.service';
+import { StorageService } from '../services/storage.service';
+import { UserService } from '../services/user.service';
 
 @Component({
   selector: 'app-product-details',
@@ -23,7 +24,14 @@ export class ProductDetailsComponent implements OnInit {
     userId: 1,
     categoryId: 1
   }
-  constructor(private productsService: ProductsService, private route: ActivatedRoute) { }
+  authUser: any | undefined;
+  @Output() addedProducts:IProduct[] = [];
+
+  constructor(
+    private productsService: ProductsService,
+    private route: ActivatedRoute,
+    private userService: UserService,
+    private storageService: StorageService) { }
 
   ngOnInit(): void {
     const id = this.route.snapshot.params["id"] as number; // Recibimos parámetro
@@ -33,13 +41,33 @@ export class ProductDetailsComponent implements OnInit {
         p => this.productoDetails = p,
         error => console.log("Error")
       );
+    this.authUser = this.userService.getLoggedUser();
   }
 
-  deleteProducto(){
-    console.log(this.route.snapshot.params["id"]);
+  addProduct(){
+    this.addedProducts.push(this.productoDetails);
+    this.productsService.disparador.emit(this.productoDetails);
+    this.storageService.setCart(this.productsService.productos);
+  }
 
+  deleteProduct(){
+    console.log(this.route.snapshot.params["id"]);
     this.productsService.deleteEvent(this.route.snapshot.params["id"]);
-    alert('Se ha eliminado correctamente!!!');
+    Swal.fire({
+      title: 'Producto Eliminado',
+      icon: 'success',
+      text: 'Se ha eliminado el producto con éxito!.',
+      timer: 4000
+    })
+  }
+
+  updateProduct(){
+    Swal.fire({
+      title: 'Producto Actualizado',
+      icon: 'success',
+      text: 'Se ha actualizado el producto con éxito!.',
+      timer: 4000
+    })
   }
 
   offer(price: number){

@@ -9,16 +9,15 @@ import { AppRoutingModule } from './app-routing.module';
 import { PreloadAllModules, Route, RouterModule } from '@angular/router';
 import { SocialLoginModule, SocialAuthServiceConfig } from '@abacritt/angularx-social-login';
 import {
-  GoogleLoginProvider,
-  FacebookLoginProvider
+  GoogleLoginProvider
 } from '@abacritt/angularx-social-login';
 
 import { AppComponent } from './app.component';
 import { ProductListComponent } from './product-list/product-list.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
-import { HomeComponent } from './home/home.component';
-import { ContactComponent } from './contact/contact.component';
+import { HomeComponent } from './components/home/home.component';
+import { ContactComponent } from './components/contact/contact.component';
 import { CartComponent } from './cart/cart.component';
 import { ProductRentComponent } from './product-rent/product-rent.component';
 import { NavComponent } from './nav/nav.component';

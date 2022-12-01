@@ -7,6 +7,7 @@ import { GoogleLoginProvider } from "@abacritt/angularx-social-login";
 import { Router } from '@angular/router';
 import { UserService } from '../services/user.service';
 import { JwtInterface } from '../interfaces/jwt-interface';
+import Swal from "sweetalert2";
 
 
 @Component({
@@ -47,6 +48,8 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {
     this.authService.authState.subscribe((user) => {
       this.socialUser = user;
+      console.log(this.socialUser);
+
       this.loggedIn = (user != null);
       this.redirect();
     });
@@ -87,7 +90,14 @@ export class LoginComponent implements OnInit {
           this.saveToken(this.token);
           this.userService.eventEmitter.emit(res);
         },
-        (error)=>console.log("Los datos no son válidos!!!"+error)
+        (error)=> {
+          Swal.fire({
+            title: 'Error!',
+            icon: 'error',
+            text: 'Los datos no son válidos!.',
+            timer: 4000
+          })
+        }
       )
       this.localUser = {
         name:"",
@@ -99,7 +109,6 @@ export class LoginComponent implements OnInit {
         password:"",
         image:""
       };
-
     }
   }
 

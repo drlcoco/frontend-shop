@@ -50,16 +50,15 @@ export class NavComponent implements OnInit {
     image:""
   };
 
-  constructor(private productosService:ProductsService,
-              private userService: UserService,
-              private storageService: StorageService,
-              private authService: SocialAuthService,
-              private http: HttpClient) { }
+  constructor(
+    private productosService:ProductsService,
+    private userService: UserService,
+    private storageService: StorageService,
+    private authService: SocialAuthService,
+    private http: HttpClient) { }
 
   ngOnInit(): void {
     this.productosService.disparador.subscribe(data => {
-      console.log(data);
-      /* this.addedProducts.push(data); */
       this.productosService.setNumbadge(this.addedProducts.length);
     });
     this.authService.authState.subscribe((user) => {
@@ -68,34 +67,20 @@ export class NavComponent implements OnInit {
     });
     this.userService.eventEmitter.subscribe(data => {
       this.authUser = data;
-      console.log(this.authUser);
+      this.loggedIn = (this.authUser != null);
     });
   }
 
-  updateBadge(){
-    /* this.productosAdd = this.productosService.printBadge(); */
+  updateBadge(): number{
     this.productosAdd = this.storageService.getCart().length;
     return this.productosAdd;
   }
 
   signOut(): void {
-    if(this.authUser.name !== ''){
+    if(this.authUser){
       this.userService.logout();
+    }else{
+      this.authService.signOut();
     }
-    this.authService.signOut();
-    localStorage.removeItem('token');
   }
-
-  checkUser(){
-    /* if(localStorage.getItem('token')){
-      return this.userService.getUser(42).subscribe((user) => {
-        this.localUser = user;
-        console.log(this.localUser);
-
-        this.loggedIn = (user != null);
-      });
-    } */
-    return 'No hay token en checkusser';
-  }
-
 }

@@ -18,8 +18,8 @@ export class UserService {
   authSubject = new BehaviorSubject(false);
   private token: string = '';
   url:string = "https://127.0.0.1:8000/api/users";
-  expires_in: number = 60 * 60;
   user: IUser | undefined;
+  loggedUser: any | undefined;
 
   @Output() eventEmitter:EventEmitter<any> = new EventEmitter();
 
@@ -29,6 +29,7 @@ export class UserService {
     console.log(user);
     return this.http.post<UserResponses>('http://localhost:8000/api/users' , user).pipe(
 			map(resp => {
+        this.loggedUser = resp.user;
 				return resp.user;
 			}),
       catchError((resp: HttpErrorResponse) =>
@@ -63,6 +64,7 @@ export class UserService {
       tap(
         (res) => {
           if(res){
+            this.loggedUser = res;
             console.log(res);
             /* this.saveToken(res.dataUser.token); */
             this.router.navigate(["/products"]);
@@ -131,7 +133,12 @@ export class UserService {
 		);
   } */
 
+  getLoggedUser(){
+    return this.loggedUser;
+  }
+
   logout(): void {
+    this.loggedUser = undefined;
     this.token = '';
     localStorage.removeItem('token');
   }
