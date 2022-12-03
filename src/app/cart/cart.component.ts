@@ -20,14 +20,11 @@ export class CartComponent implements OnInit {
   ngOnInit(): void {
     if(this.storageService.existCart()) {
       this.addedProducts = this.storageService.getCart();
-      this.productosService.productos = this.storageService.getCart();
+      /* this.productosService.productos = this.storageService.getCart(); */
     }
     this.productosService.disparador.subscribe(data => {
-      console.log(data);
       this.productosService.addProduct(data);
       this.addedProducts.push(data);
-      console.log(this.addedProducts);
-      /* this.total += data.price; */
       this.calcularTotal();
     });
     this.badgeNumber = this.addedProducts.length;
@@ -44,12 +41,8 @@ export class CartComponent implements OnInit {
           this.addedProducts.splice(i,1);
           this.productosService.deleteProduct(product.id as number);
           this.badgeNumber = this.addedProducts.length;
-          /* this.productosService.setNumbadge(this.addedProducts.length); */
-          this.productosService.setNumbadge(this.storageService.getCart().length);
-          /* this.storageService.clear(); */
+          /* this.productosService.setNumbadge(this.storageService.getCart().length); */
           this.storageService.setCart(this.productosService.productos);
-          console.log(this.productosService.productos.length);
-          console.log(this.storageService.getCart().length);
           break;
         }
     }

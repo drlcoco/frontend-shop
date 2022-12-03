@@ -15,14 +15,6 @@ export class AppComponent implements OnInit{
   /* constructor(private authService: AuthService){} */
   constructor(private productosService:ProductsService) { }
   ngOnInit(): void {
-    this.badgeNum = this.productosService.printBadge();
-    /* localStorage.clear(); */
   }
-
-  /* ngOnInit(): void {
-    this.authService.getUser().subscribe(next(data: Array) => {
-      this.usuarios = data;
-    });
-  } */
 }
 

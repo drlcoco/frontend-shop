@@ -4,18 +4,10 @@
 }
 
 .navbar{
-  /* z-index: 999; */
   background: rgba(5, 5, 5, 0.855);
 }
 
 .filter{
-  margin-top: 60px;
+  margin-top: 69px;
   padding-left: 287px;
 }
-
-/* img{
-  height: 4vh;
-}
-.card-columns{
-  overflow: hidden;
-} */

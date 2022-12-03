@@ -80,10 +80,6 @@ export class ProductsService {
     )
   }
 
-  setNumbadge(num:number){
-    this.numBadge = num;
-  }
-
   addProduct(product:IProduct){
     this.productos.push(product);
     console.log(this.productos.length);
@@ -101,11 +97,6 @@ export class ProductsService {
         }
     }
     console.log(this.productos.length);
-    return this.productos.length;
-  }
-
-  printBadge(){
-    /* return this.numBadge; */
     return this.productos.length;
   }
 }

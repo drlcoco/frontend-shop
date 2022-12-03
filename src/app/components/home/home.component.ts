@@ -39,9 +39,9 @@ export class HomeComponent implements OnInit {
 
   ngOnInit(): void {
     this.user = this.userService.getLoggedUser();
-    if(!this.user){
+    /* if(!this.user){
       localStorage.removeItem('cart');
-    }
+    } */
     this.productosService.getEventos().subscribe(
       resp =>{
         this.productos = resp;

@@ -97,18 +97,18 @@ export class LoginComponent implements OnInit {
             text: 'Los datos no son válidos!.',
             timer: 4000
           })
+          this.localUser = {
+            name:"",
+            surname:"",
+            phone:0,
+            address:"",
+            role:"",
+            email:"",
+            password:"",
+            image:""
+          };
         }
       )
-      this.localUser = {
-        name:"",
-        surname:"",
-        phone:0,
-        address:"",
-        role:"",
-        email:"",
-        password:"",
-        image:""
-      };
     }
   }
 

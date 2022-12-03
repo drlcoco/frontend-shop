@@ -62,7 +62,7 @@
             </ul>
           </li>
           <li class="nav-item my-0 ms-3">
-            <a class="btn  btn-outline-primary fs-6 text-light" role="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight" ><i class="d-lg-none d-xl-inline bi bi-cart "></i> Carrito <span class="" [matBadge]="updateBadge()" [matBadgeHidden]="productosAdd === 0" matBadgeColor="accent" matBadgeOverlap="false"></span></a>
+            <a class="btn  btn-outline-primary fs-6 text-light" role="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight" ><i class="d-lg-none d-xl-inline bi bi-cart "></i> Carrito <span class="" [matBadge]="updateBadge()" [matBadgeHidden]="this.addedProducts.length === 0" matBadgeColor="accent" matBadgeOverlap="false"></span></a>
           </li>
         </ul>
       </div>

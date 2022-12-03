@@ -33,6 +33,7 @@ export class NavComponent implements OnInit {
 
   AUTH_SERVER: string = 'http://localhost:8000/api';
   addedProducts:IProduct[] = [];
+  numBadge:number = 0;
   @Input() productosAdd:number = 0;
   user: SocialUser | undefined;
   iuser:IUser | undefined;
@@ -58,8 +59,10 @@ export class NavComponent implements OnInit {
     private http: HttpClient) { }
 
   ngOnInit(): void {
-    this.productosService.disparador.subscribe(data => {
-      this.productosService.setNumbadge(this.addedProducts.length);
+    this.storageService.disparador.subscribe(data => {
+      console.log(data);
+      this.numBadge = data;
+
     });
     this.authService.authState.subscribe((user) => {
       this.user = user;
@@ -72,8 +75,9 @@ export class NavComponent implements OnInit {
   }
 
   updateBadge(): number{
-    this.productosAdd = this.storageService.getCart().length;
-    return this.productosAdd;
+    this.addedProducts = this.storageService.getCart();
+    this.numBadge = this.addedProducts.length;
+    return this.numBadge;
   }
 
   signOut(): void {

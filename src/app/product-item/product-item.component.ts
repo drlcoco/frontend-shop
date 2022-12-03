@@ -51,7 +51,6 @@ export class ProductItemComponent implements OnInit {
   }
 
   addProduct(){
-    this.addedProducts.push(this.inputProducto);
     this.productosService.disparador.emit(this.inputProducto);
     this.storageService.setCart(this.productosService.productos);
   }
