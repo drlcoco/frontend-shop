@@ -2,13 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { Form } from '@angular/forms';
 import { IUser } from '../interfaces/i-user';
 import { SocialAuthService, SocialUser } from "@abacritt/angularx-social-login";
-import { FacebookLoginProvider } from "@abacritt/angularx-social-login";
 import { GoogleLoginProvider } from "@abacritt/angularx-social-login";
 import { Router } from '@angular/router';
 import { UserService } from '../services/user.service';
 import { JwtInterface } from '../interfaces/jwt-interface';
-import Swal from "sweetalert2";
-
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-login',
@@ -21,8 +19,11 @@ export class LoginComponent implements OnInit {
   loggedIn: boolean | undefined;
   pageTitle:string = "Regístrate";
   private token: string = '';
+  private expires: string = '';
+  private id: string = '';
+  private user: string = '';
 
-  userToShow: IUser ={
+  userToShow: IUser | undefined ={
     name:"",
     surname:"",
     phone:0,
@@ -48,23 +49,13 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {
     this.authService.authState.subscribe((user) => {
       this.socialUser = user;
-      console.log(this.socialUser);
-
       this.loggedIn = (user != null);
       this.redirect();
     });
   }
 
-  /* onSubmit(form: Form){
-    console.log(this.localUser);
-  } */
-
   signInWithGoogle(): void {
     this.authService.signIn(GoogleLoginProvider.PROVIDER_ID);
-  }
-
-  signInWithFB(): void {
-    this.authService.signIn(FacebookLoginProvider.PROVIDER_ID);
   }
 
   signOut(): void {
@@ -84,11 +75,17 @@ export class LoginComponent implements OnInit {
       /* this.userToShow = Object.assign({}, this.localUser); */
       this.userService.login(this.localUser).subscribe(
         (res)=>{
-          console.log(res);
-          /* this.localUser = res.dataUser; */
-          this.token = res.token;
-          this.saveToken(this.token);
-          this.userService.eventEmitter.emit(res);
+          this.userService.loggedUser = res.user;
+          this.token = res['access_token'];
+          this.expires = res.expires_in;
+          this.localUser = res.user
+          this.user = JSON.stringify(res.user);
+          this.saveToken(this.token, this.expires, this.user);
+          this.userService.eventEmitter.emit(this.localUser);
+          setTimeout(() => {
+            this.userService.logout();
+            this.userService.eventEmitter.emit(this.userToShow = undefined);
+          }, (6000 * 60));
         },
         (error)=> {
           Swal.fire({
@@ -97,7 +94,7 @@ export class LoginComponent implements OnInit {
             text: 'Los datos no son válidos!.',
             timer: 4000
           })
-          this.localUser = {
+          /* this.localUser = {
             name:"",
             surname:"",
             phone:0,
@@ -106,15 +103,19 @@ export class LoginComponent implements OnInit {
             email:"",
             password:"",
             image:""
-          };
+          }; */
         }
       )
     }
   }
 
-  private saveToken(token:string): void{
-    localStorage.setItem('token', token);
+  private saveToken(token:string, expires:string, auth:string) {
+    localStorage.setItem('access_token', token);
+    localStorage.setItem('expires_in', expires);
+    localStorage.setItem('auth', auth);
     this.token = token;
+    this.expires = expires;
+    this.user = auth;
   }
 
 }

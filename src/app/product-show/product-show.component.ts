@@ -17,12 +17,10 @@ export class ProductShowComponent implements OnInit {
   constructor(private productosService : ProductsService) {}
 
   ngOnInit(): void {
-    this.spinner = true;
     this.productosService.getEventos().subscribe(
       resp =>{
         console.log(resp);
         this.productos = resp;
-        this.spinner = false;
       },
       error =>{console.log(error);
       }

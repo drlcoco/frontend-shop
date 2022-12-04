@@ -72,14 +72,28 @@ export class NavComponent implements OnInit {
       this.loggedIn = (user != null);
     });
     this.userService.eventEmitter.subscribe(data => {
+      console.log(data);
+
       this.authUser = data;
       this.loggedIn = (this.authUser != null);
     });
+    if(this.existAuth()){
+      console.log("Recuperando el usuario autorizado del localstorage");
+      console.log(this.getAuth());
+      this.authUser = this.getAuth();
+    }
   }
 
   updateBadge(): number{
     this.addedProducts = this.storageService.getCart();
     return this.addedProducts.length;
+  }
+
+  setAuthName(data: any){
+    this.authUser = data;
+    console.log(this.authUser);
+
+    return this.authUser.image;
   }
 
   signOut(): void {
@@ -88,5 +102,14 @@ export class NavComponent implements OnInit {
     }else{
       this.authService.signOut();
     }
+  }
+
+  private getAuth(): IUser{
+    this.localUser = JSON.parse(localStorage.getItem('auth') || '');
+    return this.localUser;
+  }
+
+  existAuth(): boolean {
+    return localStorage.getItem('auth') != null;
   }
 }

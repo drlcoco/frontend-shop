@@ -20,6 +20,7 @@ export class UserService {
   url:string = "https://127.0.0.1:8000/api/users";
   user: IUser | undefined;
   loggedUser: any | undefined;
+  body: any | null;
 
   @Output() eventEmitter:EventEmitter<any> = new EventEmitter();
 
@@ -140,7 +141,9 @@ export class UserService {
   logout(): void {
     this.loggedUser = undefined;
     this.token = '';
-    localStorage.removeItem('token');
+    localStorage.removeItem('access_token');
+    localStorage.removeItem('expires_in');
+    localStorage.removeItem('id');
   }
 
   private saveToken(token:string): void{

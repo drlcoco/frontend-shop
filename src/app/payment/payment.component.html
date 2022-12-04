@@ -5,7 +5,7 @@
         <h1 class="title fw-b fs-1">Tu lista de productos</h1>
         <table class="table table-light table-striped mt-5" *ngIf="productosAPagar && productosAPagar.length; else elseBlock">
           <thead>
-            <tr class="fw-b fs-4">
+            <tr class="fw-b fs-5">
               <th scope="col" class="py-4">Imagen</th>
               <th scope="col" class="py-4">Producto</th>
               <th scope="col" class="py-4">Precio</th>
@@ -13,7 +13,7 @@
             </tr>
           </thead>
           <tbody>
-            <tr *ngFor="let producto of productosAPagar;" class="fs-5">
+            <tr *ngFor="let producto of productosAPagar;" >
               <td class="justify-content center align-self-center"><img src="{{producto.image}}" width="50" height="50"></td>
               <td class="pt-4">{{producto.title}}</td>
               <td class="pt-4">{{producto.price}}</td>
@@ -21,14 +21,21 @@
             </tr>
           </tbody>
         </table>
-        <div class="text-center mt-5" *ngIf="calcularTotal() > 0">
-          <div class="mb-5">
+        <div class="text-center mt-3" *ngIf="calcularTotal() > 0">
+          <div class="mb-3">
             <svg xmlns="http://www.w3.org/2000/svg" width="76" height="76" fill="currentColor" class="bi bi-bag-heart" viewBox="0 0 16 16">
               <path fill-rule="evenodd" d="M10.5 3.5a2.5 2.5 0 0 0-5 0V4h5v-.5Zm1 0V4H15v10a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V4h3.5v-.5a3.5 3.5 0 1 1 7 0ZM14 14V5H2v9a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1ZM8 7.993c1.664-1.711 5.825 1.283 0 5.132-5.825-3.85-1.664-6.843 0-5.132Z"/>
             </svg>
           </div>
           <div class="d-grid gap-2 col-6 mx-auto">
+            <h1>Total {{calcularTotal() | currency}}</h1>
+
+          </div>
+          <!-- <div class="d-grid gap-2 col-6 mx-auto">
             <a class="btn  btn-primary btn-lg mb-5" role="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"><i class="bi bi-currency-exchange me-3"></i>Pagar {{calcularTotal()}}€<span class="badge rounded-pill bg-danger"></span></a>
+          </div> -->
+          <div class="d-grid gap-2 col-6 mx-auto">
+            <ngx-paypal [config]="payPalConfig"></ngx-paypal>
           </div>
         </div>
       </div>

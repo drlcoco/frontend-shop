@@ -54,9 +54,6 @@ export class ProductoUpdateComponent implements OnInit {
   constructor(private productosService: ProductsService, private routeId: ActivatedRoute, private router: Router) { }
 
   updateProduct() {
-    /* console.log(this.producto);
-    this.productosService.deleteEvent(this.producto.id as number);
-    console.log(this.producto); */
     this.producto.id = this.id;
     this.producto.price = Number(this.producto.price);
     this.productosService.updateEvento(this.producto).subscribe(
