@@ -43,15 +43,15 @@ export class ProductItemComponent implements OnInit {
 
   ngOnInit(): void {
     if(this.storageService.existCart()) {
-      this.addedProducts = this.storageService.getCart();
+      this.productosService.productos = this.storageService.getCart();
     }
   }
 
   addProduct(){
-    this.productosService.disparador.emit(this.inputProducto);
+    this.storageService.disparador.emit(this.inputProducto);
     /* this.productosService.addProduct(this.inputProducto);
     this.addedProducts.push(this.inputProducto); */
-    this.storageService.setCart(this.productosService.productos);
+    /* this.storageService.setCart(this.productosService.productos); */
   }
 
   deleteProduct(){

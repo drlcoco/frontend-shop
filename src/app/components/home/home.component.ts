@@ -2,6 +2,7 @@ import { animate, state, style, transition, trigger } from '@angular/animations'
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { IUser } from 'src/app/interfaces/i-user';
+import { StorageService } from 'src/app/services/storage.service';
 import { IProduct } from '../../interfaces/i-product';
 import { ProductsService } from '../../services/products.service';
 import { UserService } from '../../services/user.service';
@@ -45,35 +46,18 @@ export class HomeComponent implements OnInit {
 
   constructor(
     private route:ActivatedRoute,
+    private storageService: StorageService,
     private productosService:ProductsService,
     private userService: UserService) { }
 
   ngOnInit(): void {
-    /* this.user = this.userService.getLoggedUser();
-    if(!this.user && this.existId()){
-      this.idn = this.getId();
-      console.log(this.idn);
-
-      this.user = this.userService.getUser(this.idn).subscribe(
-        (res)=> {
-          this.userService.loggedUser = this.user;
-          this.userService.eventEmitter.emit(this.user);
-          setTimeout(() => {
-            this.userService.logout();
-            this.userService.eventEmitter.emit(this.user = undefined);
-          }, (6000 * 60));
-        },
-        (error)=> {
-          console.log(error);
-        }
-      );
-    } */
     this.productosService.getEventos().subscribe(
       resp =>{
         this.productos = resp;
         console.log('...Cargando '+resp.length);
       }
-    )
+    );
+    this.storageService.clear();
   }
 
   private getId(): number{

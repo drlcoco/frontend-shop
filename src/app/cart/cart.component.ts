@@ -28,33 +28,27 @@ export class CartComponent implements OnInit {
   ngOnInit(): void {
     if(this.storageService.existCart()) {
       this.addedProducts = this.storageService.getCart();
-      this.productosService.productos = this.addedProducts;
+      this.productosService.productos = this.storageService.getCart();
     }
-    this.productosService.disparador.subscribe(data => {
+    this.storageService.disparador.subscribe(data => {
       this.productosService.addProduct(data);
+      this.storageService.setCart(this.productosService.productos);
       this.addedProducts = this.productosService.productos;
       this.calcularTotal();
     });
-    this.user = this.userService.getLoggedUser();
+    this.user = this.userService.getAuth();
     this.badgeNumber = this.addedProducts.length;
   }
 
   borrarItem(product:IProduct){
     for(let i = 0; i < this.addedProducts.length; i++)
     {
-        /* if(product.id === this.addedProducts[i].id){
-          this.addedProducts.splice(i,1);
-          this.productosService.deleteProduct(product.id as number);
-          this.addedProducts = this.productosService.productos;
-          this.badgeNumber = this.addedProducts.length;
-          this.storageService.setCart(this.productosService.productos);
-          break;
-        } */
         if(product.id === this.addedProducts[i].id){
-          this.addedProducts.splice(i,1);
+          /* this.addedProducts.splice(i,1); */
+          this.productosService.deleteProduct(product.id as number);
           this.badgeNumber = this.addedProducts.length;
-          this.productosService.productos.length;
           this.storageService.setCart(this.productosService.productos);
+          this.addedProducts = this.productosService.productos;
           break;
         }
     }
@@ -71,10 +65,11 @@ export class CartComponent implements OnInit {
   }
 
   getUser(){
-    this.user = this.userService.getLoggedUser();
-    if(this.user){
+    if(this.userService.existAuth()){
+      this.user = this.userService.getAuth();
       this.router.navigate(['/payment']);
     }else{
+      this.user = undefined;
       this.router.navigate(['/login']);
     }
   }

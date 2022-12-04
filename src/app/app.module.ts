@@ -35,6 +35,7 @@ import { CardhomeComponent } from './components/cardhome/cardhome.component';
 import { SpinnerComponent } from './components/spinner/spinner.component';
 import { SwalComponent } from './components/swal/swal.component';
 import { AdminGuard } from './guards/admin.guard';
+import { UserGuard } from './guards/user-guard';
 
 const APP_ROUTES: Route[] = [
   { path: 'home', component: HomeComponent },
@@ -47,11 +48,11 @@ const APP_ROUTES: Route[] = [
   { path: 'cart', component: CartComponent },
   { path: 'rent', component: ProductRentComponent },
   { path: 'logout/:sure', component: LoginComponent },
-  { path: 'products/update/:id', component: ProductoUpdateComponent },
+  { path: 'products/update/:id', component: ProductoUpdateComponent, canActivate: [AdminGuard] },
   { path: 'add', component: ProductoAddComponent, canActivate: [AdminGuard] },
-  { path: 'payment', component: PaymentComponent },
+  { path: 'payment', component: PaymentComponent, canActivate: [UserGuard] },
   { path: 'spinner', component: SpinnerComponent },
-  { path:'/', redirectTo:'/home', pathMatch:'full'},
+  /* { path:'/', redirectTo:'/home', pathMatch:'full'}, */
   { path:'**', redirectTo:'/home', pathMatch:'full'}
 ]
 

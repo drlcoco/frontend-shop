@@ -46,23 +46,13 @@ export class ProductDetailsComponent implements OnInit {
   }
 
   addProduct(){
-    this.productsService.disparador.emit(this.productoDetails);
-    this.storageService.setCart(this.productsService.productos);
+    this.storageService.disparador.emit(this.productoDetails);
+    /* this.storageService.setCart(this.productsService.productos); */
   }
 
   deleteProduct(){
     console.log(this.route.snapshot.params["id"]);
     this.productsService.deleteEvent(this.route.snapshot.params["id"]);
-  }
-
-  updateProduct(){
-
-    /* Swal.fire({
-      title: 'Producto Actualizado',
-      icon: 'success',
-      text: 'Se ha actualizado el producto con éxito!.',
-      timer: 4000
-    }) */
   }
 
   offer(price: number){

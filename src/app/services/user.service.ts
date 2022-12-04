@@ -134,37 +134,31 @@ export class UserService {
   } */
 
   getLoggedUser(){
+    console.log(this.loggedUser);
+
     return this.loggedUser;
   }
 
   logout(): void {
-    console.log("Entrando en userService.logout(), lito para borrar");
     this.loggedUser = undefined;
     localStorage.removeItem('access_token');
     localStorage.removeItem('expires_in');
     localStorage.removeItem('auth');
     this.user = undefined
     this.eventEmitter.emit(this.user);
-    /* setTimeout(() => {
-      this.loggedUser = undefined;
-      localStorage.removeItem('access_token');
-      localStorage.removeItem('expires_in');
-      localStorage.removeItem('auth');
-      this.user = undefined
-      this.eventEmitter.emit(this.user);
-    }, (10000)); */
+    this.router.navigate(["/products"]);
   }
 
-  private saveToken(token:string): void{
-    localStorage.setItem('token', token);
-    this.token = token;
+  getAuth(): IUser{
+    const user = JSON.parse(localStorage.getItem('auth') || '');
+    return user;
   }
 
-  private getToken(): string{
-    if(!this.token){
-      this.token == localStorage.getItem('token');
+  existAuth(): boolean {
+    if(localStorage.getItem('auth') !== null && localStorage.getItem('auth') !== '' && localStorage.getItem('auth') !== undefined){
+      return true;
     }
-    return this.token;
+    return false;
   }
 
 }

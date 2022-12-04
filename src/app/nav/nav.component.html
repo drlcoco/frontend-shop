@@ -22,7 +22,7 @@
           <li class="nav-item me-3" *ngIf="this.authUser && this.authUser.role === 'admin'">
             <a class="nav-link fs-6 text-light" [routerLink]="['add']" [routerLinkActive]="['active']"><i class="bi bi-arrow-up-square"></i> Añadir</a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item" *ngIf="user || authUser">
             <a class="nav-link fs-6 text-light" [routerLink]="['payment']" [routerLinkActive]="['active']"><i class="bi bi-currency-exchange"></i> Pagar</a>
           </li>
         </ul>
@@ -30,9 +30,6 @@
           <li class="nav-item mx-2" *ngIf="!user && !authUser">
             <a class="nav-link fs-6 text-light " [routerLink]="['login']" [routerLinkActive]="['active']" ><i class="bi bi-lock-fill"></i> Login</a>
           </li>
-          <!-- <li class="nav-item" *ngIf="!user">
-            <a class="nav-link fs-6 text-light " [routerLink]="['register']" [routerLinkActive]="['active']"><i class="bi bi-unlock-fill"></i> Registro</a>
-          </li> -->
           <li class="nav-item dropdown my-0" *ngIf="user">
             <img src="{{ user.photoUrl }}" class="rounded-3 d-inline my-auto" width="30">
             <a class="nav-link fs-6 text-light dropdown-toggle d-inline mx-2" data-bs-toggle="dropdown" href="javascript:void(0)">{{ user.name }}</a>

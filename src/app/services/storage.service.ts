@@ -19,11 +19,6 @@ export class StorageService {
 
   setCart(cart: IProduct[]): void{
     localStorage.setItem('cart', JSON.stringify(cart));
-    this.badgeNumber = JSON.parse(localStorage.getItem('cart') || "[]").length;
-    this.disparador.emit(this.badgeNumber);
-    console.log(this.badgeNumber);
-
-    this.disparador.emit(this.badgeNumber);
   }
 
   getCart(): IProduct[] {
@@ -34,7 +29,7 @@ export class StorageService {
     localStorage.removeItem('cart');
   }
 
-  deleteProduct(id:number){
+  /* deleteProduct(id:number){
     for(let i = 0; i < this.productos.length; i++)
     {
         if(id == this.productos[i].id){
@@ -46,5 +41,5 @@ export class StorageService {
     }
     console.log(this.productos.length);
     return this.productos.length;
-  }
+  } */
 }

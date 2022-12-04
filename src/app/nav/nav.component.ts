@@ -61,7 +61,7 @@ export class NavComponent implements OnInit {
   ngOnInit(): void {
     if(this.storageService.existCart()) {
       this.addedProducts = this.storageService.getCart();
-      this.productosService.productos = this.addedProducts;
+      this.productosService.productos = this.storageService.getCart();
     }
     this.storageService.disparador.subscribe(data => {
       this.numBadge = data;
@@ -70,6 +70,7 @@ export class NavComponent implements OnInit {
     this.authService.authState.subscribe((user) => {
       this.user = user;
       this.loggedIn = (user != null);
+      this.userService.loggedUser = user;
     });
     if(this.existAuth()){
       this.authUser = this.getAuth();
@@ -79,13 +80,14 @@ export class NavComponent implements OnInit {
     this.userService.eventEmitter.subscribe(data => {
       this.authUser = data;
       this.loggedIn = (this.authUser != null);
+      this.userService.loggedUser = data;
     });
   }
 
   updateBadge(): number{
     this.productosService.productos = this.storageService.getCart();
     this.addedProducts = this.storageService.getCart();
-    return this.addedProducts.length;
+    return this.storageService.getCart().length;
   }
 
   signOut(): void {

@@ -17,7 +17,7 @@ export class ProductsService {
   private productoURL = 'http://localhost:8000/api/products';
   headers: HttpHeaders | { [header: string]: string | string[]; } | undefined;
 
-  @Output() disparador:EventEmitter<any> = new EventEmitter();
+  /* @Output() disparador:EventEmitter<any> = new EventEmitter(); */
 
   constructor(private http: HttpClient) { }
 
@@ -113,7 +113,7 @@ export class ProductsService {
 
   addProduct(product:IProduct){
     this.productos.push(product);
-    this.numBadge = this.productos.length;
+    /* this.numBadge = this.productos.length; */
   }
 
   deleteProduct(id:number){
