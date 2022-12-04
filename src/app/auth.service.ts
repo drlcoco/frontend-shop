@@ -17,54 +17,6 @@ export class AuthService {
 
   constructor(private httpClient: HttpClient) { }
 
-  /* register(user: IUser): Observable<JwtInterface>{
-    return this.httpClient.post<JwtInterface>(`${this.AUTH_SERVER}/users`, user).pipe(
-      tap(
-        (res: JwtInterface) => {
-          if(res){
-            this.saveToken(res.dataUser.token, res.dataUser.expire);
-          }
-        }
-      )
-    );
-  } */
-
-  /* login(user: IUser): Observable<JwtInterface>{
-    return this.httpClient.post<JwtInterface>(`${this.AUTH_SERVER}/login`, user).pipe(
-      tap(
-        (res: JwtInterface) => {
-          if(res){
-            console.log(res);
-
-            this.saveToken(res.dataUser.token, res.dataUser.expire);
-          }else{
-            console.log("No estoy entrando en res");
-
-          }
-        }
-      )
-    );
-
-  }*/
-
-  /* logout(): void {
-    this.token = '';
-    localStorage.removeItem('token');
-    localStorage.removeItem('expires_in');
-  }
-
-  private saveToken(token:string, expires_in:string): void{
-    localStorage.setItem('token', token);
-    localStorage.setItem('expires_in', expires_in);
-    this.token = token;
-  }
-
-  private getToken(): string{
-    if(!this.token){
-      this.token == localStorage.getItem('token');
-    }
-    return this.token;
-  } */
 }
 
 

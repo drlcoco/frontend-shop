@@ -46,6 +46,7 @@ const APP_ROUTES: Route[] = [
   { path: 'contact', component: ContactComponent },
   { path: 'cart', component: CartComponent },
   { path: 'rent', component: ProductRentComponent },
+  { path: 'logout/:sure', component: LoginComponent },
   { path: 'products/update/:id', component: ProductoUpdateComponent },
   { path: 'add', component: ProductoAddComponent, canActivate: [AdminGuard] },
   { path: 'payment', component: PaymentComponent },

@@ -49,7 +49,7 @@ export class HomeComponent implements OnInit {
     private userService: UserService) { }
 
   ngOnInit(): void {
-    this.user = this.userService.getLoggedUser();
+    /* this.user = this.userService.getLoggedUser();
     if(!this.user && this.existId()){
       this.idn = this.getId();
       console.log(this.idn);
@@ -67,7 +67,7 @@ export class HomeComponent implements OnInit {
           console.log(error);
         }
       );
-    }
+    } */
     this.productosService.getEventos().subscribe(
       resp =>{
         this.productos = resp;

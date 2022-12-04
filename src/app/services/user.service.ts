@@ -20,9 +20,8 @@ export class UserService {
   url:string = "https://127.0.0.1:8000/api/users";
   user: IUser | undefined;
   loggedUser: any | undefined;
-  body: any | null;
 
-  @Output() eventEmitter:EventEmitter<any> = new EventEmitter();
+  @Output() eventEmitter:EventEmitter<IUser> = new EventEmitter();
 
   constructor(private http: HttpClient, private route: ActivatedRoute, private router: Router) { }
 
@@ -139,11 +138,21 @@ export class UserService {
   }
 
   logout(): void {
+    console.log("Entrando en userService.logout(), lito para borrar");
     this.loggedUser = undefined;
-    this.token = '';
     localStorage.removeItem('access_token');
     localStorage.removeItem('expires_in');
-    localStorage.removeItem('id');
+    localStorage.removeItem('auth');
+    this.user = undefined
+    this.eventEmitter.emit(this.user);
+    /* setTimeout(() => {
+      this.loggedUser = undefined;
+      localStorage.removeItem('access_token');
+      localStorage.removeItem('expires_in');
+      localStorage.removeItem('auth');
+      this.user = undefined
+      this.eventEmitter.emit(this.user);
+    }, (10000)); */
   }
 
   private saveToken(token:string): void{

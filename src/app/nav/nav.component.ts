@@ -71,37 +71,44 @@ export class NavComponent implements OnInit {
       this.user = user;
       this.loggedIn = (user != null);
     });
+    if(this.existAuth()){
+      this.authUser = this.getAuth();
+    }else{
+      this.authUser = undefined;
+    }
     this.userService.eventEmitter.subscribe(data => {
-      console.log(data);
-
       this.authUser = data;
       this.loggedIn = (this.authUser != null);
     });
-    if(this.existAuth()){
-      console.log("Recuperando el usuario autorizado del localstorage");
-      console.log(this.getAuth());
-      this.authUser = this.getAuth();
-    }
   }
 
   updateBadge(): number{
+    this.productosService.productos = this.storageService.getCart();
     this.addedProducts = this.storageService.getCart();
     return this.addedProducts.length;
   }
 
-  setAuthName(data: any){
-    this.authUser = data;
-    console.log(this.authUser);
-
-    return this.authUser.image;
+  signOut(): void {
+    this.authService.signOut();
   }
 
-  signOut(): void {
-    if(this.authUser){
-      this.userService.logout();
-    }else{
-      this.authService.signOut();
-    }
+  logout(){
+    this.iuser = undefined;
+    this.authUser = undefined;
+    this.loggedIn = false;
+    this.localIn = false;
+    this.localUser ={
+      name:"",
+      surname:"",
+      phone:0,
+      address:"",
+      role:"user",
+      email:"",
+      password:"",
+      image:""
+    };
+    this.userService.loggedUser = null;
+    this.userService.logout();
   }
 
   private getAuth(): IUser{
@@ -110,6 +117,9 @@ export class NavComponent implements OnInit {
   }
 
   existAuth(): boolean {
-    return localStorage.getItem('auth') != null;
+    if(localStorage.getItem('auth') !== null && localStorage.getItem('auth') !== '' && localStorage.getItem('auth') !== undefined){
+      return true;
+    }
+    return false;
   }
 }
