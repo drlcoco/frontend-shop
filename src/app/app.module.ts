@@ -29,10 +29,10 @@ import { ProductoAddComponent } from './producto-add/producto-add.component';
 import { ProductoUpdateComponent } from './producto-update/producto-update.component';
 import { ProductShowComponent } from './product-show/product-show.component';
 import { EventFilterPipe } from './pipes/event-filter.pipe';
-import { ProdcutUpdateComponent } from './prodcut-update/prodcut-update.component';
 import { PaymentComponent } from './payment/payment.component';
 import { InputErrorsExample } from './components/login-material/login-material.component';
 import { CardhomeComponent } from './components/cardhome/cardhome.component';
+import { SpinnerComponent } from './components/spinner/spinner.component';
 import { SwalComponent } from './components/swal/swal.component';
 import { AdminGuard } from './guards/admin.guard';
 
@@ -49,6 +49,7 @@ const APP_ROUTES: Route[] = [
   { path: 'products/update/:id', component: ProductoUpdateComponent },
   { path: 'add', component: ProductoAddComponent, canActivate: [AdminGuard] },
   { path: 'payment', component: PaymentComponent },
+  { path: 'spinner', component: SpinnerComponent },
   { path:'/', redirectTo:'/home', pathMatch:'full'},
   { path:'**', redirectTo:'/home', pathMatch:'full'}
 ]
@@ -72,11 +73,10 @@ const APP_ROUTES: Route[] = [
     ProductoUpdateComponent,
     ProductShowComponent,
     EventFilterPipe,
-    ProdcutUpdateComponent,
     PaymentComponent,
     InputErrorsExample,
     CardhomeComponent,
-    SwalComponent
+    SpinnerComponent
   ],
   imports: [
     BrowserModule,

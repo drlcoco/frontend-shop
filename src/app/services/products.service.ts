@@ -4,6 +4,7 @@ import { HttpClient, HttpErrorResponse, HttpHeaders } from '@angular/common/http
 import { catchError, map, Observable, retry, throwError } from 'rxjs';
 import { Responses } from '../interfaces/responses';
 import { StorageService } from './storage.service';
+import Swal from 'sweetalert2';
 
 @Injectable({
   providedIn: 'root'
@@ -12,6 +13,7 @@ export class ProductsService {
 
   productos : IProduct[] = [];
   numBadge:number = 0;
+  badgeNumber: number = 0;
   private productoURL = 'http://localhost:8000/api/products';
   headers: HttpHeaders | { [header: string]: string | string[]; } | undefined;
 
@@ -73,16 +75,44 @@ export class ProductsService {
 		);
   }
 
+  updateEvento(producto: IProduct): Observable<IProduct> {
+    return this.http.put<Responses>(`http://localhost:8000/api/products/${producto.id}` , producto).pipe(
+			map(resp => {
+        console.log(resp);
+
+				return resp.producto;
+			}),
+      catchError((resp: HttpErrorResponse) =>
+        throwError(
+          `Error insertando producto: Código de servidor: ${resp.status}. Mensaje: ${resp.message}`
+        )
+      )
+		);
+  }
+
   deleteEvent(id:number){
     return this.http.delete<Responses>(this.productoURL + "/" + id).subscribe(
-      (result)=>console.log("Se ha ELIMINADO correctamente el producto: " + id),
-      (error)=>console.log("Error al borrar el producto!!! "+ id)
+      (result)=> {
+        Swal.fire({
+          title: 'Producto Eliminado',
+          icon: 'success',
+          text: 'Se ha eliminado el producto con éxito!.',
+          timer: 4000
+        })
+      },
+      (error)=> {
+        Swal.fire({
+          title: 'Error Eliminando el producto!',
+          icon: 'error',
+          text: 'No se ha eliminado el producto con éxito!.',
+          timer: 4000
+        })
+      }
     )
   }
 
   addProduct(product:IProduct){
     this.productos.push(product);
-    console.log(this.productos.length);
     this.numBadge = this.productos.length;
   }
 
@@ -91,12 +121,11 @@ export class ProductsService {
     {
         if(id == this.productos[i].id){
           this.productos.splice(i,1);
-          console.log(this.productos);
           this.numBadge = this.productos.length;
           break;
         }
     }
-    console.log(this.productos.length);
     return this.productos.length;
   }
+
 }

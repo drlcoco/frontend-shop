@@ -9,6 +9,7 @@ export class StorageService {
 
   constructor() { }
 
+  productos : IProduct[] = [];
   badgeNumber: number = 0;
   @Output() disparador:EventEmitter<any> = new EventEmitter();
 
@@ -20,6 +21,9 @@ export class StorageService {
     localStorage.setItem('cart', JSON.stringify(cart));
     this.badgeNumber = JSON.parse(localStorage.getItem('cart') || "[]").length;
     this.disparador.emit(this.badgeNumber);
+    console.log(this.badgeNumber);
+
+    this.disparador.emit(this.badgeNumber);
   }
 
   getCart(): IProduct[] {
@@ -28,5 +32,19 @@ export class StorageService {
 
   clear(): void {
     localStorage.removeItem('cart');
+  }
+
+  deleteProduct(id:number){
+    for(let i = 0; i < this.productos.length; i++)
+    {
+        if(id == this.productos[i].id){
+          this.productos.splice(i,1);
+          console.log(this.productos);
+          this.badgeNumber = this.productos.length;
+          break;
+        }
+    }
+    console.log(this.productos.length);
+    return this.productos.length;
   }
 }

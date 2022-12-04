@@ -24,8 +24,9 @@ export class ProductDetailsComponent implements OnInit {
     userId: 1,
     categoryId: 1
   }
+  id: number = this.route.snapshot.params["id"];
   authUser: any | undefined;
-  @Output() addedProducts:IProduct[] = [];
+  addedProducts:IProduct[] = [];
 
   constructor(
     private productsService: ProductsService,
@@ -52,21 +53,16 @@ export class ProductDetailsComponent implements OnInit {
   deleteProduct(){
     console.log(this.route.snapshot.params["id"]);
     this.productsService.deleteEvent(this.route.snapshot.params["id"]);
-    Swal.fire({
-      title: 'Producto Eliminado',
-      icon: 'success',
-      text: 'Se ha eliminado el producto con éxito!.',
-      timer: 4000
-    })
   }
 
   updateProduct(){
-    Swal.fire({
+
+    /* Swal.fire({
       title: 'Producto Actualizado',
       icon: 'success',
       text: 'Se ha actualizado el producto con éxito!.',
       timer: 4000
-    })
+    }) */
   }
 
   offer(price: number){

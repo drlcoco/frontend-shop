@@ -31,9 +31,7 @@ export class ProductItemComponent implements OnInit {
     userId: 1,
     categoryId: 1
   };
-
-  @Output() addedProducts:IProduct[] = [];
-
+  addedProducts:IProduct[] = [];
   productosAdd:number = 0;
   imgHeight:number = 200;
 
@@ -46,12 +44,13 @@ export class ProductItemComponent implements OnInit {
   ngOnInit(): void {
     if(this.storageService.existCart()) {
       this.addedProducts = this.storageService.getCart();
-      this.productosService.productos = this.storageService.getCart();
     }
   }
 
   addProduct(){
     this.productosService.disparador.emit(this.inputProducto);
+    /* this.productosService.addProduct(this.inputProducto);
+    this.addedProducts.push(this.inputProducto); */
     this.storageService.setCart(this.productosService.productos);
   }
 

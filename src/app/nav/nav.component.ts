@@ -59,10 +59,13 @@ export class NavComponent implements OnInit {
     private http: HttpClient) { }
 
   ngOnInit(): void {
+    if(this.storageService.existCart()) {
+      this.addedProducts = this.storageService.getCart();
+      this.productosService.productos = this.addedProducts;
+    }
     this.storageService.disparador.subscribe(data => {
-      console.log(data);
       this.numBadge = data;
-
+      this.updateBadge();
     });
     this.authService.authState.subscribe((user) => {
       this.user = user;
@@ -76,8 +79,7 @@ export class NavComponent implements OnInit {
 
   updateBadge(): number{
     this.addedProducts = this.storageService.getCart();
-    this.numBadge = this.addedProducts.length;
-    return this.numBadge;
+    return this.addedProducts.length;
   }
 
   signOut(): void {

@@ -20,28 +20,31 @@ export class CartComponent implements OnInit {
   ngOnInit(): void {
     if(this.storageService.existCart()) {
       this.addedProducts = this.storageService.getCart();
-      /* this.productosService.productos = this.storageService.getCart(); */
+      this.productosService.productos = this.addedProducts;
     }
     this.productosService.disparador.subscribe(data => {
       this.productosService.addProduct(data);
-      this.addedProducts.push(data);
+      this.addedProducts = this.productosService.productos;
       this.calcularTotal();
     });
     this.badgeNumber = this.addedProducts.length;
   }
 
-  obtenerItem(){
-    this.storageService.setCart(this.addedProducts);
-  }
-
   borrarItem(product:IProduct){
     for(let i = 0; i < this.addedProducts.length; i++)
     {
-        if(product.id == this.addedProducts[i].id){
+        /* if(product.id === this.addedProducts[i].id){
           this.addedProducts.splice(i,1);
-          this.productosService.deleteProduct(product.id as number);
+          this.productosService.deleteProduct(product.id as number);/*
+          this.addedProducts = this.productosService.productos;
           this.badgeNumber = this.addedProducts.length;
-          /* this.productosService.setNumbadge(this.storageService.getCart().length); */
+          this.storageService.setCart(this.productosService.productos);
+          break;
+        } */
+        if(product.id === this.addedProducts[i].id){
+          this.addedProducts.splice(i,1);
+          this.badgeNumber = this.addedProducts.length;
+          this.productosService.productos.length;
           this.storageService.setCart(this.productosService.productos);
           break;
         }

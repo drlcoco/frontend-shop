@@ -40,7 +40,7 @@
       </ng-container>
       <ng-container *ngIf="this.authUser && this.authUser.role === 'admin'">
         <button class="btn btn-danger mt-2" type="button" [routerLink]="['/products']" (click)="deleteProduct()">Borrar Producto</button>
-        <button class="btn btn-success mt-2" type="button" [routerLink]="['/products']" (click)="updateProduct()">Editar Producto</button>
+        <button class="btn btn-success mt-2" type="button" [routerLink]="['/products/update', this.id]">Editar Producto</button>
         <button class="btn btn-primary mt-2" type="button" [routerLink]="['/products']">Volver</button>
       </ng-container>
     </div>

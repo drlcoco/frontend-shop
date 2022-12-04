@@ -10,11 +10,24 @@ import { ProductsService } from '../services/products.service';
 export class ProductShowComponent implements OnInit {
 
   productos: IProduct[] = [];
-
+  spinner: boolean = false;
   filterSearch: string = '';
   ProductsService: any;
 
   constructor(private productosService : ProductsService) {}
+
+  ngOnInit(): void {
+    this.spinner = true;
+    this.productosService.getEventos().subscribe(
+      resp =>{
+        console.log(resp);
+        this.productos = resp;
+        this.spinner = false;
+      },
+      error =>{console.log(error);
+      }
+    )
+  }
 
   ordenarStock(enlaceEvento: Event) {
     enlaceEvento.preventDefault();
@@ -32,16 +45,4 @@ export class ProductShowComponent implements OnInit {
     })
   }
 
-  ngOnInit(): void {
-    this.productosService.getEventos().subscribe(
-      resp =>{
-        console.log(resp);
-        this.productos = resp;
-        console.log('...Cargando '+this.productos);
-      },
-      error =>{console.log(error);
-      }
-    )
-  }
-  
 }

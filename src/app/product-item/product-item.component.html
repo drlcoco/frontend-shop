@@ -11,8 +11,9 @@
       <s class="text-muted"> {{ offer(inputProducto.price) | currency: "EUR"}}</s></p>
     </mat-card-content>
       <mat-card-actions class="d-flex">
-        <button mat-button class="">COMPRAR</button>
-        <button mat-button (click)="addProduct()">AÑADIR AL CARRITO</button>
+        <!-- <button mat-button class="">COMPRAR</button> -->
+        <a (click)="addProduct()" [routerLink]="['/payment']"><button mat-button class=""><i class="bi bi-bag-heart me-1 d-lg-none d-xl-inline"></i>COMPRAR</button></a>
+        <button mat-button (click)="addProduct()"><i class="bi bi-heart-fill me-1 d-lg-none d-xl-inline"></i>AÑADIR</button>
       </mat-card-actions>
   </mat-card>
 </div>

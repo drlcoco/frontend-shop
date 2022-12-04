@@ -22,7 +22,7 @@
           required>
       </div>
       <div class="form-group">
-        <label for="date">Fecha</label>
+        <label for="date">Stock</label>
         <input type="number" class="form-control" name="date" [(ngModel)]="producto.stock" (ngModelChange)="producto.stock"
           #ngDate="ngModel"
           [ngClass]="{'is-valid':ngDate.valid, 'is-invalid': !ngDate.valid}"
@@ -40,7 +40,7 @@
           (change)="changeImage(fileUpload)" />
       </div>
       <div class="text-center mt-2">
-        <img [src]="producto.image" alt="" id="preview" width="450">
+        <img [src]="producto.image" alt="" id="preview" width="200">
       </div>
       <div class="form-group mt-3 text-center mb-5">
         <input type="submit" class="btn btn-primary w-50"  value="Enviar" />
