@@ -31,6 +31,8 @@ export class CartComponent implements OnInit {
       this.productosService.productos = this.storageService.getCart();
     }
     this.storageService.disparador.subscribe(data => {
+      this.addedProducts = this.storageService.getCart();
+      this.productosService.productos = this.storageService.getCart();
       this.productosService.addProduct(data);
       this.storageService.setCart(this.productosService.productos);
       this.addedProducts = this.productosService.productos;
@@ -44,7 +46,6 @@ export class CartComponent implements OnInit {
     for(let i = 0; i < this.addedProducts.length; i++)
     {
         if(product.id === this.addedProducts[i].id){
-          /* this.addedProducts.splice(i,1); */
           this.productosService.deleteProduct(product.id as number);
           this.badgeNumber = this.addedProducts.length;
           this.storageService.setCart(this.productosService.productos);

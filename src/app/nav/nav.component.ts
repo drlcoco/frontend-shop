@@ -65,6 +65,8 @@ export class NavComponent implements OnInit {
     }
     this.storageService.disparador.subscribe(data => {
       this.numBadge = data;
+      this.productosService.productos = this.storageService.getCart();
+      this.addedProducts = this.productosService.productos;
       this.updateBadge();
     });
     this.authService.authState.subscribe((user) => {
@@ -86,7 +88,7 @@ export class NavComponent implements OnInit {
 
   updateBadge(): number{
     this.productosService.productos = this.storageService.getCart();
-    this.addedProducts = this.storageService.getCart();
+    this.addedProducts = this.productosService.productos;
     return this.storageService.getCart().length;
   }
 
