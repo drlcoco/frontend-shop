@@ -1,6 +1,6 @@
 import { SocialAuthService, SocialUser } from '@abacritt/angularx-social-login';
 import { animate, keyframes, state, style, transition, trigger } from '@angular/animations';
-import { Component, Input, OnInit, Output } from '@angular/core';
+import { Component, Input, OnInit, Output, OnDestroy } from '@angular/core';
 import { IProduct } from '../interfaces/i-product';
 import { IUser } from '../interfaces/i-user';
 import { ProductsService } from '../services/products.service';
@@ -29,11 +29,9 @@ import { HttpClient, HttpErrorResponse, HttpHeaders } from '@angular/common/http
     ])
   ]
 })
-export class NavComponent implements OnInit {
+export class NavComponent implements OnInit, OnDestroy {
 
   AUTH_SERVER: string = 'http://localhost:8000/api';
-  addedProducts:IProduct[] = [];
-  numBadge:number = 0;
   @Input() productosAdd:number = 0;
   user: SocialUser | undefined;
   iuser:IUser | undefined;
@@ -57,18 +55,23 @@ export class NavComponent implements OnInit {
     private storageService: StorageService,
     private authService: SocialAuthService,
     private http: HttpClient) { }
+  ngOnDestroy(): void {
+
+
+
+  }
 
   ngOnInit(): void {
-    if(this.storageService.existCart()) {
-      this.addedProducts = this.storageService.getCart();
+    /* if(this.storageService.existCart()) {
       this.productosService.productos = this.storageService.getCart();
-    }
-    this.storageService.disparador.subscribe(data => {
-      this.numBadge = data;
+    } */
+    /* this.storageService.disparador.subscribe(data => {
       this.productosService.productos = this.storageService.getCart();
-      this.addedProducts = this.productosService.productos;
       this.updateBadge();
-    });
+      console.log(this.productosService.productos.length);
+
+
+    }); */
     this.authService.authState.subscribe((user) => {
       this.user = user;
       this.loggedIn = (user != null);
@@ -85,10 +88,13 @@ export class NavComponent implements OnInit {
       this.userService.loggedUser = data;
     });
   }
+  ngDestroy(){
+
+  }
 
   updateBadge(): number{
-    this.productosService.productos = this.storageService.getCart();
-    this.addedProducts = this.productosService.productos;
+    /* this.productosService.productos = this.storageService.getCart();
+    this.addedProducts = this.productosService.productos; */
     return this.storageService.getCart().length;
   }
 

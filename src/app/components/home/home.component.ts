@@ -57,19 +57,7 @@ export class HomeComponent implements OnInit {
         console.log('...Cargando '+resp.length);
       }
     );
-    this.storageService.clear();
-  }
-
-  private getId(): number{
-    if(this.existId()){
-      this.id == localStorage.getItem('id');
-      this.idn = Number(this.id);
-    }
-    return this.idn;
-  }
-
-  existId(): boolean {
-    return localStorage.getItem('id') != null;
+    /* this.storageService.clear(); */
   }
 
 }

@@ -50,7 +50,7 @@
             <ul class="dropdown-menu">
               <li><a class="dropdown-item" [routerLink]="['login']" [routerLinkActive]="['active']"><i class="d-lg-none d-xl-inline bi bi-pencil "></i> Mi Cuenta</a></li>
               <li><hr class="dropdown-divider"></li>
-              <li><a class="dropdown-item" href="#"><i class="d-lg-none d-xl-inline bi bi-truck "></i> Mis Pedidos</a></li>
+              <li><a class="dropdown-item" [routerLink]="['purchases']" [routerLinkActive]="['active']"><i class="d-lg-none d-xl-inline bi bi-truck "></i> Mis Pedidos</a></li>
               <li><hr class="dropdown-divider"></li>
               <li><a class="dropdown-item" [routerLink]="['contact']" [routerLinkActive]="['active']"><i class="d-lg-none d-xl-inline bi bi-question-circle text-white" *ngIf="!localUser"></i> Contacto</a></li>
               <li><hr class="dropdown-divider"></li>
@@ -59,7 +59,7 @@
             </ul>
           </li>
           <li class="nav-item my-0 ms-3">
-            <a class="btn  btn-outline-primary fs-6 text-light" role="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight" ><i class="d-lg-none d-xl-inline bi bi-cart "></i> Carrito <span class="" [matBadge]="this.updateBadge()" [matBadgeHidden]="this.addedProducts.length === 0" matBadgeColor="accent" matBadgeOverlap="false"></span></a>
+            <a class="btn  btn-outline-primary fs-6 text-light" role="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight" ><i class="d-lg-none d-xl-inline bi bi-cart "></i> Carrito <span class="" [matBadge]="this.updateBadge()" [matBadgeHidden]="this.updateBadge() === 0" matBadgeColor="accent" matBadgeOverlap="false"></span></a>
           </li>
         </ul>
       </div>

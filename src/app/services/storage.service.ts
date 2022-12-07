@@ -1,5 +1,6 @@
 /* import { nullSafeIsEquivalent } from '@angular/compiler/src/output/output_ast'; */
 import { EventEmitter, Injectable, Output } from '@angular/core';
+import { BehaviorSubject, Observable, Subject } from 'rxjs';
 import { IProduct } from '../interfaces/i-product';
 
 @Injectable({
@@ -8,10 +9,20 @@ import { IProduct } from '../interfaces/i-product';
 export class StorageService {
 
   constructor() { }
-
+  product : IProduct = {
+    id: 0,
+    title: '',
+    description: '',
+    stock: 0,
+    price: 0,
+    image: '',
+    userId: 1,
+    categoryId: 1,
+  };
   productos : IProduct[] = [];
   badgeNumber: number = 0;
-  @Output() disparador:EventEmitter<any> = new EventEmitter();
+  disparador:EventEmitter<IProduct> = new EventEmitter();
+  /* disparador = new Subject<IProduct>(); */
 
   existCart(): boolean {
     return localStorage.getItem('cart') != null;
@@ -27,6 +38,10 @@ export class StorageService {
 
   clear(): void {
     localStorage.removeItem('cart');
+  }
+
+  sendProduct(product: IProduct) {
+    this.disparador.emit(product);
   }
 
   /* deleteProduct(id:number){

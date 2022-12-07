@@ -42,11 +42,12 @@ export class ProductDetailsComponent implements OnInit {
         p => this.productoDetails = p,
         error => console.log("Error")
       );
-    this.authUser = this.userService.getLoggedUser();
+    this.authUser = this.userService.getAuth();
   }
 
-  addProduct(){
-    this.storageService.disparador.emit(this.productoDetails);
+  addProductCart(){
+    /* this.storageService.disparador.emit(this.productoDetails); */
+    this.storageService.sendProduct(this.productoDetails);
     /* this.storageService.setCart(this.productsService.productos); */
   }
 

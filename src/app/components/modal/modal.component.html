@@ -1,0 +1,25 @@
+  <div class="modal-header">
+    <h4 class="modal-title pull-left">Modal</h4>
+    <button type="button" class="btn-close close pull-right" aria-label="Close" (click)="modalRef?.hide()">
+      <span aria-hidden="true" class="visually-hidden">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <h1 class="title fw-b fs-1">Compra realizada</h1>
+        <table class="table table-light table-striped mt-5" *ngIf="productosAPagar && productosAPagar.length">
+          <thead>
+            <tr class="fw-b fs-5">
+              <th scope="col" class="py-4">Imagen</th>
+              <th scope="col" class="py-4">Producto</th>
+              <th scope="col" class="py-4">Precio</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let producto of productosAPagar;" >
+              <td class="justify-content center align-self-center"><img src="{{producto.image}}" width="50" height="50"></td>
+              <td class="pt-4">{{producto.title}}</td>
+              <td class="pt-4">{{producto.price}}</td>
+            </tr>
+          </tbody>
+        </table>
+  </div>

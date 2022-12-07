@@ -11,6 +11,7 @@ import { SocialLoginModule, SocialAuthServiceConfig } from '@abacritt/angularx-s
 import { GoogleLoginProvider } from '@abacritt/angularx-social-login';
 import { NgxPayPalModule } from 'ngx-paypal';
 import { NgxSpinnerModule } from 'ngx-spinner';
+import { ModalModule } from 'ngx-bootstrap/modal';
 
 import { AppComponent } from './app.component';
 import { ProductListComponent } from './product-list/product-list.component';
@@ -32,6 +33,8 @@ import { EventFilterPipe } from './pipes/event-filter.pipe';
 import { PaymentComponent } from './payment/payment.component';
 import { InputErrorsExample } from './components/login-material/login-material.component';
 import { CardhomeComponent } from './components/cardhome/cardhome.component';
+import { ModalComponent } from './components/modal/modal.component';
+import { MyPurchasesComponent} from './components/my-purchases/my-purchases.component';
 import { SpinnerComponent } from './components/spinner/spinner.component';
 import { SwalComponent } from './components/swal/swal.component';
 import { AdminGuard } from './guards/admin.guard';
@@ -51,6 +54,7 @@ const APP_ROUTES: Route[] = [
   { path: 'products/update/:id', component: ProductoUpdateComponent, canActivate: [AdminGuard] },
   { path: 'add', component: ProductoAddComponent, canActivate: [AdminGuard] },
   { path: 'payment', component: PaymentComponent, canActivate: [UserGuard] },
+  { path: 'purchases', component: MyPurchasesComponent, canActivate: [UserGuard] },
   { path: 'spinner', component: SpinnerComponent },
   /* { path:'/', redirectTo:'/home', pathMatch:'full'}, */
   { path:'**', redirectTo:'/home', pathMatch:'full'}
@@ -78,7 +82,9 @@ const APP_ROUTES: Route[] = [
     PaymentComponent,
     InputErrorsExample,
     CardhomeComponent,
-    SpinnerComponent
+    SpinnerComponent,
+    ModalComponent,
+    MyPurchasesComponent
   ],
   imports: [
     BrowserModule,
@@ -92,7 +98,8 @@ const APP_ROUTES: Route[] = [
     MatNativeDateModule,
     SocialLoginModule,
     NgxPayPalModule,
-    NgxSpinnerModule
+    NgxSpinnerModule,
+    ModalModule.forRoot()
   ],
   providers: [
     {

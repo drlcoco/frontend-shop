@@ -1,8 +1,10 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, TemplateRef } from '@angular/core';
 import { ICreateOrderRequest, IPayPalConfig } from 'ngx-paypal';
 import { IProduct } from '../interfaces/i-product';
 import { ProductsService } from '../services/products.service';
 import { StorageService } from '../services/storage.service';
+import { BsModalService, BsModalRef } from 'ngx-bootstrap/modal';
+import { ModalComponent } from '../components/modal/modal.component';
 
 @Component({
   selector: 'app-payment',
@@ -27,7 +29,11 @@ export class PaymentComponent implements OnInit {
 
   public payPalConfig ?: IPayPalConfig;
 
-  constructor(private productosService:ProductsService, private storageService: StorageService) { }
+  constructor(private productosService:ProductsService,
+    private storageService: StorageService,
+    private modalService: BsModalService,
+    private modalRef: BsModalRef,
+    /* private modalComponent: ModalComponent */) { }
 
   ngOnInit(): void {
     this.initConfig();
@@ -46,23 +52,15 @@ export class PaymentComponent implements OnInit {
             purchase_units: [{
                 amount: {
                     currency_code: 'EUR',
-                    value: '9.99',
+                    value: this.calcularTotal().toString(),
                     breakdown: {
                         item_total: {
                             currency_code: 'EUR',
-                            value: '9.99'
+                            value: this.calcularTotal().toString()
                         }
                     }
                 },
-                items: [{
-                    name: 'Enterprise Subscription',
-                    quantity: '1',
-                    category: 'DIGITAL_GOODS',
-                    unit_amount: {
-                        currency_code: 'EUR',
-                        value: '9.99',
-                    },
-                }]
+                items: this.getPaypalProducts()
             }]
         },
         advanced: {
@@ -80,6 +78,7 @@ export class PaymentComponent implements OnInit {
         },
         onClientAuthorization: (data) => {
             console.log('onClientAuthorization - you should probably inform your server about completed transaction at this point', data);
+            this.openModal();
         },
         onCancel: (data, actions) => {
             console.log('OnCancel', data, actions);
@@ -91,9 +90,9 @@ export class PaymentComponent implements OnInit {
             console.log('onClick', data, actions);
         }
     };
-}
+  }
 
-  calcPrice (){
+  /* calcPrice (){
     while(this.cantidad > 0){
       this.productosAPagar.push(this.producto);
       this.cantidad--;
@@ -105,7 +104,7 @@ export class PaymentComponent implements OnInit {
       }
     }
     return this.precioTotal;
-  }
+  } */
 
   calcularTotal(){
     this.precioTotal = 0;
@@ -114,6 +113,32 @@ export class PaymentComponent implements OnInit {
       this.precioTotal += this.productosAPagar[i].price;
     }
     return this.precioTotal;
+  }
+
+  getPaypalProducts(){
+    const items: any[] = [];
+    let item = {};
+    this.productosAPagar.forEach((product: IProduct) => {
+      item = {
+        name: product.title,
+        quantity: 1,
+        unit_amount: {value: product.price, currency_code: 'EUR'}
+      };
+      items.push(item);
+    });
+    return items;
+  }
+
+  openModal() {
+    console.log("Abriendo el modal");
+    this.productosAPagar.forEach((product: IProduct) => {
+      const userId = product.userId;
+      const productId = product.id;
+      this.productosService.addPurchase(userId, productId as number);
+    });
+    console.log("Se han guardado los productos en la base de datos correctamente");
+
+    this.modalService.show(ModalComponent);
   }
 
 }
