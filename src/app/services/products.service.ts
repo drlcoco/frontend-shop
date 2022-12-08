@@ -33,9 +33,6 @@ export class ProductsService {
   }
 
   getEventos(): Observable<IProduct[]> {
-    let options = {
-      headers: new HttpHeaders().set('Authorization', localStorage.getItem('token') as string)
-    };
     const productoURL = 'http://localhost:8000/api/products';
     return this.http.get<IProduct[]>(productoURL).pipe(
       map(response => response),
@@ -128,20 +125,13 @@ export class ProductsService {
     return this.productos.length;
   }
 
-  addPurchase(userId: number, productId: number){
-    const purchase: IPurchase = {
-      userId: userId,
-      productId: productId
-    }
-    console.log(purchase);
+  addPurchase(product:IProduct): Observable<Responses> {
+    console.log(product);
 
-    return this.http.post<IPurchase>('http://localhost:8000/api/purchases' , purchase)/* .pipe(
+    return this.http.post<Responses>('http://localhost:8000/api/purchases' , product).pipe(
 			map(resp => {
-        console.log(resp);
-        if(resp){
-          const product = this.getEvento(productId);
-          console.log(product);
-        }
+        console.log('Se ha añadido la compra a la base de datos en addPurchase');
+        console.log(product);
 				return resp;
 			}),
       catchError((resp: HttpErrorResponse) =>
@@ -149,16 +139,29 @@ export class ProductsService {
           `Error insertando la compra: Código de servidor: ${resp.status}. Mensaje: ${resp.message}`
         )
       )
-		) */;
+		);
   }
 
   getUserPurchase(id: number | undefined){
     if(id){
-      return this.http.get<IPurchase>(`http://localhost:8000/api/purchases/${id}`);
+      return this.http.get<IProduct>(`http://localhost:8000/api/purchases/${id}`);
     }
     else{
       return "La id"+ id +"ha fallado";
     }
+  }
+
+  getPurchases(): Observable<IProduct[]> {
+    const productoURL = 'http://localhost:8000/api/purchases';
+    return this.http.get<IProduct[]>(productoURL).pipe(
+      map(response => {
+        return response;
+      }),
+      catchError(
+        (resp:HttpErrorResponse)=> throwError(`Error obteniendo
+        las compras. Código de servidor: ${resp.status}. Mensaje: ${resp.message}`)
+      )
+    );
   }
 
 }

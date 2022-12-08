@@ -5,6 +5,8 @@ import { ProductsService } from '../services/products.service';
 import { StorageService } from '../services/storage.service';
 import { BsModalService, BsModalRef } from 'ngx-bootstrap/modal';
 import { ModalComponent } from '../components/modal/modal.component';
+import { IUser } from '../interfaces/i-user';
+import { UserService } from '../services/user.service';
 
 @Component({
   selector: 'app-payment',
@@ -14,7 +16,6 @@ import { ModalComponent } from '../components/modal/modal.component';
 export class PaymentComponent implements OnInit {
 
   @Input() producto: IProduct = {
-    id: 0,
     title: "",
     description: "",
     stock: 0,
@@ -26,10 +27,22 @@ export class PaymentComponent implements OnInit {
   productosAPagar:IProduct[] = [];
   cantidad:number = 1;
   precioTotal:number = 0;
+  auth: IUser = {
+    id:0,
+    name:'',
+    surname:'',
+    phone:0,
+    address:'',
+    role:'',
+    email:'',
+    password:'',
+    image:''
+  }
 
   public payPalConfig ?: IPayPalConfig;
 
   constructor(private productosService:ProductsService,
+    private userService: UserService,
     private storageService: StorageService,
     private modalService: BsModalService,
     private modalRef: BsModalRef,
@@ -39,7 +52,12 @@ export class PaymentComponent implements OnInit {
     this.initConfig();
     if(this.storageService.existCart()) {
       this.productosAPagar = this.storageService.getCart();
+      console.log(this.productosAPagar);
+
       this.productosService.productos = this.storageService.getCart();
+    }
+    if(this.userService.existAuth()){
+      this.auth = this.userService.getAuth();
     }
   }
 
@@ -92,20 +110,6 @@ export class PaymentComponent implements OnInit {
     };
   }
 
-  /* calcPrice (){
-    while(this.cantidad > 0){
-      this.productosAPagar.push(this.producto);
-      this.cantidad--;
-    }
-    if(this.productosAPagar){
-      for (let index = 0; index < this.productosAPagar.length; index++) {
-        const element = this.productosAPagar[index];
-        this.precioTotal += element.price * this.cantidad;
-      }
-    }
-    return this.precioTotal;
-  } */
-
   calcularTotal(){
     this.precioTotal = 0;
     for(let i = 0; i < this.productosAPagar.length; i++)
@@ -132,12 +136,21 @@ export class PaymentComponent implements OnInit {
   openModal() {
     console.log("Abriendo el modal");
     this.productosAPagar.forEach((product: IProduct) => {
-      const userId = product.userId;
-      const productId = product.id;
-      this.productosService.addPurchase(userId, productId as number);
+      this.producto.title = product.title;
+      this.producto.description = product.description;
+      this.producto.stock = product.stock - 1;
+      this.producto.price = product.price;
+      this.producto.image = product.image;
+      this.producto.userId = product.userId;
+      this.producto.categoryId = product.categoryId;
+      console.log(product);
+      console.log(this.producto);
+      this.productosService.updateEvento(this.producto);
+      if(this.auth.id !== undefined){
+        this.producto.userId = this.auth.id;
+      }
+      this.productosService.addPurchase(this.producto);
     });
-    console.log("Se han guardado los productos en la base de datos correctamente");
-
     this.modalService.show(ModalComponent);
   }
 

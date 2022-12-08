@@ -2,6 +2,7 @@ import { animate, style, transition, trigger } from '@angular/animations';
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { IProduct } from '../interfaces/i-product';
+import { CartServiceService } from '../services/cart-service.service';
 import { ProductsService } from '../services/products.service';
 import { StorageService } from '../services/storage.service';
 import { UserService } from '../services/user.service';
@@ -36,6 +37,7 @@ export class ProductItemComponent implements OnInit {
 
   constructor(
     private productosService: ProductsService,
+    private cartService: CartServiceService,
     private router: Router,
     private route: ActivatedRoute,
     private storageService: StorageService,
@@ -43,19 +45,10 @@ export class ProductItemComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    /* if (this.storageService.existCart()) {
-      this.productosService.productos = this.storageService.getCart();
-    } */
   }
 
-  addProduct() {
-    console.log('Añadiendo producto');
-    /* this.addedProducts = this.storageService.getCart(); */
-    this.storageService.sendProduct(this.inputProducto);
-    /* this.storageService.disparador.emit(this.inputProducto); */
-    /* this.productosService.addProduct(this.inputProducto);
-    this.addedProducts.push(this.inputProducto); */
-    /* this.storageService.setCart(this.productosService.productos); */
+  addProduct(){
+    this.cartService.addToCart(this.inputProducto);
   }
 
   deleteProduct() {

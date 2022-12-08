@@ -2,6 +2,7 @@ import { Component, OnInit, Output } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import Swal from "sweetalert2";
 import { IProduct } from '../interfaces/i-product';
+import { CartServiceService } from '../services/cart-service.service';
 import { ProductsService } from '../services/products.service';
 import { StorageService } from '../services/storage.service';
 import { UserService } from '../services/user.service';
@@ -30,6 +31,7 @@ export class ProductDetailsComponent implements OnInit {
 
   constructor(
     private productsService: ProductsService,
+    private cartService: CartServiceService,
     private route: ActivatedRoute,
     private userService: UserService,
     private storageService: StorageService) { }
@@ -45,10 +47,12 @@ export class ProductDetailsComponent implements OnInit {
     this.authUser = this.userService.getAuth();
   }
 
-  addProductCart(){
-    /* this.storageService.disparador.emit(this.productoDetails); */
+  /* addProductCart(){
     this.storageService.sendProduct(this.productoDetails);
-    /* this.storageService.setCart(this.productsService.productos); */
+  } */
+
+  addProductCart(){
+    this.cartService.addToCart(this.productoDetails);
   }
 
   deleteProduct(){

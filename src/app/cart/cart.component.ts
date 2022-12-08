@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { of } from 'rxjs';
 import { IProduct } from '../interfaces/i-product';
 import { IUser } from '../interfaces/i-user';
+import { CartServiceService } from '../services/cart-service.service';
 import { ProductsService } from '../services/products.service';
 import { StorageService } from '../services/storage.service';
 import { UserService } from '../services/user.service';
@@ -13,38 +14,39 @@ import { UserService } from '../services/user.service';
   styleUrls: ['./cart.component.css'],
 })
 export class CartComponent implements OnInit {
-  @Output() addedProducts: IProduct[] = [];
+  addedProducts: IProduct[] = [];
   badgeNumber = 0;
   total: number = 0;
   user: IUser | undefined;
 
   constructor(
     private productosService: ProductsService,
+    private cartService: CartServiceService,
     private storageService: StorageService,
     private userService: UserService,
     private router: Router
   ) {}
 
   ngOnInit(): void {
-    if (this.storageService.existCart()) {
-      this.addedProducts = this.storageService.getCart();
-      this.productosService.productos = this.storageService.getCart();
-    }
-    this.storageService.disparador.subscribe((data) => {
-      /* this.addedProducts = this.storageService.getCart(); */
-      /* this.productosService.productos = this.storageService.getCart(); */
+    
+    this.cartService.productsObs.subscribe(
+      data => this.addedProducts = data
+    );
+    /* this.storageService.disparador.subscribe((data) => {
       this.productosService.addProduct(data);
       this.storageService.setCart(this.productosService.productos);
       this.addedProducts = this.productosService.productos;
       this.calcularTotal();
-      /* this.router.navigate(['/products']); */
-    });
-    this.user = this.userService.getAuth();
+    }); */
+    if(this.userService.existAuth()){
+      this.user = this.userService.getAuth();
+    }
     this.badgeNumber = this.addedProducts.length;
   }
 
   borrarItem(product: IProduct) {
-    for (let i = 0; i < this.addedProducts.length; i++) {
+    this.cartService.deleteCartProduct(product);
+    /* for (let i = 0; i < this.addedProducts.length; i++) {
       if (product.id === this.addedProducts[i].id) {
         this.productosService.deleteProduct(product.id as number);
         this.badgeNumber = this.addedProducts.length;
@@ -53,7 +55,7 @@ export class CartComponent implements OnInit {
         break;
       }
     }
-    return this.total;
+    return this.total; */
   }
 
   calcularTotal() {
