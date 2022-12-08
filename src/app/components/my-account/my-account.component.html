@@ -1,0 +1,56 @@
+<div class="container-fluid">
+  <div class="row">
+    <div *ngIf="this.user" class="col p-5 mx-5">
+      <h1 class="mt-5 text-primary text-center">Actualizar usuario {{this.user.id}}</h1>
+      <form class="mt-4" #valForm="ngForm" (ngSubmit)="updateUser()">
+        <div class="form-group">
+          <label for="id">Id</label>
+          <input type="number" class="form-control" name="id" [(ngModel)]="this.user.id" disabled>
+        </div>
+        <div class="form-group">
+          <label for="role">Id</label>
+          <input type="text" class="form-control" name="role" [(ngModel)]="this.user.role" disabled>
+        </div>
+        <div class="form-group">
+          <label for="title">Nombre</label>
+          <input type="text" class="form-control" name="title" [(ngModel)]="this.user.name"
+            (ngModelChange)="this.user.name" minlength="5" maxlength="30" #ngNombre="ngModel"
+            [ngClass]="{'is-valid':ngNombre.valid, 'is-invalid':!ngNombre.valid}"
+            required>
+        </div>
+        <div class="form-group">
+          <label for="apellidos">Apellidos</label>
+          <input type="text" class="form-control" name="apellidos" [(ngModel)]="this.user.surname"
+            (ngModelChange)="this.user.surname" #ngSurname="ngModel" minlength="5" maxlength="90"
+            [ngClass]="{'is-valid':ngSurname.valid, 'is-invalid':!ngSurname.valid}"
+            required>
+        </div>
+        <div class="form-group">
+          <label for="address">Dirección</label>
+          <input type="text" class="form-control" name="address" [(ngModel)]="this.user.address" (ngModelChange)="this.user.address"
+            #ngAddress="ngModel"
+            [ngClass]="{'is-valid':ngAddress.valid, 'is-invalid': !ngAddress.valid}"
+            required>
+        </div>
+        <div class="form-group">
+          <label for="phone">Teléfono</label>
+          <input type="number" class="form-control" name="phone" [(ngModel)]="this.user.phone" #ngPhone="ngModel"
+            [ngClass]="{'is-valid':ngPhone.valid, 'is-invalid':!ngPhone.valid}"
+            required (ngModelChange)="this.user.phone">
+        </div>
+        <div class="form-group mt-3">
+          <label for="image">Imagen</label>
+          <input type="file" class="file-upload form-control" #fileUpload name="image"
+            (change)="changeImage(fileUpload)" />
+        </div>
+        <div class="text-center mt-3">
+          <img [src]="this.user.image" alt="" id="preview" width="200">
+        </div>
+        <div class="form-group mt-3 text-center mb-5">
+          <input type="submit" class="btn btn-primary w-50"  value="Enviar" />
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+

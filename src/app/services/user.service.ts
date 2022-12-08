@@ -7,6 +7,7 @@ import { catchError, tap, map, retry } from 'rxjs/operators';
 
 import { IUser } from '../interfaces/i-user';
 import { JwtInterface } from '../interfaces/jwt-interface';
+import { Responses } from '../interfaces/responses';
 import { UserResponses } from '../interfaces/userResponses';
 
 @Injectable({
@@ -79,12 +80,9 @@ export class UserService {
     );
   }
 
-  getUser(id:number) {
-    let options = {
-      headers: new HttpHeaders().set('Authorization', localStorage.getItem('token') as string)
-    };
-    const userURL = 'http://localhost:8000/api/users';
-    return this.http.get<IUser>(`${userURL}/${id}`, options).pipe(
+  getUser(id:number | undefined) {
+    /* const userURL = 'http://localhost:8000/api/users';
+    return this.http.get<IUser>(`${userURL}/${id}`).pipe(
       retry(3),
       tap(res =>{
         this.user = res;
@@ -95,9 +93,24 @@ export class UserService {
         (res:HttpErrorResponse)=> throwError(`Error obteniendo
         usuario. Código de servidor: ${res.status}. Mensaje: ${res.message}`)
       )
-    );
-    /* const productoURL = 'http://localhost:8000/api/users';
-    return this.http.get<any>(`${productoURL}/${id}`); */
+    ); */
+    const userURL = 'http://localhost:8000/api/users';
+    return this.http.get<any>(`${userURL}/${id}`);
+  }
+
+  updateUser(user: IUser): Observable<IUser> {
+    const token = localStorage.getItem('access_token');
+    return this.http.put<UserResponses>(`http://localhost:8000/api/users/${user.id}`, user).pipe(
+			map(resp => {
+        console.log("Usuario actualizado correctamente... "+resp);
+				return resp.user;
+			}),
+      catchError((resp: HttpErrorResponse) =>
+        throwError(
+          `Error insertando user: Código de servidor: ${resp.status}. Mensaje: ${resp.message}`
+        )
+      )
+		);
   }
 
   /* login(user:IUser){
@@ -159,6 +172,12 @@ export class UserService {
       return true;
     }
     return false;
+  }
+
+  timeLogout(){
+    setTimeout(() => {
+      this.logout();
+    }, (60000 * 60));
   }
 
 }

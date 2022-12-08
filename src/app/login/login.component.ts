@@ -7,6 +7,7 @@ import { Router } from '@angular/router';
 import { UserService } from '../services/user.service';
 import { JwtInterface } from '../interfaces/jwt-interface';
 import Swal from 'sweetalert2';
+import { StorageService } from '../services/storage.service';
 
 @Component({
   selector: 'app-login',
@@ -20,7 +21,6 @@ export class LoginComponent implements OnInit {
   pageTitle:string = "Regístrate";
   private token: string = '';
   private expires: string = '';
-  private id: string = '';
   private user: string = '';
 
   userToShow: IUser | undefined ={
@@ -44,7 +44,10 @@ export class LoginComponent implements OnInit {
     image:""
   };
 
-  constructor(private authService: SocialAuthService, private userService: UserService, private router:Router) { }
+  constructor(private authService: SocialAuthService,
+    private userService: UserService,
+    private storageService: StorageService,
+    private router:Router) { }
 
   ngOnInit(): void {
     this.authService.authState.subscribe((user) => {
@@ -72,7 +75,6 @@ export class LoginComponent implements OnInit {
 
   sendLogin(){
     if(this.localUser){
-      /* this.userToShow = Object.assign({}, this.localUser); */
       this.userService.login(this.localUser).subscribe(
         (res)=>{
           this.userService.loggedUser = res.user;
@@ -80,12 +82,9 @@ export class LoginComponent implements OnInit {
           this.expires = res.expires_in;
           this.localUser = res.user
           this.user = JSON.stringify(res.user);
-          this.saveToken(this.token, this.expires, this.user);
+          this.storageService.saveToken(this.token, this.expires, this.user);
           this.userService.eventEmitter.emit(this.localUser);
-          setTimeout(() => {
-            this.userService.logout();
-            this.userService.eventEmitter.emit(this.userToShow = undefined);
-          }, (6000 * 60));
+          this.userService.timeLogout();
         },
         (error)=> {
           Swal.fire({
@@ -94,28 +93,9 @@ export class LoginComponent implements OnInit {
             text: 'Los datos no son válidos!.',
             timer: 4000
           })
-          /* this.localUser = {
-            name:"",
-            surname:"",
-            phone:0,
-            address:"",
-            role:"",
-            email:"",
-            password:"",
-            image:""
-          }; */
         }
       )
     }
-  }
-
-  private saveToken(token:string, expires:string, auth:string) {
-    localStorage.setItem('access_token', token);
-    localStorage.setItem('expires_in', expires);
-    localStorage.setItem('auth', auth);
-    this.token = token;
-    this.expires = expires;
-    this.user = auth;
   }
 
 }

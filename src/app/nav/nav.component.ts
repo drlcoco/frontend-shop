@@ -1,6 +1,6 @@
 import { SocialAuthService, SocialUser } from '@abacritt/angularx-social-login';
 import { animate, keyframes, state, style, transition, trigger } from '@angular/animations';
-import { Component, Input, OnInit, Output, OnDestroy } from '@angular/core';
+import { Component, Inject, Input, OnInit, Output, Renderer2 } from '@angular/core';
 import { IProduct } from '../interfaces/i-product';
 import { IUser } from '../interfaces/i-user';
 import { ProductsService } from '../services/products.service';
@@ -68,16 +68,6 @@ export class NavComponent implements OnInit {
       });
       this.productosService.productos = this.storageService.getCart();
     }
-    /* if(this.storageService.existCart()) {
-      this.addedProducts = this.cartService.loadProducts();
-    } */
-    /* this.storageService.disparador.subscribe(data => {
-      this.productosService.productos = this.storageService.getCart();
-      this.updateBadge();
-      console.log(this.productosService.productos.length);
-
-
-    }); */
     this.cartService.productsObs.subscribe(
       data => this.addedProducts = data
     );
@@ -88,6 +78,7 @@ export class NavComponent implements OnInit {
     });
     if(this.userService.existAuth()){
       this.authUser = this.userService.getAuth();
+      this.userService.timeLogout();
     }else{
       this.authUser = undefined;
     }
@@ -97,13 +88,8 @@ export class NavComponent implements OnInit {
       this.userService.loggedUser = data;
     });
   }
-  ngDestroy(){
-
-  }
 
   updateBadge(): number{
-    /* this.productosService.productos = this.storageService.getCart();
-    this.addedProducts = this.productosService.productos; */
     return this.addedProducts.length;
   }
 

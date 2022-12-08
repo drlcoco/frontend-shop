@@ -26,14 +26,14 @@ export class MyPurchasesComponent implements OnInit {
   ngOnInit(): void {
     if(this.userService.existAuth()){
       this.auth = this.userService.getAuth();
+      const id = this.auth.id;
       console.log(this.auth.id);
       this.productsService.getPurchases().subscribe(
         resp =>{
           this.products = resp;
           console.log('...Cargando '+resp.length);
           this.products.forEach(element => {
-            console.log(element);
-            if(element.userId === this.auth?.id){
+            if(element.userId === id){
               this.myPurchases.push(element);
               console.log(element);
             }
@@ -46,9 +46,9 @@ export class MyPurchasesComponent implements OnInit {
 
   calcularTotal(){
     this.precioTotal = 0;
-    if(this.products && this.products.length){
-      for(let i = 0; i < this.products.length; i++) {
-        this.precioTotal += this.products[i].price;
+    if(this.myPurchases && this.myPurchases.length){
+      for(let i = 0; i < this.myPurchases.length; i++) {
+        this.precioTotal += this.myPurchases[i].price;
       }
     }
     return this.precioTotal;

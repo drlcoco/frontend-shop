@@ -42,4 +42,14 @@ export class StorageService {
   sendProduct(product: IProduct) {
     this.disparador.emit(product);
   }
+
+  saveToken(token:string, expires:string, auth:string) {
+    localStorage.setItem('access_token', token);
+    localStorage.setItem('expires_in', expires);
+    localStorage.setItem('auth', auth);
+  }
+
+  getToken(){
+    return localStorage.getItem('access_token');
+  }
 }
