@@ -1,4 +1,6 @@
 <button class="btn btn-outline-primary fs-6 text-light toogle" (click)="switchTheme()">
+  <i *ngIf="theme === 'dark-theme'" class="bi bi-sun-fill"></i>
+  <i *ngIf="theme === 'light-theme'" class="bi bi-moon-stars-fill"></i>
   {{ theme === 'light-theme' ? 'Dark' : 'Light'}}
 </button>
 <app-nav></app-nav>
