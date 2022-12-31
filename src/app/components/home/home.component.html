@@ -4,7 +4,7 @@
     <div class="col text-center fluid">
       <div class="row fluid">
         <div class="col figure box" id="zoom">
-          <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop" loading="lazy" class="hero__video">
+          <video muted="muted" playsinline="playsinline" autoplay="autoplay" loop="loop" class="hero__video">
             <source src="../../../assets/video/videoPatinete.mp4" type="video/mp4">
           </video>
           <div class="capa align-self-end" @animateList>
@@ -18,16 +18,14 @@
       </div>
     </div>
   </div>
-</div>
-
-<div class="row d-flex justify-content-center mt-5">
-  <div class="col-11 d-flex ms-4 mt-5">
-    <h1 class="fs-1">Tienda. </h1>
-    <h1 class="text-secondary ms-1 fs-1">La mejor forma de comprar tus patinetes favoritos</h1>
+  <div class="row d-flex justify-content-center mt-5">
+    <div class="col-11 d-flex ms-4 mt-5">
+      <h1 class="fs-1">Tienda. </h1>
+      <h1 class="text-secondary ms-1 fs-1">La mejor forma de comprar tus patinetes favoritos</h1>
+    </div>
   </div>
 </div>
 
-<!-- Products -->
 <script>
   $(document).ready(function() {
   $('#autoWidth').lightSlider({
@@ -47,16 +45,15 @@
   </div>
 </div>
 
-<div class="container secondbox my-5">
+<div class="container my-5">
   <div class="row m-5 justify-content-center">
     <div class="col-sm-6 justify-content-center my-5 p-3">
       <div class="card text-center cardShadow">
         <div class="card-body">
-          <h2 class="card-title fs-2 fw-bold pt-4">Comprar Patinetes</h2>
+          <h2 class="card-title fs-2 fw-bold pt-4 text-dark">Comprar Patinetes</h2>
           <p class="card-text fs-5 text-secondary py-4">
             <strong>Comprar en una tienda de confianza, con todas las garantías y toda la tranquilidad necesaria para una compra segura. Te damos lo mejor, al mejor precio.</strong>
           </p>
-          <!-- <a href="#" class="btn btn-lg btn-outline-primary mb-4" role="button" [routerLink]="['login']">Comprar </a> -->
           <a class="btn btn-lg btn-outline-primary mb-4" role="button" [routerLink]="['/products']">Comprar</a>
         </div>
         <img
@@ -70,7 +67,7 @@
     <div class="col-sm-6 justify-content-center my-5 p-3">
       <div class="card text-center cardShadow">
         <div class="card-body">
-          <h2 class="card-title fs-2 fw-bold pt-4">Alquilar Patinetes</h2>
+          <h2 class="card-title fs-2 fw-bold pt-4 text-dark">Alquilar Patinetes</h2>
           <p class="card-text fs-5 text-secondary py-4">
             <strong>Disponemos de 10 puntos repartidos estratéficamente por Benidorm, para que siempre tengas patinetes accesibles desde cualquier punto de la ciudad.</strong>
           </p>
@@ -86,25 +83,37 @@
     </div>
   </div>
 </div>
-<div class="my-5 w-100">
+<div class="mb-0 w-100 txtOver bg-warning h-100 p-0">
+  <a [routerLink]="['/products/10']">
+    <div class="rightSide text-dark d-none d-lg-block">
+      <h1 class="fs-1 fw-bold">Fácil de plegar</h1>
+      <h1 class="fs-1 fw-bold">Fácil de transportar</h1>
+    </div>
+  </a>
   <img
     src="https://i02.appmifile.com/mi-com-product/fly-birds/xiaomi-scooter-4-pro/4fb96ef23fe20cbb37e08e06aa0bcdb9.jpg"
     class="card-img-bottom"
     alt="..."
   />
 </div>
-<div class="my-5 w-100">
+<div class="w-100 txtOver h-100 p-0 d-flex align-self-start justify-content-center">
+  <a [routerLink]="['/products/10']">
+    <div class="leftSide text-light d-none d-lg-block">
+      <h1 class="fs-1 fw-bold">Xiaomi 4 Pro</h1>
+      <h1 class="fs-1 fw-bold">Diseño, estilo y elegancia</h1>
+    </div>
+  </a>
   <img
     src="https://i02.appmifile.com/mi-com-product/fly-birds/xiaomi-scooter-4-pro/dbcffb9256e5460e64bc32a22671ed10.jpg"
-    class="card-img-bottom"
+    class="img-fluid"
     alt="..."
   />
 </div>
 
-<div class="container h-50">
-  <div class="row my-5 dos align-items-center text-center text-light bg-light h-100">
-    <div class="col my-5 color h-100">
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6598.017185128!2d-0.16034495917552852!3d38.53255714201281!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd621b27d43b2ac1%3A0x6a73b28e7988ce83!2sPlaya%20de%20Poniente!5e0!3m2!1ses!2ses!4v1668347211771!5m2!1ses!2ses" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+<div class="container w-100 h-50">
+  <div class="row my-5 dos align-items-center text-center text-light h-100">
+    <div class="col color h-100">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6598.017185128!2d-0.16034495917552852!3d38.53255714201281!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd621b27d43b2ac1%3A0x6a73b28e7988ce83!2sPlaya%20de%20Poniente!5e0!3m2!1ses!2ses!4v1668347211771!5m2!1ses!2ses" width="400" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="w-100"></iframe>
     </div>
   </div>
 </div>

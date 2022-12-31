@@ -28,16 +28,10 @@ export class CartComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    
+
     this.cartService.productsObs.subscribe(
       data => this.addedProducts = data
     );
-    /* this.storageService.disparador.subscribe((data) => {
-      this.productosService.addProduct(data);
-      this.storageService.setCart(this.productosService.productos);
-      this.addedProducts = this.productosService.productos;
-      this.calcularTotal();
-    }); */
     if(this.userService.existAuth()){
       this.user = this.userService.getAuth();
     }
@@ -46,16 +40,6 @@ export class CartComponent implements OnInit {
 
   borrarItem(product: IProduct) {
     this.cartService.deleteCartProduct(product);
-    /* for (let i = 0; i < this.addedProducts.length; i++) {
-      if (product.id === this.addedProducts[i].id) {
-        this.productosService.deleteProduct(product.id as number);
-        this.badgeNumber = this.addedProducts.length;
-        this.storageService.setCart(this.productosService.productos);
-        this.addedProducts = this.productosService.productos;
-        break;
-      }
-    }
-    return this.total; */
   }
 
   calcularTotal() {

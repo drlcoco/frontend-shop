@@ -26,12 +26,6 @@ export class CardhomeComponent implements OnInit {
   constructor(private route:ActivatedRoute, private productosService:ProductsService) { }
 
   ngOnInit(): void {
-    /* this.productosService.getEventos().subscribe(
-      resp =>{
-        this.productos = resp;
-        console.log('...Cargando '+resp.length);
-      }
-    ) */
   }
 
 }

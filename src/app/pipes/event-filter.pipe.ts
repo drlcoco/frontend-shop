@@ -8,11 +8,9 @@ export class EventFilterPipe implements PipeTransform {
 
   transform(productos: IProduct[], filterBy: string): IProduct[] {
     const filter = filterBy ? filterBy.toLocaleLowerCase() : null;
-
     if (filter) {
       return productos.filter(producto => producto.title.toLocaleLowerCase().includes(filter) || producto.description.toLocaleLowerCase().includes(filter))
     }
-    
     return productos;
   }
 

@@ -17,7 +17,6 @@ export class AppComponent implements OnInit{
   usuarios = [];
   badgeNum = 0;
 
-  /* constructor(private authService: AuthService){} */
   constructor(
     @Inject(DOCUMENT) private document: Document,
     private renderer: Renderer2,

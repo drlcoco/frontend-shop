@@ -1,12 +1,4 @@
-/* You can add global styles to this file, and also import other style files */
-/* @import "../node_modules/bootstrap/dist/css/bootstrap.css";
-@import "../node_modules/@fortawesome/fontawesome-free/css/all.min.css"; */
-
 @import url("https://fonts.googleapis.com/css?family=Acme|Lobster|Patua+One|Rubik|Sniglet");
-
-li{
-  list-style: none;
-}
 
 *{
   margin: 0;
@@ -21,8 +13,8 @@ li{
 }
 
 .light-theme{
-  --backgroung-color: #f5f5f5;
-  --text-color: #1a1a1a;
+  --backgroung-color: linear-gradient(to right, #fff, #e2e2de);
+  --text-color: linear-gradient(to right, rgb(48, 48, 48), #080707);
   --button-color: #fff;
 }
 
@@ -30,6 +22,10 @@ body{
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   color: var(--text-color);
   background: var(--backgroung-color);
+}
+
+li{
+  list-style: none;
 }
 
 .toogle{
@@ -172,20 +168,6 @@ section {
   overflow-x: hidden;
 }
 
-:root {
-  --Sniglet-font: "Sniglet", cursive;
-  --Rubik: "Rubik", cursive;
-  --Patua: "Patua One", cursive;
-  --Lobster: "lobster", cursive;
-  --light-black: #2e2c2caf;
-  /* --bggradient: linear-gradient(to bottom, #dd2476, #ff512f); */
-  --bggradient: linear-gradient(to bottom, #d310ed, #ff512f);
-  --bggradient2: linear-gradient(to bottom, #f9f4f6, #cbc3c3);
-  --bgurl: url('assets/ps.png');
-  --light-gray: rgba(255, 255, 255, 0.877);
-  --navText: rgba(69, 111, 153, 0.877);
-}
-
 header a {
   font-family: var(--Sniglet-font);
   font-size: 0.9em;
@@ -233,8 +215,6 @@ header .row .col-md-5 {
 header {
   min-height: 100vh;
   box-shadow: 0 0 2px 2px rgba(5, 7, 12, 0.75);
-  /* background: #ff512f; */
-  /* fallback for old browsers */
   background: linear-gradient(to bottom, rgb(0 0 0 / 0.5), rgb(0 0 0 / 0.5)),var(--bgurl);
   background-repeat: no-repeat;
   background-size: 100, 100;
@@ -265,8 +245,6 @@ header .container .col-md-7 p {
   border-radius: 30px;
   font-weight: bold;
 }
-
-/********** section 1 **************/
 
 .section-1 {
   padding: 20vmin 0vmin;
@@ -306,12 +284,10 @@ header .container .col-md-7 p {
   color: rgba(0, 0, 0, 0.5);
 }
 
-/*  Section 2  */
-
 .cover {
   width: 100%;
   height: 55vmin;
-  background: url("./assets/alquiler.jpg");
+  background: url("./assets/img/alquiler.jpg");
   background-position: -24rem -19rem;
   background-size: 150%;
   position: relative;
@@ -414,8 +390,6 @@ header .container .col-md-7 p {
   padding: 1em 0.5em;
 }
 
-/* Section 3 */
-
 .section-3 {
   height: 70vmin;
   margin-top: 15vmin;
@@ -450,8 +424,6 @@ header .container .col-md-7 p {
 .section-3 .desktop p {
   font-size: 2vmin;
 }
-
-/* Section Team */
 
 .section-4 .container h1 {
   font-size: 6vmin;
@@ -510,8 +482,6 @@ footer .input-group .input-group-text {
 footer .column i {
   color: #dd2476;
 }
-
-/* It is Adjacent sibling combinator */
 
 footer .column i + i {
   padding: 0 0.5em;

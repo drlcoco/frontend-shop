@@ -47,10 +47,6 @@ export class ProductDetailsComponent implements OnInit {
     this.authUser = this.userService.getAuth();
   }
 
-  /* addProductCart(){
-    this.storageService.sendProduct(this.productoDetails);
-  } */
-
   addProductCart(){
     this.cartService.addToCart(this.productoDetails);
   }

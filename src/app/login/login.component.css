@@ -12,7 +12,6 @@
   background-image: url('../../assets/2.png');
   background-position: center center;
   background-repeat: no-repeat;
-  /* max-height: 90vh; */
   overflow: hidden;
 }
 
@@ -24,9 +23,6 @@
 }
 
 .boxShadow:hover{
-  /* border: 1px solid;
-  padding: 10px;
-  box-shadow: 15px 10px #888888; */
   overflow: hidden;
   transform: scale(1.001);
   transition: all 200ms ease-out;

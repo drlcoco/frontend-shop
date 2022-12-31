@@ -1,4 +1,3 @@
-/* import { nullSafeIsEquivalent } from '@angular/compiler/src/output/output_ast'; */
 import { EventEmitter, Injectable, Output } from '@angular/core';
 import { IProduct } from '../interfaces/i-product';
 
@@ -21,7 +20,6 @@ export class StorageService {
   productos : IProduct[] = [];
   badgeNumber: number = 0;
   disparador:EventEmitter<IProduct> = new EventEmitter();
-  /* disparador = new Subject<IProduct>(); */
 
   existCart(): boolean {
     return localStorage.getItem('cart') != null;

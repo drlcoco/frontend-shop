@@ -29,11 +29,7 @@
           </div>
           <div class="d-grid gap-2 col-6 mx-auto">
             <h1>Total {{calcularTotal() | currency}}</h1>
-
           </div>
-          <!-- <div class="d-grid gap-2 col-6 mx-auto">
-            <a class="btn  btn-primary btn-lg mb-5" role="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"><i class="bi bi-currency-exchange me-3"></i>Pagar {{calcularTotal()}}€<span class="badge rounded-pill bg-danger"></span></a>
-          </div> -->
           <div class="d-grid gap-2 col-6 mx-auto">
             <ngx-paypal [config]="payPalConfig"></ngx-paypal>
           </div>

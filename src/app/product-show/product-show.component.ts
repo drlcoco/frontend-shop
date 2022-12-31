@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NgxSpinnerService } from 'ngx-spinner';
 import { IProduct } from '../interfaces/i-product';
 import { ProductsService } from '../services/products.service';
 
@@ -14,17 +15,19 @@ export class ProductShowComponent implements OnInit {
   filterSearch: string = '';
   ProductsService: any;
 
-  constructor(private productosService : ProductsService) {}
+  constructor(private productosService : ProductsService,
+    private spinnerService: NgxSpinnerService) {}
 
   ngOnInit(): void {
+    this.spinnerService.show();
     this.productosService.getEventos().subscribe(
       resp =>{
-        console.log(resp);
         this.productos = resp;
       },
       error =>{console.log(error);
       }
-    )
+    );
+    this.spinnerService.hide();
   }
 
   ordenarStock(enlaceEvento: Event) {

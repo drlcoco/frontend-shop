@@ -6,10 +6,6 @@ header{
   max-width: 500vw;
 }
 
-.secondbox{
-  background: linear-gradient(to right, #fafaf9, #dcdcd9);
-}
-
 .container{
   max-width: 100%;
 }
@@ -30,6 +26,24 @@ header{
 .capa > h1{
   color: rgb(49, 51, 57);
   font-size: 10vh;
+}
+
+.txtOver{
+  position: relative;
+  display: inline-block;
+  text-align: center;
+}
+.rightSide{
+  position: absolute;
+  top: 50%;
+  right: 2%;
+  transform: translate(-50%, -50%);
+}
+.leftSide{
+  position: absolute;
+  top: 50%;
+  left: 30%;
+  transform: translate(-50%, -50%);
 }
 
 

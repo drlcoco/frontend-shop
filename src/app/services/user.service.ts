@@ -40,25 +40,6 @@ export class UserService {
       )
 		);
   }
-  /* register(user: IUser): Observable<JwtInterface>{
-    console.log(user);
-    return this.http.post<JwtInterface>(`${this.AUTH_SERVER}/users`, user).pipe(
-      tap(
-        (res: JwtInterface) => {
-          if(res){
-            this.saveToken(res.token);
-          }else{
-            console.log("Elseweeeeee");
-          }
-        }
-      ),
-      catchError((resp: HttpErrorResponse) =>
-        throwError(
-          `Error insertando usuario: Código de servidor: ${resp.status}. Mensaje: ${resp.message}`
-        )
-      )
-		);
-  } */
 
   login(user: IUser): Observable<any>{
     return this.http.post<any>(`${this.AUTH_SERVER}/login`, user).pipe(
@@ -81,19 +62,6 @@ export class UserService {
   }
 
   getUser(id:number | undefined) {
-    /* const userURL = 'http://localhost:8000/api/users';
-    return this.http.get<IUser>(`${userURL}/${id}`).pipe(
-      retry(3),
-      tap(res =>{
-        this.user = res;
-        console.log(res);
-      }
-        ),
-      catchError(
-        (res:HttpErrorResponse)=> throwError(`Error obteniendo
-        usuario. Código de servidor: ${res.status}. Mensaje: ${res.message}`)
-      )
-    ); */
     const userURL = 'http://localhost:8000/api/users';
     return this.http.get<any>(`${userURL}/${id}`);
   }
@@ -112,39 +80,6 @@ export class UserService {
       )
 		);
   }
-
-  /* login(user:IUser){
-    const id = user.id;
-    console.log(user);
-
-    return this.http.post<JwtInterface>('http://localhost:8000/api/login', user).pipe(
-			map(
-        (res: JwtInterface) => {
-          if(res){
-            this.saveToken(res.dataUser.token, res.dataUser.expire);
-          }
-        },
-      catchError((resp: HttpErrorResponse) =>
-        throwError(
-          `Error recibiendo al usuario: Código de servidor: ${resp.status}. Mensaje: ${resp.message}`
-        )
-      )
-		));
-  } */
-  /* login(user:IUser){
-    return this.http.post<JwtInterface>('http://localhost:8000/api/login' , user).pipe(
-			map(res => {
-        this.saveToken(res.dataUser.token);
-        console.log(res);
-        this.router.navigate(["/products"]);
-			}),
-      catchError((res: HttpErrorResponse) =>
-        throwError(
-          `Error recibiendo usuario: Código de servidor: ${res.status}. Mensaje: ${res.message}`
-        )
-      )
-		);
-  } */
 
   getLoggedUser(){
     console.log(this.loggedUser);

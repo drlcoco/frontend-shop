@@ -18,8 +18,6 @@ export class ProductsService {
   private productoURL = 'http://localhost:8000/api/products';
   headers: HttpHeaders | { [header: string]: string | string[]; } | undefined;
 
-  /* @Output() disparador:EventEmitter<any> = new EventEmitter(); */
-
   constructor(private http: HttpClient) { }
 
   getHomeProducts(): Observable<IProduct[]> {
@@ -44,18 +42,6 @@ export class ProductsService {
   }
 
   getEvento(id:number) {
-    /* let options = {
-      headers: new HttpHeaders().set('Authorization', localStorage.getItem('token') as string)
-    };
-    return this.http.get<{producto : IProduct}>(`${this.productoURL}/${id}`, options).pipe(
-      retry(3),
-      map(response => response.producto),
-      catchError(
-        (resp:HttpErrorResponse)=> throwError(`Error obteniendo
-        productos. Código de servidor: ${resp.status}. Mensaje: ${resp.message}`)
-      )
-    ); */
-    /* const productoURL = 'http://localhost:8000/api/products'; */
     return this.http.get<IProduct>(`${this.productoURL}/${id}`);
   }
 
@@ -110,7 +96,6 @@ export class ProductsService {
 
   addProduct(product:IProduct){
     this.productos.push(product);
-    /* this.numBadge = this.productos.length; */
   }
 
   deleteProduct(id:number){

@@ -36,7 +36,6 @@ import { CardhomeComponent } from './components/cardhome/cardhome.component';
 import { ModalComponent } from './components/modal/modal.component';
 import { MyPurchasesComponent} from './components/my-purchases/my-purchases.component';
 import { MyAccountComponent} from './components/my-account/my-account.component';
-import { SpinnerComponent } from './components/spinner/spinner.component';
 import { SwalComponent } from './components/swal/swal.component';
 import { AdminGuard } from './guards/admin.guard';
 import { UserGuard } from './guards/user-guard';
@@ -57,7 +56,6 @@ const APP_ROUTES: Route[] = [
   { path: 'payment', component: PaymentComponent, canActivate: [UserGuard] },
   { path: 'purchases', component: MyPurchasesComponent, canActivate: [UserGuard] },
   { path: 'account', component: MyAccountComponent, canActivate: [UserGuard] },
-  { path: 'spinner', component: SpinnerComponent },
   { path:'/', redirectTo:'/home', pathMatch:'full'},
   { path:'**', redirectTo:'/home', pathMatch:'full'}
 ]
@@ -84,7 +82,6 @@ const APP_ROUTES: Route[] = [
     PaymentComponent,
     InputErrorsExample,
     CardhomeComponent,
-    SpinnerComponent,
     ModalComponent,
     MyPurchasesComponent,
     MyAccountComponent
@@ -101,7 +98,7 @@ const APP_ROUTES: Route[] = [
     MatNativeDateModule,
     SocialLoginModule,
     NgxPayPalModule,
-    NgxSpinnerModule,
+    NgxSpinnerModule.forRoot({ type: 'ball-scale-multiple' }),
     ModalModule.forRoot()
   ],
   providers: [

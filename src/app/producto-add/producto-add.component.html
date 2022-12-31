@@ -10,7 +10,7 @@
     <form class="mt-4" #valForm="ngForm" (ngSubmit)="addEvento(fileUpload)" novalidate>
       <div class="form-group">
         <label for="name">Nombre*</label>
-        <input type="text" class="form-control" name="title" [(ngModel)]="newProducto.title" #ngNombre="ngModel"
+        <input type="text" class="form-control mb-3" name="title" [(ngModel)]="newProducto.title" #ngNombre="ngModel"
           [ngClass]="{'is-valid':ngNombre.touched && ngNombre.valid, 'is-invalid':ngNombre.touched && !ngNombre.valid}"
           minlength="5" maxlength="30" required>
         <div class="col-10">
@@ -21,7 +21,7 @@
       </div>
       <div class="form-group">
         <label for="description">Descripción*</label>
-        <input type="text" class="form-control" name="description" [(ngModel)]="newProducto.description" #ngDesc="ngModel"
+        <input type="text" class="form-control mb-3" name="description" [(ngModel)]="newProducto.description" #ngDesc="ngModel"
           [ngClass]="{'is-valid':ngDesc.touched && ngDesc.valid, 'is-invalid':ngDesc.touched && !ngDesc.valid}"
           minlength="5" maxlength="90" required>
           <div class="col-10">
@@ -30,31 +30,21 @@
             </div>
           </div>
       </div>
-      <!-- <div class="form-group">
-        <label for="date">Fecha*</label>
-        <input type="date" class="form-control" name="date" [(ngModel)]="newProducto.stock" #ngDate="ngModel"
-          [ngClass]="{'is-valid':ngDate.touched && ngDate.valid, 'is-invalid':ngDate.touched && !ngDate.valid}" required>
-          <div class="col-10">
-            <div *ngIf="ngDate.touched && ngDate.invalid" class="alert alert-danger">
-              Introduzca la fecha*
-            </div>
-          </div>
-      </div> -->
       <div class="form-group">
         <label for="stock">Stock</label>
-        <input type="number" class="form-control" name="stock" [(ngModel)]="newProducto.stock" #ngStock="ngModel"
-          [ngClass]="{'is-valid':ngStock.touched && ngStock.valid, 'is-invalid':ngStock.touched && !ngStock.valid}"
+        <input type="number" class="form-control mb-3 mb-1" name="stock" [(ngModel)]="newProducto.stock" #ngStock="ngModel"
+          [ngClass]="{'is-valid':ngStock.touched && ngStock.valid && ngStock.value > 0, 'is-invalid':ngStock.touched && !ngStock.valid && ngStock.value === 0}"
           placeholder="Introduzca stock" required>
           <div class="col-10">
-            <div *ngIf="ngStock.touched && ngStock.invalid" class="alert alert-danger">
+            <div *ngIf="ngStock.touched  && ngStock.invalid" class="alert alert-danger">
               Debes introducir el stock
             </div>
           </div>
       </div>
       <div class="form-group">
         <label for="price">Precio</label>
-        <input type="number" class="form-control" name="price" [(ngModel)]="newProducto.price" #ngPrecio="ngModel"
-          [ngClass]="{'is-valid':ngPrecio.touched && ngPrecio.valid, 'is-invalid':ngPrecio.touched && !ngPrecio.valid}"
+        <input type="number" class="form-control mb-3" name="price" [(ngModel)]="newProducto.price" #ngPrecio="ngModel"
+          [ngClass]="{'is-valid':ngPrecio.touched && ngPrecio.valid && ngPrecio.value > 0, 'is-invalid':ngPrecio.touched && !ngPrecio.valid}"
           placeholder="Introduzca precio" required>
           <div class="col-10">
             <div *ngIf="ngPrecio.touched && ngPrecio.invalid" class="alert alert-danger">
@@ -64,7 +54,7 @@
       </div>
       <div class="form-group mt-3">
         <label for="image">Imagen*</label>
-        <input type="file" class="file-upload form-control" #fileUpload name="image" [(ngModel)]="newProducto.image"
+        <input type="file" class="file-upload form-control mb-3" #fileUpload name="image" (ngModel)="newProducto.image"
           #ngImagen="ngModel"
           [ngClass]="{'is-valid':ngImagen.touched && ngImagen.valid, 'is-invalid': ngImagen.touched && !ngImagen.valid}"
           (change)="changeImage(fileUpload)" required />
@@ -78,7 +68,7 @@
         <img [src]="preview" alt="" id="preview" width="250">
       </div>
       <div class="form-group mt-3 mb-5 text-center">
-        <input type="submit" class="btn btn-primary w-50" value="Crear Evento" [disabled]="valForm.invalid" />
+        <input type="submit" class="btn btn-primary w-50" value="Añadir" [disabled]="valForm.invalid" />
       </div>
     </form>
   </div>

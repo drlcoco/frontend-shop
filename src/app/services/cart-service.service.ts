@@ -33,12 +33,6 @@ export class CartServiceService {
     if(this.products.length = 0){
       this.products = this.storageService.getCart();
       console.log(this.products);
-
-      /* this.storageService.getCart().forEach(element => {
-        this.products.push(element);
-        console.log(element);
-
-      }); */
     }
     return this.products;
   }

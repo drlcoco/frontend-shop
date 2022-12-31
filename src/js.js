@@ -26,25 +26,6 @@ function loadimage(){
     })
 })()
 
-//Animación Formulario.
-/* function animarForm(){
-// Obtenemos los elementos input del formulario
-let input = document.querySelectorAll(".anim");
-
-//Recorro todos los input del formulario
-input.forEach(element => {
-    if(element.value === ""){
-      console.log(element);
-  // Agregamos las clases form-error, animate__animated y animate__shakeX al input
-      element.classList.add("animate__animated", "animate__shakeX");
-  // Al acabar la animación, quitamos las clases animate__animated y animate__shakeX al input
-      element.addEventListener("animationend",  function (){
-        element.classList.remove("animate__animated", "animate__shakeX");
-      });
-    }
-});
-} */
-
 function animarForm(){
   // Obtenemos los elementos input y text area del formulario
   let inputAndTextArea = document.querySelectorAll("form > input, textarea");
