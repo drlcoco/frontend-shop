@@ -1,4 +1,5 @@
 import { EventEmitter, Injectable, Output } from '@angular/core';
+import { BehaviorSubject, Observable } from 'rxjs';
 import { IProduct } from '../interfaces/i-product';
 
 @Injectable({
@@ -20,6 +21,9 @@ export class StorageService {
   productos : IProduct[] = [];
   badgeNumber: number = 0;
   disparador:EventEmitter<IProduct> = new EventEmitter();
+  private darkTheme: boolean = false;
+  private darkThemeSubject: BehaviorSubject<boolean> = new BehaviorSubject(this.darkTheme);
+  public darkThemeObs: Observable<boolean> = this.darkThemeSubject.asObservable();
 
   existCart(): boolean {
     return localStorage.getItem('cart') != null;
@@ -49,5 +53,14 @@ export class StorageService {
 
   getToken(){
     return localStorage.getItem('access_token');
+  }
+
+  setDarkTheme(bool: boolean){
+    this.darkTheme = bool;
+    console.log("cambiando el tema "+this.darkTheme);
+  }
+
+  getDarkTheme(){
+    return this.darkTheme;
   }
 }

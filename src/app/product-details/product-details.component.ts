@@ -1,5 +1,5 @@
 import { Component, OnInit, Output } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import Swal from "sweetalert2";
 import { IProduct } from '../interfaces/i-product';
 import { CartServiceService } from '../services/cart-service.service';
@@ -33,6 +33,7 @@ export class ProductDetailsComponent implements OnInit {
     private productsService: ProductsService,
     private cartService: CartServiceService,
     private route: ActivatedRoute,
+    private router: Router,
     private userService: UserService,
     private storageService: StorageService) { }
 
@@ -59,6 +60,16 @@ export class ProductDetailsComponent implements OnInit {
   offer(price: number){
     price = price * 1.1;
     return price.toFixed(2);
+  }
+
+  getUser() {
+    if (this.userService.existAuth()) {
+      this.authUser = this.userService.getAuth();
+      this.router.navigate(['/payment']);
+    } else {
+      this.authUser = undefined;
+      this.router.navigate(['/login']);
+    }
   }
 
 }

@@ -35,7 +35,7 @@
     <div class="d-grid gap-2 col-6  my-4 ps-xl-5">
       <ng-container *ngIf="!this.authUser || this.authUser.role !== 'admin'">
         <button class="btn btn-primary" type="button" (click)="addProductCart()"><i class="d-lg-none d-xl-inline bi bi-cart "></i> Añadir al Carrito</button>
-        <button class="btn btn-dark mt-2" type="button"><i class="bi bi-currency-exchange"></i> Pagar</button>
+        <button class="btn btn-dark mt-2" type="button" (click)="getUser()"><i class="bi bi-currency-exchange"></i> Pagar</button>
         <button class="btn btn-primary mt-2" type="button" [routerLink]="['/products']"><i class="bi bi-arrow-left-circle"></i> Volver</button>
       </ng-container>
       <ng-container *ngIf="this.authUser && this.authUser.role === 'admin'">

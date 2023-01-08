@@ -3,20 +3,11 @@ header{
 }
 
 .firstbox{
-  max-width: 500vw;
+  overflow-x: hidden;
+  overflow-y: hidden;
 }
 
-.container{
-  max-width: 100%;
-}
-.cS-hidden {
-  height: 1px;
-  opacity: 0;
-  filter: alpha(opacity=0);
-  overflow: hidden;
-}
 .scroller{
-  width: 100%;
   overflow-x: scroll;
 }
 .item{
@@ -38,12 +29,18 @@ header{
   top: 50%;
   right: 2%;
   transform: translate(-50%, -50%);
+  letter-spacing: 3em;
 }
 .leftSide{
   position: absolute;
   top: 50%;
   left: 30%;
   transform: translate(-50%, -50%);
+  letter-spacing: 3em;
+}
+
+.alquiler{
+  height: 300px;
 }
 
 

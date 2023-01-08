@@ -3,7 +3,7 @@
     <div class="col">
       <div class="m-5 text-center">
         <h1 class="title fw-b fs-1">Tu lista de productos</h1>
-        <table class="table table-light table-striped mt-5" *ngIf="productosAPagar && productosAPagar.length; else elseBlock">
+        <table [ngClass]="this.updateTableTheme() ? 'table table-dark table-striped mt-5' : 'table table-light table-striped mt-5'"  *ngIf="productosAPagar && productosAPagar.length; else elseBlock">
           <thead>
             <tr class="fw-b fs-5">
               <th scope="col" class="py-4">Imagen</th>
@@ -14,7 +14,7 @@
           </thead>
           <tbody>
             <tr *ngFor="let producto of productosAPagar;" >
-              <td class="justify-content center align-self-center"><img src="{{producto.image}}" width="50" height="50"></td>
+              <td class="justify-content-center align-self-center rounded"><img src="{{producto.image}}" width="50" height="50"></td>
               <td class="pt-4">{{producto.title}}</td>
               <td class="pt-4">{{producto.price}}</td>
               <td class="pt-4">{{this.cantidad}}</td>

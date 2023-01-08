@@ -32,7 +32,6 @@ export class CartServiceService {
   loadProducts(){
     if(this.products.length = 0){
       this.products = this.storageService.getCart();
-      console.log(this.products);
     }
     return this.products;
   }

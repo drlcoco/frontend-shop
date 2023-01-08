@@ -43,9 +43,7 @@ export class RegisterComponent {
   }
 
   addUser(fileInput: HTMLInputElement){
-    console.log(this.user);
     this.userToShow = Object.assign({}, this.user);
-    console.log(this.userToShow);
     this.userService.register(this.user).subscribe(
       (result)=>{
         console.log(this.user);

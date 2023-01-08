@@ -1,73 +1,73 @@
 <div class="container-fluid mt-5">
-  <div class="login row boxShadow">
-    <div class="col bg d-none d-lg-block imageLogin my-5 ms-5 rounded"></div>
-    <div class="col align-items-stretch my-5 mx-xs-1 me-lg-5 rounded bg-white boxShadow">
-      <div class="d-flex align-items-center justify-content-center mt-4">
+  <div class="login row ">
+    <div class="col d-none d-lg-block imageLogin my-5 ms-5 rounded"></div>
+    <div class="col align-items-stretch my-5 mx-xs-1 me-lg-5 rounded boxShadow">
+      <div class="d-flex align-items-center justify-content-center mt-4 ">
         <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="#0d6efd" class="bi bi-scooter me-2 mb-2" viewBox="0 0 16 16">
           <path fill-rule="evenodd" d="M9 2.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1h-.39l1.4 7a2.5 2.5 0 1 1-.98.195l-.189-.938-2.43 3.527A.5.5 0 0 1 9.5 13H4.95a2.5 2.5 0 1 1 0-1h4.287l2.831-4.11L11.09 3H9.5a.5.5 0 0 1-.5-.5ZM3.915 12a1.5 1.5 0 1 0 0 1H2.5a.5.5 0 0 1 0-1h1.415Zm8.817-.789A1.499 1.499 0 0 0 13.5 14a1.5 1.5 0 0 0 .213-2.985l.277 1.387a.5.5 0 0 1-.98.196l-.278-1.387Z"/>
         </svg>
-        <h1 class="fs-4 fw-bold text-center pt-3 ms-3">Bienvenido</h1>
+        <h1 class="fs-3 fw-bold text-center pt-3 ms-3">Bienvenido</h1>
       </div>
-      <form action="" method="POST" class="mx-5" #loginForm="ngForm" (ngSubmit)="sendLogin()">
-        <div class="mb-4">
-          <label
-            for="email"
-            [ngStyle]="{ color: !email.valid ? 'red' : 'green' }"
-            class="col-sm-2 col-form-label"
-            >Email
-          </label>
+      <form action="" method="POST" class="mx-5 darkThemeForm p-4 rounded-3 boxShadow" #loginForm="ngForm" (ngSubmit)="sendLogin()">
+
+        <mat-form-field class="example-form-field col-12 bg-transparent">
+          <mat-label [ngStyle]="{ color: !email.valid ? 'red' : '#0d6efd' }">Email</mat-label>
           <input
-              type="email"
-              name="email"
-              id="email"
-              [ngClass]="{
-                'is-valid': email.valid,
-                'is-invalid': !email.valid && email.touched
-              }"
-              class="form-control mt-2"
-              placeholder="Introduzca el correo electrónico"
-              value=""
-              #email="ngModel"
-              [(ngModel)]="localUser.email"
-              required
-              pattern="[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])"
-            />
-            <small
-              *ngIf="!email.valid && email.touched"
-              class="invalid-feedback d-flex"
-              >El email no es válido</small
-            >
-        </div>
-        <div class="mb-4">
-          <label
-            for="password"
-            [ngStyle]="{ color: !password.valid ? 'red' : 'green' }"
-            class="col-sm-2 col-form-label"
-            >Password</label
-          >
+            matInput
+            class="text-dark"
+            type="email"
+            name="email"
+            id="email"
+            [(ngModel)]="localUser.email"
+            #email="ngModel"
+            [ngClass]="{'is-valid':email.touched && email.valid, 'is-invalid':email.touched && !email.valid}"
+            pattern="[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])"
+            placeholder="Introduzca el correo electrónico"
+            minlength="5" maxlength="30" required>
+            <mat-error *ngIf="!email.valid && email.touched && !email.hasError('required')"
+              class="fs-5">
+              El email no es válido
+            </mat-error>
+            <mat-error *ngIf="email.hasError('required')">
+              Email <strong>requerido</strong>
+            </mat-error>
+          <button *ngIf="localUser.email" matSuffix mat-icon-button aria-label="Clear" (click)="localUser.email=''">
+            <mat-icon>close</mat-icon>
+          </button>
+        </mat-form-field>
+
+        <mat-form-field class="example-form-field col-12 my-3">
+          <mat-label [ngStyle]="{ color: !password.valid ? 'red' : '#0d6efd' }">Password</mat-label>
           <input
+              matInput
               type="password"
               name="password"
               id="password"
+              class="text-dark"
               [ngClass]="{
                 'is-valid': password.valid,
                 'is-invalid': !password.valid && password.touched
               }"
-              class="form-control mt-2"
               placeholder="Introduzca la contraseña"
               value=""
               #password="ngModel"
               [(ngModel)]="localUser.password"
               required
-              pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}"
+              pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,60}"
             />
-            <small
-              *ngIf="!password.valid && password.touched"
-              class="invalid-feedback d-flex"
-              >La contraseña no es válida</small
-            >
-        </div>
-        <div class="mb-4 d-grid">
+            <mat-error *ngIf="!password.valid && password.touched && !password.hasError('required')"
+              class="mb-2">
+              El password no es válido
+            </mat-error>
+            <mat-error *ngIf="password.hasError('required')">
+              Password <strong>requerido</strong>
+            </mat-error>
+          <button *ngIf="localUser.password" matSuffix mat-icon-button aria-label="Clear" (click)="localUser.password=''">
+            <mat-icon>close</mat-icon>
+          </button>
+        </mat-form-field>
+
+        <div class="mb-4 mt-2 d-grid">
           <button
             type="submit"
             [disabled]="loginForm.invalid"
@@ -75,21 +75,22 @@
           >Iniciar Sesión
           </button>
         </div>
+
         <div class="my-3">
-          <span>No tienes cuenta? <a
+          <span class="text-dark">No tienes cuenta? <a
             class="text-primary nav-link d-inline"
             [routerLink]="['register']"
             [routerLinkActive]="['active']"
             [routerLink]="['/register']"
             >Regístrate ya!!!</a>
-
           </span>
         </div>
+
       </form>
 
       <div class="container mb-5 px-5 w-100">
         <div class="row text-center">
-          <div class="col-12 mb-3">Inicia sesión con Google</div>
+          <div class="col-12 my-3">Inicia sesión con Google</div>
         </div>
         <div class="row">
           <div class="col-12 d-flex justify-content-center align-items-center">
@@ -98,6 +99,7 @@
           </div>
         </div>
       </div>
+
     </div>
   </div>
 </div>

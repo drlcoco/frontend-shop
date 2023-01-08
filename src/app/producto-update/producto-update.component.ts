@@ -30,7 +30,6 @@ export class ProductoUpdateComponent implements OnInit {
       .subscribe(
         async (p) => {
           this.producto = p;
-          console.log(this.producto);
           this.producto.price=Number(this.producto.price);
 
           const reader: FileReader = new FileReader();
@@ -38,7 +37,6 @@ export class ProductoUpdateComponent implements OnInit {
           reader.readAsDataURL(imagen);
           reader.addEventListener('loadend', e =>{
             this.producto.image =reader.result as string;
-            console.log(this.producto.image);
           })
         },
           error => console.error(error)

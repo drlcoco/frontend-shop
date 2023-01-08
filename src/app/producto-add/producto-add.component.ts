@@ -50,8 +50,6 @@ export class ProductoAddComponent {
       return;
     }
     const reader: FileReader = new FileReader();
-    console.log(fileInput.files[0]);
-
     reader.readAsDataURL(fileInput.files[0]);
     reader.addEventListener('loadend', (e) => {
       this.newProducto.image = reader.result as string;

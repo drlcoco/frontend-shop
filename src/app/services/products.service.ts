@@ -62,7 +62,6 @@ export class ProductsService {
     return this.http.put<Responses>(`http://localhost:8000/api/products/${producto.id}` , producto).pipe(
 			map(resp => {
         console.log(resp);
-
 				return resp.producto;
 			}),
       catchError((resp: HttpErrorResponse) =>
@@ -111,8 +110,6 @@ export class ProductsService {
   }
 
   addPurchase(product:IProduct): Observable<Responses> {
-    console.log(product);
-
     return this.http.post<Responses>('http://localhost:8000/api/purchases' , product).pipe(
 			map(resp => {
         console.log('Se ha añadido la compra a la base de datos en addPurchase');

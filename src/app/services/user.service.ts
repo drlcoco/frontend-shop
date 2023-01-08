@@ -27,7 +27,6 @@ export class UserService {
   constructor(private http: HttpClient, private route: ActivatedRoute, private router: Router) { }
 
   register(user: IUser): Observable<IUser>{
-    console.log(user);
     return this.http.post<UserResponses>('http://localhost:8000/api/users' , user).pipe(
 			map(resp => {
         this.loggedUser = resp.user;
@@ -48,7 +47,6 @@ export class UserService {
           if(res){
             this.loggedUser = res;
             console.log(res);
-            /* this.saveToken(res.dataUser.token); */
             this.router.navigate(["/products"]);
           }
         }
@@ -82,8 +80,6 @@ export class UserService {
   }
 
   getLoggedUser(){
-    console.log(this.loggedUser);
-
     return this.loggedUser;
   }
 

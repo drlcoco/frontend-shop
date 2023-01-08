@@ -1,4 +1,4 @@
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, OnChanges, OnInit, Output, SimpleChanges } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { IUser } from 'src/app/interfaces/i-user';
 import { StorageService } from 'src/app/services/storage.service';
@@ -10,9 +10,10 @@ import Swal from 'sweetalert2';
   templateUrl: './my-account.component.html',
   styleUrls: ['./my-account.component.css']
 })
-export class MyAccountComponent implements OnInit {
+export class MyAccountComponent implements OnInit, OnChanges {
 
   id?:number;
+  public dark: boolean = false;
   user: IUser = {
     id: 0,
     email:'',
@@ -29,8 +30,14 @@ export class MyAccountComponent implements OnInit {
     private storageService: StorageService,
     private routeId: ActivatedRoute,
     private router: Router) { }
+  ngOnChanges(changes: SimpleChanges): void {
+    throw new Error('Method not implemented.');
+  }
 
   ngOnInit(): void {
+    this.storageService.darkThemeObs.subscribe(
+      data => this.dark = data
+    );
     this.user = this.userService.getAuth();
     this.id = this.user.id; // Recibimos parámetro
     this.userService.getUser(this.id)
@@ -85,6 +92,20 @@ export class MyAccountComponent implements OnInit {
     reader.addEventListener('loadend', (e) => {
       this.user.image = reader.result as string;
     });
+  }
+
+  onFileSelected() {
+    const inputNode: any = document.querySelector('#file');
+
+    if (typeof (FileReader) !== 'undefined') {
+      const reader = new FileReader();
+
+      reader.onload = (e: any) => {
+        const srcResult = e.target.result;
+      };
+
+      reader.readAsArrayBuffer(inputNode.files[0]);
+    }
   }
 
 }

@@ -1,7 +1,8 @@
 .container-fluid{
-  background: #ffe259;
-  background: linear-gradient(to right, white, #f8f8f6);
+  /* background: #ffe259;
+  background: linear-gradient(to right, white, #f8f8f6); */
   min-height: 85%;
+  font-size: 18px;
  }
 
  .login{
@@ -9,9 +10,10 @@
  }
 
 .imageLogin{
-  background-image: url('../../assets/2.png');
+  background-image: url('../../assets/img/login.jpg');
   background-position: center center;
   background-repeat: no-repeat;
+  background-size: cover;
   overflow: hidden;
 }
 
@@ -31,4 +33,14 @@
 
 label{
   font-size: 16px;
+}
+
+.textWhite{
+  color: white;
+  background-color: rgb(156, 189, 11);
+}
+
+.textDark{
+  color: dark;
+  background-color: rgb(189, 11, 141);
 }

@@ -22,6 +22,7 @@ export class LoginComponent implements OnInit {
   private token: string = '';
   private expires: string = '';
   private user: string = '';
+  dark: boolean = false;
 
   userToShow: IUser | undefined ={
     name:"",
@@ -55,6 +56,12 @@ export class LoginComponent implements OnInit {
       this.loggedIn = (user != null);
       this.redirect();
     });
+    this.storageService.darkThemeObs.subscribe(
+      data => {
+        this.dark = data;
+        console.log(data);
+      }
+    );
   }
 
   signInWithGoogle(): void {
@@ -81,7 +88,7 @@ export class LoginComponent implements OnInit {
           this.token = res['access_token'];
           this.expires = res.expires_in;
           this.localUser = res.user
-          this.user = JSON.stringify(res.user);
+          this.user = JSON.stringify(this.localUser);
           this.storageService.saveToken(this.token, this.expires, this.user);
           this.userService.eventEmitter.emit(this.localUser);
           this.userService.timeLogout();

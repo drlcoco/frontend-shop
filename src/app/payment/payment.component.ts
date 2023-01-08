@@ -38,6 +38,7 @@ export class PaymentComponent implements OnInit {
     password:'',
     image:''
   }
+  theme: boolean = false;
 
   public payPalConfig ?: IPayPalConfig;
 
@@ -52,8 +53,6 @@ export class PaymentComponent implements OnInit {
     this.initConfig();
     if(this.storageService.existCart()) {
       this.productosAPagar = this.storageService.getCart();
-      console.log(this.productosAPagar);
-
       this.productosService.productos = this.storageService.getCart();
     }
     if(this.userService.existAuth()){
@@ -152,6 +151,11 @@ export class PaymentComponent implements OnInit {
       this.productosService.addPurchase(this.producto);
     });
     this.modalService.show(ModalComponent);
+  }
+
+  updateTableTheme(): boolean {
+    this.theme = this.storageService.getDarkTheme();
+    return this.theme;
   }
 
 }

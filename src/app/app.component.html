@@ -1,10 +1,16 @@
-<button class="btn btn-outline-primary fs-6 text-light toogle" (click)="switchTheme()">
-  <i *ngIf="theme === 'dark-theme'" class="bi bi-sun-fill"></i>
-  <i *ngIf="theme === 'light-theme'" class="bi bi-moon-stars-fill"></i>
-  {{ theme === 'light-theme' ? 'Dark' : 'Light'}}
-</button>
-<app-nav></app-nav>
-<router-outlet></router-outlet>
-<app-canvas-cart></app-canvas-cart>
-<app-footer></app-footer>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-12">
+      <button class="btn btn-outline-primary fs-6 text-light toogle" (click)="switchTheme()">
+        <i *ngIf="theme === 'dark-theme'" class="bi bi-sun-fill"></i>
+        <i *ngIf="theme === 'light-theme'" class="bi bi-moon-stars-fill"></i>
+        {{ theme === 'light-theme' ? 'Dark' : 'Light'}}
+      </button>
+      <app-nav></app-nav>
+      <router-outlet></router-outlet>
+      <app-canvas-cart></app-canvas-cart>
+      <app-footer></app-footer>
+    </div>
+  </div>
+</div>
 
