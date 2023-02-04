@@ -14,6 +14,7 @@ export class ProductShowComponent implements OnInit {
   spinner: boolean = false;
   filterSearch: string = '';
   ProductsService: any;
+  title = 'Patinetes eléctricos de última generación para tu movilidad urbana';
 
   constructor(private productosService : ProductsService,
     private spinnerService: NgxSpinnerService) {}

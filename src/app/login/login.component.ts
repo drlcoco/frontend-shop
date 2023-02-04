@@ -53,7 +53,20 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {
     this.authService.authState.subscribe((user) => {
       this.socialUser = user;
+      console.log(this.socialUser);
+      this.localUser ={
+        name: this.socialUser.name,
+        surname: this.socialUser.lastName,
+        phone:0,
+        address:"",
+        role:"user",
+        email: this.socialUser.email,
+        password:"",
+        image:""
+      };
       this.loggedIn = (user != null);
+      this.user = JSON.stringify(this.localUser);
+      this.storageService.saveToken(this.socialUser.idToken, this.expires, this.user);
       this.redirect();
     });
     this.storageService.darkThemeObs.subscribe(

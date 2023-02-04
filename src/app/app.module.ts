@@ -39,6 +39,7 @@ import { MyAccountComponent} from './components/my-account/my-account.component'
 import { SwalComponent } from './components/swal/swal.component';
 import { AdminGuard } from './guards/admin.guard';
 import { UserGuard } from './guards/user-guard';
+import { RentPointerComponent } from './components/rent-pointer/rent-pointer.component';
 
 const APP_ROUTES: Route[] = [
   { path: 'home', component: HomeComponent },
@@ -50,6 +51,7 @@ const APP_ROUTES: Route[] = [
   { path: 'contact', component: ContactComponent },
   { path: 'cart', component: CartComponent },
   { path: 'rent', component: ProductRentComponent },
+  { path: 'pointer/:id', component: RentPointerComponent },
   { path: 'logout/:sure', component: LoginComponent },
   { path: 'products/update/:id', component: ProductoUpdateComponent, canActivate: [AdminGuard] },
   { path: 'add', component: ProductoAddComponent, canActivate: [AdminGuard] },
@@ -84,7 +86,8 @@ const APP_ROUTES: Route[] = [
     CardhomeComponent,
     ModalComponent,
     MyPurchasesComponent,
-    MyAccountComponent
+    MyAccountComponent,
+    RentPointerComponent
   ],
   imports: [
     BrowserModule,

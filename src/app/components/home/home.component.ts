@@ -14,16 +14,22 @@ import { UserService } from '../../services/user.service';
   animations: [
     trigger('animateList', [
       transition(':enter', [
-        style({ opacity: 0, transform: 'translateY(-500px)'}),
-        animate('5000ms ease-out', style({opacity: 1, transform: 'none'}))
+        style({
+          transform: 'translateY(-400px)',
+          height: 0
+        }),
+        animate('2000ms ease-out', style({
+          transform: 'none',
+          height: '*'
+        }))
       ])
-    ]),
+    ])/* ,
     trigger('animateImage', [
       transition(':enter', [
         style({ opacity: 0, transform: 'translateX(-100px)'}),
         animate('1000ms ease-out', style({opacity: 1, transform: 'none'}))
       ])
-    ])
+    ]) */
   ]
 })
 

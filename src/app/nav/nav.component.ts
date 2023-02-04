@@ -98,6 +98,10 @@ export class NavComponent implements OnInit {
   }
 
   logout(){
+    if(this.authService) {
+      this.authService.signOut();
+      this.user = undefined;
+    }
     this.iuser = undefined;
     this.authUser = undefined;
     this.loggedIn = false;
