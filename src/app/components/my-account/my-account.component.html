@@ -1,132 +1,154 @@
 <div class="container-fluid">
   <div class="row text-center justify-content-center mt-4">
-    <div *ngIf="this.user" class="col-xs-12 col-lg-6 p-5 mx-5">
-      <h1 class="mt-5 text-primary text-center fs-2"><i class="bi bi-arrow-up-square me-3"></i>Actualizar usuario {{this.user.name}}</h1>
-      <form class="mt-5 fs-5 rounded-3 p-4 border border-primary darkThemeForm" #valForm="ngForm" (ngSubmit)="updateUser()">
-        <!-- <div class="form-group">
-          <mat-form-field class="example-form-field col-12">
-            <mat-label class="text-primary">Id</mat-label>
-            <input
-              matInput
-              class="text-secondary"
-              type="number"
-              name="id"
-              id="id"
-              [(ngModel)]="this.user.id"
-              #id="ngModel"
-              [ngClass]="{'is-valid':id.touched && id.valid, 'is-invalid':id.touched && !id.valid}"
-              disabled
-              minlength="1" maxlength="30" required>
-          </mat-form-field>
-        </div>
-        <div class="form-group">
-          <mat-form-field class="example-form-field col-12">
-            <mat-label class="text-primary">Role</mat-label>
-            <input
-              matInput
-              class="text-secondary"
-              type="text"
-              name="role"
-              id="role"
-              [(ngModel)]="this.user.role"
-              #role="ngModel"
-              [ngClass]="{'is-valid':role.touched && role.valid, 'is-invalid':role.touched && !role.valid}"
-              pattern="[a-zA-ZÀ-ÿ\s]{1,40}"
-              disabled
-              minlength="5" maxlength="30" required>
-          </mat-form-field>
-        </div> -->
-        <div class="form-group">
-            <mat-form-field class="example-form-field col-12">
-              <mat-label [ngStyle]="{ color: !name.valid ? 'red' : '#0d6efd' }">Nombre</mat-label>
-              <input
-                matInput
-                class=""
-                type="text"
-                name="name"
-                id="name"
-                [(ngModel)]="this.user.name"
-                (ngModelChange)="this.user.name"
-                #name="ngModel"
-                [ngClass]="{'is-valid':name.touched && name.valid, 'is-invalid':name.touched && !name.valid}"
-                pattern="[a-zA-ZÀ-ÿ\s]{5,30}"
-                minlength="5" maxlength="30" required>
-            </mat-form-field>
-        </div>
-        <div class="form-group">
-            <mat-form-field class="example-form-field col-12">
-              <mat-label [ngStyle]="{ color: !surname.valid ? 'red' : '#0d6efd' }">Apellidos</mat-label>
-              <input
-                matInput
-                class=""
-                type="text"
-                name="surname"
-                id="surname"
-                [(ngModel)]="this.user.surname"
-                (ngModelChange)="this.user.surname"
-                #surname="ngModel"
-                [ngClass]="{'is-valid':surname.touched && surname.valid, 'is-invalid':surname.touched && !surname.valid}"
-                pattern="[a-zA-ZÀ-ÿ\s]{5,60}"
-                minlength="5" maxlength="60" required>
-            </mat-form-field>
-        </div>
-        <div class="form-group">
-            <mat-form-field class="example-form-field col-12">
-              <mat-label [ngStyle]="{ color: !address.valid ? 'red' : '#0d6efd' }">Dirección</mat-label>
-              <input
-                matInput
-                class=""
-                type="text"
-                name="address"
-                id="address"
-                [(ngModel)]="this.user.address"
-                (ngModelChange)="this.user.address"
-                #address="ngModel"
-                [ngClass]="{'is-valid':address.touched && address.valid, 'is-invalid':address.touched && !address.valid}"
-                pattern="[a-zA-Z0-9\_\-\,\ ]{4,68}"
-                minlength="5" maxlength="100" required>
-            </mat-form-field>
-        </div>
-        <div class="form-group">
-            <mat-form-field class="example-form-field col-12">
-              <mat-label [ngStyle]="{ color: !phone.valid ? 'red' : '#0d6efd' }">Teléfono</mat-label>
-              <input
-                matInput
-                class=""
-                type="tel"
-                name="phone"
-                id="phone"
-                [(ngModel)]="this.user.phone"
-                (ngModelChange)="this.user.phone"
-                #phone="ngModel"
-                [ngClass]="{'is-valid':phone.touched && phone.valid, 'is-invalid':phone.touched && !phone.valid}"
-                pattern="(\+?( |-|\.)?\d{1,4}( |-|\.)?)?(\(?\d{3}\)?|\d{3})( |-|\.)?(\d{3}( |-|\.)?\d{3})"
-                required>
-            </mat-form-field>
-        </div>
-        <div class="form-group">
-            <mat-form-field class="example-form-field col-12">
-              <mat-label></mat-label>
-              <button type="button" mat-raised-button (click)="onFileSelected()">Choose File</button>
-              <input
-              hidden
-              matInput
-              type="file"
-              class="file-upload"
-              #fileUpload
-              name="image"
-              (ngModel)="this.user.image"
-              (change)="changeImage(fileUpload)"/>
-            </mat-form-field>
-        </div>
-        <div class="text-center mt-3">
-          <img [src]="this.user.image" alt="" id="preview" width="200">
-        </div>
-        <div class="form-group mt-3 text-center mb-3">
-          <input type="submit" class="btn btn-primary w-50"  value="Guardar" />
+    <div *ngIf="this.user" class="col-xs-12 col-lg-10 p-5 mx-5">
+      <h1 class="mt-5 text-primary text-center fs-2">
+        <i class="bi bi-arrow-up-square me-3"></i>Actualizar perfil de
+        {{ this.user.name }}
+      </h1>
+      <form
+        class="mt-5 fs-5 rounded-3 p-4 border border-primary darkThemeForm d-flex"
+        #valForm="ngForm"
+        (ngSubmit)="updateUser()"
+      >
+        <div class="row d-flex w-100">
+          <div class="col-xs-12 col-md-6">
+            <div class="form-group">
+              <mat-form-field class="example-form-field col-12">
+                <mat-label [ngStyle]="{ color: !name.valid ? 'red' : '#0d6efd' }"
+                  >Nombre</mat-label
+                >
+                <input
+                  matInput
+                  class=""
+                  type="text"
+                  name="name"
+                  id="name"
+                  [(ngModel)]="this.user.name"
+                  (ngModelChange)="(this.user.name)"
+                  #name="ngModel"
+                  [ngClass]="{
+                    'is-valid': name.touched && name.valid,
+                    'is-invalid': name.touched && !name.valid
+                  }"
+                  pattern="[a-zA-ZÀ-ÿ\s]{5,30}"
+                  minlength="5"
+                  maxlength="30"
+                  required
+                />
+              </mat-form-field>
+            </div>
+            <div class="form-group">
+              <mat-form-field class="example-form-field col-12">
+                <mat-label
+                  [ngStyle]="{ color: !surname.valid ? 'red' : '#0d6efd' }"
+                  >Apellidos</mat-label
+                >
+                <input
+                  matInput
+                  class=""
+                  type="text"
+                  name="surname"
+                  id="surname"
+                  [(ngModel)]="this.user.surname"
+                  (ngModelChange)="(this.user.surname)"
+                  #surname="ngModel"
+                  [ngClass]="{
+                    'is-valid': surname.touched && surname.valid,
+                    'is-invalid': surname.touched && !surname.valid
+                  }"
+                  pattern="[a-zA-ZÀ-ÿ\s]{5,60}"
+                  minlength="5"
+                  maxlength="60"
+                  required
+                />
+              </mat-form-field>
+            </div>
+          </div>
+          <div class="col-xs-12 col-md-6">
+            <div class="form-group">
+              <mat-form-field class="example-form-field col-12">
+                <mat-label
+                  [ngStyle]="{ color: !address.valid ? 'red' : '#0d6efd' }"
+                  >Dirección</mat-label
+                >
+                <input
+                  matInput
+                  class=""
+                  type="text"
+                  name="address"
+                  id="address"
+                  [(ngModel)]="this.user.address"
+                  (ngModelChange)="(this.user.address)"
+                  #address="ngModel"
+                  [ngClass]="{
+                    'is-valid': address.touched && address.valid,
+                    'is-invalid': address.touched && !address.valid
+                  }"
+                  pattern="[a-zA-Z0-9\_\-\,\ ]{4,68}"
+                  minlength="5"
+                  maxlength="100"
+                  required
+                />
+              </mat-form-field>
+            </div>
+            <div class="form-group">
+              <mat-form-field class="example-form-field col-12">
+                <mat-label [ngStyle]="{ color: !phone.valid ? 'red' : '#0d6efd' }"
+                  >Teléfono</mat-label
+                >
+                <input
+                  matInput
+                  class=""
+                  type="tel"
+                  name="phone"
+                  id="phone"
+                  [(ngModel)]="this.user.phone"
+                  (ngModelChange)="(this.user.phone)"
+                  #phone="ngModel"
+                  [ngClass]="{
+                    'is-valid': phone.touched && phone.valid,
+                    'is-invalid': phone.touched && !phone.valid
+                  }"
+                  pattern="(\+?( |-|\.)?\d{1,4}( |-|\.)?)?(\(?\d{3}\)?|\d{3})( |-|\.)?(\d{3}( |-|\.)?\d{3})"
+                  required
+                />
+              </mat-form-field>
+            </div>
+          </div>
+          <div class="col-12">
+            <div class="col-12">
+              <div class="form-group">
+                <mat-form-field class="example-form-field col-12">
+                  <mat-label></mat-label>
+                  <!-- <button type="button" mat-raised-button (click)="onFileSelected()">Choose File</button> -->
+                  <div class="box-button">
+                    <button type="button" class="btn btn-outline-primary button-select">
+                      <input
+                      matInput
+                      type="file"
+                      class="file-upload file-button"
+                      #fileUpload
+                      name="image"
+                      (ngModel)="(this.user.image)"
+                      (change)="changeImage(fileUpload)"
+                    />Seleccionar imagen</button>
+                  </div>
+                </mat-form-field>
+              </div>
+              <div class="text-center mt-3">
+                <img [src]="this.user.image" alt="" id="preview" width="200" />
+              </div>
+              <div class="form-group my-3 text-center">
+                <input
+                  type="submit"
+                  class="btn btn-primary w-50 mt-4"
+                  value="Guardar"
+                />
+              </div>
+            </div>
+          </div>
         </div>
       </form>
     </div>
   </div>
 </div>
-

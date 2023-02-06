@@ -49,7 +49,7 @@
         <h1 class="fs-1">Tienda. </h1>
         <h1 class="text-secondary ms-2 fs-1">Patinetes eléctricos</h1>
       </div>
-      <div class="col-xs-12 col-md-4 col-lg-3" *ngFor="let producto of productos | eventFilter:   filterSearch">
+      <div class="col-xs-12 col-md-6 col-lg-4 col-xl-3" *ngFor="let producto of productos | eventFilter:   filterSearch">
         <app-product-item [inputProducto]="producto"></app-product-item>
       </div>
     </div>

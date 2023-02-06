@@ -18,6 +18,8 @@ export class MyPurchasesComponent implements OnInit {
   products: IProduct[] = [];
   myPurchases: IProduct[] = [];
   precioTotal:number = 0;
+  date!: Date | undefined;
+  theme: boolean = false;
 
   constructor(private userService: UserService,
     private productsService: ProductsService,
@@ -34,6 +36,8 @@ export class MyPurchasesComponent implements OnInit {
           console.log('...Cargando '+resp.length);
           this.products.forEach(element => {
             if(element.userId === id){
+              this.date = element.created_at;
+              console.log(this.date);
               this.myPurchases.push(element);
               console.log(element);
             }
@@ -52,6 +56,11 @@ export class MyPurchasesComponent implements OnInit {
       }
     }
     return this.precioTotal;
+  }
+
+  updateTableTheme(): boolean {
+    this.theme = this.storageService.getDarkTheme();
+    return this.theme;
   }
 
 }

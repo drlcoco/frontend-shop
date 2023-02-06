@@ -135,7 +135,7 @@ export class PaymentComponent implements OnInit {
   openModal() {
     console.log("Abriendo el modal");
     this.productosAPagar.forEach((product: IProduct) => {
-      this.producto.title = product.title;
+      /* this.producto.title = product.title;
       this.producto.description = product.description;
       this.producto.stock = product.stock - 1;
       this.producto.price = product.price;
@@ -143,12 +143,20 @@ export class PaymentComponent implements OnInit {
       this.producto.userId = product.userId;
       this.producto.categoryId = product.categoryId;
       console.log(product);
-      console.log(this.producto);
-      this.productosService.updateEvento(this.producto);
+      console.log(this.producto); */
+      product.stock = product.stock - 1;
+      this.productosService.updateEvento(product).subscribe(
+        ok => 'Producto actualizado correctamente',
+        err => 'Error actualizando producto'
+      );
       if(this.auth.id !== undefined){
-        this.producto.userId = this.auth.id;
+        product.userId = this.auth.id;
       }
-      this.productosService.addPurchase(this.producto);
+      console.log(product);
+      this.productosService.addPurchase(product).subscribe(
+        ok => 'Compra añadida a la base de datos correctamente',
+        err => 'Error añadiendo la compra a la base de datos'
+      );
     });
     this.modalService.show(ModalComponent);
   }

@@ -61,7 +61,7 @@ export class ProductsService {
   updateEvento(producto: IProduct): Observable<IProduct> {
     return this.http.put<Responses>(`http://localhost:8000/api/products/${producto.id}` , producto).pipe(
 			map(resp => {
-        console.log(resp);
+        console.log('Actualizando stock del producto comprado. '+resp);
 				return resp.producto;
 			}),
       catchError((resp: HttpErrorResponse) =>

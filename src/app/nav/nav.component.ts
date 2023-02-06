@@ -40,6 +40,7 @@ export class NavComponent implements OnInit {
   authUser: any | undefined;
   loggedIn: boolean | undefined;
   localIn: boolean | undefined;
+  isToggle: boolean = true;
   localUser:IUser ={
     name:"",
     surname:"",
@@ -118,5 +119,10 @@ export class NavComponent implements OnInit {
     };
     this.userService.loggedUser = null;
     this.userService.logout();
+  }
+
+  changeToggle(){
+    if(this.isToggle === true){this.isToggle = false;}
+    else{this.isToggle = true;}
   }
 }

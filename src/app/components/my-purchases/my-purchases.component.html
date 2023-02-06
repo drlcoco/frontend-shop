@@ -2,21 +2,28 @@
   <div class="row">
     <div class="col">
       <div class="m-5 text-center">
-        <h1 *ngIf="auth?.name" class="title fw-b fs-1">
-          Tus compras, {{ auth?.name }}
-        </h1>
-        <h1 *ngIf="!auth?.name && auth?.email" class="title fw-b fs-1">
-          Tus compras, {{ auth?.email }}
-        </h1>
+        <div *ngIf="auth?.name" class="col-11 d-flex ms-5 mt-5 mb-3 justify-content-center">
+          <h1 class="fs-1">Tus compras. </h1>
+          <h1 class="text-secondary ms-2 fs-1">{{ auth?.name }}</h1>
+        </div>
+        <div *ngIf="!auth?.name && auth?.email" class="col-11 d-flex ms-5 mt-5 mb-3 justify-content-center">
+          <h1 class="fs-1">Tus compras. </h1>
+          <h1 class="text-secondary ms-2 fs-1">{{ auth?.email }}</h1>
+        </div>
         <table
-          class="table table-light table-striped mt-5"
+          [ngClass]="this.updateTableTheme() ? 'table table-dark table-striped mt-5' : 'table table-light table-striped mt-5'"
           *ngIf="myPurchases && myPurchases.length; else noPurchases"
         >
+        <!-- <table
+          class="table table-light table-striped mt-5"
+          *ngIf="myPurchases && myPurchases.length; else noPurchases"
+        > -->
           <thead>
             <tr class="fw-b fs-5">
               <th scope="col" class="py-4">Imagen</th>
               <th scope="col" class="py-4">Producto</th>
               <th scope="col" class="py-4">Precio</th>
+              <th scope="col" class="py-4">Fecha</th>
             </tr>
           </thead>
           <tbody>
@@ -26,12 +33,13 @@
               </td>
               <td class="pt-4">{{ producto.title }}</td>
               <td class="pt-4">{{ producto.price }}</td>
+              <td class="pt-4">{{ producto.created_at | date : "dd/MM/y HH:mm" }}</td>
             </tr>
           </tbody>
         </table>
         <ng-template #noPurchases>
-          <div class="row m-5">
-            <div class="col-6 my-5">
+          <div class="row m-5 d-flex">
+            <div class="col-xs-12 col-lg-6 my-2 justify-content-center">
               <h1 class="text-center fs-1 fw-b my-5">
                 No hay compras realizadas
               </h1>
@@ -45,11 +53,11 @@
                 >
               </div>
             </div>
-            <div class="col">
+            <div class="col-xs-12 col-lg-6 justify-content-center">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                width="456"
-                height="456"
+                width="356"
+                height="356"
                 fill="currentColor"
                 class="bi bi-cart4"
                 viewBox="0 0 16 16"
@@ -62,7 +70,7 @@
           </div>
         </ng-template>
         <div class="text-center mt-3" *ngIf="calcularTotal() > 0">
-          <div class="mb-3">
+          <div class="mt-5 mb-3">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="76"

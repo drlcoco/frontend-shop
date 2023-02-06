@@ -7,4 +7,5 @@ export interface IProduct {
   image:string;
   userId:number;
   categoryId:number;
+  created_at?: Date;
 }

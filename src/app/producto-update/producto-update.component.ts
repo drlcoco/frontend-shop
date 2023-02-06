@@ -41,7 +41,7 @@ export class ProductoUpdateComponent implements OnInit {
         },
           error => console.error(error)
       );
-    this.producto.price=Number(this.producto.price);
+    /* this.producto.price=Number(this.producto.price); */
   }
 
   canDeactivate(){
@@ -84,5 +84,4 @@ export class ProductoUpdateComponent implements OnInit {
       this.producto.image = reader.result as string;
     });
   }
-
 }

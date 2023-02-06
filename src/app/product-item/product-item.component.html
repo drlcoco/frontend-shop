@@ -1,16 +1,16 @@
 <div class="col">
-  <mat-card class="cardShadow m-4">
-    <mat-card-content>
+  <mat-card class="cardShadow m-4 rounded h-100">
+    <mat-card-content class="h-100">
       <a class="nav-link m-0 p-0" [routerLink]="['/products', inputProducto.id]">
-        <img mat-card-image [src]="inputProducto.image" alt="Photo" height="250px">
+        <img mat-card-image [src]="inputProducto.image" alt="Photo" height="250px" class="rounded">
         <mat-card-title>{{ inputProducto.title }}</mat-card-title>
       </a>
       <mat-card-subtitle>Stock: {{ inputProducto.stock}}</mat-card-subtitle>
-      <p>{{ inputProducto.description}}</p>
+      <p class="h-100">{{ inputProducto.description}}</p>
       <p>Precio: <span class="text-danger mx-1">{{inputProducto.price | currency: "EUR" }}</span>
       <s class="text-muted"> {{ offer(inputProducto.price) | currency: "EUR"}}</s></p>
     </mat-card-content>
-      <mat-card-actions class="d-flex">
+      <mat-card-actions class="d-flex h-100">
         <a (click)="addProduct()" [routerLink]="['/payment']"><button mat-button class=""><i class="bi bi-bag-heart me-1 d-lg-none d-xl-inline"></i>COMPRAR</button></a>
         <button mat-button (click)="addProduct()"><i class="bi bi-heart-fill me-1 d-lg-none d-xl-inline"></i>AÑADIR</button>
       </mat-card-actions>
