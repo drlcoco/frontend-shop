@@ -7,6 +7,7 @@ import { BsModalService, BsModalRef } from 'ngx-bootstrap/modal';
 import { ModalComponent } from '../components/modal/modal.component';
 import { IUser } from '../interfaces/i-user';
 import { UserService } from '../services/user.service';
+import { Email } from '../interfaces/email';
 
 @Component({
   selector: 'app-payment',
@@ -37,6 +38,11 @@ export class PaymentComponent implements OnInit {
     email:'',
     password:'',
     image:''
+  }
+  email: Email = {
+    user: this.auth,
+    products: this.productosAPagar,
+    total: this.calcularTotal()
   }
   theme: boolean = false;
 
@@ -135,15 +141,6 @@ export class PaymentComponent implements OnInit {
   openModal() {
     console.log("Abriendo el modal");
     this.productosAPagar.forEach((product: IProduct) => {
-      /* this.producto.title = product.title;
-      this.producto.description = product.description;
-      this.producto.stock = product.stock - 1;
-      this.producto.price = product.price;
-      this.producto.image = product.image;
-      this.producto.userId = product.userId;
-      this.producto.categoryId = product.categoryId;
-      console.log(product);
-      console.log(this.producto); */
       product.stock = product.stock - 1;
       this.productosService.updateEvento(product).subscribe(
         ok => 'Producto actualizado correctamente',
@@ -152,12 +149,18 @@ export class PaymentComponent implements OnInit {
       if(this.auth.id !== undefined){
         product.userId = this.auth.id;
       }
-      console.log(product);
       this.productosService.addPurchase(product).subscribe(
         ok => 'Compra añadida a la base de datos correctamente',
         err => 'Error añadiendo la compra a la base de datos'
       );
     });
+    this.email.user = this.auth;
+    this.email.products = this.productosAPagar;
+    this.email.total = this.calcularTotal();
+    this.productosService.sendEmail(this.email).subscribe(
+      ok => 'Email enviado correctamente',
+      err => 'Error enviando email'
+    );
     this.modalService.show(ModalComponent);
   }
 

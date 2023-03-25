@@ -4,6 +4,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { BehaviorSubject, Observable } from 'rxjs';
 import { throwError } from 'rxjs/internal/observable/throwError';
 import { catchError, tap, map, retry } from 'rxjs/operators';
+import Swal from 'sweetalert2';
 
 import { IUser } from '../interfaces/i-user';
 import { JwtInterface } from '../interfaces/jwt-interface';
@@ -59,6 +60,17 @@ export class UserService {
     );
   }
 
+  getEventos(): Observable<IUser[]> {
+    const userURL = 'http://localhost:8000/api/users';
+    return this.http.get<IUser[]>(userURL).pipe(
+      map(response => response),
+      catchError(
+        (resp:HttpErrorResponse)=> throwError(`Error obteniendo
+        usuarios. Código de servidor: ${resp.status}. Mensaje: ${resp.message}`)
+      )
+    );
+  }
+
   getUser(id:number | undefined) {
     const userURL = 'http://localhost:8000/api/users';
     return this.http.get<any>(`${userURL}/${id}`);
@@ -77,6 +89,27 @@ export class UserService {
         )
       )
 		);
+  }
+
+  deleteUser(id:number){
+    return this.http.delete<UserResponses>(this.url + "/" + id).subscribe(
+      (result)=> {
+        Swal.fire({
+          title: 'Usuario Eliminado',
+          icon: 'success',
+          text: 'Se ha eliminado el producto con éxito!.',
+          timer: 4000
+        })
+      },
+      (error)=> {
+        Swal.fire({
+          title: 'Error Eliminando el usuario!',
+          icon: 'error',
+          text: 'No se ha eliminado el usuario con éxito!.',
+          timer: 4000
+        })
+      }
+    )
   }
 
   getLoggedUser(){

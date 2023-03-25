@@ -26,7 +26,6 @@
               [(ngModel)]="newProducto.title"
               #name="ngModel"
               [ngClass]="{'is-valid':name.touched && name.valid, 'is-invalid':name.touched && !name.valid}"
-              pattern="[a-zA-ZÀ-ÿ\s]{5,30}"
               minlength="5" maxlength="30" required>
             <mat-error *ngIf="!name.valid && name.touched && !name.hasError('required')"
               class="fs-6">
@@ -60,7 +59,6 @@
               [(ngModel)]="newProducto.description"
               #description="ngModel"
               [ngClass]="{'is-valid':description.touched && description.valid, 'is-invalid':description.touched && !description.valid}"
-              pattern="[a-zA-ZÀ-ÿ0-9\s]{5,90}"
               minlength="5" maxlength="90" required>
             <mat-error *ngIf="!description.valid && description.touched && !description.hasError('required')"
               class="fs-6">
@@ -71,7 +69,7 @@
             </mat-error>
           </mat-form-field>
         </div>
-        <!-- <div class="form-group">
+        <!-- <div class="form-group"> pattern="[a-zA-ZÀ-ÿ0-9\s]{5,90}"
           <label for="stock">Stock</label>
           <input type="number" class="form-control mb-3 mb-1" name="stock" [(ngModel)]="newProducto.stock" #ngStock="ngModel"
             [ngClass]="{'is-valid':ngStock.touched && ngStock.valid && ngStock.value > 0, 'is-invalid':ngStock.touched && !ngStock.valid && ngStock.value === 0}"
@@ -92,7 +90,7 @@
               name="stock"
               id="stock"
               [(ngModel)]="this.newProducto.stock"
-              pattern="[0-9]{1,40}"
+              pattern="[0-9]{1,30}"
               #stock="ngModel"
               [ngClass]="{'is-valid':stock.touched && stock.valid && stock.value > 0, 'is-invalid':stock.touched && !stock.valid && stock.value === 0}"
               minlength="1" maxlength="30" required>
@@ -126,7 +124,7 @@
               name="precio"
               id="precio"
               [(ngModel)]="this.newProducto.price"
-              pattern="[0-9]{1,40}"
+              pattern="[0-9]{1,30}"
               #precio="ngModel"
               [ngClass]="{'is-valid':precio.touched && precio.valid && precio.value > 0, 'is-invalid':precio.touched && !precio.valid}"
               minlength="1" maxlength="30" required>
@@ -171,7 +169,7 @@
           <img [src]="preview" alt="" id="preview" width="250">
         </div>
         <div class="form-group mt-3 mb-5 text-center">
-          <input type="submit" class="btn btn-primary w-50" value="Añadir" [disabled]="valForm.invalid" />
+          <input type="submit" class="btn btn-primary w-50" value="Añadir" [disabled]="valForm.invalid || this.newProducto.stock === 0 || this.newProducto.price === 0" />
         </div>
       </form>
     </div>

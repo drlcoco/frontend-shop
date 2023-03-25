@@ -182,8 +182,8 @@
                   Cuenta</a
                 >
               </li>
-              <li><hr class="dropdown-divider" /></li>
-              <li>
+              <li *ngIf="this.authUser.role === 'admin'"><hr class="dropdown-divider" /></li>
+              <li *ngIf="this.authUser.role === 'admin'">
                 <a
                   class="dropdown-item"
                   [routerLink]="['panel']"

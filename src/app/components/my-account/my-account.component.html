@@ -1,12 +1,12 @@
 <div class="container-fluid">
-  <div class="row text-center justify-content-center mt-4">
+  <div class="row text-center justify-content-center my-4">
     <div *ngIf="this.user" class="col-xs-12 col-lg-10 p-5 mx-5">
       <h1 class="mt-5 text-primary text-center fs-2">
         <i class="bi bi-arrow-up-square me-3"></i>Actualizar perfil de
         {{ this.user.name }}
       </h1>
       <form
-        class="mt-5 fs-5 rounded-3 p-4 border border-primary darkThemeForm d-flex"
+        class="mt-5 fs-5 rounded-3 p-4 border border-primary darkThemeForm d-flex ali"
         #valForm="ngForm"
         (ngSubmit)="updateUser()"
       >
@@ -30,8 +30,8 @@
                     'is-valid': name.touched && name.valid,
                     'is-invalid': name.touched && !name.valid
                   }"
-                  pattern="[a-zA-ZÀ-ÿ\s]{5,30}"
-                  minlength="5"
+                  pattern="[a-zA-ZÀ-ÿ\s]{2,30}"
+                  minlength="2"
                   maxlength="30"
                   required
                 />
@@ -143,6 +143,7 @@
                   type="submit"
                   class="btn btn-primary w-50 mt-4"
                   value="Guardar"
+                  [disabled]="valForm.invalid"
                 />
               </div>
             </div>

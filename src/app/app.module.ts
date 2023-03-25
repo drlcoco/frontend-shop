@@ -108,7 +108,7 @@ const APP_ROUTES: Route[] = [
     MatNativeDateModule,
     SocialLoginModule,
     NgxPayPalModule,
-    NgxSpinnerModule.forRoot({ type: 'ball-scale-multiple' }),
+    NgxSpinnerModule,
     ModalModule.forRoot()
   ],
   providers: [

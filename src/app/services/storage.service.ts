@@ -1,6 +1,7 @@
 import { EventEmitter, Injectable, Output } from '@angular/core';
 import { BehaviorSubject, Observable } from 'rxjs';
 import { IProduct } from '../interfaces/i-product';
+import { IUser } from '../interfaces/i-user';
 
 @Injectable({
   providedIn: 'root'

@@ -6,6 +6,8 @@ import { Responses } from '../interfaces/responses';
 import { StorageService } from './storage.service';
 import Swal from 'sweetalert2';
 import { IPurchase } from '../interfaces/i-purchase';
+import { IUser } from '../interfaces/i-user';
+import { Email } from '../interfaces/email';
 
 @Injectable({
   providedIn: 'root'
@@ -107,6 +109,28 @@ export class ProductsService {
         }
     }
     return this.productos.length;
+  }
+
+  sendEmail(email: Email): Observable<Responses> {
+    const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
+    const url = 'http://localhost:8000/api/sendEmail';
+    /* const json = JSON.stringify(email); */
+    /* const data = new FormData();
+    data.append('emailData', email.user); */
+
+    /* return this.http.post<Responses>(url, {headers: headers}).pipe( */
+    return this.http.post<Responses>(url, email).pipe(
+      map(resp => {
+        console.log('Se ha enviado el email correctamente');
+        console.log(resp);
+				return resp;
+			}),
+      catchError((resp: HttpErrorResponse) =>
+        throwError(
+          `Error insertando la compra: Código de servidor: ${resp.status}. Mensaje: ${resp.message}`
+        )
+      )
+    );
   }
 
   addPurchase(product:IProduct): Observable<Responses> {

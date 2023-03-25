@@ -19,7 +19,7 @@ export class RegisterComponent {
     surname:"",
     phone:0,
     address:"",
-    role:"admin",
+    role:"user",
     email:"",
     password:"",
     password2:"",

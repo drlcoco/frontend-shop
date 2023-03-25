@@ -11,14 +11,14 @@
           </li>
         </ul>
         <form class="d-inline-flex justify-content-end w-50">
-          <label class="col-form-label text-truncate text-light align-self-center">Filtrando por: </label>
+          <label class="col-form-label text-truncate text-light align-self-center"><i class="bi bi-search fs-6 me-2"></i> </label>
           <input
             type="text"
             [(ngModel)]="filterSearch"
             class="form-control w-50 ms-2"
             name="filterDesc"
             id="filterDesc"
-            placeholder="Filter..."
+            placeholder="Búsqueda"
           />
         </form>
       </div>
@@ -42,7 +42,6 @@
   </div>
 </ng-template>
 <div>
-  <ngx-spinner type="ball-scale-multiple"></ngx-spinner>
   <div class="products custom-shadow rounded card-custom" *ngIf="productos && productos.length else elseBlock">
     <div class="row mb-3">
       <div class="col-11 d-flex ms-5 mt-5 mb-3">
@@ -55,4 +54,18 @@
     </div>
   </div>
 </div>
+<ngx-spinner type="ball-scale-multiple"></ngx-spinner>
+<!-- <ngx-spinner
+  bdColor="rgba(51,51,51,0.8)"
+  size="medium"
+  color="#fff"
+  type="ball-atom"
+>
+  <p style="font-size: 20px; color: white">Loading...</p>
+</ngx-spinner> -->
+<!-- <ngx-spinner
+  bdColor="rgba(0, 0, 0, 1)"
+  template="<img src='https://media.giphy.com/media/o8igknyuKs6aY/giphy.gif' />"
+>
+</ngx-spinner> -->
 
