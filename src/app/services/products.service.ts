@@ -17,7 +17,8 @@ export class ProductsService {
   productos : IProduct[] = [];
   numBadge:number = 0;
   badgeNumber: number = 0;
-  private productoURL = 'http://localhost:8000/api/products';
+  url:string = "https://apirest.patinetesdriveelectric.com/public/api/products";
+  private productoURL = "https://apirest.patinetesdriveelectric.com/public/api/products";
   headers: HttpHeaders | { [header: string]: string | string[]; } | undefined;
 
   constructor(private http: HttpClient) { }
@@ -26,14 +27,14 @@ export class ProductsService {
     let options = {
       headers: new HttpHeaders().set('Authorization', localStorage.getItem('token') as string)
     };
-    const productoURL = 'http://localhost:8000/api/products';
+    const productoURL = "https://apirest.patinetesdriveelectric.com/public/api/products";
     return this.http.get<IProduct[]>(productoURL).pipe(
       map(response => response = this.productos.filter(resp => resp.price > 0))
     );
   }
 
   getEventos(): Observable<IProduct[]> {
-    const productoURL = 'http://localhost:8000/api/products';
+    const productoURL = "https://apirest.patinetesdriveelectric.com/public/api/products";
     return this.http.get<IProduct[]>(productoURL).pipe(
       map(response => response),
       catchError(
@@ -48,7 +49,8 @@ export class ProductsService {
   }
 
   crearEvento(producto: IProduct): Observable<IProduct> {
-    return this.http.post<Responses>('http://localhost:8000/api/products' , producto).pipe(
+    const productoURL = "https://apirest.patinetesdriveelectric.com/public/api/products";
+    return this.http.post<Responses>("https://apirest.patinetesdriveelectric.com/public/api/products" , producto).pipe(
 			map(resp => {
 				return resp.producto;
 			}),
@@ -61,7 +63,8 @@ export class ProductsService {
   }
 
   updateEvento(producto: IProduct): Observable<IProduct> {
-    return this.http.put<Responses>(`http://localhost:8000/api/products/${producto.id}` , producto).pipe(
+    const productoURL = "https://apirest.patinetesdriveelectric.com/public/api/products";
+    return this.http.put<Responses>(`${productoURL}/${producto.id}` , producto).pipe(
 			map(resp => {
         console.log('Actualizando stock del producto comprado. '+resp);
 				return resp.producto;
@@ -75,7 +78,8 @@ export class ProductsService {
   }
 
   deleteEvent(id:number){
-    return this.http.delete<Responses>(this.productoURL + "/" + id).subscribe(
+    const productoURL = "https://apirest.patinetesdriveelectric.com/public/api/products";
+    return this.http.delete<Responses>(productoURL + "/" + id).subscribe(
       (result)=> {
         Swal.fire({
           title: 'Producto Eliminado',
@@ -113,7 +117,7 @@ export class ProductsService {
 
   sendEmail(email: Email): Observable<Responses> {
     const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
-    const url = 'http://localhost:8000/api/sendEmail';
+    const url = 'https://apirest.patinetesdriveelectric.com/public/api/sendEmail';
     /* const json = JSON.stringify(email); */
     /* const data = new FormData();
     data.append('emailData', email.user); */
@@ -134,7 +138,7 @@ export class ProductsService {
   }
 
   addPurchase(product:IProduct): Observable<Responses> {
-    return this.http.post<Responses>('http://localhost:8000/api/purchases' , product).pipe(
+    return this.http.post<Responses>('https://apirest.patinetesdriveelectric.com/public/api/purchases' , product).pipe(
 			map(resp => {
         console.log('Se ha añadido la compra a la base de datos en addPurchase');
         console.log(product);
@@ -150,7 +154,7 @@ export class ProductsService {
 
   getUserPurchase(id: number | undefined){
     if(id){
-      return this.http.get<IProduct>(`http://localhost:8000/api/purchases/${id}`);
+      return this.http.get<IProduct>(`https://apirest.patinetesdriveelectric.com/public/api/purchases/${id}`);
     }
     else{
       return "La id"+ id +"ha fallado";
@@ -158,7 +162,7 @@ export class ProductsService {
   }
 
   getPurchases(): Observable<IProduct[]> {
-    const productoURL = 'http://localhost:8000/api/purchases';
+    const productoURL = 'https://apirest.patinetesdriveelectric.com/public/api/purchases';
     return this.http.get<IProduct[]>(productoURL).pipe(
       map(response => {
         return response;

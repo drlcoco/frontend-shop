@@ -148,12 +148,12 @@
       <div *ngIf="user.image" class="text-center mt-2">
         <img [src]="preview" alt="" id="preview" width="120">
       </div>
-       <div class="alert alert-success" *ngIf="status == 'success'">
+       <!-- <div class="alert alert-success" *ngIf="status == 'success'">
         Ha sido registrado correctamente <a class="btn btn-primary" [routerLink]="['/login']">Logueate</a>
        </div>
        <div class="alert alert-danger" *ngIf="status == 'error'">
         Error!!! No ha sido registrado correctamente, inténtelo de nuevo
-       </div>
+       </div> -->
        <div class="row justify-content-center">
         <div class="col-sm-3">
           <button type="submit" [disabled]="registerForm.invalid || user.password !== user.password2" class="btn rounded" data-bs-toggle="modal" data-bs-target="#staticBackdrop"><img
@@ -161,24 +161,12 @@
           alt="logo"
           class="imgLogin rounded mx-auto d-block"/>
           </button>
-          <div class="modal fade text-dark" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-            <div class="modal-dialog modal-lg">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h1 class="modal-title text-center" id="staticBackdropLabel">Usuario registrado correctamente</h1>
-                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                  <img [src]="this.userToShow.image" alt="imagen de usuario" class="imagenUsuario">
-                  <hr>
-                  <p class="mt-2">{{ this.userToShow.name }}</p>
-                </div>
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-primary" data-bs-dismiss="modal" [routerLink]="['/login']">Iniciar Sesión</button>
-                </div>
-              </div>
-            </div>
-          </div>
+          <div class="alert alert-success" *ngIf="this.isRegistered == true">
+            Ha sido registrado correctamente <a class="btn btn-primary" [routerLink]="['/login']">Logueate</a>
+           </div>
+           <div class="alert alert-danger" *ngIf="this.isRegistered == false">
+            Error!!! El email ya existe, inténtelo de nuevo.
+           </div>
         </div>
        </div>
      </form>

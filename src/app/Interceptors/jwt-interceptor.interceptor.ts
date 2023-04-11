@@ -3,25 +3,28 @@ import {
   HttpRequest,
   HttpHandler,
   HttpEvent,
-  HttpInterceptor
+  HttpInterceptor,
+  HttpClient
 } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
 @Injectable()
 export class JwtInterceptorInterceptor implements HttpInterceptor {
 
-  intercept(request: HttpRequest<unknown>, next: HttpHandler): Observable<HttpEvent<unknown>> {
+  intercept(request: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
 
-    /* const token: string = this.cookieService.get('token');
+    let token: string = localStorage.getItem('access_token') || '[]';
     let req = request;
     if (token) {
-      req = request.clone ( update: {
+      req = request.clone ( {
         setHeaders:{
-          authorization:`Bearer ${token}`
+          'Content-type' : 'application/json',
+          'Accept' : 'application/json',
+          'Authorization':`Bearer ${token}`
         }
-      }
-    } */
-    
+      });
+    }
+
     return next.handle(request);
   }
 }

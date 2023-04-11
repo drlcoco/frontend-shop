@@ -43,6 +43,7 @@ import { RentPointerComponent } from './components/rent-pointer/rent-pointer.com
 import { AdminPanelComponent } from './components/admin-panel/admin-panel.component';
 import { ProductsPanelComponent } from './components/products-panel/products-panel.component';
 import { UsersPanelComponent } from './components/users-panel/users-panel.component';
+import { JwtInterceptorInterceptor } from './Interceptors/jwt-interceptor.interceptor';
 
 const APP_ROUTES: Route[] = [
   { path: 'home', component: HomeComponent },
@@ -62,8 +63,8 @@ const APP_ROUTES: Route[] = [
   { path: 'purchases', component: MyPurchasesComponent, canActivate: [UserGuard] },
   { path: 'account', component: MyAccountComponent, canActivate: [UserGuard] },
   { path: 'panel', component: AdminPanelComponent, canActivate: [AdminGuard] },
-  { path:'/', redirectTo:'/home', pathMatch:'full'},
-  { path:'**', redirectTo:'/home', pathMatch:'full'}
+  { path:'/', redirectTo:'home', pathMatch:'full'},
+  { path:'**', redirectTo:'home', pathMatch:'full'}
 ]
 
 @NgModule({
@@ -128,6 +129,11 @@ const APP_ROUTES: Route[] = [
           console.error(err);
         }
       } as SocialAuthServiceConfig,
+    },
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: JwtInterceptorInterceptor,
+      multi: true
     }
   ],
   bootstrap: [AppComponent],

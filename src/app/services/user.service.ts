@@ -16,10 +16,10 @@ import { UserResponses } from '../interfaces/userResponses';
 })
 export class UserService {
 
-  AUTH_SERVER: string = 'http://localhost:8000/api';
+  AUTH_SERVER: string = 'https://apirest.patinetesdriveelectric.com/public/api';
   authSubject = new BehaviorSubject(false);
   private token: string = '';
-  url:string = "https://127.0.0.1:8000/api/users";
+  url:string = "https://apirest.patinetesdriveelectric.com/public/api/users";
   user: IUser | undefined;
   loggedUser: any | undefined;
 
@@ -28,11 +28,12 @@ export class UserService {
   constructor(private http: HttpClient, private route: ActivatedRoute, private router: Router) { }
 
   register(user: IUser): Observable<IUser>{
-    return this.http.post<UserResponses>('http://localhost:8000/api/users' , user).pipe(
-			map(resp => {
-        this.loggedUser = resp.user;
-				return resp.user;
-			}),
+    return this.http.post<any>("https://apirest.patinetesdriveelectric.com/public/api/register" , user).pipe(
+			tap((res) => {
+        if(res){
+          this.router.navigate(["/products"]);
+        }
+      }),
       catchError((resp: HttpErrorResponse) =>
         throwError(
           `Error insertando usuario: Código de servidor: ${resp.status}. Mensaje: ${resp.message}`
@@ -61,7 +62,7 @@ export class UserService {
   }
 
   getEventos(): Observable<IUser[]> {
-    const userURL = 'http://localhost:8000/api/users';
+    const userURL = 'https://apirest.patinetesdriveelectric.com/public/api/users';
     return this.http.get<IUser[]>(userURL).pipe(
       map(response => response),
       catchError(
@@ -72,13 +73,13 @@ export class UserService {
   }
 
   getUser(id:number | undefined) {
-    const userURL = 'http://localhost:8000/api/users';
+    const userURL = 'https://apirest.patinetesdriveelectric.com/public/api/users';
     return this.http.get<any>(`${userURL}/${id}`);
   }
 
   updateUser(user: IUser): Observable<IUser> {
     const token = localStorage.getItem('access_token');
-    return this.http.put<UserResponses>(`http://localhost:8000/api/users/${user.id}`, user).pipe(
+    return this.http.put<UserResponses>(`https://apirest.patinetesdriveelectric.com/public/api/users/${user.id}`, user).pipe(
 			map(resp => {
         console.log("Usuario actualizado correctamente... "+resp);
 				return resp.user;
@@ -92,7 +93,7 @@ export class UserService {
   }
 
   deleteUser(id:number){
-    return this.http.delete<UserResponses>(this.url + "/" + id).subscribe(
+    return this.http.delete<UserResponses>(`https://apirest.patinetesdriveelectric.com/public/api/users/${id}`).subscribe(
       (result)=> {
         Swal.fire({
           title: 'Usuario Eliminado',

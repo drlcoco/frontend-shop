@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { IProduct } from 'src/app/interfaces/i-product';
 import { ProductsService } from 'src/app/services/products.service';
 import { StorageService } from 'src/app/services/storage.service';
@@ -31,6 +31,11 @@ export class ProductsPanelComponent implements OnInit {
   deleteItem(producto: IProduct) {
     console.log('Borrando producto '+ producto.id);
     this.productsService.deleteEvent(producto.id as number);
+    this.productsService.getEventos().subscribe(
+      (ok) => console.log('obteniendo productos'),
+      (error) => console.log('Error obteniendo productos en el panel')
+    );
+    this.router.navigate(['/panel']);
   }
 
   editItem(producto: IProduct) {
