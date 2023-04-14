@@ -23,9 +23,9 @@ export class ProductsService {
   constructor(private http: HttpClient) { }
 
   getHomeProducts(): Observable<IProduct[]> {
-    let options = {
+    /* let options = {
       headers: new HttpHeaders().set('Authorization', localStorage.getItem('token') as string)
-    };
+    }; */
     const productoURL = 'http://localhost:8000/api/products';
     return this.http.get<IProduct[]>(productoURL).pipe(
       map(response => response = this.productos.filter(resp => resp.price > 0))
@@ -114,11 +114,6 @@ export class ProductsService {
   sendEmail(email: Email): Observable<Responses> {
     const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
     const url = 'http://localhost:8000/api/sendEmail';
-    /* const json = JSON.stringify(email); */
-    /* const data = new FormData();
-    data.append('emailData', email.user); */
-
-    /* return this.http.post<Responses>(url, {headers: headers}).pipe( */
     return this.http.post<Responses>(url, email).pipe(
       map(resp => {
         console.log('Se ha enviado el email correctamente');

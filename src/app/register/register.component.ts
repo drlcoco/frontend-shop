@@ -13,6 +13,7 @@ import { UserService } from '../services/user.service';
 export class RegisterComponent {
 
   pageTitle:string = "Regístrate";
+  isRegistered!: boolean;
   public password2: string = '';
   user:IUser = {
     name:"",
@@ -46,9 +47,16 @@ export class RegisterComponent {
     this.userToShow = Object.assign({}, this.user);
     this.userService.register(this.user).subscribe(
       (result)=>{
-        console.log(this.user);
+        this.isRegistered = true;
+        console.log(this.isRegistered);
+        console.log(result);
       },
-      (error)=>console.log("Los datos no son válidos!!!")
+      (error)=>{
+        this.isRegistered = false;
+        console.log(this.isRegistered);
+        console.log(error);
+        console.log("Los datos de registro no son válidos!!!");
+      }
     )
     this.user = {
       name:"",

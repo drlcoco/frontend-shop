@@ -27,12 +27,22 @@ export class UserService {
 
   constructor(private http: HttpClient, private route: ActivatedRoute, private router: Router) { }
 
-  register(user: IUser): Observable<IUser>{
-    return this.http.post<UserResponses>('http://localhost:8000/api/users' , user).pipe(
+  register(user: IUser): Observable<any>{
+    return this.http.post<any>(`${this.AUTH_SERVER}/users`, user).pipe(
+      tap(
+        (res) => {
+          if(res){
+            this.loggedUser = res;
+            console.log(res);
+            this.router.navigate(["/login"]);
+          }
+        }
+      ),
+    /* return this.http.post<UserResponses>('http://localhost:8000/api/register' , user).pipe(
 			map(resp => {
         this.loggedUser = resp.user;
 				return resp.user;
-			}),
+			}), */
       catchError((resp: HttpErrorResponse) =>
         throwError(
           `Error insertando usuario: Código de servidor: ${resp.status}. Mensaje: ${resp.message}`
@@ -91,8 +101,8 @@ export class UserService {
 		);
   }
 
-  deleteUser(id:number){
-    return this.http.delete<UserResponses>(this.url + "/" + id).subscribe(
+  deleteUser(id:number) {
+    return this.http.delete<any>(`http://localhost:8000/api/users/${id}`).subscribe(
       (result)=> {
         Swal.fire({
           title: 'Usuario Eliminado',
@@ -126,7 +136,7 @@ export class UserService {
     this.router.navigate(["/products"]);
   }
 
-  getAuth(): IUser{
+  getAuth(): IUser {
     const user = JSON.parse(localStorage.getItem('auth') || '');
     return user;
   }

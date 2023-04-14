@@ -38,7 +38,10 @@ export class MyAccountComponent implements OnInit, OnChanges {
     this.storageService.darkThemeObs.subscribe(
       data => this.dark = data
     );
-    this.user = this.userService.getAuth();
+    if(this.userService.existAuth()){
+      this.user = this.userService.getAuth();
+    }
+    /* this.user = this.userService.getAuth(); */
     this.id = this.user.id; // Recibimos parámetro
     this.userService.getUser(this.id)
       .subscribe(
