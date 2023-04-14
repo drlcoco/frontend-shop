@@ -1,0 +1,23 @@
+.map
+{
+  width: 100%;
+  min-height: 100vh;
+}
+.title{
+  width: 100%;
+  height: 10%;
+}
+#mapa-poniente{
+  height: 30%;
+}
+#mapa-levante{
+  height: 30%;
+}
+#marker {
+  background-image: url('../../assets/2.png');
+  background-size: cover;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+}

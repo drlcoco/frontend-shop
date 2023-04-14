@@ -1,19 +1,22 @@
 import { Injectable } from '@angular/core';
-import { environment } from 'src/environments/environment';
 import {HttpClient} from '@angular/common/http';
+import { BehaviorSubject, Observable } from 'rxjs';
+import { IUser } from './interfaces/i-user';
+import { JwtInterface } from './interfaces/jwt-interface';
+import { tap } from 'rxjs/operators';
+
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
 
-  base = environment.base;
+  AUTH_SERVER: string = 'http://localhost:8000/api';
+  authSubject = new BehaviorSubject(false);
+  private token: string = '';
 
-  constructor(private http:HttpClient) { }
+  constructor(private httpClient: HttpClient) { }
 
-  /* getUser(){
-    return this.http.get(url: `$(this.base)users`);
-  } */
 }
 
 

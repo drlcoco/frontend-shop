@@ -1,0 +1,12 @@
+<div class="card-body me-4">
+  <a class="nav-link" [routerLink]="['/products', inputProducto.id]">
+    <div class="card">
+      <div class="face front">
+        <img mat-card-image [src]="inputProducto.image" alt="Photo" class="img-fluid">
+        <h1>{{ inputProducto.title }} <br><span *ngIf="inputProducto.price > 700" class="badge bg-primary">New</span></h1>
+      </div>
+    </div>
+  </a>
+</div>
+<a class="nav-link" [routerLink]="['/products', inputProducto.id]">
+

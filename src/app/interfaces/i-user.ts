@@ -1,5 +1,5 @@
 export interface IUser {
-  id:number;
+  id?:number;
   name:string;
   surname:string;
   phone:number;
@@ -7,5 +7,6 @@ export interface IUser {
   role:string;
   email:string;
   password:string;
+  password2?:string;
   image:string;
 }

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { resetFakeAsyncZone } from '@angular/core/testing';
 import { Form, NgForm, Validators } from '@angular/forms';
 import { IUser } from '../interfaces/i-user';
@@ -9,11 +10,12 @@ import { UserService } from '../services/user.service';
   templateUrl: './register.component.html',
   styleUrls: ['./register.component.css']
 })
-export class RegisterComponent implements OnInit {
+export class RegisterComponent {
 
   pageTitle:string = "Regístrate";
-  user:IUser ={
-    id:0,
+  isRegistered!: boolean;
+  public password2: string = '';
+  user:IUser = {
     name:"",
     surname:"",
     phone:0,
@@ -21,54 +23,63 @@ export class RegisterComponent implements OnInit {
     role:"user",
     email:"",
     password:"",
+    password2:"",
+    image:""
+  };
+  userToShow:IUser = {
+    name:"",
+    surname:"",
+    phone:0,
+    address:"",
+    role:"user",
+    email:"",
+    password:"",
+    password2:"",
     image:""
   };
   status: string = "";
+  public preview: string | undefined;
 
-  constructor(private userService: UserService) {
+  constructor(private userService: UserService, private route:ActivatedRoute) {
   }
 
-  ngOnInit(): void {
-  }
-
-  onSubmit(form: NgForm){
-    console.log(this.user);
+  addUser(fileInput: HTMLInputElement){
+    this.userToShow = Object.assign({}, this.user);
     this.userService.register(this.user).subscribe(
-      response => {
-        if(response.status == "success"){
-          this.status = response.status;
-          form.reset();
-        }else{
-          this.status = 'error';
-        }
+      (result)=>{
+        this.isRegistered = true;
+        console.log(this.isRegistered);
+        console.log(result);
       },
-      error => {
-        this.status = 'error';
+      (error)=>{
+        this.isRegistered = false;
+        console.log(this.isRegistered);
         console.log(error);
-
+        console.log("Los datos de registro no son válidos!!!");
       }
     )
+    this.user = {
+      name:"",
+      surname:"",
+      phone:0,
+      address:"",
+      role:"user",
+      email:"",
+      password:"",
+      image:""
+    };
   }
 
-  // Example starter JavaScript for disabling form submissions if there are invalid fields
-function () {
-  'use strict'
-
-  // Fetch all the forms we want to apply custom Bootstrap validation styles to
-  var forms = document.querySelectorAll('.needs-validation')
-
-  // Loop over them and prevent submission
-  Array.prototype.slice.call(forms)
-    .forEach(function (form) {
-      form.addEventListener('submit', function (event: { preventDefault: () => void; stopPropagation: () => void; }) {
-        if (!form.checkValidity()) {
-          event.preventDefault()
-          event.stopPropagation()
-        }
-
-        form.classList.add('was-validated')
-      }, false)
-    })
-}
+  changeImage(fileInput:HTMLInputElement) {
+    if (!fileInput.files || fileInput.files.length === 0) {
+      return;
+    }
+    const reader: FileReader = new FileReader();
+    reader.readAsDataURL(fileInput.files[0]);
+    reader.addEventListener('loadend', (e) => {
+      this.user.image = reader.result as string;
+      this.preview = reader.result as string;
+    });
+  }
 
 }

@@ -1,9 +1,11 @@
 import { animate, style, transition, trigger } from '@angular/animations';
-import { Component, Input, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { IProduct } from '../interfaces/i-product';
+import { CartServiceService } from '../services/cart-service.service';
 import { ProductsService } from '../services/products.service';
 import { StorageService } from '../services/storage.service';
+import { UserService } from '../services/user.service';
 
 @Component({
   selector: 'app-product-item',
@@ -12,60 +14,58 @@ import { StorageService } from '../services/storage.service';
   animations: [
     trigger('animateList', [
       transition(':enter', [
-        style({ opacity: 0, transform: 'translateX(-300px)'}),
-        animate('5000ms ease-out', style({opacity: 1, transform: 'none'}))
-      ])
-    ])
-  ]
+        style({ opacity: 0, transform: 'translateX(-300px)' }),
+        animate('5000ms ease-out', style({ opacity: 1, transform: 'none' })),
+      ]),
+    ]),
+  ],
 })
 export class ProductItemComponent implements OnInit {
-
-  @Input() inputProducto:IProduct = {
-    id:0,
-    title:'',
-    description: "",
+  @Input() inputProducto: IProduct = {
+    id: 0,
+    title: '',
+    description: '',
     stock: 0,
     price: 0,
     image: '',
     userId: 1,
-    categoryId: 1
+    categoryId: 1,
   };
+  addedProducts: IProduct[] = [];
+  productosAdd: number = 0;
+  imgHeight: number = 200;
 
-  @Output() addedProducts:IProduct[] = [];
+  constructor(
+    private productosService: ProductsService,
+    private cartService: CartServiceService,
+    private router: Router,
+    private route: ActivatedRoute,
+    private storageService: StorageService,
+    private userService: UserService
+  ) {}
 
-  productosAdd:number = 0;
+  ngOnInit(): void {
+  }
 
-  imgHeight:number = 200;
+  addProduct(){
+    this.cartService.addToCart(this.inputProducto);
+  }
 
-  constructor(private productosService:ProductsService, private router:Router, private route:ActivatedRoute, private storageService: StorageService) { }
-
-  deleteProducto(){
+  deleteProduct() {
     this.productosService.deleteEvent(this.inputProducto.id as number);
     alert('Se ha eliminado correctamente!!!');
     this.router.navigate(['../home']);
   }
 
-  ngOnInit(): void {
-    if(this.storageService.existCart()) {
-      this.addedProducts = this.storageService.getCart();
-      this.productosService.productos = this.storageService.getCart();
-    }
-    console.log(this.inputProducto.image);
-  }
+  updateProduct() {}
 
-  addProduct(){
-    this.addedProducts.push(this.inputProducto);
-    this.productosService.disparador.emit(this.inputProducto);
-    this.storageService.setCart(this.productosService.productos);
-  }
-
-  /* edit(){
-    this.router.navigate(["update/:id"]);
-  } */
-
-  updateBadge(){
+  updateBadge() {
     this.productosAdd = this.productosService.productos.length;
     return this.productosAdd;
   }
 
+  offer(price: number) {
+    price = price * 1.1;
+    return price.toFixed(2);
+  }
 }

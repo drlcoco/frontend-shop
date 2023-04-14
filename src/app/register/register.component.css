@@ -1,8 +1,14 @@
 .imgLogin{
-  width: 100px;
-  height: 100px;
+  width: 130px;
+  height: 130px;
 }
 
-.text-dark{
-  font-size: 52px;
+.imagenUsuario{
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+}
+
+label{
+  font-size: 18px;
 }

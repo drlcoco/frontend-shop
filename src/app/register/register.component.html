@@ -1,15 +1,14 @@
- <!-- <app-canvas-cart></app-canvas-cart> -->
- <div class="row text-center text-white justify-content-center">
+ <div class="row cont text-center justify-content-center mt-4">
   <div class="col-8 d-flex flex-column">
-     <form action="" method="POST" class="m-5 needs-validation" #registerForm = "ngForm" (ngSubmit)="onSubmit(registerForm)"  novalidate>
-      <div class="row text-center justify-content-center mt-5">
-        <div
-          class="col-8 d-flex flex-column justify-content-center align-self-center m-3">
-          <h1 class="text-dark">Registro</h1>
+     <form action="" method="POST" class="m-5 needs-validation" #registerForm = "ngForm" (ngSubmit)="addUser(fileUpload)"  novalidate>
+      <div class="row d-flex justify-content-center ms-2 pt-3">
+        <div class="col d-flex m-3 d-flex justify-content-center">
+          <h1 class="fs-1  ps-5 ms-5">Regístrate. </h1>
+          <h1 class="text-secondary ms-2 fs-1 fw-b">La mejor forma de comprar</h1>
         </div>
       </div>
         <div class="mb-3 row">
-         <label for="name" [ngStyle]="{'color': !name.valid?'red':'green'}" class="col-sm-2 col-form-label">Nombre </label>
+         <label for="name" [ngStyle]="{'color': !name.valid?'red':'green'}" class="col-sm-2 col-form-label mt-2">Nombre </label>
          <div class="col-sm-10">
            <input
              type="text"
@@ -17,7 +16,7 @@
              id="name"
              [ngClass]="{'is-valid': name.valid, 'is-invalid': !name.valid && name.touched}"
              class="form-control mt-2"
-             placeholder="Nombre"
+             placeholder="Introduzca el nombre"
              value=""
              #name = "ngModel"
              [(ngModel)] = "user.name"
@@ -27,7 +26,7 @@
          </div>
        </div>
        <div class="mb-3 row">
-         <label for="surname" [ngStyle]="{'color': !surname.valid?'red':'green'}" class="col-sm-2 col-form-label">Apellidos </label>
+         <label for="surname" [ngStyle]="{'color': !surname.valid?'red':'green'}" class="col-sm-2 col-form-label mt-2">Apellidos </label>
          <div class="col-sm-10">
            <input
              type="text"
@@ -35,7 +34,7 @@
              id="surname"
              [ngClass]="{'is-valid': surname.valid, 'is-invalid': !surname.valid && surname.touched}"
              class="form-control mt-2"
-             placeholder="Apellidos"
+             placeholder="Introduzca los apellidos"
              value=""
              #surname = "ngModel"
              [(ngModel)] = "user.surname"
@@ -45,7 +44,7 @@
          </div>
        </div>
        <div class="mb-3 row">
-         <label for="address" [ngStyle]="{'color': !address.valid?'red':'green'}" class="col-sm-2 col-form-label">Dirección </label>
+         <label for="address" [ngStyle]="{'color': !address.valid?'red':'green'}" class="col-sm-2 col-form-label mt-2">Dirección </label>
          <div class="col-sm-10">
            <input
              type="text"
@@ -53,7 +52,7 @@
              id="address"
              [ngClass]="{'is-valid': address.valid, 'is-invalid': !address.valid && address.touched}"
              class="form-control mt-2"
-             placeholder="Dirección"
+             placeholder="Introduzca la dirección"
              value=""
              #address = "ngModel"
              [(ngModel)] = "user.address"
@@ -63,7 +62,7 @@
          </div>
        </div>
        <div class="mb-3 row">
-        <label for="address" [ngStyle]="{'color': !phone.valid?'red':'green'}" class="col-sm-2 col-form-label">Teléfono</label>
+        <label for="address" [ngStyle]="{'color': !phone.valid?'red':'green'}" class="col-sm-2 col-form-label mt-2">Teléfono</label>
          <div class="col-sm-10">
            <input
              type="number"
@@ -71,7 +70,7 @@
              id="phone"
              [ngClass]="{'is-valid': phone.valid, 'is-invalid': !phone.valid && phone.touched}"
              class="form-control mt-2"
-             placeholder="000000000"
+             placeholder="Introduzca el teléfono"
              value=""
              #phone = "ngModel"
              [(ngModel)] = "user.phone"
@@ -81,7 +80,7 @@
          </div>
        </div>
        <div class="mb-3 row">
-        <label for="email" [ngStyle]="{'color': !email.valid?'red':'green'}" class="col-sm-2 col-form-label">Email </label>
+        <label for="email" [ngStyle]="{'color': !email.valid?'red':'green'}" class="col-sm-2 col-form-label mt-2">Email </label>
         <div class="col-sm-10">
           <input
             type="email"
@@ -89,7 +88,7 @@
             id="email"
             [ngClass]="{'is-valid': email.valid, 'is-invalid': !email.valid && email.touched}"
             class="form-control mt-2"
-            placeholder="Email"
+            placeholder="Introduzca el correo electrónico"
             value=""
             #email = "ngModel"
             [(ngModel)] = "user.email"
@@ -99,7 +98,7 @@
         </div>
       </div>
        <div class="mb-3 row">
-         <label for="password" [ngStyle]="{'color': !password.valid?'red':'green'}" class="col-sm-2 col-form-label">Password</label>
+         <label for="password" [ngStyle]="{'color': !password.valid?'red':'green'}" class="col-sm-2 col-form-label mt-2">Password</label>
          <div class="col-sm-10">
            <input
              type="password"
@@ -107,7 +106,7 @@
              id="password"
              [ngClass]="{'is-valid': password.valid, 'is-invalid': !password.valid && password.touched}"
              class="form-control mt-2"
-             placeholder="Password"
+             placeholder="Introduzca la contraseña"
              value=""
              #password = "ngModel"
              [(ngModel)] = "user.password"
@@ -115,37 +114,59 @@
              pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}"
            /> <small *ngIf="!password.valid && password.touched" class=" invalid-feedback d-flex">La contraseña no es válida, debe contener al menos 8 caracteres entre mayúsculas, minúsculas y números</small>
          </div>
-         <!-- <label for="password2" class="col-sm-2 col-form-label"
-           >Verify Password
-         </label>
-         <div class="col-sm-4">
+         <label for="password2" [ngStyle]="{'color': !password2.valid || user.password2 !== user.password ?'red':'green'}" class="col-sm-2 col-form-label mt-4">Verificar</label>
+         <div class="col-sm-10 mt-4">
            <input
              type="password"
              name="password2"
              id="password2"
+             [ngClass]="{'is-valid': password2.valid && user.password2 === user.password, 'is-invalid': !password2.valid && password2.touched || user.password2 !== user.password && password2.touched}"
              class="form-control"
-             placeholder="Verify Password"
+             placeholder="Verifique la contraseña"
              value=""
              #password2 = "ngModel"
-             [(ngModel)] = "password2"
+             [(ngModel)] = "user.password2"
              required
-             pattern="/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}$/gm"
-           /> <small *ngIf="password !==  password2 && password2.touched" class=" invalid-feedback d-flex">La contraseña no coincide</small>
-         </div> -->
+             pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}"
+           /> <small *ngIf="user.password !==  user.password2 && this.password2.touched" class=" invalid-feedback d-flex">La contraseña no coincide</small>
+         </div>
        </div>
-       <div class="alert alert-success" *ngIf="status == 'success'">
+       <div class="mb-2 row">
+        <label for="image" [ngStyle]="{'color': !ngImagen.valid?'red':'green'}" class="col-sm-2 col-form-label mt-2">Imagen</label>
+        <div class="col-sm-10 mt-2">
+          <input type="file" class="file-upload form-control" #fileUpload name="image" (ngModel)="user.image"
+          #ngImagen="ngModel"
+          [ngClass]="{'is-valid':ngImagen.valid, 'is-invalid': ngImagen.touched && !ngImagen.valid}"
+          (change)="changeImage(fileUpload)" required />
+          <div class="col-10">
+            <div *ngIf="ngImagen.touched && ngImagen.invalid" class="alert alert-danger">
+              Introduzca la imagen*
+            </div>
+          </div>
+        </div>
+      </div>
+      <div *ngIf="user.image" class="text-center mt-2">
+        <img [src]="preview" alt="" id="preview" width="120">
+      </div>
+       <!-- <div class="alert alert-success" *ngIf="status == 'success'">
         Ha sido registrado correctamente <a class="btn btn-primary" [routerLink]="['/login']">Logueate</a>
        </div>
        <div class="alert alert-danger" *ngIf="status == 'error'">
         Error!!! No ha sido registrado correctamente, inténtelo de nuevo
-       </div>
-       <div class="mb-3 row justify-content-center">
+       </div> -->
+       <div class="row justify-content-center">
         <div class="col-sm-3">
-          <button type="submit" [disabled]="registerForm.invalid" class="btn rounded"><img
-          src="assets/register.jpg"
+          <button type="submit" [disabled]="registerForm.invalid || user.password !== user.password2" class="btn rounded" data-bs-toggle="modal" data-bs-target="#staticBackdrop"><img
+          src="assets/img/register.jpg"
           alt="logo"
           class="imgLogin rounded mx-auto d-block"/>
           </button>
+          <div class="alert alert-success" *ngIf="this.isRegistered == true">
+            Ha sido registrado correctamente <a class="btn btn-primary" [routerLink]="['/login']">Logueate</a>
+           </div>
+           <div class="alert alert-danger" *ngIf="this.isRegistered == false">
+            Error!!! El email ya existe, inténtelo de nuevo.
+           </div>
         </div>
        </div>
      </form>

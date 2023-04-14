@@ -2,12 +2,11 @@
 {
   background-color: rgb(223, 233, 233);
 }
-.navbar{
-  margin-top: 65px;
+
+.filter{
+  margin-top: 69px;
 }
-img{
-  height: 4vh;
-}
-.card-columns{
-  overflow: hidden;
+
+.products{
+  min-height: 85%;
 }

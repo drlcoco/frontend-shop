@@ -1,0 +1,97 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col">
+      <div class="m-5 text-center">
+        <div *ngIf="auth?.name" class="col-11 d-flex ms-5 mt-5 mb-3 justify-content-center">
+          <h1 class="fs-1">Tus compras. </h1>
+          <h1 class="text-secondary ms-2 fs-1">{{ auth?.name }}</h1>
+        </div>
+        <div *ngIf="!auth?.name && auth?.email" class="col-11 d-flex ms-5 mt-5 mb-3 justify-content-center">
+          <h1 class="fs-1">Tus compras. </h1>
+          <h1 class="text-secondary ms-2 fs-1">{{ auth?.email }}</h1>
+        </div>
+        <table
+          [ngClass]="this.updateTableTheme() ? 'table table-dark table-striped mt-5' : 'table table-light table-striped mt-5'"
+          *ngIf="myPurchases && myPurchases.length; else noPurchases"
+        >
+        <!-- <table
+          class="table table-light table-striped mt-5"
+          *ngIf="myPurchases && myPurchases.length; else noPurchases"
+        > -->
+          <thead>
+            <tr class="fw-b fs-5">
+              <th scope="col" class="py-4">Imagen</th>
+              <th scope="col" class="py-4">Nº Compra</th>
+              <th scope="col" class="py-4">Producto</th>
+              <th scope="col" class="py-4">Precio</th>
+              <th scope="col" class="py-4">Fecha</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let producto of this.myPurchases">
+              <td class="justify-content center align-self-center">
+                <img src="{{ producto.image }}" width="50" height="50" />
+              </td>
+              <td class="pt-4">{{ producto.id }}</td>
+              <td class="pt-4">{{ producto.title }}</td>
+              <td class="pt-4">{{ producto.price }}</td>
+              <td class="pt-4">{{ producto.created_at | date : "dd/MM/y HH:mm" }}</td>
+            </tr>
+          </tbody>
+        </table>
+        <ng-template #noPurchases>
+          <div class="row m-5 d-flex">
+            <div class="col-xs-12 col-lg-6 my-2 justify-content-center">
+              <h1 class="text-center fs-1 fw-b my-5">
+                No hay compras realizadas
+              </h1>
+              <h2>Aún no ha comprado ningún producto</h2>
+              <div class="d-grid gap-2 my-5">
+                <a
+                  class="btn btn-primary"
+                  role="button"
+                  [routerLink]="['/products']"
+                  >Comprar</a
+                >
+              </div>
+            </div>
+            <div class="col-xs-12 col-lg-6 justify-content-center">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="356"
+                height="356"
+                fill="currentColor"
+                class="bi bi-cart4"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l.5 2H5V5H3.14zM6 5v2h2V5H6zm3 0v2h2V5H9zm3 0v2h1.36l.5-2H12zm1.11 3H12v2h.61l.5-2zM11 8H9v2h2V8zM8 8H6v2h2V8zM5 8H3.89l.5 2H5V8zm0 5a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"
+                />
+              </svg>
+            </div>
+          </div>
+        </ng-template>
+        <div class="text-center mt-3" *ngIf="calcularTotal() > 0">
+          <div class="mt-5 mb-3">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="76"
+              height="76"
+              fill="currentColor"
+              class="bi bi-bag-heart"
+              viewBox="0 0 16 16"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M10.5 3.5a2.5 2.5 0 0 0-5 0V4h5v-.5Zm1 0V4H15v10a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V4h3.5v-.5a3.5 3.5 0 1 1 7 0ZM14 14V5H2v9a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1ZM8 7.993c1.664-1.711 5.825 1.283 0 5.132-5.825-3.85-1.664-6.843 0-5.132Z"
+              />
+            </svg>
+          </div>
+          <div class="d-grid gap-2 col-6 mx-auto">
+            <h1>Total {{ calcularTotal() | currency }}</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

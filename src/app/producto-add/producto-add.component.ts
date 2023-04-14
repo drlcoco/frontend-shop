@@ -11,7 +11,7 @@ import { ComponentDeactivate } from '../guards/save-changes.guard';
   templateUrl: './producto-add.component.html',
   styleUrls: ['./producto-add.component.css']
 })
-export class ProductoAddComponent implements OnInit {
+export class ProductoAddComponent {
 
   newProducto: IProduct = {
     title:'',
@@ -28,9 +28,6 @@ export class ProductoAddComponent implements OnInit {
   constructor(private productosService:ProductsService, private route:Router) { }
 
   addEvento(fileInput: HTMLInputElement) {
-    /* this.crearEvento.emit(this.newEvento); */
-    console.log(this.newProducto);
-
     this.productosService.crearEvento(this.newProducto).subscribe(
       (result)=>{
         alert("Se ha añadido el producto correctamente");
@@ -53,22 +50,14 @@ export class ProductoAddComponent implements OnInit {
       return;
     }
     const reader: FileReader = new FileReader();
-    console.log(fileInput.files[0]);
-
     reader.readAsDataURL(fileInput.files[0]);
     reader.addEventListener('loadend', (e) => {
       this.newProducto.image = reader.result as string;
-      /* this.preview = reader.result as string; */
-      console.log(this.newProducto.image);
-
+      this.preview = reader.result as string;
     });
   }
 
   canDeactivate() {
     return confirm("¿Quieres abandonar la página?. Los cambios no se guardarán");
   }
-
-  ngOnInit(): void {
-  }
-
 }

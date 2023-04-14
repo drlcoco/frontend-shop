@@ -8,8 +8,6 @@ import { IProduct } from '../interfaces/i-product';
 })
 export class CanvasCartComponent implements OnInit {
 
-  @Input() addedProducts:IProduct[] = [];
-
   constructor() { }
 
   ngOnInit(): void {

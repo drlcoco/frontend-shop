@@ -1,0 +1,110 @@
+<app-canvas-cart></app-canvas-cart>
+<div class="container-fluid firstbox mb-5 mw-xs-100" >
+  <div class="row fluid ">
+    <div class="col text-center fluid">
+      <div class="row fluid">
+        <div class="col figure box" id="zoom" @animateList>
+          <video muted="muted" playsinline="playsinline" autoplay="autoplay" loop="loop" class="hero__video">
+            <source src="../../../assets/video/videoPatinete.mp4" type="video/mp4">
+          </video>
+          <div class="col-xs-8 col-sm-12 capa d-flex justify-content-start mx-xs-auto mx-md-5 px-5">
+            <h1 class="mt-5 titulo fw-bold text-effect fs-1" >Patinetes</h1>
+            <h1 class="mt-5 fw-bold titulo1 text-effect fs-1">Drive-Electric</h1>
+            <div class="botonPortada">
+              <a class="btn btn-lg btn-outline-primary" role="button" [routerLink]="['/products']"><i class="bi bi-bag-heart me-1 d-lg-none d-xl-inline"></i>Comprar Ahora</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid mt-5 m-0 p-0">
+  <div class="row d-flex justify-content-center mt-5">
+    <div class="col-11 d-flex ms-5 my-5">
+      <h1 class="fs-1">Tienda. </h1>
+      <h1 class="text-secondary ms-2 fs-1">La mejor forma de comprar tus patinetes favoritos</h1>
+    </div>
+  </div>
+  <div class="row fluid">
+    <div class="col-12 scroller me-5">
+      <ul id="" class="d-flex ms-5">
+        <li class="item" *ngFor="let producto of productos"><app-cardhome [inputProducto]="producto"></app-cardhome></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid my-3">
+  <div class="row m-2 justify-content-center ">
+    <div class="col-xs-12 col-lg-6 justify-content-center mt-5 mb-2 p-3">
+      <div class="card text-center cardShadow darkThemeForm">
+        <div class="card-body">
+          <h2 class="card-title fs-2 fw-bold pt-4">Comprar Patinetes</h2>
+          <p class="card-text fs-5 text-secondary py-4">
+            <strong>Comprar en una tienda de confianza, con todas las garantías y toda la tranquilidad necesaria para una compra segura. Te damos lo mejor, al mejor precio.</strong>
+          </p>
+          <a class="btn btn-lg btn-outline-primary mb-4" role="button" [routerLink]="['/products']">Comprar</a>
+        </div>
+        <img
+          src="https://i02.appmifile.com/mi-com-product/fly-birds/xiaomi-scooter-4-pro/dbcffb9256e5460e64bc32a22671ed10.jpg"
+          class="card-img-bottom"
+          alt="foto patinete"
+          height="300"
+        />
+      </div>
+    </div>
+    <div class="col-xs-12 col-lg-6 justify-content-center my-5 p-3">
+      <div class="card text-center cardShadow bg-transparent">
+        <div class="card-body darkThemeForm">
+          <h2 class="card-title fs-2 fw-bold pt-4 ">Alquilar Patinetes</h2>
+          <p class="card-text fs-5 text-secondary py-4">
+            <strong>Disponemos de 10 puntos repartidos estratéficamente por Benidorm, para que siempre tengas patinetes accesibles desde cualquier punto.</strong>
+          </p>
+          <a class="btn btn-lg btn-outline-primary mb-4" role="button" [routerLink]="['/rent']">Alquilar </a>
+        </div>
+        <img
+          src="../../../assets/img/alquilerHome.jpg"
+          class="card-img-bottom img-fluid alquiler"
+          alt="foto patinete"
+          width="300"
+          height="150"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+<div class="mb-0 w-100 txtOver p-0">
+  <a [routerLink]="['/products/10']">
+    <div class="rightSide text-dark d-none d-lg-block">
+      <h1 class="fs-1 fw-bold">Fácil de plegar</h1>
+      <h1 class="fs-1 fw-bold">Fácil de transportar</h1>
+    </div>
+  </a>
+  <img
+    src="https://i02.appmifile.com/mi-com-product/fly-birds/xiaomi-scooter-4-pro/4fb96ef23fe20cbb37e08e06aa0bcdb9.jpg"
+    class="card-img-bottom"
+    alt="..."
+  />
+</div>
+<div class="w-100 txtOver p-0 d-flex align-self-start justify-content-center">
+  <a [routerLink]="['/products/10']">
+    <div class="leftSide text-light d-none d-lg-block">
+      <h1 class="fs-1 fw-bold">Xiaomi 4 Pro</h1>
+      <h1 class="fs-1 fw-bold">Diseño, estilo y elegancia</h1>
+    </div>
+  </a>
+  <img
+    src="https://i02.appmifile.com/mi-com-product/fly-birds/xiaomi-scooter-4-pro/dbcffb9256e5460e64bc32a22671ed10.jpg"
+    class="img-fluid"
+    alt="..."
+  />
+</div>
+<div class="container w-100">
+  <div class="row my-5 align-items-center text-center text-light">
+    <div class="col color h-100 p-2">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6598.017185128!2d-0.16034495917552852!3d38.53255714201281!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd621b27d43b2ac1%3A0x6a73b28e7988ce83!2sPlaya%20de%20Poniente!5e0!3m2!1ses!2ses!4v1668347211771!5m2!1ses!2ses" width="400" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="w-100"></iframe>
+    </div>
+  </div>
+</div>

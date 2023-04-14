@@ -1,11 +1,60 @@
-<div class="col-6 superior">
-  <img [src]="productoDetails.image">
+<div class="row mt-5">
+  <div class="col-xs-12 col-xl-5 text-center d-flex flex-column align-items-center justify-content-center px-xs-4 ps-xl-5 mt-5 mb-3">
+    <div class="col-12 ps-xl-5 ">
+      <h1 class="my-auto px-xs-4 ps-md-5 fs-1">{{productoDetails.title}}</h1>
+    </div>
+  </div>
 </div>
-<div class="col-6 productDetails" *ngIf="productoDetails; else elseBlock">
-  <app-product-item [inputProducto]="productoDetails" class=""></app-product-item>
+<div class="row justify-content-center m-0">
+  <div class="col">
+    <hr class="fw-bold">
+  </div>
 </div>
-<ng-template #elseBlock>
-  <h1 class="alert" role="alert">
-    No se ha creado ningún producto
-  </h1>
-</ng-template>
+<div class="row mx-sm-auto text-center text-xl-start">
+  <div class="col-xs-12 col-xl-5 d-flex flex-column justify-content-center align-items-center mx-xs-5 ps-xl-5"
+    *ngIf="productoDetails.stock > 0 ; else noStock">
+    <div class="col-xs-10 col-lg-8 px-5 ps-xl-5 mx-xs-auto">
+      <h2 class="ps-xs-5 text-xs-center ps-xl-5">{{productoDetails.description}}</h2>
+    </div>
+    <div class="col-xs-12 col-lg-8 ps-xl-5 mt-2">
+      <h3 class="text-primary ps-md-5">
+        {{productoDetails.price | currency: "EUR"}}
+        <s class="text-muted "> {{ offer(productoDetails.price) }} €</s>
+      </h3>
+    </div>
+    <div class="col-xs-12 col-lg-8 ps-xl-5  mt-2">
+      <p class="ps-md-5">
+        <i class="bi bi-bag-plus"></i> Recógelo en tienda
+      </p>
+    </div>
+    <div class="col-xs-12 col-lg-8 ps-xl-5 ">
+      <p class="ps-md-5">
+        <i class="bi bi-truck"></i> Pídelo y te lo llevamos a casa
+      </p>
+    </div>
+    <div class="d-grid gap-2 col-6  my-4 ps-xl-5">
+      <ng-container *ngIf="!this.authUser || this.authUser.role !== 'admin'">
+        <button class="btn btn-primary" type="button" (click)="addProductCart()"><i class="d-lg-none d-xl-inline bi bi-cart "></i> Añadir al Carrito</button>
+        <button class="btn btn-dark mt-2" type="button" (click)="getUser()"><i class="bi bi-currency-exchange"></i> Pagar</button>
+        <button class="btn btn-primary mt-2" type="button" [routerLink]="['/products']"><i class="bi bi-arrow-left-circle"></i> Volver</button>
+      </ng-container>
+      <ng-container *ngIf="this.authUser && this.authUser.role === 'admin'">
+        <button class="btn btn-danger mt-2" type="button" [routerLink]="['/products']" (click)="deleteProduct()">Borrar Producto</button>
+        <button class="btn btn-success mt-2" type="button" [routerLink]="['/products/update', this.id]">Editar Producto</button>
+        <button class="btn btn-primary mt-2" type="button" [routerLink]="['/products']">Volver</button>
+      </ng-container>
+    </div>
+  </div>
+  <ng-template #noStock>
+    <div class="col-xs-12 col-lg-5 d-flex flex-column align-items-center mt-5 ps-xl-5">
+      <div class="col-xs-12 col-lg-8 ps-xl-5">
+        <h1 class="alert rounded" role="alert">
+          Lo sentimos, en este momento el producto no está disponible
+        </h1>
+      </div>
+    </div>
+  </ng-template>
+  <div class="col-xs-12 col-lg-7 py-5 px-xl-5 pe-lg-5 imgContainer ms-xl-5 mx-sm-auto">
+    <img mat-card-image [src]="productoDetails.image" class="sizeImage rounded-3" alt="Photo">
+  </div>
+</div>
