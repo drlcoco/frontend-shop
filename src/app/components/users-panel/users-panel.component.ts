@@ -31,6 +31,8 @@ export class UsersPanelComponent implements OnInit {
   }
 
   deleteItem(user: IUser) {
+    console.log("User id: "+user.id);
+
     if(user.id !== undefined) {
       this.usersService.deleteUser(user.id);
       console.log('Borrando user '+ user.id);

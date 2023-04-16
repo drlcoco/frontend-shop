@@ -1,17 +1,19 @@
 <div class="container-fluid p-0">
+  <a class="close-navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+  </a>
   <nav
     class="navbar navbar-dark bg-dark navbar-expand-lg fixed-top scrolling-navbar"
   >
     <div class="container-lg d-flex justify-content-center align-items-center">
       <a
-        class="d-none d-lg-block navbar-brand text-primary fs-4 fw-bold ms-5"
+        class="d-none d-lg-block navbar-brand text-primary justify-self-sm-center fs-4 fw-bold ms-5"
         href="javascript:void(0)"
         ><svg
           xmlns="http://www.w3.org/2000/svg"
           width="35"
           height="35"
           fill="currentColor"
-          class="bi bi-scooter ms-3 mb-2"
+          class="bi bi-scooter ms-3 mb-2 d-none d-md-inline"
           viewBox="0 0 16 16"
         >
           <path
@@ -28,7 +30,7 @@
           width="35"
           height="35"
           fill="currentColor"
-          class="bi bi-scooter ms-5 me-2 mb-2"
+          class="bi bi-scooter ms-5 me-2 mb-2 d-none d-md-block"
           viewBox="0 0 16 16"
         >
           <path
@@ -38,22 +40,11 @@
         </svg>
         Drive-Electric
       </a>
-      <button
-        class="navbar-toggler btn btn-outline-primary"
-        type="button"
-        data-bs-toggle="collapse"
-        data-bs-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent"
-        aria-expanded="true"
-        aria-label="Toggle navigation"
-        (click)="changeToggle()"
-      >
-        <!-- <button class="navbar-toggler mx-0" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar"> --><!-- <span class="navbar-toggler-icon"></span> --><i
-          class="bi bi-three-dots" *ngIf="isToggle"
-        ></i><i class="bi bi-x-lg" *ngIf="!isToggle"></i>
+      <button class="navbar-toggler my-1" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
       </button>
       <div id="navbarSupportedContent" class="collapse navbar-collapse">
-        <ul class="navbar-nav">
+        <ul class="navbar-nav" aria-labelledby="navbarSupportedContent">
           <li class="nav-item me-lg-3">
             <a
               class="nav-link fs-6 text-light"
@@ -145,7 +136,6 @@
                   Pedidos</a
                 >
               </li>
-              <!-- <li><a class="dropdown-item" [routerLink]="['contact']" [routerLinkActive]="['active']"><i class="d-lg-none d-xl-inline bi bi-question-circle text-white" *ngIf="!user"></i> Contacto</a></li> -->
               <li>
                 <hr class="dropdown-divider" />
               </li>
@@ -160,14 +150,15 @@
               </li>
             </ul>
           </li>
-          <li class="nav-item dropdown my-0" *ngIf="this.authUser">
+          <li class="nav-item dropdown d-flex my-4" *ngIf="this.authUser">
             <img
               src="{{ this.authUser.image }}"
-              class="rounded-3 d-inline my-auto d-none d-xl-inline"
-              width="30"
+              class="rounded-3 d-inline my-auto dropdown-toggle"
+              data-bs-toggle="dropdown"
+              width="40"
             />
             <a
-              class="nav-link fs-6 text-light dropdown-toggle d-inline mx-2"
+              class="nav-link fs-6 text-light dropdown-toggle d-inline my-4 d-none d-xl-inline"
               data-bs-toggle="dropdown"
               href="javascript:void(0)"
               >{{ this.authUser.name }}</a
@@ -202,7 +193,6 @@
                 >
               </li>
               <li><hr class="dropdown-divider" /></li>
-              <!-- <li><a class="dropdown-item" [routerLink]="['contact']" [routerLinkActive]="['active']"><i class="d-lg-none d-xl-inline bi bi-question-circle text-white" *ngIf="!localUser"></i> Contacto</a></li> -->
               <li><hr class="dropdown-divider" /></li>
               <li>
                 <a class="dropdown-item" type="button" (click)="logout()"

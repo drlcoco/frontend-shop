@@ -41,6 +41,7 @@ export class NavComponent implements OnInit {
   loggedIn: boolean | undefined;
   localIn: boolean | undefined;
   isToggle: boolean = true;
+
   localUser:IUser ={
     name:"",
     surname:"",
@@ -61,7 +62,6 @@ export class NavComponent implements OnInit {
     private http: HttpClient) { }
 
   ngOnInit(): void {
-
     if (this.storageService.existCart()) {
       this.addedProducts = this.storageService.getCart();
       this.addedProducts.forEach(element => {
@@ -122,7 +122,8 @@ export class NavComponent implements OnInit {
   }
 
   changeToggle(){
-    if(this.isToggle === true){this.isToggle = false;}
-    else{this.isToggle = true;}
+    if(this.storageService.isNavbarCollapsed === true){this.storageService.isNavbarCollapsed = false;}
+    else{this.storageService.isNavbarCollapsed = true;}
+    this.isToggle = this.storageService.isNavbarCollapsed;
   }
 }

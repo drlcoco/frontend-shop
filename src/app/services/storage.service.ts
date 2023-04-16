@@ -1,4 +1,4 @@
-import { EventEmitter, Injectable, Output } from '@angular/core';
+import { EventEmitter, HostListener, Injectable, Output } from '@angular/core';
 import { BehaviorSubject, Observable } from 'rxjs';
 import { IProduct } from '../interfaces/i-product';
 import { IUser } from '../interfaces/i-user';
@@ -25,6 +25,14 @@ export class StorageService {
   private darkTheme: boolean = false;
   private darkThemeSubject: BehaviorSubject<boolean> = new BehaviorSubject(this.darkTheme);
   public darkThemeObs: Observable<boolean> = this.darkThemeSubject.asObservable();
+  isNavbarCollapsed: boolean = true;
+
+  @HostListener('document:click', ['$event'])
+  onClick(event: MouseEvent) {
+    if (this.isNavbarCollapsed === false && event.target !== document.querySelector('.navbar-toggler')) {
+      this.isNavbarCollapsed = true;
+    }
+  }
 
   existCart(): boolean {
     return localStorage.getItem('cart') != null;
