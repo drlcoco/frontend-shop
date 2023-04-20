@@ -3,8 +3,27 @@ header{
 }
 
 .firstbox{
+  width: 100%;
+  min-width: 100vw;
+  max-width: 100vw;
   overflow-x: hidden;
   overflow-y: hidden;
+}
+
+.primerafila{
+  width: 100%;
+  min-width: 100vw;
+  height: 100vh;
+  min-height: 100vh;
+  max-height: 100vh;
+}
+
+.port{
+  width: 100%;
+  min-width: 100vw;
+  height: 100vh;
+  min-height: 100vh;
+  max-height: 100vh;
 }
 
 .scroller{
@@ -50,14 +69,22 @@ header{
   line-height: 0.70em;
   outline: none;
   text-shadow: 0 0 0 10px #03bcf4;
-  animation: animate 25s linear infinite;
+  animation: animate 20s linear infinite;
 }
 @keyframes animate{
   0%{
     color: #0e3742;
     text-shadow: none;
   }
+  25%{
+    color: #fff;
+    text-shadow: 0 0 0 160px #03bcf4;
+  }
   50%{
+    color: #0e3742;
+    text-shadow: 0 0 0 160px #03bcf4;
+  }
+  75%{
     color: #fff;
     text-shadow: 0 0 0 160px #03bcf4;
   }

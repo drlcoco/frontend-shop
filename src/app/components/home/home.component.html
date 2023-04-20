@@ -1,35 +1,45 @@
 <app-canvas-cart></app-canvas-cart>
-<div class="container-fluid firstbox mb-5 mw-xs-100" >
-  <div class="row fluid ">
-    <div class="col text-center fluid">
-      <div class="row fluid">
-        <div class="col figure box" id="zoom" @animateList>
-          <video muted="muted"  autoplay="autoplay" loop="loop" class="hero__video">
-            <source src="../../../assets/video/videoPatinete.mp4" type="video/mp4">
-          </video>
-          <div class="col-xs-8 col-sm-12 capa d-flex justify-content-start mx-xs-auto mx-md-5 px-5">
-            <h1 class="mt-5 titulo fw-bold text-effect fs-1" >Patinetes</h1>
-            <h1 class="mt-5 fw-bold titulo1 text-effect fs-1">Drive-Electric</h1>
-            <div class="botonPortada">
-              <a class="btn btn-lg btn-outline-primary" role="button" [routerLink]="['/products']"><i class="bi bi-bag-heart me-1 d-lg-none d-xl-inline"></i>Comprar Ahora</a>
-            </div>
+
+<div class="container-fluid firstbox mb-5">
+  <div class="row mt-4">
+      <div class="col-xs-12 d-md-none primerafila figure box">
+          <div class="text-center" id="zoom" @animateList>
+            <img
+            src="../../../assets/img/port.jpg"
+            class="img-fluid port"
+            alt="foto patinete"
+          />
           </div>
+      </div>
+      <div class="col-xs-12-first d-none d-md-block primerafila figure box">
+        <div>
+            <img src="../../../assets/img/portada3.jpg" class="img-fluid port" alt="...">
         </div>
       </div>
-    </div>
+      <div class="col-xs-8 col-md-12  d-flex justify-content-start mx-xs-auto mx-sm-5 mx-md-5 px-5 bg-red">
+        <h1 class="mt-5 titulo fw-bold text-effect fs-1 mx-auto float-xs-start" >Patinetes</h1>
+        <h1 class="mt-5 fw-bold titulo1 text-effect fs-1 mx-auto float-xs-start">Drive-Electric</h1>
+        <div class="botonPortada">
+          <a class="btn btn-lg btn-outline-primary" role="button" [routerLink]="['/products']"><i class="bi bi-bag-heart me-1 d-lg-none d-xl-inline"></i>Comprar Ahora</a>
+        </div>
+      </div>
   </div>
 </div>
 
 <div class="container-fluid mt-5 m-0 p-0">
   <div class="row d-flex justify-content-center mt-5">
-    <div class="col-11 d-flex ms-5 my-5">
-      <h1 class="fs-1">Tienda. </h1>
-      <h1 class="text-secondary ms-2 fs-1">La mejor forma de comprar tus patinetes favoritos</h1>
+    <div class="row d-flex justify-content-center mt-5">
+      <div class="col-11 d-flex ms-2">
+        <h1 class="fs-1">Tienda. </h1>
+      </div>
+      <div class="col-11 d-flex ms-2">
+        <h1 class="text-secondary fs-1">La mejor forma de comprar tus patinetes favoritos</h1>
+      </div>
     </div>
   </div>
-  <div class="row fluid">
+  <div class="row fluid mt-4">
     <div class="col-12 scroller me-5">
-      <ul id="" class="d-flex ms-5">
+      <ul id="" class="d-flex ms-2">
         <li class="item" *ngFor="let producto of productos"><app-cardhome [inputProducto]="producto"></app-cardhome></li>
       </ul>
     </div>
@@ -37,19 +47,19 @@
 </div>
 
 <div class="container-fluid my-3">
-  <div class="row m-2 justify-content-center ">
+  <div class="row m-4 justify-content-center ">
     <div class="col-xs-12 col-lg-6 justify-content-center mt-5 mb-2 p-3">
       <div class="card text-center cardShadow darkThemeForm">
         <div class="card-body">
           <h2 class="card-title fs-2 fw-bold pt-4">Comprar Patinetes</h2>
           <p class="card-text fs-5 text-secondary py-4">
-            <strong>Comprar en una tienda de confianza, con todas las garantías y toda la tranquilidad necesaria para una compra segura. Te damos lo mejor, al mejor precio.</strong>
+            <strong>Comprar en una tienda de confianza, con todas las garantías y toda la tranquilidad necesaria para una compra segura y al mejor precio.</strong>
           </p>
           <a class="btn btn-lg btn-outline-primary mb-4" role="button" [routerLink]="['/products']">Comprar</a>
         </div>
         <img
-          src="https://i02.appmifile.com/mi-com-product/fly-birds/xiaomi-scooter-4-pro/dbcffb9256e5460e64bc32a22671ed10.jpg"
-          class="card-img-bottom"
+          src="../../../assets/img/comprar.jpg"
+          class="alquiler"
           alt="foto patinete"
           height="300"
         />
@@ -65,42 +75,63 @@
           <a class="btn btn-lg btn-outline-primary mb-4" role="button" [routerLink]="['/rent']">Alquilar </a>
         </div>
         <img
-          src="../../../assets/img/alquilerHome.jpg"
-          class="card-img-bottom img-fluid alquiler"
+          src="../../../assets/img/rent.jpg"
+          class="alquiler"
           alt="foto patinete"
-          width="300"
-          height="150"
         />
       </div>
     </div>
   </div>
 </div>
-<div class="mb-0 w-100 txtOver p-0">
-  <a [routerLink]="['/products/10']">
-    <div class="rightSide text-dark d-none d-lg-block">
-      <h1 class="fs-1 fw-bold">Fácil de plegar</h1>
-      <h1 class="fs-1 fw-bold">Fácil de transportar</h1>
+
+<div class="container-fluid">
+  <div class="row d-flex justify-content-center mt-5">
+    <div class="col-11 d-flex ms-2">
+      <h1 class="fs-1">Recomendados. </h1>
     </div>
-  </a>
-  <img
-    src="https://i02.appmifile.com/mi-com-product/fly-birds/xiaomi-scooter-4-pro/4fb96ef23fe20cbb37e08e06aa0bcdb9.jpg"
-    class="card-img-bottom"
-    alt="..."
-  />
-</div>
-<div class="w-100 txtOver p-0 d-flex align-self-start justify-content-center">
-  <a [routerLink]="['/products/10']">
-    <div class="leftSide text-light d-none d-lg-block">
-      <h1 class="fs-1 fw-bold">Xiaomi 4 Pro</h1>
-      <h1 class="fs-1 fw-bold">Diseño, estilo y elegancia</h1>
+    <div class="col-11 d-flex ms-2">
+      <h1 class="text-secondary fs-1">Lo mejor de esta semana.</h1>
     </div>
-  </a>
-  <img
-    src="https://i02.appmifile.com/mi-com-product/fly-birds/xiaomi-scooter-4-pro/dbcffb9256e5460e64bc32a22671ed10.jpg"
-    class="img-fluid"
-    alt="..."
-  />
+  </div>
+  <div class="row m-4">
+    <div class="col">
+      <div class="mb-0 w-100 txtOver p-0 ">
+        <a [routerLink]="['/products/10']">
+          <div class="rightSide text-dark d-none d-lg-block">
+            <h1 class="fs-1 fw-bold">Fácil de plegar</h1>
+            <h1 class="fs-1 fw-bold">Fácil de transportar</h1>
+          </div>
+        </a>
+        <img
+          src="https://i02.appmifile.com/mi-com-product/fly-birds/xiaomi-scooter-4-pro/4fb96ef23fe20cbb37e08e06aa0bcdb9.jpg"
+          class="card-img-bottom rounded"
+          alt="..."
+        />
+      </div>
+    </div>
+  </div>
 </div>
+
+<div class="container-fluid">
+  <div class="row m-4">
+    <div class="col">
+      <div class="w-100 txtOver p-0 d-flex align-self-start justify-content-center">
+        <a [routerLink]="['/products/10']">
+          <div class="leftSide text-light d-none d-lg-block">
+            <h1 class="fs-1 fw-bold">Xiaomi 4 Pro</h1>
+            <h1 class="fs-1 fw-bold">Diseño, estilo y elegancia</h1>
+          </div>
+        </a>
+        <img
+          src="https://i02.appmifile.com/mi-com-product/fly-birds/xiaomi-scooter-4-pro/dbcffb9256e5460e64bc32a22671ed10.jpg"
+          class="img-fluid rounded"
+          alt="..."
+        />
+      </div>
+    </div>
+  </div>
+</div>
+
 <div class="container w-100">
   <div class="row my-5 align-items-center text-center text-light">
     <div class="col color h-100 p-2">

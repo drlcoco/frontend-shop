@@ -1,56 +1,67 @@
-<div class="row">
-  <div class="col">
-    <div class="m-5 text-center">
-      <div class="col-11 d-flex  ms-5 title justify-content-center">
-        <h1 class="fs-1">Panel de </h1>
-        <h1 class="text-secondary ms-2 fs-1">Administración de productos</h1>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col">
+      <div class="m-5 text-center">
+        <div class="col-11 d-flex  ms-5 title justify-content-center">
+          <h1 class="fs-1">Panel</h1>
+          <h1 class="text-secondary ms-2 fs-1">productos</h1>
+        </div>
+        <button type="button" class="btn btn-outline-primary d-flex ms-auto mb-2" [routerLink]="['/add']"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-database-fill-add align-self-center me-2" viewBox="0 0 16 16">
+          <path d="M12.5 16a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7Zm.5-5v1h1a.5.5 0 0 1 0 1h-1v1a.5.5 0 0 1-1 0v-1h-1a.5.5 0 0 1 0-1h1v-1a.5.5 0 0 1 1 0ZM8 1c-1.573 0-3.022.289-4.096.777C2.875 2.245 2 2.993 2 4s.875 1.755 1.904 2.223C4.978 6.711 6.427 7 8 7s3.022-.289 4.096-.777C13.125 5.755 14 5.007 14 4s-.875-1.755-1.904-2.223C11.022 1.289 9.573 1 8 1Z"/>
+          <path d="M2 7v-.839c.457.432 1.004.751 1.49.972C4.722 7.693 6.318 8 8 8s3.278-.307 4.51-.867c.486-.22 1.033-.54 1.49-.972V7c0 .424-.155.802-.411 1.133a4.51 4.51 0 0 0-4.815 1.843A12.31 12.31 0 0 1 8 10c-1.573 0-3.022-.289-4.096-.777C2.875 8.755 2 8.007 2 7Zm6.257 3.998L8 11c-1.682 0-3.278-.307-4.51-.867-.486-.22-1.033-.54-1.49-.972V10c0 1.007.875 1.755 1.904 2.223C4.978 12.711 6.427 13 8 13h.027a4.552 4.552 0 0 1 .23-2.002Zm-.002 3L8 14c-1.682 0-3.278-.307-4.51-.867-.486-.22-1.033-.54-1.49-.972V13c0 1.007.875 1.755 1.904 2.223C4.978 15.711 6.427 16 8 16c.536 0 1.058-.034 1.555-.097a4.507 4.507 0 0 1-1.3-1.905Z"/>
+        </svg>Nuevo</button>
+        <ngx-spinner type="ball-scale-multiple"></ngx-spinner>
+        <div class="d-none d-lg-block">
+          <table [ngClass]="this.updateTableTheme() ? 'table table-dark table-striped' : 'table table-light table-striped'"  *ngIf="productos && productos.length">
+            <thead>
+              <tr class="fw-b fs-5">
+                <th scope="col" class="py-4">Imagen</th>
+                <th scope="col" class="py-4">Id</th>
+                <th scope="col" class="py-4">Product</th>
+                <th scope="col" class="py-4">Precio</th>
+                <th scope="col" class="py-4">Stock</th>
+                <th scope="col" class="py-4">Editar</th>
+                <th scope="col" class="py-4">Borrar</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let producto of productos;" class="justify-content-center align-items-center">
+                <td class="d-flex justify-content-center align-items-center rounded h-100 "><img src="{{producto.image}}" width="35" height="35"></td>
+                <td class="pt-3">{{producto.id}}</td>
+                <td class="pt-3">{{producto.title}}</td>
+                <td class="pt-3">{{producto.price}}</td>
+                <td class="pt-3">{{producto.stock}}</td>
+                <td class="pt-3"><a role="button" [routerLink]="['/products/update', producto.id]" (click)="editItem(producto)"><i class="bi bi-pencil me-2"></i></a></td>
+                <td class="pt-3"><a role="button" [routerLink]="['/panel']" (click)="deleteItem(producto)"><i class="bi bi-trash3 my-auto"></i></a></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="d-block d-lg-none">
+          <table [ngClass]="this.updateTableTheme() ? 'table table-dark table-striped' : 'table table-light table-striped'"  *ngIf="productos && productos.length">
+            <thead>
+              <tr class="fw-b fs-5">
+                <th scope="col" class="py-4">Imagen</th>
+                <th scope="col" class="py-4">Id</th>
+                <th scope="col" class="py-4">Precio</th>
+                <th scope="col" class="py-4">Stock</th>
+                <th scope="col" class="py-4">Editar</th>
+                <th scope="col" class="py-4">Borrar</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let producto of productos;" class="justify-content-center align-items-center">
+                <td class="d-flex justify-content-center align-items-center rounded h-100 "><img src="{{producto.image}}" width="35" height="35"></td>
+                <td class="pt-3">{{producto.id}}</td>
+                <td class="pt-3">{{producto.price}}</td>
+                <td class="pt-3">{{producto.stock}}</td>
+                <td class="pt-3"><a role="button" [routerLink]="['/products/update', producto.id]" (click)="editItem(producto)"><i class="bi bi-pencil me-2"></i></a></td>
+                <td class="pt-3"><a role="button" [routerLink]="['/panel']" (click)="deleteItem(producto)"><i class="bi bi-trash3 my-auto"></i></a></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </div>
-      <button type="button" class="btn btn-outline-primary d-flex ms-auto mb-2" [routerLink]="['/add']"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-database-fill-add align-self-center me-2" viewBox="0 0 16 16">
-        <path d="M12.5 16a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7Zm.5-5v1h1a.5.5 0 0 1 0 1h-1v1a.5.5 0 0 1-1 0v-1h-1a.5.5 0 0 1 0-1h1v-1a.5.5 0 0 1 1 0ZM8 1c-1.573 0-3.022.289-4.096.777C2.875 2.245 2 2.993 2 4s.875 1.755 1.904 2.223C4.978 6.711 6.427 7 8 7s3.022-.289 4.096-.777C13.125 5.755 14 5.007 14 4s-.875-1.755-1.904-2.223C11.022 1.289 9.573 1 8 1Z"/>
-        <path d="M2 7v-.839c.457.432 1.004.751 1.49.972C4.722 7.693 6.318 8 8 8s3.278-.307 4.51-.867c.486-.22 1.033-.54 1.49-.972V7c0 .424-.155.802-.411 1.133a4.51 4.51 0 0 0-4.815 1.843A12.31 12.31 0 0 1 8 10c-1.573 0-3.022-.289-4.096-.777C2.875 8.755 2 8.007 2 7Zm6.257 3.998L8 11c-1.682 0-3.278-.307-4.51-.867-.486-.22-1.033-.54-1.49-.972V10c0 1.007.875 1.755 1.904 2.223C4.978 12.711 6.427 13 8 13h.027a4.552 4.552 0 0 1 .23-2.002Zm-.002 3L8 14c-1.682 0-3.278-.307-4.51-.867-.486-.22-1.033-.54-1.49-.972V13c0 1.007.875 1.755 1.904 2.223C4.978 15.711 6.427 16 8 16c.536 0 1.058-.034 1.555-.097a4.507 4.507 0 0 1-1.3-1.905Z"/>
-      </svg>Nuevo</button>
-      <ngx-spinner type="ball-scale-multiple"></ngx-spinner>
-      <!-- <h1 class="title fw-b fs-1">Tu lista de productos</h1> -->
-      <table [ngClass]="this.updateTableTheme() ? 'table table-dark table-striped' : 'table table-light table-striped'"  *ngIf="productos && productos.length">
-        <thead>
-          <tr class="fw-b fs-5">
-            <th scope="col" class="py-4">Imagen</th>
-            <th scope="col" class="py-4">Id</th>
-            <th scope="col" class="py-4">Producto</th>
-            <th scope="col" class="py-4">Precio</th>
-            <th scope="col" class="py-4">Stock</th>
-            <th scope="col" class="py-4">Editar</th>
-            <th scope="col" class="py-4">Borrar</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr *ngFor="let producto of productos;" class="justify-content-center align-items-center">
-            <td class="d-flex justify-content-center align-items-center rounded"><img src="{{producto.image}}" width="35" height="35"></td>
-            <td class="pt-3">{{producto.id}}</td>
-            <td class="pt-3">{{producto.title}}</td>
-            <td class="pt-3">{{producto.price}}</td>
-            <td class="pt-3">{{producto.stock}}</td>
-            <td class="pt-3"><a role="button" [routerLink]="['/products/update', producto.id]" (click)="editItem(producto)"><i class="bi bi-pencil me-2"></i></a></td>
-            <td class="pt-3"><a role="button" [routerLink]="['/panel']" (click)="deleteItem(producto)"><i class="bi bi-trash3 my-auto"></i></a></td>
-          </tr>
-        </tbody>
-      </table>
     </div>
-    <!-- <ng-template #elseBlock>
-      <div class="row m-5">
-        <div class="col-6 my-5">
-          <h1 class="text-center fs-1 fw-b my-5">Su carrito está vacío</h1>
-          <h2>Aún no ha añadido ningún producto</h2>
-          <div class="d-grid gap-2 my-5">
-            <a class="btn btn-primary " role="button" [routerLink]="['/products']">Comprar</a>
-          </div>
-        </div>
-        <div class="col">
-          <svg xmlns="http://www.w3.org/2000/svg" width="456" height="456" fill="currentColor" class="bi bi-cart4" viewBox="0 0 16 16">
-            <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5zM3.14 5l.5 2H5V5H3.14zM6 5v2h2V5H6zm3 0v2h2V5H9zm3 0v2h1.36l.5-2H12zm1.11 3H12v2h.61l.5-2zM11 8H9v2h2V8zM8 8H6v2h2V8zM5 8H3.89l.5 2H5V8zm0 5a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0zm9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0z"/>
-          </svg>
-        </div>
-      </div>
-    </ng-template> -->
   </div>
 </div>

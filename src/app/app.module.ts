@@ -63,7 +63,7 @@ const APP_ROUTES: Route[] = [
   { path: 'purchases', component: MyPurchasesComponent, canActivate: [UserGuard] },
   { path: 'account', component: MyAccountComponent, canActivate: [UserGuard] },
   { path: 'panel', component: AdminPanelComponent, canActivate: [AdminGuard] },
-  { path:'/', redirectTo:'home', pathMatch:'full'},
+  { path:'', redirectTo:'home', pathMatch:'full'},
   { path:'**', redirectTo:'home', pathMatch:'full'}
 ]
 
