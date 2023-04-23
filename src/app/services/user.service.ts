@@ -86,7 +86,13 @@ export class UserService {
     return this.http.get<any>(`${userURL}/${id}`);
   }
 
+  checkEmail(checkUser:IUser): Observable<String> {
+    return this.http.post<any>('http://localhost:8000/api/checkemail', checkUser);
+  }
+
   updateUser(user: IUser): Observable<IUser> {
+    console.log(user);
+
     const token = localStorage.getItem('access_token');
     return this.http.put<UserResponses>(`http://localhost:8000/api/users/${user.id}`, user).pipe(
 			map(resp => {
@@ -151,7 +157,7 @@ export class UserService {
   timeLogout(){
     setTimeout(() => {
       this.logout();
-    }, (60000 * 60));
+    }, (6000 * 60));
   }
 
 }

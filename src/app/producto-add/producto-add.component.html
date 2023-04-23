@@ -1,19 +1,8 @@
-<div class="container-fluid">
+<!-- <div class="container-fluid">
   <div class="row text-center justify-content-center mt-4">
     <div class="col-xs-12 col-lg-6 p-5 mx-5">
       <h1 class="text-center text-primary mt-5 fs-2"><i class="bi bi-arrow-up-square me-2"></i> Añadir Producto</h1>
       <form class="mt-5 fs-6 rounded-3 p-4 border border-primary darkThemeForm" #valForm="ngForm" (ngSubmit)="addEvento(fileUpload)" novalidate>
-        <!-- <div class="form-group">
-          <label for="title">Nombre*</label>
-          <input type="text" class="form-control mb-3" name="title" [(ngModel)]="newProducto.title" #ngNombre="ngModel"
-            [ngClass]="{'is-valid':ngNombre.touched && ngNombre.valid, 'is-invalid':ngNombre.touched && !ngNombre.valid}"
-            minlength="5" maxlength="30" required>
-          <div class="col-10">
-            <div *ngIf="ngNombre.touched && ngNombre.invalid" class="alert alert-danger">
-              Introduzca el nombre*
-            </div>
-          </div>
-        </div> -->
         <div class="form-group">
           <mat-form-field class="example-form-field col-12">
             <mat-label [ngStyle]="{ color: !name.valid ? 'red' : '#0d6efd' }">Nombre</mat-label>
@@ -36,17 +25,6 @@
             </mat-error>
           </mat-form-field>
         </div>
-        <!-- <div class="form-group">
-          <label for="description">Descripción*</label>
-          <input type="text" class="form-control mb-3" name="description" [(ngModel)]="newProducto.description" #ngDesc="ngModel"
-            [ngClass]="{'is-valid':ngDesc.touched && ngDesc.valid, 'is-invalid':ngDesc.touched && !ngDesc.valid}"
-            minlength="5" maxlength="90" required>
-            <div class="col-10">
-              <div *ngIf="ngDesc.touched && ngDesc.invalid" class="alert alert-danger">
-                Introduzca la descripción*
-              </div>
-            </div>
-        </div> -->
         <div class="form-group">
           <mat-form-field class="example-form-field col-12">
             <mat-label [ngStyle]="{ color: !description.valid ? 'red' : '#0d6efd' }">Descripción</mat-label>
@@ -69,17 +47,6 @@
             </mat-error>
           </mat-form-field>
         </div>
-        <!-- <div class="form-group"> pattern="[a-zA-ZÀ-ÿ0-9\s]{5,90}"
-          <label for="stock">Stock</label>
-          <input type="number" class="form-control mb-3 mb-1" name="stock" [(ngModel)]="newProducto.stock" #ngStock="ngModel"
-            [ngClass]="{'is-valid':ngStock.touched && ngStock.valid && ngStock.value > 0, 'is-invalid':ngStock.touched && !ngStock.valid && ngStock.value === 0}"
-            placeholder="Introduzca stock" required>
-            <div class="col-10">
-              <div *ngIf="ngStock.touched  && ngStock.invalid" class="alert alert-danger">
-                Debes introducir el stock
-              </div>
-            </div>
-        </div> -->
         <div class="form-group">
           <mat-form-field class="example-form-field col-12">
             <mat-label [ngStyle]="{ color: !stock.valid ? 'red' : '#0d6efd' }">Stock</mat-label>
@@ -103,17 +70,6 @@
             </mat-error>
           </mat-form-field>
         </div>
-        <!-- <div class="form-group">
-          <label for="price">Precio</label>
-          <input type="number" class="form-control mb-3" name="price" [(ngModel)]="newProducto.price" #ngPrecio="ngModel"
-            [ngClass]="{'is-valid':ngPrecio.touched && ngPrecio.valid && ngPrecio.value > 0, 'is-invalid':ngPrecio.touched && !ngPrecio.valid}"
-            placeholder="Introduzca precio" required>
-            <div class="col-10">
-              <div *ngIf="ngPrecio.touched && ngPrecio.invalid" class="alert alert-danger">
-                Debes introducir el precio
-              </div>
-            </div>
-        </div> -->
         <div class="form-group">
           <mat-form-field class="example-form-field col-12">
             <mat-label [ngStyle]="{ color: !precio.valid ? 'red' : '#0d6efd' }">Precio</mat-label>
@@ -137,18 +93,6 @@
             </mat-error>
           </mat-form-field>
         </div>
-        <!-- <div class="form-group mt-3">
-          <label for="image">Imagen*</label>
-          <input type="file" class="file-upload form-control mb-3" #fileUpload name="image" (ngModel)="newProducto.image"
-            #ngImagen="ngModel"
-            [ngClass]="{'is-valid':ngImagen.touched && ngImagen.valid, 'is-invalid': ngImagen.touched && !ngImagen.valid}"
-            (change)="changeImage(fileUpload)" required />
-            <div class="col-10">
-              <div *ngIf="ngImagen.touched && ngImagen.invalid" class="alert alert-danger">
-                Introduzca la imagen*
-              </div>
-            </div>
-        </div> -->
         <div class="form-group">
           <mat-form-field class="example-form-field col-12">
             <mat-label></mat-label>
@@ -175,5 +119,143 @@
     </div>
   </div>
 </div>
+
+
+ -->
+
+
+
+
+
+
+ <div class="container-fluid">
+  <div class="row text-center justify-content-center my-4">
+    <div class="col-xs-12 col-lg-10 p-5 mx-5">
+      <h1 class="mt-5 text-primary text-center fs-2"><i class="bi bi-plus-square me-2"></i> Añadir Producto</h1>
+      <form class="mt-5 fs-5 rounded-3 p-4 border border-primary darkThemeForm" #valForm="ngForm" (ngSubmit)="addEvento(fileUpload)">
+        <div class="row d-flex w-100">
+          <div class="col-xs-12 col-md-6">
+            <div class="form-group">
+              <mat-form-field class="example-form-field col-12">
+                <mat-label [ngStyle]="{ color: !name.valid ? 'red' : '#0d6efd' }">Nombre</mat-label>
+                <input
+                  matInput
+                  class=""
+                  type="text"
+                  name="name"
+                  id="name"
+                  [(ngModel)]="newProducto.title"
+                  #name="ngModel"
+                  [ngClass]="{'is-valid':name.touched && name.valid, 'is-invalid':name.touched && !name.valid}"
+                  minlength="5" maxlength="30" required>
+                <mat-error *ngIf="!name.valid && name.touched && !name.hasError('required')"
+                  class="fs-6">
+                  El nombre no es válido
+                </mat-error>
+                <mat-error *ngIf="name.hasError('required')">
+                  Nombre <strong>requerido</strong>
+                </mat-error>
+              </mat-form-field>
+            </div>
+            <div class="form-group">
+              <mat-form-field class="example-form-field col-12">
+                <mat-label [ngStyle]="{ color: !description.valid ? 'red' : '#0d6efd' }">Descripción</mat-label>
+                <input
+                  matInput
+                  class=""
+                  type="text"
+                  name="description"
+                  id="description"
+                  [(ngModel)]="newProducto.description"
+                  #description="ngModel"
+                  [ngClass]="{'is-valid':description.touched && description.valid, 'is-invalid':description.touched && !description.valid}"
+                  minlength="5" maxlength="90" required>
+                <mat-error *ngIf="!description.valid && description.touched && !description.hasError('required')"
+                  class="fs-6">
+                  La descripción no es válida
+                </mat-error>
+                <mat-error *ngIf="description.hasError('required')">
+                  Descripción <strong>requerida</strong>
+                </mat-error>
+              </mat-form-field>
+            </div>
+          </div>
+          <div class="col-xs-12 col-md-6">
+            <div class="form-group">
+              <mat-form-field class="example-form-field col-12">
+                <mat-label [ngStyle]="{ color: !stock.valid ? 'red' : '#0d6efd' }">Stock</mat-label>
+                <input
+                  matInput
+                  class=""
+                  type="number"
+                  name="stock"
+                  id="stock"
+                  [(ngModel)]="this.newProducto.stock"
+                  pattern="[0-9]{1,30}"
+                  #stock="ngModel"
+                  [ngClass]="{'is-valid':stock.touched && stock.valid && stock.value > 0, 'is-invalid':stock.touched && !stock.valid && stock.value === 0}"
+                  minlength="1" maxlength="30" required>
+                <mat-error *ngIf="!stock.valid && stock.touched && !stock.hasError('required')"
+                class="fs-6">
+                  El stock no es válido
+                </mat-error>
+                <mat-error *ngIf="stock.hasError('required')">
+                  Stock <strong>requerido</strong>
+                </mat-error>
+              </mat-form-field>
+            </div>
+            <div class="form-group">
+              <mat-form-field class="example-form-field col-12">
+                <mat-label [ngStyle]="{ color: !precio.valid ? 'red' : '#0d6efd' }">Precio</mat-label>
+                <input
+                  matInput
+                  class=""
+                  type="number"
+                  name="precio"
+                  id="precio"
+                  [(ngModel)]="this.newProducto.price"
+                  pattern="[0-9]{1,30}"
+                  #precio="ngModel"
+                  [ngClass]="{'is-valid':precio.touched && precio.valid && precio.value > 0, 'is-invalid':precio.touched && !precio.valid}"
+                  minlength="1" maxlength="30" required>
+                <mat-error *ngIf="!precio.valid && precio.touched && !precio.hasError('required')"
+                class="fs-6">
+                  El precio no es válido
+                </mat-error>
+                <mat-error *ngIf="precio.hasError('required')">
+                  Stock <strong>requerido</strong>
+                </mat-error>
+              </mat-form-field>
+            </div>
+          </div>
+          <div class="col-12">
+            <div class="form-group">
+              <mat-form-field class="example-form-field col-12">
+                <mat-label></mat-label>
+                <div class="box-button">
+                  <button type="button" class="btn btn-outline-primary button-select">
+                    <input
+                    matInput
+                    type="file"
+                    class="file-upload file-button"
+                    #fileUpload
+                    name="image"
+                    (change)="changeImage(fileUpload)"/>Seleccionar imagen</button>
+                </div>
+              </mat-form-field>
+            </div>
+            <div class="text-center mt-3">
+              <img [src]="newProducto.image" alt="" id="preview" width="200">
+            </div>
+            <div class="form-group my-3 text-center">
+              <input type="submit" class="btn btn-primary w-50" value="Añadir" [disabled]="valForm.invalid || this.newProducto.stock === 0 || this.newProducto.price === 0" />
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
 
 

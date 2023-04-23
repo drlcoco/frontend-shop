@@ -119,7 +119,6 @@
               <div class="form-group">
                 <mat-form-field class="example-form-field col-12">
                   <mat-label></mat-label>
-                  <!-- <button type="button" mat-raised-button (click)="onFileSelected()">Choose File</button> -->
                   <div class="box-button">
                     <button type="button" class="btn btn-outline-primary button-select">
                       <input
@@ -140,10 +139,13 @@
               <div class="form-group my-3 text-center">
                 <input
                   type="submit"
-                  class="btn btn-primary w-50 mt-4"
-                  value="Guardar"
+                  class="btn btn-primary w-25 mt-4"
+                  value="Actualizar"
                   [disabled]="valForm.invalid"
                 />
+              </div>
+              <div class="form-group my-3 text-center">
+                <button class="btn btn-dark w-25" type="button" [routerLink]="['/panel']">Volver</button>
               </div>
             </div>
           </div>
@@ -152,3 +154,4 @@
     </div>
   </div>
 </div>
+

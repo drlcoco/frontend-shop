@@ -44,6 +44,7 @@ import { AdminPanelComponent } from './components/admin-panel/admin-panel.compon
 import { ProductsPanelComponent } from './components/products-panel/products-panel.component';
 import { UsersPanelComponent } from './components/users-panel/users-panel.component';
 import { JwtInterceptorInterceptor } from './Interceptors/jwt-interceptor.interceptor';
+import { AccountDetailsComponent } from './components/account-details/account-details.component';
 
 const APP_ROUTES: Route[] = [
   { path: 'home', component: HomeComponent },
@@ -62,6 +63,7 @@ const APP_ROUTES: Route[] = [
   { path: 'payment', component: PaymentComponent, canActivate: [UserGuard] },
   { path: 'purchases', component: MyPurchasesComponent, canActivate: [UserGuard] },
   { path: 'account', component: MyAccountComponent, canActivate: [UserGuard] },
+  { path: 'account/:id', component: AccountDetailsComponent, canActivate: [AdminGuard] },
   { path: 'panel', component: AdminPanelComponent, canActivate: [AdminGuard] },
   { path:'', redirectTo:'home', pathMatch:'full'},
   { path:'**', redirectTo:'home', pathMatch:'full'}
@@ -95,7 +97,8 @@ const APP_ROUTES: Route[] = [
     RentPointerComponent,
     AdminPanelComponent,
     ProductsPanelComponent,
-    UsersPanelComponent
+    UsersPanelComponent,
+    AccountDetailsComponent
   ],
   imports: [
     BrowserModule,

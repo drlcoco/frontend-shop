@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { NgxSpinnerService } from 'ngx-spinner';
 import { IUser } from 'src/app/interfaces/i-user';
 import { StorageService } from 'src/app/services/storage.service';
@@ -16,7 +17,8 @@ export class UsersPanelComponent implements OnInit {
 
   constructor(private storageService: StorageService,
               private usersService : UserService,
-              private spinnerService: NgxSpinnerService) { }
+              private spinnerService: NgxSpinnerService,
+              private router: Router) { }
 
   ngOnInit(): void {
     this.spinnerService.show();
@@ -36,12 +38,14 @@ export class UsersPanelComponent implements OnInit {
     if(user.id !== undefined) {
       this.usersService.deleteUser(user.id);
       console.log('Borrando user '+ user.id);
+      this.router.navigate(['/panel']);
       /* this.usersService.getUser(user.id); */
     }
   }
 
-  editItem(user: IUser) {
+  editUser(user: IUser) {
     console.log('Editando user '+ user.id);
+    this.router.navigate(['/account', user.id]);
   }
 
   updateTableTheme(): boolean {

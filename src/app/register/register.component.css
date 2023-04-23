@@ -12,3 +12,7 @@
 label{
   font-size: 18px;
 }
+
+.icono{
+  cursor: not-allowed;
+}

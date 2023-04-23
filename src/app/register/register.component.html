@@ -1,4 +1,4 @@
- <div class="row cont text-center justify-content-center mt-4">
+<!--  <div class="row cont text-center justify-content-center mt-4">
   <div class="col-8 d-flex flex-column">
      <form action="" method="POST" class="m-5 needs-validation" #registerForm = "ngForm" (ngSubmit)="addUser(fileUpload)"  novalidate>
       <div class="row d-flex justify-content-center ms-2 pt-3">
@@ -57,7 +57,6 @@
              #address = "ngModel"
              [(ngModel)] = "user.address"
              required
-             pattern="[a-zA-Z0-9\_\-\,\ ]{4,68}"
            /> <small *ngIf="!address.valid && address.touched" class=" invalid-feedback d-flex">La dirección no es válida</small>
          </div>
        </div>
@@ -75,7 +74,7 @@
              #phone = "ngModel"
              [(ngModel)] = "user.phone"
              required
-             pattern="(\+?( |-|\.)?\d{1,4}( |-|\.)?)?(\(?\d{3}\)?|\d{3})( |-|\.)?(\d{3}( |-|\.)?\d{3})"
+             pattern="[0-9]{9}"
            /> <small *ngIf="!phone.valid && phone.touched" class=" invalid-feedback d-flex">El teléfono no es válido</small>
          </div>
        </div>
@@ -92,9 +91,13 @@
             value=""
             #email = "ngModel"
             [(ngModel)] = "user.email"
+            (keyup)="checkEmail()"
             required
             pattern="[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])"
           /> <small *ngIf="!email.valid && email.touched" class=" invalid-feedback d-flex">El email no es válido</small>
+           <div class="alert alert-danger mt-1" *ngIf="this.isEmailExist == true">
+            Error!!! El email ya existe.
+           </div>
         </div>
       </div>
        <div class="mb-3 row">
@@ -148,15 +151,9 @@
       <div *ngIf="user.image" class="text-center mt-2">
         <img [src]="preview" alt="" id="preview" width="120">
       </div>
-       <!-- <div class="alert alert-success" *ngIf="status == 'success'">
-        Ha sido registrado correctamente <a class="btn btn-primary" [routerLink]="['/login']">Logueate</a>
-       </div>
-       <div class="alert alert-danger" *ngIf="status == 'error'">
-        Error!!! No ha sido registrado correctamente, inténtelo de nuevo
-       </div> -->
        <div class="row justify-content-center">
-        <div class="col-sm-3">
-          <button type="submit" [disabled]="registerForm.invalid || user.password !== user.password2" class="btn rounded" data-bs-toggle="modal" data-bs-target="#staticBackdrop"><img
+        <div class="col-sm-3" [ngClass]="{'icono': this.isEmailExist}">
+          <button type="submit" [disabled]="registerForm.invalid || user.password !== user.password2 || this.isEmailExist == true" class="btn rounded" data-bs-toggle="modal" data-bs-target="#staticBackdrop"><img
           src="assets/img/register.jpg"
           alt="logo"
           class="imgLogin rounded mx-auto d-block"/>
@@ -173,3 +170,255 @@
    </div>
  </div>
 
+ -->
+
+
+
+
+
+
+ <div class="container-fluid">
+  <div class="row text-center justify-content-center my-4">
+    <div class="col-xs-12 col-lg-10 p-5 mx-5">
+      <h1 class="mt-5 text-primary text-center fs-1"><i class="bi bi-person-plus me-2"></i> Regístrate</h1>
+      <form action="" method="POST" class="mt-5 fs-6 rounded-3 p-4 border border-primary darkThemeForm" #registerForm = "ngForm" (ngSubmit)="addUser(fileUpload)"  novalidate>
+        <div class="row d-flex w-100">
+          <div class="col-xs-12 col-md-6">
+            <div class="form-group">
+              <mat-form-field class="example-form-field col-12">
+                <mat-label [ngStyle]="{ color: !name.valid ? 'red' : '#0d6efd' }">Nombre</mat-label>
+                <input
+                  matInput
+                  class=""
+                  type="text"
+                  name="name"
+                  id="name"
+                  [(ngModel)]="user.name"
+                  #name="ngModel"
+                  [ngClass]="{'is-valid':name.touched && name.valid, 'is-invalid':name.touched && !name.valid}"
+                  minlength="5" maxlength="30" required>
+                <mat-error *ngIf="!name.valid && name.touched && !name.hasError('required')"
+                  >
+                  El nombre no es válido
+                </mat-error>
+                <mat-error *ngIf="name.hasError('required')">
+                  Nombre <strong>requerido</strong>
+                </mat-error>
+              </mat-form-field>
+            </div>
+            <div class="form-group">
+              <mat-form-field class="example-form-field col-12">
+                <mat-label [ngStyle]="{ color: !surname.valid ? 'red' : '#0d6efd' }">Apellidos</mat-label>
+                <input
+                  matInput
+                  class=""
+                  type="text"
+                  name="surname"
+                  id="surname"
+                  [(ngModel)]="user.surname"
+                  #surname="ngModel"
+                  [ngClass]="{'is-valid':surname.touched && surname.valid, 'is-invalid':surname.touched && !surname.valid}"
+                  minlength="5" maxlength="90" required>
+                <mat-error *ngIf="!surname.valid && surname.touched && !surname.hasError('required')"
+                  >
+                  El apellido no es válido
+                </mat-error>
+                <mat-error *ngIf="surname.hasError('required')">
+                  Apellido <strong>requerido</strong>
+                </mat-error>
+              </mat-form-field>
+            </div>
+          </div>
+          <div class="col-xs-12 col-md-6">
+            <div class="form-group">
+              <mat-form-field class="example-form-field col-12">
+                <mat-label [ngStyle]="{ color: !address.valid ? 'red' : '#0d6efd' }">Dirección</mat-label>
+                <input
+                  matInput
+                  class=""
+                  type="text"
+                  name="address"
+                  id="address"
+                  [(ngModel)]="user.address"
+                  #address="ngModel"
+                  [ngClass]="{'is-valid':address.touched && address.valid, 'is-invalid':address.touched && !address.valid}"
+                  minlength="5" maxlength="90" required>
+                <mat-error *ngIf="!address.valid && address.touched && !address.hasError('required')"
+                  >
+                  La dirección no es válida
+                </mat-error>
+                <mat-error *ngIf="address.hasError('required')">
+                  Dirección <strong>requerida</strong>
+                </mat-error>
+              </mat-form-field>
+            </div>
+            <div class="form-group">
+              <mat-form-field class="example-form-field col-12">
+                <mat-label [ngStyle]="{ color: !phone.valid ? 'red' : '#0d6efd' }">phone</mat-label>
+                <input
+                  matInput
+                  class=""
+                  type="number"
+                  name="phone"
+                  id="phone"
+                  [(ngModel)]="user.phone"
+                  pattern="[0-9]{9}"
+                  #phone="ngModel"
+                  [ngClass]="{'is-valid':phone.touched && phone.valid && phone.value > 0, 'is-invalid':phone.touched && !phone.valid}"
+                  minlength="1" maxlength="30" required>
+                <mat-error *ngIf="!phone.valid && phone.touched && !phone.hasError('required')"
+                >
+                  El teléfono no es válido, introduzca 9 números.
+                </mat-error>
+                <mat-error *ngIf="phone.hasError('required')">
+                  Teléfono <strong>requerido</strong>
+                </mat-error>
+              </mat-form-field>
+            </div>
+          </div>
+          <div class="col-xs-12 col-md-6">
+            <div class="form-group">
+              <mat-form-field class="example-form-field col-12">
+                <mat-label [ngStyle]="{ color: !email.valid ? 'red' : '#0d6efd' }">Email</mat-label>
+                <input
+                  matInput
+                  class=""
+                  type="email"
+                  name="email"
+                  id="email"
+                  [(ngModel)]="user.email"
+                  #email="ngModel"
+                  [ngClass]="{'is-valid':email.touched && email.valid, 'is-invalid':email.touched && !email.valid}"
+                  (keyup)="checkEmail()"
+                  required
+                  pattern="[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])"
+                  minlength="5" maxlength="90" required>
+                <mat-error *ngIf="!email.valid && email.touched && !email.hasError('required')"
+                  >
+                  El email no es válido
+                </mat-error>
+                <mat-error *ngIf="email.hasError('required')">
+                  Email <strong>requerido</strong>
+                </mat-error>
+              </mat-form-field>
+              <div class="alert alert-danger mt-1" *ngIf="this.isEmailExist == true">
+                Error!!! El email ya existe.
+               </div>
+            </div>
+            <div class="form-group">
+              <mat-form-field class="example-form-field col-12">
+                <mat-label [ngStyle]="{ color: !password.valid ? 'red' : '#0d6efd' }">Password</mat-label>
+                <input
+                  matInput
+                  class=""
+                  type="password"
+                  name="password"
+                  id="password"
+                  [(ngModel)]="user.password"
+                  pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}"
+                  #password="ngModel"
+                  [ngClass]="{'is-valid': password.valid, 'is-invalid': !password.valid && password.touched}"
+                  minlength="1" maxlength="30" required>
+                <mat-error *ngIf="!password.valid && password.touched && !password.hasError('required')"
+                >
+                La contraseña no es válida, debe contener al menos 8 caracteres entre mayúsculas, minúsculas y números
+                </mat-error>
+                <mat-error *ngIf="password.hasError('required')">
+                  Contraseña <strong>requerida</strong>
+                </mat-error>
+              </mat-form-field>
+            </div>
+          </div>
+          <div class="col-xs-12 col-md-6">
+            <div class="form-group">
+              <mat-form-field class="example-form-field col-12">
+                <mat-label [ngStyle]="{ color: !postalCode.valid ? 'red' : '#0d6efd' }">Código Postal</mat-label>
+                <input
+                  matInput
+                  class=""
+                  type="text"
+                  name="postalCode"
+                  id="postalCode"
+                  [(ngModel)]="user.postalCode"
+                  #postalCode="ngModel"
+                  pattern="[0-9]{1,5}"
+                  [ngClass]="{'is-valid':postalCode.touched && postalCode.valid, 'is-invalid':postalCode.touched && !postalCode.valid}"
+                  minlength="5" maxlength="30" required>
+                <mat-error *ngIf="!postalCode.valid && postalCode.touched && !postalCode.hasError('required')"
+                  >
+                  El código postal no es válido
+                </mat-error>
+                <mat-error *ngIf="postalCode.hasError('required')">
+                  Código postal <strong>requerido</strong>
+                </mat-error>
+              </mat-form-field>
+            </div>
+            <div class="form-group">
+              <mat-form-field class="example-form-field col-12">
+                <mat-label [ngStyle]="{ color: !password2.valid || user.password !== user.password2 ? 'red' : '#0d6efd' }">Verify Password</mat-label>
+                <input
+                  matInput
+                  class=""
+                  type="password"
+                  name="password2"
+                  id="password2"
+                  [(ngModel)]="user.password2"
+                  pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z]).{8,}"
+                  #password2="ngModel"
+                  [ngClass]="{'is-valid': password2.valid
+                  && user.password === user.password2
+                  , 'is-invalid': !password2.valid && password2.touched}"
+                  minlength="1" maxlength="30" required
+                >
+                <mat-error *ngIf="!password2.valid && password != password2 && password2.touched && !password2.hasError('required')">
+                  La contraseña no coincide
+                </mat-error>
+                <mat-error *ngIf="password2.hasError('required')">
+                  Contraseña <strong>requerida</strong>
+                </mat-error>
+              </mat-form-field>
+            </div>
+          </div>
+          <div class="col-12">
+            <div class="form-group">
+              <mat-form-field class="example-form-field col-12">
+                <mat-label></mat-label>
+                <div class="box-button">
+                  <button type="button" class="btn btn-outline-primary btn-sm button-select">
+                    <input
+                    matInput
+                    type="file"
+                    class="file-upload file-button"
+                    #fileUpload
+                    name="image"
+                    (change)="changeImage(fileUpload)"/>Seleccionar imagen</button>
+                </div>
+              </mat-form-field>
+            </div>
+            <div class="text-center mt-3">
+              <img [src]="user.image" alt="" id="preview" width="200">
+            </div>
+            <!-- <div class="form-group my-3 text-center">
+              <input type="submit" class="btn btn-primary w-50" value="Añadir" [disabled]="valForm.invalid || this.newProducto.stock === 0 || this.newProducto.price === 0" />
+            </div> -->
+            <div class="row justify-content-center">
+              <div class="col-sm-3" [ngClass]="{'icono': registerForm.invalid || user.password !== user.password2 || this.isEmailExist == true}">
+                <button type="submit" [disabled]="registerForm.invalid || user.password !== user.password2 || this.isEmailExist == true" class="btn rounded" data-bs-toggle="modal" data-bs-target="#staticBackdrop"><img
+                src="assets/img/register.jpg"
+                alt="logo"
+                class="imgLogin rounded mx-auto d-block"/>
+                </button>
+                <div class="alert alert-success" *ngIf="this.isRegistered == true">
+                  Ha sido registrado correctamente <a class="btn btn-primary" [routerLink]="['/login']">Logueate</a>
+                </div>
+                <div class="alert alert-danger" *ngIf="this.isRegistered == false">
+                  Error!!! El email ya existe, inténtelo de nuevo.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

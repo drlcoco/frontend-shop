@@ -14,8 +14,21 @@ export class RegisterComponent {
 
   pageTitle:string = "Regístrate";
   isRegistered!: boolean;
+  isEmailExist!: boolean;
   public password2: string = '';
   user:IUser = {
+    name:"",
+    surname:"",
+    phone:0,
+    address:"",
+    role:"user",
+    email:"",
+    postalCode:"",
+    password:"",
+    password2:"",
+    image:""
+  };
+  checkUser:IUser = {
     name:"",
     surname:"",
     phone:0,
@@ -45,6 +58,7 @@ export class RegisterComponent {
 
   addUser(fileInput: HTMLInputElement){
     this.userToShow = Object.assign({}, this.user);
+    this.user.address = this.user.address + "CP: " + this.user.postalCode;
     this.userService.register(this.user).subscribe(
       (result)=>{
         this.isRegistered = true;
@@ -56,6 +70,7 @@ export class RegisterComponent {
         console.log(this.isRegistered);
         console.log(error);
         console.log("Los datos de registro no son válidos!!!");
+        return this.user;
       }
     )
     this.user = {
@@ -68,6 +83,25 @@ export class RegisterComponent {
       password:"",
       image:""
     };
+  }
+
+  checkEmail() {
+    console.log(this.user.email);
+    this.checkUser = this.user;
+    if(this.checkUser.email) {
+      this.userService.checkEmail(this.checkUser).subscribe(
+        (result)=>{
+          this.isEmailExist = false;
+          console.log(this.isEmailExist);
+          console.log(result);
+        },
+        (error)=>{
+          this.isEmailExist = true;
+          console.log(error);
+          return this.user;
+        }
+      )
+    }
   }
 
   changeImage(fileInput:HTMLInputElement) {
