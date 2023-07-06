@@ -96,7 +96,6 @@ export class UserService {
     const token = localStorage.getItem('access_token');
     return this.http.put<UserResponses>(`http://localhost:8000/api/users/${user.id}`, user).pipe(
 			map(resp => {
-        console.log("Usuario actualizado correctamente... "+resp);
 				return resp.user;
 			}),
       catchError((resp: HttpErrorResponse) =>

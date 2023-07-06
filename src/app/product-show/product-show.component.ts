@@ -19,7 +19,7 @@ export class ProductShowComponent implements OnInit {
   constructor(private productosService : ProductsService,
     private spinnerService: NgxSpinnerService) {}
 
-  ngOnInit(): void {
+  /* ngOnInit(): void {
     this.spinnerService.show();
     this.productosService.getEventos().subscribe(
       resp =>{
@@ -29,6 +29,23 @@ export class ProductShowComponent implements OnInit {
       }
     );
     this.spinnerService.hide();
+  } */
+
+  ngOnInit(): void {
+    this.spinnerService.show();
+    this.productosService.getEventos().subscribe(
+      {
+        next: (resp)=> {
+          this.productos = resp;
+        },
+        error: (error)=> {
+          console.log(error);
+        },
+        complete: ()=> {
+          this.spinnerService.hide();
+        }
+       }
+    );
   }
 
   ordenarStock(enlaceEvento: Event) {

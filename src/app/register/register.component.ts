@@ -4,6 +4,7 @@ import { resetFakeAsyncZone } from '@angular/core/testing';
 import { Form, NgForm, Validators } from '@angular/forms';
 import { IUser } from '../interfaces/i-user';
 import { UserService } from '../services/user.service';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-register',
@@ -58,18 +59,25 @@ export class RegisterComponent {
 
   addUser(fileInput: HTMLInputElement){
     this.userToShow = Object.assign({}, this.user);
-    this.user.address = this.user.address + "CP: " + this.user.postalCode;
+    this.user.address = (this.user.address + " CP: " + this.user.postalCode) as string;
     this.userService.register(this.user).subscribe(
       (result)=>{
         this.isRegistered = true;
-        console.log(this.isRegistered);
-        console.log(result);
+        Swal.fire({
+          title: 'Registro completado',
+          icon: 'success',
+          text: 'Se ha registrado con éxito!.',
+          timer: 4000
+        })
       },
       (error)=>{
         this.isRegistered = false;
-        console.log(this.isRegistered);
-        console.log(error);
-        console.log("Los datos de registro no son válidos!!!");
+        Swal.fire({
+          title: 'Error registrando el usuario',
+          icon: 'error',
+          text: 'No se ha registrado el usuario correctamente.',
+          timer: 4000
+        })
         return this.user;
       }
     )

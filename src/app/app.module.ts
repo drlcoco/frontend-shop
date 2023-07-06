@@ -65,8 +65,9 @@ const APP_ROUTES: Route[] = [
   { path: 'account', component: MyAccountComponent, canActivate: [UserGuard] },
   { path: 'account/:id', component: AccountDetailsComponent, canActivate: [AdminGuard] },
   { path: 'panel', component: AdminPanelComponent, canActivate: [AdminGuard] },
-  { path:'', redirectTo:'home', pathMatch:'full'},
-  { path:'**', redirectTo:'home', pathMatch:'full'}
+  { path:'', component: HomeComponent, pathMatch:'full'},
+  { path:'**', component: HomeComponent, pathMatch:'full'},
+  { path:'/', component: HomeComponent, pathMatch:'full'}
 ]
 
 @NgModule({
