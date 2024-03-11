@@ -1,0 +1,98 @@
+<nav [class.hide-nav]="!isNavbarVisible" class="navbar navbar-expand-lg navbar-light bg-light cntnr p-3 justify-content-center fixed-top d-none d-lg-block">
+  <div class="container-fluid justify-content-center">
+    <button class="navbar-toggler btn-primary mb-2" (click)="isHide()" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse d-flex justify-content-center align-items-center" id="navbarTogglerDemo01">
+      <a class="navbar-brand text-light me-4" [routerLink]="['/']" routerLinkActive="router-link-active"></a>
+      <ul class="navbar-nav mb-2 mb-lg-0 d-flex justify-content-center w-100">
+
+        <div class="col-12 col-lg-3 px-3 m-0 d-flex justify-content-center align-items-center">
+          <div class="col-8 p-0 m-0 backGold br25 border border-warning text-center">
+            <li><a class="link" [routerLink]="['/']" routerLinkActive="router-link-active">{{"Nav.Home" | translate}}</a></li>
+          </div>
+        </div>
+
+        <div class="col-12 col-lg-3 px-3 m-0 d-flex justify-content-center align-items-center">
+          <div class="col-8 p-0 m-0 backGold br25 border border-warning text-center justify-content-center align-items-center">
+            <li><a class="link" [routerLink]="['work']" routerLinkActive="router-link-active">{{"Nav.Work" | translate}}</a></li>
+          </div>
+        </div>
+
+        <div class="col-12 col-lg-3 px-3 m-0 d-flex justify-content-center align-items-center">
+          <div class="col-8 p-0 m-0 backGold br25 border border-warning text-center justify-content-center align-items-center">
+            <li><a class="link" [routerLink]="['contact']" routerLinkActive="router-link-active">{{"Nav.Contact" | translate}}</a></li>
+          </div>
+        </div>
+
+        <div class="col-12 col-lg-3 px-3 m-0 d-flex justify-content-center align-items-center">
+          <div class="col-8 p-0 m-0 backGold br25 border border-warning text-center justify-content-center align-items-center">
+            <li><a class="link" data-bs-toggle="modal" href="#language" role="button">{{"Language.Languages" | translate}}</a></li>
+          </div>
+        </div>
+
+      </ul>
+    </div>
+  </div>
+</nav>
+<nav class="navbar navbar-expand-lg navbar-light bg-light cntnr p-3 justify-content-center fixed-top d-lg-none"><!-- <nav class="navbar navbar-expand-lg navbar-light bg-light cntnr p-3 justify-content-center fixed-top"> -->
+  <div class="container-fluid justify-content-center">
+    <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <!-- <button class="navbar-toggler mb-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse d-flex justify-content-center align-items-center" id="navbarTogglerDemo01"> -->
+      <a class="navbar-brand text-light me-4" [routerLink]="['/']" routerLinkActive="router-link-active"></a>
+      <ul class="navbar-nav mb-2 mb-lg-0 d-flex justify-content-center w-100">
+
+        <!-- <li>
+            <a class="link" [routerLink]="['/']" routerLinkActive="router-link-active">{{"Nav.Home" | translate}}</a>
+        </li>
+
+        <li>
+            <a class="link" [routerLink]="['work']" routerLinkActive="router-link-active">{{"Nav.Work" | translate}}</a>
+        </li>
+
+        <li>
+            <a class="link" [routerLink]="['contact']" routerLinkActive="router-link-active">{{"Nav.Contact" | translate}}</a>
+        </li>
+
+        <li>
+            <a class="link" data-bs-toggle="modal" href="#language" role="button">{{"Language.Languages" | translate}}</a>
+        </li> -->
+
+        <div class="col-12 col-lg-3 px-3 m-0 d-flex justify-content-center align-items-center">
+          <div class="col-8 p-0 m-0 backGold br25 border border-warning text-center">
+            <li><a class="link" [routerLink]="['/']" routerLinkActive="router-link-active">{{"Nav.Home" | translate}}</a></li>
+          </div>
+        </div>
+
+        <div class="col-12 col-lg-3 px-3 m-0 d-flex justify-content-center align-items-center">
+          <div class="col-8 p-0 m-0 backGold br25 border border-warning text-center justify-content-center align-items-center">
+            <li><a class="link" [routerLink]="['work']" routerLinkActive="router-link-active">{{"Nav.Work" | translate}}</a></li>
+          </div>
+        </div>
+
+        <div class="col-12 col-lg-3 px-3 m-0 d-flex justify-content-center align-items-center">
+          <div class="col-8 p-0 m-0 backGold br25 border border-warning text-center justify-content-center align-items-center">
+            <li><a class="link" [routerLink]="['contact']" routerLinkActive="router-link-active">{{"Nav.Contact" | translate}}</a></li>
+          </div>
+        </div>
+
+        <div class="col-12 col-lg-3 px-3 m-0 d-flex justify-content-center align-items-center">
+          <div class="col-8 p-0 m-0 backGold br25 border border-warning text-center justify-content-center align-items-center">
+            <li><a class="link" data-bs-toggle="modal" href="#language" role="button">{{"Language.Languages" | translate}}</a></li>
+          </div>
+        </div>
+
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+
+

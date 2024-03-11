@@ -1,0 +1,52 @@
+main{
+  width: 100%;
+  min-height: 100vh;
+  max-width: 100vw;
+  margin: 0;
+  padding: 0;
+}
+
+section{
+  width: 100%;
+  max-width: 100vw;
+}
+
+.sepa{
+  height: 8px;
+  border-color: rgb(128, 86, 15);
+}
+
+.thin-separator {
+  height: 2px;
+  width: 100%;
+  background-color: rgb(147, 125, 2); /* Color oro (dorado) */
+  border: none;
+}
+
+.fat-separator {
+  height: 5px;
+  width: 100%;
+  background-color: rgb(147, 125, 2); /* Color oro (dorado) */
+  border: none;
+}
+
+.flyr{
+  width: 95%;
+  height: 28vh;
+  border-radius: 25px;
+}
+
+.rounded-image-container {
+  position: relative;
+  display: inline-block;
+  text-align: center;
+}
+
+.txt{
+  width: auto;
+  border-radius: 20px;
+  position: absolute;
+  top: 90%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

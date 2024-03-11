@@ -1,0 +1,126 @@
+{
+  "Home": {
+    "Indoor": "INNE",
+    "Outdoor": "UTE"
+  },
+  "Nav": {
+    "Home": "Hjem",
+    "Work": "Vårt arbeid",
+    "Contact": "Kontakt",
+    "Languages": "Språk"
+  },
+  "Contact": {
+    "Title": "Kontakt oss",
+    "Solutions": "Vi har alle løsningene for deg",
+    "FullName": "Fullt navn",
+    "Email": "E-post",
+    "Phone": "Telefon",
+    "Message": "Melding"
+  },
+  "Language": {
+    "Languages": "Språk",
+    "Header": "Velg ditt språk"
+  },
+  "Work": {
+    "Title": "Vår arbeidsmetode",
+    "Contact": "1. Innledende kontakt",
+    "Advice": "2. Rådgivning hjemme hos deg",
+    "Installation": "3. Installasjon hjemme hos deg",
+    "Concept": "Vår arbeidsmetode i Space of Design, spesialisert på dekorasjon og solbeskyttelse for både innendørs og utendørs bruk, fokuserer på å gi våre kunder en komplett og tilfredsstillende opplevelse fra første kontakt til endelig installasjon. Her er detaljene for hvert trinn i vår prosess:",
+    "ContactText": "1. INNLEDENDE KONTAKT: I dette første trinnet mottar vi samtalen fra en interessert kunde. Vårt kundeserviceteam er svært opplært for å lytte til behovene og spesifikasjonene til hver kunde, gir personlig oppmerksomhet og svarer på alle spørsmål, avtaler en avtale for å besøke deg hjemme uten kostnad for deg.",
+    "AdviceText": "2. PERSONLIG RÅDGIVNING: Under besøket hos kunden gir vårt team av eksperter innen dekorasjon og solbeskyttelse grundig og personlig rådgivning. Vi presenterer et bredt utvalg av produkter og materialer, forklarer egenskapene, fordelene og mulighetene med hver. Vi sikrer også at vi forstår kundens estetiske preferanser og spesifikke behov for funksjonalitet og komfort.",
+    "InstallationText": "3. INSTALLASJON, profesjonell, ryddig og ren: Når kunden har valgt ønskede produkter og materialer, går vi videre med profesjonell installasjon. Vårt team av høyt kvalifiserte og erfarne installatører utfører arbeidet med omhu og oppmerksomhet på detaljer, og sikrer en feilfri og varig finish. Vi forplikter oss til å utføre installasjonen på en ryddig og ren måte, respekterer kundens plass og møbler, og forlater stedet i perfekt stand etter at arbeidet er ferdig. I Space of Design streber vi etter å tilby en helhetlig og høykvalitetstjeneste fra første kontakt til endelig installasjon, og sikrer full tilfredshet for våre kunder gjennom hver fase av prosessen."
+  },
+  "Crystal": {
+    "Title": "Foldbare og skyvbare glassinnkapslinger",
+    "Contact": "Oppdag elegansen og eksklusiviteten med våre glassgardiner for innkapsling av plasser!",
+    "Advice": "Våre glassgardiner tilbyr en innovativ og sofistikert løsning for å skape distinkte og unike miljøer i hjemmet eller bedriften din. Med moderne og minimalistisk design transformerer disse gardinene utendørsområdene dine til funksjonelle og elegante områder, ideelle for å nyte året rundt.",
+    "Installation": "Takket være sitt ramme-løse design og glatte skyvesystem gir våre glassgardiner uhindret panoramautsikt, lar naturlig lys strømme inn i rommene dine og skaper en følelse av romslighet og lys. I tillegg gir deres allsidighet deg muligheten til å åpne eller lukke gardinene etter behov, tilpasse seg værforholdene og atmosfæren når som helst.",
+    "Concept": "Laget med høykvalitets herdet glass, gir våre glassgardiner enestående styrke og holdbarhet, og garanterer effektiv beskyttelse mot eksterne elementer som vind, regn og støv, uten å kompromittere estetikk eller gjennomsiktighet.",
+    "ContactText": "Enten du ønsker å skape en elegant utendørsspisesal, en koselig stue ved bassenget eller et luksuriøst arrangementsområde for virksomheten din, er våre glassgardiner det perfekte valget for å legge til en touch av distinksjon og eksklusivitet til ethvert miljø.",
+    "AdviceText": "Transformér dine utendørsområder til unike og eksklusive steder med våre glassgardiner og gjør dine design- og komfortdrømmer til virkelighet. Våg å skille deg ut med den uovertrufne elegansen til våre innkapslingsløsninger!"
+  },
+  "Sliding": {
+    "Title": "Skyvbare paneler for interiørdekorasjon",
+    "Contact": "Skyvbare paneler for tekstildekorasjon av interiører med toppmoderne materialer er en moderne og elegant løsning for å forskjønne og kontrollere belysningen i ethvert rom. Dette produktet kombinerer moderne design med avansert teknologi og tilbyr et allsidig og funksjonelt alternativ for dekorasjon av hjemmet ditt, med mulighet for personlig tilpasning for hvert design.",
+    "Advice": "Materialer fra siste generasjon: Skyvbare paneler er produsert med materialer av høy kvalitet og avansert teknologi som garanterer holdbarhet og motstand. Disse materialene kan inkludere innovative stoffer som er motstandsdyktige mot flekker og slitasje, og gir en varig løsning, som fiberglass, screen eller harpiksbehandlede linmaterialer.",
+    "Installation": "Enkel vedlikehold: Overflaten på de skyvbare panelene er designet for enkel vedlikehold, og eliminerer behovet for hyppig rengjøring. Materialene avviser støv og flekker, noe som gjør det enkelt å rengjøre dem av og til med en myk, fuktig klut.",
+    "Concept": "Motoriserte systemer: Dette produktet har motoriserte systemer som gjør det mulig å kontrollere panelene på en behagelig og effektiv måte. Med fjernkontroll eller til og med via mobilapper kan du justere posisjonen til panelene for å regulere lysinntaket og sikre personvern med et enkelt trykk.",
+    "ContactText": "Tilpasning og design: De skyvbare panelene er tilgjengelige i et bredt spekter av farger, mønstre og teksturer for å passe til enhver interiørdesignstil. I tillegg tilbyr de muligheter for tilpasning gjennom digital trykk for å imøtekomme individuelle brukerpreferanser."
+  },
+  "Roller": {
+    "Title": "Rullegardiner for interiørdekorasjon",
+    "Contact": "Rullegardiner for tekstildekorasjon av interiører med toppmoderne materialer er en moderne og elegant løsning for å forskjønne og kontrollere belysningen i ethvert rom. Dette produktet kombinerer moderne design med avansert teknologi og tilbyr et allsidig og funksjonelt alternativ for dekorasjon av hjemmet ditt, med mulighet for personlig tilpasning for hvert design.",
+    "Advice": "Materialer fra siste generasjon: Rullegardiner er produsert med materialer av høy kvalitet og avansert teknologi som garanterer holdbarhet og motstand. Disse materialene kan inkludere innovative stoffer som er motstandsdyktige mot flekker og slitasje, og gir en varig løsning.",
+    "Installation": "Enkel vedlikehold: Overflaten på rullegardinene er designet for enkel vedlikehold, og eliminerer behovet for hyppig rengjøring. Materialene avviser støv og flekker, noe som gjør det enkelt å rengjøre dem av og til med en myk, fuktig klut.",
+    "Concept": "Motoriserte systemer: Dette produktet har motoriserte systemer som gjør det mulig å kontrollere panelene på en behagelig og effektiv måte. Med fjernkontroll eller til og med via mobilapper kan du justere posisjonen til panelene for å regulere lysinntaket og sikre personvern med et enkelt trykk.",
+    "ContactText": "Tilpasning og design: Rullegardiner er tilgjengelige i et bredt spekter av farger, mønstre og teksturer for å passe til enhver interiørdesignstil. I tillegg tilbyr de muligheter for tilpasning  a gjennom digital trykk for å imøtekomme individuelle brukerpreferanser."
+  },
+  "Slated": {
+    "Title": "Vertikale lamellgardiner for interiør.",
+    "Contact": "Vårt produkt med lamellegardiner kombinerer toppmoderne teknologi med materialer av høy kvalitet for å tilby deg en uovertruffen opplevelse av solbeskyttelse. Laget med materialer som screen, glassfiber og naturlige stoffer, gir disse gardinene effektiv beskyttelse mot solstråler mens de skaper et innbydende og behagelig interiørmiljø.",
+    "Advice": "Det som gjør våre gardiner virkelig unike er muligheten for tilpasning gjennom digital trykk. Vil du legge til en splash av farge eller et tilpasset design til gardinene dine? Med vår digitale trykkmulighet kan du transformere gardinene dine til et sant kunstverk som gjenspeiler din stil og personlighet.",
+    "Installation": "Men det er ikke alt. Vi presenterer systemet Duomo, en revolusjonerende innovasjon som kombinerer letthet og eleganse i ett produkt. Duomo-systemet er utrolig lett, noe som gjør installasjonen og håndteringen enkel, men det går ikke på kompromiss med stil og sofistikering. Med Duomo får du det beste fra begge verdener: funksjonalitet og skjønnhet."
+  },
+  "Venetian": {
+    "Title": "Venezianske persienner av tre eller aluminium for interiørdekorasjon",
+    "Contact": "Oppdag eleganse og komfort med våre dekorative venezianske persienner for interiør i tre eller aluminium!",
+    "Advice": "I vår kolleksjon tilbyr vi en enestående dekorativ løsning. Våre venezianske persienner legger ikke bare til en touch av varme og komfort til ethvert rom, men er også utrolig enkle å vedlikeholde, noe som gjør dem til det perfekte valget for hjemmet ditt eller kontoret.",
+    "Installation": "Venezianske persienner av tre eller aluminium er laget med de fineste materialene, som fremhever deres skjønnhet og tekstur. Disse materialene behandles nøye for å sikre motstand over tid, mens den glatte og luksuriøse finishen skaper en koselig og elegant atmosfære i ethvert rom. I tillegg er tre og aluminium kjent for sin enkle rengjøring og vedlikehold, slik at du kan glede deg over skjønnheten deres i mange år med minimalt vedlikehold.",
+    "Concept": "Motoriserte systemer: Dette produktet har motoriserte systemer som lar deg kontrollere panelene komfortabelt og effektivt. Med fjernkontroll eller til og med gjennom mobile applikasjoner kan du justere posisjonen til panelene for å regulere lysinntaket og sikre personvern med et enkelt trykk."
+  },
+  "Pleated": {
+    "Title": "Plisserte gardiner for interiørdekorasjon",
+    "Contact": "Plisserte gardiner er en elegant og funksjonell løsning for interiørdekorasjon og solbeskyttelse. De kjennetegnes av sin brettbare design, som gjør det enkelt å justere mengden lys som kommer inn i rommet og gir personvern etter brukerens behov.",
+    "Advice": "Egenskaper:",
+    "Installation": "Variert utvalg av materialer: Disse gardinene er tilgjengelige i et bredt spekter av materialer, inkludert gjennomsiktige, halvgjennomsiktige og ugjennomsiktige stoffer, samt alternativer som tilbyr UV-beskyttelse for å bevare møbler og forhindre blending.",
+    "Concept": "Dekorative design: Disse gardinene kommer i forskjellige design og farger som passer til ulike dekorasjonsstiler, fra moderne og minimalistisk til klassisk og tradisjonell.",
+    "ContactText": "Funksjonalitet og estetikk: I tillegg til sin praktiske funksjon som solbeskyttelse og lyskontroll, legger plisserte gardiner til et snev av eleganse og stil til ethvert interiørrom."
+  },
+  "Textile": {
+    "Title": "Tekstilgardiner og konfeksjon for interiørdekorasjon",
+    "Contact": "Vi har et bredt utvalg av stoffer som vi syr i våre egne verksteder med forskjellige finish og grader av solskjerming. Vi liker å kombinere tekniske gardiner med rullegardiner eller skyvepaneler, supplert med fall av naturlige stoffer, noe som gir våre rom en veldig beroligende varme med unik stil og design.",
+    "Advice": "I tillegg er våre installasjonssystemer utstyrt med de mest innovative materialene, og vi tar vare på hver minste detalj i våre utførelser. Vår produktlinje skiller seg ut med sin allsidighet og tilpasningsdyktighet. Fra farger og mønstre til størrelser og stiler kan du skape et virkelig unikt og personlig rom som gjenspeiler din stil og personlighet.",
+    "Installation": "Vår samling av stoffer for gardiner og konfeksjoner kombinerer den nyeste teknologien med enestående design for å gi deg en uovertruffen opplevelse av interiørdekorasjon. Med muligheten for å motorisere våre systemer og et bredt spekter av tilpasningsalternativer, er vi sikre på at du vil finne alt du trenger for å forvandle dine rom med stil og funksjonalitet."
+  },
+  "CustomStructures": {
+      "Title": "INDIVIDUELLE KONSTRUKSJONER FOR HAGER OG TERRASSER",
+      "Contact": "Våre hagestrukturer tilbyr den perfekte kombinasjonen av funksjonalitet og estetikk, og lar deg forvandle utendørsområdet ditt til en oase av avslapning og underholdning. Med faste eller uttrekkbare alternativer for armer tilpasser våre strukturer seg etter dine behov og preferanser, og gir deg fleksibilitet til å utnytte ditt utendørsområde maksimalt.",
+      "Advice": "Vi tilbyr muligheten til å legge til integrert LED-belysning; våre strukturer skaper ikke bare en koselig og sofistikert atmosfære, men lar deg også glede deg over utendørsområdene dine selv etter solnedgang. LED-belysningen gir mykt og behagelig lys, perfekt for sosiale sammenkomster, utendørs middager eller bare for avslapning under stjernene.",
+      "Installation": "Bygget med materialer av høy kvalitet og en slitesterk design, garanterer våre hagestrukturer værbestandighet og enkel vedlikehold, slik at du kan glede deg over deres skjønnhet og komfort i mange år.",
+      "Concept": "Enten du ønsker å lage en rolig lesekrok, et livlig underholdningsområde eller bare et sted å nyte frisk luft, er våre hagestrukturer det perfekte valget for å legge til et preg av eleganse og komfort i hjemmet ditt.",
+      "ContactText": "Forvandle hagen, terrassen eller gårdsplassen din til et drømmested med våre hagestrukturer og opplev skjønnheten og roen i utendørsområdene dine som aldri før."
+  },
+  "Pergolas": {
+    "Title": "PERGOLOER OG STRUKTURER FOR PARKERING MED FOTOVOLTAISK SYSTEM",
+    "Contact": "Velkommen til fremtiden for solenergi og intelligent funksjonalitet med vår innovative løsning for fotovoltaisk pergola og struktur for fotovoltaisk parkering!",
+    "Advice": "Våre fotovoltaiske pergolaer og strukturer for parkering representerer den perfekte sammenhengen mellom bærekraft, energieffektivitet og moderne design. Forestill deg et rom som ikke bare gir skygge og beskyttelse for kjøretøy, men også genererer ren og fornybar energi for lading av elektriske kjøretøy med tilpasningsdyktige paneler som intelligent tilpasser seg endrede solforhold.",
+    "Installation": "Med høyeffektive solcellepaneler integrert i taket på pergolaen og parkeringsstrukturen, blir hver solstråle omdannet til brukbar elektrisitet, noe som bidrar til å redusere avhengigheten av ikke-fornybare energikilder og redusere karbonavtrykket.",
+    "Concept": "Men det er ikke alt. Vår teknologi med motoriserte orienterbare solcellepaneler legger til et ekstra lag av intelligens i systemet vårt. Disse panelene kan justeres automatisk for å følge solens bane gjennom dagen, optimalisere innhenting av solenergi i sanntid. En overskyet eller skyggefull dag? Ikke noe problem. Systemet vårt kan tilpasses for å maksimere tilgjengelig solbestråling.",
+    "ContactText": "I tillegg til den energiske funksjonaliteten er våre fotovoltaiske pergolaer og parkeringsstrukturer et vitnesbyrd om elegant design og allsidighet. Med et mangfold av tilpasningsalternativer, fra materialer til farger og utførelser, kan vi tilpasse produktet vårt til enhver arkitektonisk og estetisk setting."
+  },
+  "Coffee": {
+    "Title": "RETRAKTBARE MARKISESYSTEMER",
+    "Contact": "Våre strukturer for hager tilbyr den perfekte kombinasjonen av funksjonalitet og estetikk, og lar deg forvandle utendørsområdet ditt til en oase av avslapning og underholdning. Med faste eller uttrekkbare alternativer tilpasser strukturene våre seg til dine behov og preferanser, og gir fleksibilitet for å utnytte ditt utendørsområde maksimalt.",
+    "Advice": "Vi tilbyr muligheten til å legge til integrert LED-belysning; strukturene våre skaper ikke bare en koselig og sofistikert atmosfære, men lar deg også nyte utendørsområdene selv etter at natten har falt på. LED-belysningen gir mykt og behagelig lys, perfekt for sosiale sammenkomster, utendørs middager eller bare for å slappe av under stjernene.",
+    "Installation": "Bygget med høykvalitetsmaterialer og en holdbar design, garanterer våre hagestrukturer motstand mot værforholdene og enkel vedlikehold, slik at du kan glede deg over skjønnheten og komforten i mange år.",
+    "Concept": "Enten du ønsker å lage en rolig lesekrok, et livlig underholdningsområde eller bare et sted å nyte frisk luft, er våre hagestrukturer det perfekte valget for å legge til et preg av eleganse og komfort i hjemmet ditt.",
+    "ContactText": "Forvandle hagen din, terrassen eller gårdsplassen til en drømme destinasjon med våre hagestrukturer og opplev skjønnheten og roen i ditt utendørsområde som aldri før."
+  },
+  "Retractable": {
+    "Title": "RETRAKTBARE MARKISESYSTEMER",
+    "Contact": "Nyt friluftslivet med en uovertruffen stil og komfort takket være vårt innovative retraktable markisesystem! Nøye designet for å skape unike og komfortable utendørsområder, er dette innovative systemet den perfekte løsningen for de som ønsker å utnytte sitt utendørsområde maksimalt, enten det er i hager, terrasser eller på patioen.",
+    "Advice": "Med en solid og elegant struktur gir vår retraktable markise ikke bare beskyttelse mot elementene, men legger også til et snev av sofistikering til ethvert miljø. Laget med materialer av høy kvalitet, garanterer det holdbarhet og motstand mot værforholdene, og sikrer års pålitelig bruk.",
+    "Installation": "Med muligheten til å motorisere systemet, kan du rulle ut eller trekke tilbake markisen med bare et tastetrykk, og gir en enestående bekvemmelighet. Enten du ønsker å nyte varm sol eller søke ly under kjølig skygge, gir vår retraktable markise deg full kontroll over ditt utendørsområde.",
+    "Concept": "Dessuten tilpasser det allsidige designet seg til ulike konfigurasjoner og arkitektoniske stiler, og sikrer en sømløs integrasjon med ditt eksisterende miljø."
+  },
+  "Flat": {
+      "Title": "FLATE MARKISESYSTEMER",
+      "Contact": "Dyk ned i luksus og komfort utendørs med vår flate markise for hager og terrasser. Designet med premissen om å skape unike og komfortable utendørsrom, løfter dette elegante solbeskyttelsessystemet umiddelbart sjarmen til ethvert utendørsområde, og gir deg et perfekt tilfluktssted for avslapning og nytelse av frisk luft.",
+      "Advice": "Med sitt minimalistiske og moderne design forvandler vår flate markise plassen til et koselig og elegant tilfluktssted. Dette produktet garanterer motstand mot værforholdene og langvarig holdbarhet, slik at du kan glede deg over ditt utendørsparadis i mange år uten bekymringer.",
+      "Installation": "Med muligheten til å motorisere systemet, kan du enkelt kontrollere utrullingen og innrullingen av markisen med bare et tastetrykk, og gir deg en usammenlignbar grad av bekvemmelighet og komfort. Enten du ønsker å nyte varm sol eller skape kjølig og avslappende skygge, gir vår flate markise deg full kontroll over utendørsmiljøet ditt.",
+      "Concept": "Forestill deg mulighetene: fra intime utendørs kvelder til livlige sammenkomster med venner og familie, gir vår flate markise deg friheten til å skape den perfekte stemningen når som helst.",
+      "ContactText": "Opplev en ny måte å nyte utendørsområdene dine på med vår flate markise for hager og terrasser. Gjør hvert øyeblikk utendørs uforglemmelig!"
+  },
+  "HELLO": "Hei"
+}

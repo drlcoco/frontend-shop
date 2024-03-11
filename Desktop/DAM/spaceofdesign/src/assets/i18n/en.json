@@ -1,0 +1,126 @@
+{
+  "Home": {
+    "Indoor": "INDOORS",
+    "Outdoor": "OUTDOORS"
+  },
+  "Nav": {
+    "Home": "Home",
+    "Work": "Our Work",
+    "Contact": "Contact",
+    "Languages": "Languages"
+  },
+  "Contact": {
+    "Title": "Contact Us",
+    "Solutions": "We Have All the Solutions for You",
+    "FullName": "Full Name",
+    "Email": "Email",
+    "Phone": "Phone",
+    "Message": "Message"
+  },
+  "Language": {
+    "Languages": "Languages",
+    "Header": "Choose Your Language"
+  },
+  "Work": {
+    "Title": "Our Work Method",
+    "Contact": "1. Initial Contact",
+    "Advice": "2. Home Consultation",
+    "Installation": "3. Installation at Your Home",
+    "Concept": "Our work method at Space of Design, specialized in decoration and sun protection for interiors and exteriors, focuses on providing our clients with a complete and satisfying experience from the first contact to the final installation. Below, I detail each step of our process:",
+    "ContactText": "1. INITIAL CONTACT, At this first step, we receive the call from the client interested in our services. Our customer service team is highly trained to listen to the specific needs and requirements of each client, providing personalized attention and answering all their questions and inquiries, scheduling an appointment to visit them at home at no cost to you.",
+    "AdviceText": "2. PERSONALIZED ADVICE, During the visit to the client's home, our team of experts in decoration and sun protection provides comprehensive and personalized advice. We present a wide range of products and materials, explaining the features, advantages, and possibilities of each. Additionally, we ensure to understand the client's aesthetic preferences and their specific needs for functionality and comfort.",
+    "InstallationText": "3. INSTALLATION, professional, orderly, and clean: Once the client has selected the desired products and materials, we proceed to the professional installation of them. Our team of highly qualified and experienced installers carries out the work with meticulousness and attention to detail, ensuring a flawless and durable finish. We commit to carry out the installation in an orderly and clean manner, respecting the client's space and furniture, and leaving the place in perfect condition once the work is completed. At Space of Design, we strive to offer a comprehensive and high-quality service, from the first contact to the final installation, ensuring the full satisfaction of our clients at every stage of the process."
+  },
+  "Crystal": {
+    "Title": "Folding and Sliding Glass Enclosures",
+    "Contact": "Discover elegance and exclusivity with our glass curtains for space enclosures!",
+    "Advice": "Our glass curtains offer an innovative and sophisticated solution to create distinctive and unique environments in your home or business. With a modern and minimalist design, these curtains transform your outdoor spaces into functional and elegant areas, ideal for year-round enjoyment.",
+    "Installation": "Thanks to their frameless design and smooth sliding system, our glass curtains provide unobstructed panoramic views, allowing natural light to enter your spaces and creating a sense of spaciousness and brightness. Additionally, their versatility allows you to open or close the curtains according to your needs, adapting to the weather and ambiance at any moment.",
+    "Concept": "Manufactured with high-quality tempered glass, our curtains offer exceptional strength and durability, ensuring effective protection against external elements such as wind, rain, and dust, without compromising aesthetics or transparency.",
+    "ContactText": "Whether you want to create an elegant outdoor dining area, a cozy poolside lounge, or a luxurious event space for your business, our glass curtains are the perfect choice to add a touch of distinction and exclusivity to any environment.",
+    "AdviceText": "Transform your outdoor spaces into unique and exclusive places with our glass curtains and bring your design and comfort dreams to life. Dare to stand out with the incomparable elegance of our enclosure solutions!"
+  },
+  "Sliding": {
+    "Title": "Sliding Panels for Interior Decoration",
+    "Contact": "Sliding Panels for interior textile decoration with state-of-the-art materials are a modern and elegant solution to beautify and control lighting in any space. This product combines contemporary design with advanced technology, offering a versatile and functional option for decorating your home, customizing each design to your particular taste.",
+    "Advice": "State-of-the-Art Materials: Sliding Panels are manufactured with high-quality materials and advanced technology that guarantee durability and resistance. These materials may include innovative fabrics, stain-resistant and wear-resistant, providing a durable solution such as fiberglass, screen, or resin-coated linen fabrics.",
+    "Installation": "Easy Maintenance: The surface of Sliding Panels is designed to be easy to maintain, eliminating the constant need for cleaning. The materials repel dust and stains, making occasional cleaning easy with a soft, damp cloth.",
+    "Concept": "Motorized Systems: This product features motorized systems that allow you to control the panels comfortably and efficiently. With a remote control or even through mobile applications, you can adjust the position of the panels to regulate light entry and ensure privacy with a simple touch.",
+    "ContactText": "Customization and Design: Sliding Panels are available in a wide range of colors, patterns, and textures to suit any interior decoration style. Additionally, they offer customization options through digital printing to meet individual user preferences."
+  },
+  "Roller": {
+    "Title": "Roller Curtains for Interior Decoration",
+    "Contact": "Roller Curtains for interior textile decoration with state-of-the-art materials are a modern and elegant solution to beautify and control lighting in any space. This product combines contemporary design with advanced technology, offering a versatile and functional option for decorating your home, customizing each design to your particular taste.",
+    "Advice": "State-of-the-Art Materials: Roller Curtains are manufactured with high-quality materials and advanced technology that guarantee durability and resistance. These materials may include innovative fabrics, stain-resistant and wear-resistant, providing a durable solution.",
+    "Installation": "Easy Maintenance: The surface of Roller Curtains is designed to be easy to maintain, eliminating the constant need for cleaning. The materials repel dust and stains, making occasional cleaning easy with a soft, damp cloth.",
+    "Concept": "Motorized Systems: This product features motorized systems that allow you to control the panels comfortably and efficiently. With a remote control or even through mobile applications, you can adjust the position of the panels to regulate light entry and ensure privacy with a simple touch.",
+    "ContactText": "Customization and Design: Roller Curtains are available in a wide range of colors, patterns, and textures to suit any interior decoration style. Additionally, they offer customization options through digital printing to meet individual user preferences."
+  },
+  "Slated": {
+    "Title": "Vertical Slats Curtains for Interior Decoration",
+    "Contact": "Our product of vertical slats curtains combines state-of-the-art technology with high-quality materials to offer you an unparalleled solar protection experience. Made with materials such as screen, fiberglass, and natural fabrics, these curtains provide effective protection against sunlight while creating a cozy and comfortable indoor atmosphere.",
+    "Advice": "What makes our curtains truly unique is the possibility of customizing them through digital printing. Do you want to add a touch of color or a custom design to your curtains? With our digital printing option, you can transform your curtains into a true work of art that reflects your style and personality.",
+    "Installation": "But that's not all. Introducing the Duomo system, a revolutionary innovation that combines lightness and elegance in one product. The Duomo system is incredibly lightweight, making installation and handling easy, but it doesn't sacrifice anything in terms of style and sophistication. With Duomo, you get the best of both worlds: functionality and beauty."
+  },
+  "Venetian": {
+    "Title": "Wooden or Aluminum Venetian Blinds for Interior Decoration",
+    "Contact": "Discover elegance and comfort with our decorative Venetian blinds for interiors in wood or aluminum!",
+    "Advice": "In our collection, we offer an unparalleled decorative solution. Our Venetian blinds not only add a touch of warmth and comfort to any space but are also incredibly easy to maintain, making them the perfect choice for your home or office.",
+    "Installation": "Wooden or aluminum Venetian blinds are crafted with the finest materials, highlighting their beauty and texture. These materials are carefully treated to ensure their resistance over time, while their smooth and luxurious finish creates a cozy and elegant atmosphere in any space. In addition, wood and aluminum are known for their ease of cleaning and maintenance, allowing you to enjoy their beauty for years with minimal upkeep.",
+    "Concept": "Motorized Systems: This product features motorized systems that allow you to control the panels comfortably and efficiently. With a remote control or even through mobile applications, you can adjust the position of the panels to regulate the entry of light and ensure privacy with a simple touch."
+  },
+  "Pleated": {
+    "Title": "Pleated Curtains for Interior Decoration",
+    "Contact": "Pleated curtains are an elegant and functional solution for interior decoration and sun protection. They are characterized by their foldable design, allowing easy adjustment of the amount of light entering a room and providing privacy according to the user's needs.",
+    "Advice": "Features:",
+    "Installation": "Variety of Materials: These curtains are available in a wide range of materials, including translucent, semi-transparent, and opaque fabrics, as well as options that offer UV protection to preserve furniture and prevent glare.",
+    "Concept": "Decorative Designs: These curtains come in a variety of designs and colors that suit different decoration styles, from modern and minimalist to classic and traditional.",
+    "ContactText": "Functionality and Aesthetics: In addition to their practical function as sun protection and light control, pleated curtains add a touch of elegance and style to any interior space."
+  },
+  "Textile": {
+    "Title": "Textile Curtains and Tailoring for Interior Decoration",
+    "Contact": "We have a wide assortment of fabrics that we tailor in our own workshops with different finishes and levels of solar opacity. We like to combine technical curtains with roller or sliding panels complemented by falls of natural fabrics, achieving a very comforting warmth in our spaces with a unique style and design.",
+    "Advice": "In addition, our installation systems feature the most innovative materials, paying attention to the smallest detail in our finishes. Our product line stands out for its versatility and customization capability. From colors and patterns to sizes and styles, you can create a truly unique and personalized space that reflects your style and personality.",
+    "Installation": "Our collection of fabrics for curtains and tailoring combines the latest technology with exceptional design to offer you an unparalleled interior decoration experience. With the possibility of motorizing our systems and a wide range of customization options, we are confident that you will find everything you need to transform your spaces with style and functionality."
+  },
+  "CustomStructures": {
+      "Title": "CUSTOM DESIGN STRUCTURES FOR GARDENS AND TERRACES",
+      "Contact": "Our garden structures offer a perfect combination of functionality and aesthetics, allowing you to transform your outdoor space into an oasis of relaxation and entertainment. With fixed or extendable arm options, our structures adapt to your needs and preferences, providing flexibility to make the most of your outdoor area.",
+      "Advice": "We offer the possibility to add integrated LED lighting; our structures not only create a cozy and sophisticated atmosphere but also allow you to enjoy your outdoor spaces even after nightfall. LED lighting provides soft and pleasant light, perfect for social gatherings, outdoor dinners, or simply relaxing under the stars.",
+      "Installation": "Built with high-quality materials and a durable design, our garden structures ensure weather resistance and easy maintenance, so you can enjoy their beauty and comfort for many years.",
+      "Concept": "Whether you want to create a quiet reading nook, a vibrant entertainment area, or just a space to enjoy the outdoors, our garden structures are the perfect choice to add a touch of elegance and comfort to your home.",
+      "ContactText": "Transform your garden, terrace, or patio into a dream destination with our garden structures and experience the beauty and serenity of your outdoor spaces like never before."
+  },
+  "Pergolas": {
+    "Title": "PERGOLAS AND SOLAR PARKING STRUCTURES WITH PHOTOVOLTAIC SYSTEM",
+    "Contact": "Welcome to the future of solar energy and smart functionality with our innovative photovoltaic pergola and solar parking structure solution!",
+    "Advice": "Our photovoltaic pergola and parking structure represent the perfect convergence of sustainability, energy efficiency, and modern design. Imagine a space that not only provides shade and protection for vehicles but also generates clean and renewable energy to recharge your electric vehicle with adaptable panels intelligently adjusting to changing sunlight conditions.",
+    "Installation": "With highly efficient solar panels integrated into the roof of the pergola and parking structure, every beam of sunlight is converted into usable electricity, helping reduce dependence on non-renewable energy sources and decreasing the carbon footprint.",
+    "Concept": "But that's not all. Our motorized adjustable solar panel technology adds an additional layer of intelligence to our system. These panels can automatically adjust to follow the sun's path throughout the day, optimizing real-time solar energy capture. Cloudy or shaded day? No problem. Our system can adapt to maximize available solar exposure.",
+    "ContactText": "In addition to its energy functionality, our photovoltaic pergolas and parking structures are a testament to elegant design and versatility. With a variety of customization options, from materials to colors and finishes, we can tailor our product to fit any architectural and aesthetic environment."
+  },
+  "Coffee": {
+      "Title": "RETRACTABLE AWNING SYSTEMS",
+      "Contact": "Our garden structures offer the perfect combination of functionality and aesthetics, allowing you to transform your outdoor space into an oasis of relaxation and entertainment. With fixed or extendable arm options, our structures adapt to your needs and preferences, providing flexibility to make the most of your outdoor area.",
+      "Advice": "We offer the possibility of adding integrated LED lighting; our structures not only create a cozy and sophisticated atmosphere but also allow you to enjoy your outdoor spaces even after the night falls. LED lighting provides soft and pleasant light, perfect for social gatherings, outdoor dinners, or simply relaxing under the stars.",
+      "Installation": "Built with high-quality materials and a durable design, our garden structures guarantee weather resistance and easy maintenance, allowing you to enjoy their beauty and comfort for many years.",
+      "Concept": "Whether you want to create a quiet reading nook, a vibrant entertainment area, or just a space to enjoy the outdoors, our garden structures are the perfect choice to add a touch of elegance and comfort to your home.",
+      "ContactText": "Transform your garden, terrace, or patio into a dream destination with our garden structures and experience the beauty and serenity of your outdoor spaces like never before."
+  },
+  "Retractable": {
+    "Title": "RETRACTABLE AWNING SYSTEMS",
+    "Contact": "Enjoy the outdoors with unparalleled style and comfort thanks to our Retractable Awning System! Meticulously designed to create unique and comfortable outdoor spaces, this innovative system is the perfect solution for those looking to make the most of their outdoor areas, whether in gardens, terraces, or patios.",
+    "Advice": "With a robust and elegant structure, our retractable awning not only provides protection against the elements but also adds a touch of sophistication to any environment. Manufactured with high-quality materials, it ensures durability and weather resistance, ensuring years of reliable use.",
+    "Installation": "With the option to motorize the system, you can deploy or retract your awning with just the touch of a button, providing unparalleled convenience. Whether you want to enjoy the warm sun or take refuge under cool shade, our retractable awning gives you total control over your outdoor space.",
+    "Concept": "Furthermore, its versatile design adapts to a variety of configurations and architectural styles, ensuring seamless integration with your existing surroundings."
+  },
+  "Flat": {
+      "Title": "FLAT AWNING SYSTEMS",
+      "Contact": "Immerse yourself in luxury and outdoor comfort with our Flat Awning for Gardens and Terraces. Designed with the premise of creating unique and comfortable spaces, this elegant sun protection system instantly elevates the charm of any outdoor area, offering you a perfect retreat to relax and enjoy the outdoors.",
+      "Advice": "With its minimalist and contemporary design, our flat awning transforms the space into a cozy and stylish haven. This product guarantees weather resistance and long-term durability, ensuring you can enjoy your outdoor oasis for years without worries.",
+      "Installation": "With the option to motorize the system, you can easily control the extension and retraction of the awning with just the push of a button, providing you with an unmatched level of convenience and comfort. Whether you want to bask in the warm sun or create a cool and relaxing shade, our flat awning gives you total control over your outdoor environment.",
+      "Concept": "Imagine the possibilities: from intimate outdoor evenings to lively gatherings with friends and family, our Flat Awning for Gardens and Terraces offers you the freedom to create the perfect atmosphere anytime.",
+      "ContactText": "Discover a new way to enjoy your outdoor spaces with our Flat Awning for Gardens and Terraces. Make every outdoor moment an unforgettable experience!"
+  },
+  "HELLO": "Hello"
+}

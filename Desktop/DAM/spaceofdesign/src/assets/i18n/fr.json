@@ -1,0 +1,126 @@
+{
+  "Home": {
+    "Indoor": "INTÉRIEURS",
+    "Outdoor": "EXTÉRIEURS"
+  },
+  "Nav": {
+    "Home": "Accueil",
+    "Work": "Notre travail",
+    "Contact": "Contact",
+    "Languages": "Langues"
+  },
+  "Contact": {
+    "Title": "Contactez-nous",
+    "Solutions": "Nous avons toutes les solutions pour vous",
+    "FullName": "Nom complet",
+    "Email": "E-mail",
+    "Phone": "Téléphone",
+    "Message": "Message"
+  },
+  "Language": {
+    "Languages": "Langues",
+    "Header": "Choisissez votre langue"
+  },
+  "Work": {
+    "Title": "Notre méthode de travail",
+    "Contact": "1. Contact initial",
+    "Advice": "2. Conseils à domicile",
+    "Installation": "3. Installation à domicile",
+    "Concept": "Notre méthode de travail chez Space of Design, spécialisée dans la décoration et la protection solaire intérieure et extérieure, vise à offrir à nos clients une expérience complète et satisfaisante du premier contact à l'installation finale. Voici les détails de chaque étape de notre processus :",
+    "ContactText": "1. CONTACT INITIAL : Dans cette première étape, nous recevons l'appel d'un client intéressé par nos services. Notre équipe de service client est hautement qualifiée pour écouter les besoins et les spécifications de chaque client, offrant une attention personnalisée et répondant à toutes les questions, fixant un rendez-vous pour une visite à domicile sans aucun coût pour vous.",
+    "AdviceText": "2. CONSEILS PERSONNALISÉS : Lors de la visite chez le client, notre équipe d'experts en décoration et protection solaire fournit des conseils complets et personnalisés. Nous présentons une large gamme de produits et de matériaux, expliquant les caractéristiques, les avantages et les possibilités de chacun. Nous nous assurons également de comprendre les préférences esthétiques du client et ses besoins spécifiques en termes de fonctionnalité et de confort.",
+    "InstallationText": "3. INSTALLATION, professionnelle, ordonnée et propre : Une fois que le client a choisi les produits et les matériaux souhaités, nous procédons à l'installation professionnelle. Notre équipe d'installateurs hautement qualifiés et expérimentés réalise le travail avec minutie et souci du détail, garantissant une finition impeccable et durable. Nous nous engageons à effectuer l'installation de manière ordonnée et propre, en respectant l'espace et le mobilier du client, et en laissant l'endroit en parfait état une fois le travail terminé. Chez Space of Design, nous nous efforçons d'offrir un service complet et de haute qualité, du premier contact à l'installation finale, assurant une satisfaction totale de nos clients à chaque étape du processus."
+  },
+  "Crystal": {
+    "Title": "Enceintes en verre pliantes et coulissantes",
+    "Contact": "Découvrez l'élégance et l'exclusivité avec nos rideaux en verre pour l'encapsulation d'espaces!",
+    "Advice": "Nos rideaux en verre offrent une solution innovante et sophistiquée pour créer des environnements distincts et uniques dans votre maison ou votre entreprise. Avec un design moderne et minimaliste, ces rideaux transforment vos espaces extérieurs en zones fonctionnelles et élégantes, idéales pour en profiter toute l'année.",
+    "Installation": "Grâce à leur design sans cadre et à leur système de coulissement fluide, nos rideaux en verre offrent une vue panoramique sans obstruction, permettant à la lumière naturelle d'entrer dans vos espaces et créant une sensation d'espace et de luminosité. De plus, leur polyvalence vous permet d'ouvrir ou de fermer les rideaux selon vos besoins, en s'adaptant aux conditions météorologiques et à l'ambiance à tout moment.",
+    "Concept": "Fabriqués avec du verre trempé de haute qualité, nos rideaux offrent une résistance et une durabilité exceptionnelles, garantissant une protection efficace contre les éléments extérieurs tels que le vent, la pluie et la poussière, sans compromettre l'esthétique ni la transparence.",
+    "ContactText": "Que vous souhaitiez créer une élégante salle à manger en plein air, un salon confortable près de la piscine ou un luxueux espace événementiel pour votre entreprise, nos rideaux en verre sont le choix parfait pour ajouter une touche de distinction et d'exclusivité à n'importe quel environnement.",
+    "AdviceText": "Transformez vos espaces extérieurs en lieux uniques et exclusifs avec nos rideaux en verre et réalisez vos rêves de design et de confort. Osez vous démarquer avec l'élégance inégalée de nos solutions d'encapsulation!"
+  },
+  "Sliding": {
+    "Title": "Panneaux coulissants pour la décoration intérieure",
+    "Contact": "Les panneaux coulissants pour la décoration textile intérieure avec des matériaux de dernière génération sont une solution moderne et élégante pour embellir et contrôler l'éclairage de n'importe quel espace. Ce produit allie design contemporain et technologie avancée, offrant une option polyvalente et fonctionnelle pour la décoration de votre maison, personnalisant chaque design selon vos goûts particuliers.",
+    "Advice": "Matériaux de dernière génération : Les panneaux coulissants sont fabriqués avec des matériaux de haute qualité et une technologie avancée garantissant durabilité et résistance. Ces matériaux peuvent inclure des tissus innovants, résistants aux taches et à l'usure, offrant une solution durable, tels que la fibre de verre, le screen ou des tissus de lin résinés.",
+    "InstallationText": "Entretien facile : La surface des panneaux coulissants est conçue pour être facile à entretenir, éliminant le besoin constant de nettoyage. Les matériaux repoussent la poussière et les taches, facilitant leur nettoyage occasionnel avec un chiffon doux et humide.",
+    "Concept": "Systèmes motorisés : Ce produit est doté de systèmes motorisés permettant de contrôler les panneaux de manière confortable et efficace. Avec une télécommande ou même via des applications mobiles, vous pouvez ajuster la position des panneaux pour réguler l'entrée de lumière et garantir l'intimité d'un simple toucher.",
+    "ContactText": "Personnalisation et design : Les panneaux coulissants sont disponibles dans une large gamme de couleurs, de motifs et de textures pour s'adapter à n'importe quel style de décoration intérieure. De plus, ils offrent des options de personnalisation grâce à l'impression numérique pour répondre aux préférences individuelles de l'utilisateur."
+  },
+  "Roller": {
+    "Title": "Stores enrouleurs pour la décoration intérieure",
+    "Contact": "Les stores enrouleurs pour la décoration textile intérieure avec des matériaux de dernière génération sont une solution moderne et élégante pour embellir et contrôler l'éclairage de n'importe quel espace. Ce produit allie design contemporain et technologie avancée, offrant une option polyvalente et fonctionnelle pour la décoration de votre maison, personnalisant chaque design selon vos goûts particuliers.",
+    "Advice": "Matériaux de dernière génération : Les stores enrouleurs sont fabriqués avec des matériaux de haute qualité et une technologie avancée garantissant durabilité et résistance. Ces matériaux peuvent inclure des tissus innovants, résistants aux taches et à l'usure, offrant une solution durable.",
+    "InstallationText": "Entretien facile : La surface des stores enrouleurs est conçue pour être facile à entretenir, éliminant le besoin constant de nettoyage. Les matériaux repoussent la poussière et les taches, facilitant leur nettoyage occasionnel avec un chiffon doux et humide.",
+    "Concept": "Systèmes motorisés : Ce produit est doté de systèmes motorisés permettant de contrôler les panneaux de manière confortable et efficace. Avec une télécommande ou même via des applications mobiles, vous pouvez ajuster la position des panneaux pour réguler l'entrée de lumière et garantir l'intimité d'un simple toucher.",
+    "ContactText": "Personnalisation et design : Les stores enrouleurs sont disponibles dans une large gamme de couleurs, de motifs et de textures pour s'adapter à n'importe quel style de décoration intérieure. De plus, ils offrent des options de personnalisation grâce à l'impression numérique pour répondre aux préférences individuelles de l'utilisateur."
+  },
+  "Slated": {
+    "Title": "Rideaux à lamelles verticaux pour la décoration intérieure.",
+    "Contact": "Notre produit de stores à lames verticales allie la technologie de dernière génération à des matériaux de haute qualité pour vous offrir une expérience de protection solaire incomparable. Confectionnés avec des matériaux tels que le screen, la fibre de verre et des tissus naturels, ces stores offrent une protection efficace contre les rayons du soleil tout en créant une ambiance intérieure accueillante et confortable.",
+    "Advice": "Ce qui rend nos stores vraiment uniques, c'est la possibilité de les personnaliser grâce à l'impression numérique. Vous voulez ajouter une touche de couleur ou un design personnalisé à vos stores ? Avec notre option d'impression numérique, vous pouvez transformer vos stores en une véritable œuvre d'art reflétant votre style et votre personnalité.",
+    "Installation": "Mais ce n'est pas tout. Nous présentons le système Duomo, une innovation révolutionnaire qui allie légèreté et élégance en un seul produit. Le système Duomo est incroyablement léger, facilitant son installation et sa manipulation, mais ne sacrifie rien en termes de style et de sophistication. Avec Duomo, vous obtenez le meilleur des deux mondes : fonctionnalité et beauté."
+  },
+  "Venetian": {
+    "Title": "Stores vénitiens en bois ou en aluminium pour la décoration intérieure",
+    "Contact": "Découvrez l'élégance et le confort avec nos stores vénitiens décoratifs pour l'intérieur en bois ou en aluminium !",
+    "Advice": "Dans notre collection, nous proposons une solution décorative incomparable. Nos stores vénitiens n'ajoutent pas seulement une touche de chaleur et de confort à n'importe quelle pièce, mais ils sont également incroyablement faciles à entretenir, ce qui en fait le choix parfait pour votre maison ou votre bureau.",
+    "Installation": "Les stores vénitiens en bois ou en aluminium sont fabriqués avec les meilleurs matériaux, mettant en valeur leur beauté et leur texture. Ces matériaux sont soigneusement traités pour assurer leur résistance au fil du temps, tandis que leur finition lisse et luxueuse crée une atmosphère chaleureuse et élégante dans n'importe quelle pièce. De plus, le bois et l'aluminium sont réputés pour leur facilité d'entretien et d'entretien, vous permettant de profiter de leur beauté pendant de nombreuses années avec un entretien minimal.",
+    "Concept": "Systèmes motorisés : Ce produit est équipé de systèmes motorisés qui vous permettent de contrôler les panneaux de manière confortable et efficace. À l'aide d'une télécommande ou même via des applications mobiles, vous pouvez ajuster la position des panneaux pour réguler l'entrée de lumière et assurer la confidentialité d'un simple toucher."
+  },
+  "Pleated": {
+    "Title": "Rideaux plissés pour la décoration intérieure",
+    "Contact": "Les rideaux plissés sont une solution élégante et fonctionnelle pour la décoration intérieure et la protection solaire. Ils se caractérisent par leur design pliable, qui permet d'ajuster facilement la quantité de lumière entrant dans une pièce et de fournir de l'intimité selon les besoins de l'utilisateur.",
+    "Advice": "Caractéristiques :",
+    "Installation": "Variété de matériaux : Ces rideaux sont disponibles dans une large gamme de matériaux, y compris des tissus translucides, semi-transparents et opaques, ainsi que des options offrant une protection UV pour préserver les meubles et éviter l'éblouissement.",
+    "Concept": "Designs décoratifs : Ces rideaux sont disponibles dans une variété de designs et de couleurs qui s'adaptent à différents styles de décoration, du moderne et minimaliste au classique et traditionnel.",
+    "ContactText": "Fonctionnalité et esthétique : En plus de leur fonction pratique en tant que protection solaire et contrôle de la lumière, les rideaux plissés ajoutent une touche d'élégance et de style à n'importe quel espace intérieur."
+  },
+  "Textile": {
+    "Title": "Rideaux textiles et confection pour la décoration intérieure",
+    "Contact": "Nous proposons une large gamme de tissus que nous confectionnons dans nos propres ateliers avec différentes finitions et degrés d'occultation solaire. Nous aimons associer des rideaux techniques avec des stores enrouleurs ou des panneaux coulissants, agrémentés de chutes de tissus naturels, ce qui confère à nos espaces une chaleur très apaisante avec un style et un design uniques.",
+    "Advice": "De plus, nos systèmes d'installation sont équipés des matériaux les plus innovants, et nous soignons chaque détail de nos finitions. Notre gamme de produits se distingue par sa polyvalence et sa capacité de personnalisation. Des couleurs et motifs aux tailles et styles, vous pouvez créer un espace vraiment unique et personnalisé qui reflète votre style et votre personnalité.",
+    "Installation": "Notre collection de tissus pour rideaux et confections allie la dernière technologie à un design exceptionnel pour vous offrir une expérience de décoration intérieure inégalée. Avec la possibilité de motoriser nos systèmes et une large gamme d'options de personnalisation, nous sommes convaincus que vous trouverez tout ce dont vous avez besoin pour transformer vos espaces avec style et fonctionnalité."
+  },
+  "CustomStructures": {
+      "Title": "STRUCTURES DE CONCEPTION PERSONNALISÉE POUR JARDINS ET TERRASSES",
+      "Contact": "Nos structures de jardin offrent la combinaison parfaite de fonctionnalité et d'esthétique, vous permettant de transformer votre espace extérieur en un oasis de détente et de divertissement. Avec des options fixes ou avec bras extensibles, nos structures s'adaptent à vos besoins et préférences, vous offrant une flexibilité pour tirer le meilleur parti de votre espace extérieur.",
+      "Advice": "Nous offrons la possibilité d'ajouter un éclairage LED intégré ; nos structures ne créent pas seulement une atmosphère confortable et sophistiquée, mais vous permettent également de profiter de vos espaces extérieurs même après le coucher du soleil. L'éclairage LED offre une lumière douce et agréable, parfaite pour les rencontres sociales, les dîners en plein air ou simplement pour se détendre sous les étoiles.",
+      "Installation": "Construites avec des matériaux de haute qualité et un design durable, nos structures de jardin garantissent une résistance aux intempéries et un entretien facile, vous permettant de profiter de leur beauté et de leur confort pendant de nombreuses années.",
+      "Concept": "Que vous souhaitiez créer un coin lecture paisible, une zone de divertissement animée ou simplement un espace pour profiter du plein air, nos structures de jardin sont le choix parfait pour ajouter une touche d'élégance et de confort à votre maison.",
+      "ContactText": "Transformez votre jardin, votre terrasse ou votre cour en un lieu de rêve avec nos structures de jardin et découvrez la beauté et la sérénité de vos espaces extérieurs comme jamais auparavant."
+  },
+  "Pergolas": {
+    "Title": "PERGOLAS ET STRUCTURES POUR PARKING AVEC SYSTÈME PHOTOVOLTAÏQUE",
+    "Contact": "Bienvenue dans le futur de l'énergie solaire et de la fonctionnalité intelligente avec notre solution innovante de pergola photovoltaïque et de structure de parking photovoltaïque!",
+    "Advice": "Notre pergola photovoltaïque et structure de parking représentent la convergence parfaite entre durabilité, efficacité énergétique et design moderne. Imaginez un espace qui offre non seulement de l'ombre et une protection pour les véhicules, mais qui génère également une énergie propre et renouvelable pour recharger votre véhicule électrique avec des panneaux adaptables de manière intelligente aux conditions changeantes du soleil.",
+    "Installation": "Avec des panneaux solaires hautement efficaces intégrés dans le toit de la pergola et la structure de stationnement, chaque rayon de lumière solaire se transforme en électricité utilisable, contribuant à réduire la dépendance aux sources d'énergie non renouvelables et diminuant l'empreinte carbone.",
+    "Concept": "Mais ce n'est pas tout. Notre technologie de panneaux solaires motorisés orientables ajoute une couche supplémentaire d'intelligence à notre système. Ces panneaux peuvent s'ajuster automatiquement pour suivre la trajectoire du soleil tout au long de la journée, optimisant ainsi la capture d'énergie solaire en temps réel. Un jour nuageux ou ombragé ? Aucun problème. Notre système peut s'ajuster pour maximiser l'exposition solaire disponible.",
+    "ContactText": "En plus de sa fonctionnalité énergétique, nos pergolas et structures de stationnement photovoltaïques témoignent d'un design élégant et d'une polyvalence. Avec une variété d'options de personnalisation, des matériaux aux couleurs et aux finitions, nous pouvons adapter notre produit à n'importe quel environnement architectural et esthétique."
+  },
+  "Coffee": {
+      "Title": "SYSTÈMES DE STORES COFFRE",
+      "Contact": "Nos structures pour jardins offrent une combinaison parfaite de fonctionnalité et d'esthétique, vous permettant de transformer votre espace extérieur en un oasis de détente et de divertissement. Avec des options fixes ou avec des bras extensibles, nos structures s'adaptent à vos besoins et préférences, vous offrant la flexibilité pour tirer le meilleur parti de votre espace extérieur.",
+      "Advice": "Nous offrons la possibilité d'ajouter un éclairage LED intégré. Nos structures créent non seulement une ambiance chaleureuse et sophistiquée, mais vous permettent également de profiter de vos espaces extérieurs même après la tombée de la nuit. L'éclairage LED fournit une lumière douce et agréable, parfaite pour les rencontres sociales, les dîners en plein air ou simplement pour se détendre sous les étoiles.",
+      "Installation": "Fabriquées avec des matériaux de haute qualité et un design durable, nos structures pour jardins garantissent une résistance aux intempéries et un entretien facile, afin que vous puissiez profiter de leur beauté et de leur confort pendant de nombreuses années.",
+      "Concept": "Que vous souhaitiez créer un coin lecture paisible, une zone de divertissement dynamique ou simplement un espace pour profiter de l'extérieur, nos structures pour jardins sont le choix parfait pour ajouter une touche d'élégance et de confort à votre maison.",
+      "ContactText": "Transformez votre jardin, terrasse ou patio en un lieu de rêve avec nos structures pour jardins et découvrez la beauté et la sérénité de vos espaces extérieurs comme jamais auparavant."
+  },
+  "Retractable": {
+    "Title": "SYSTÈMES DE STORE RÉTRACTABLE",
+    "Contact": "Profitez du plein air avec un style et un confort inégalés grâce à notre Store Rétractable sur Structure ! Conçu méticuleusement pour créer des espaces extérieurs uniques et confortables, ce système innovant est la solution parfaite pour ceux qui veulent tirer le meilleur parti de leurs espaces extérieurs, que ce soit dans les jardins, les terrasses ou les patios.",
+    "Advice": "Avec une structure robuste et élégante, notre store rétractable offre non seulement une protection contre les éléments, mais ajoute également une touche de sophistication à n'importe quel environnement. Fabriqué avec des matériaux de haute qualité, il garantit durabilité et résistance aux intempéries, assurant des années d'utilisation fiable.",
+    "Installation": "Avec l'option de motoriser le système, vous pourrez déployer ou rétracter votre store d'une simple pression sur un bouton, offrant une commodité inégalée. Que vous souhaitiez profiter du chaud soleil ou vous abriter sous l'ombre fraîche, notre store rétractable vous offre un contrôle total sur votre espace extérieur.",
+    "Concept": "De plus, son design polyvalent s'adapte à une variété de configurations et de styles architecturaux, assurant une intégration parfaite avec votre environnement existant."
+  },
+  "Flat": {
+      "Title": "SYSTÈMES DE STORE PLAT",
+      "Contact": "Plongez dans le luxe et le confort en plein air avec notre Store Plat pour Jardins et Terrasses. Conçu avec la prémisse de créer des espaces uniques et confortables, ce système élégant de protection solaire élève instantanément le charme de n'importe quelle zone extérieure, vous offrant un refuge parfait pour vous détendre et profiter du plein air.",
+      "Advice": "Avec son design minimaliste et contemporain, notre store plat transforme l'espace en un refuge confortable et élégant. Ce produit garantit une résistance aux intempéries et une durabilité à long terme, assurant que vous puissiez profiter de votre oasis en plein air pendant des années sans soucis.",
+      "Installation": "Avec l'option de motoriser le système, vous pouvez facilement contrôler le déploiement et la rétraction du store d'une simple pression sur un bouton, vous offrant un niveau inégalé de commodité et de confort. Que vous souhaitiez profiter du chaud soleil ou créer une ombre fraîche et relaxante, notre store plat vous offre un contrôle total sur votre environnement extérieur.",
+      "Concept": "Imaginez les possibilités : des soirées intimes en plein air aux rencontres animées avec des amis et la famille, notre Store Plat pour Jardins et Terrasses vous offre la liberté de créer l'ambiance parfaite à tout moment.",
+      "ContactText": "Découvrez une nouvelle façon de profiter de vos espaces extérieurs avec notre Store Plat pour Jardins et Terrasses. Faites de chaque moment en plein air une expérience inoubliable !"
+  },
+  "HELLO": "Bonjour"
+}

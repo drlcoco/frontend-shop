@@ -1,0 +1,23 @@
+<div class="modal fade" id="language" aria-hidden="true" aria-labelledby="languageLabel" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content text-center border border-warning">
+      <div class="modal-body">
+        <!-- Div para banderas de países -->
+        <div class="banderas-container">
+          <!-- Bandera de España -->
+          <span class="bandera fs-1 me-2" (click)="switchLanguage('es')">🇪🇸</span>
+          <!-- Bandera de Estados Unidos -->
+          <span class="bandera fs-1 mx-2" (click)="switchLanguage('en')">🇺🇸</span>
+          <!-- Bandera de Francia -->
+          <span class="bandera fs-1 mx-2" (click)="switchLanguage('fr')">🇫🇷</span>
+          <!-- Bandera de Alemania -->
+          <span class="bandera fs-1 mx-2" (click)="switchLanguage('de')">🇩🇪</span>
+          <!-- Bandera de Noruega -->
+          <span class="bandera fs-1 mx-2" (click)="switchLanguage('no')">🇳🇴</span>
+          <!-- Bandera de Rusia -->
+          <span class="bandera fs-1 ms-2" (click)="switchLanguage('ru')">🇷🇺</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

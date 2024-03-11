@@ -1,0 +1,27 @@
+/* You can add global styles to this file, and also import other style files */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+main{
+  background-color: rgb(5, 8, 8);
+}
+
+h1{
+  font-family: 'Alegreya', serif;
+}
+
+.gold{
+  color: rgb(128, 86, 15);
+}
+
+.backGold{
+  /* background: linear-gradient(to right, black, rgb(147, 125, 2), rgb(128, 86, 15), rgb(67, 58, 6)); */
+  background: linear-gradient(to right, black, #c89116, #543c07, #4d3a10);
+}
+
+.br25{
+  border-radius: 25px;
+}
