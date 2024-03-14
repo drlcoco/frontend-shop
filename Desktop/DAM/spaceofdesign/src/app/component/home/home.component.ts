@@ -22,6 +22,7 @@ import { AwningSystemComponent } from '../awning-system/awning-system.component'
 import { BioclimaticComponent } from '../bioclimatic/bioclimatic.component';
 import { LedComponent } from '../led/led.component';
 import { TraditionalComponent } from '../traditional/traditional.component';
+import { FooterSlimComponent } from '../footer-slim/footer-slim.component';
 
 @Component({
     selector: 'app-home',
@@ -62,6 +63,7 @@ import { TraditionalComponent } from '../traditional/traditional.component';
       OutdoorVerticalComponent,
       LedComponent,
       TraditionalComponent,
+      FooterSlimComponent,
       TranslateModule
     ]
 })

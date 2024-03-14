@@ -7,9 +7,9 @@
   height: 10%;
 }
 
-button{
+/* button{
   background-color: rgb(230, 235, 235, 0.3);
-}
+} */
 
 *,
 *::before,
@@ -43,14 +43,6 @@ ul {
   position: relative;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
 }
-/* .link {
-  text-decoration: none;
-  color: rgb(128, 86, 15);
-  font-size: 22px;
-  padding: 1rem 2rem;
-  position: relative;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
-} */
 
 .link::before,
 .link::after {
@@ -87,10 +79,5 @@ ul {
 .navbar:not(.hide-nav) {
   transform: translateY(0);
   transition: transform 0.3s ease-in-out;
-}
-
-.custom-toggler {
-  border: none;
-  outline: none; /* Esto quita el contorno al hacer clic en el botón */
 }
 

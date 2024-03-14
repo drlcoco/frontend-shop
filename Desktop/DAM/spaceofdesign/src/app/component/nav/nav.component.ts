@@ -26,7 +26,8 @@ export class NavComponent {
 
   public isNavbarVisible: boolean = true;
   private lastScrollTop: number = 0;
-  private scrollThreshold: number = 50; // Puedes ajustar este valor según tus necesidades
+  private scrollThreshold: number = 50;
+  isToggle: boolean = false;
 
   @HostListener('window:scroll', [])
   onWindowScroll() {
@@ -50,6 +51,10 @@ export class NavComponent {
 
   isHide(): void {
     this.isNavbarVisible = !this.isNavbarVisible;
+  }
+
+  changeToggle() {
+    this.isToggle = !this.isToggle;
   }
 
 }
