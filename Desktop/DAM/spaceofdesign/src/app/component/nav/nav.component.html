@@ -10,31 +10,31 @@
     <div class="collapse navbar-collapse d-flex justify-content-center align-items-center" id="navbarTogglerDemo01">
       <a class="navbar-brand text-light me-4" [routerLink]="['/']" routerLinkActive="router-link-active"></a>
       <ul class="navbar-nav mb-2 mb-lg-0 d-flex justify-content-center w-100">
+        <div class="row w-100">
+          <div class="col col-lg-3 px-1 m-0 d-flex justify-content-center align-items-center">
+            <div class="col-10 p-0 m-0 backGold br25 border border-warning text-center justify-content-center align-items-center">
+              <li><a class="link fw-bold" [routerLink]="['/']" routerLinkActive="router-link-active">{{"Nav.Home" | translate}}</a></li>
+            </div>
+          </div>
 
-        <div class="col-12 col-lg-3 px-3 m-0 d-flex justify-content-center align-items-center">
-          <div class="col-8 p-0 m-0 backGold br25 border border-warning text-center">
-            <li><a class="link text-truncate" [routerLink]="['/']" routerLinkActive="router-link-active">{{"Nav.Home" | translate}}</a></li>
+          <div class="col col-lg-3 px-1 m-0 d-flex justify-content-center align-items-center">
+            <div class="col-10 p-0 m-0 backGold br25 border border-warning text-center justify-content-center align-items-center">
+              <li><a class="link fw-bold" [routerLink]="['work']" routerLinkActive="router-link-active">{{"Nav.Work" | translate}}</a></li>
+            </div>
+          </div>
+
+          <div class="col col-lg-3 px-1 m-0 d-flex justify-content-center align-items-center">
+            <div class="col-10 p-0 m-0 backGold br25 border border-warning text-center justify-content-center align-items-center">
+              <li><a class="link fw-bold" [routerLink]="['contact']" routerLinkActive="router-link-active">{{"Nav.Contact" | translate}}</a></li>
+            </div>
+          </div>
+
+          <div class="col col-lg-3 px-1 m-0 d-flex justify-content-center align-items-center">
+            <div class="col-10 p-0 m-0 backGold br25 border border-warning text-center justify-content-center align-items-center">
+              <li><a class="link fw-bold" data-bs-toggle="modal" href="#language" role="button">{{"Language.Languages" | translate}}</a></li>
+            </div>
           </div>
         </div>
-
-        <div class="col-12 col-lg-3 px-3 m-0 d-flex justify-content-center align-items-center">
-          <div class="col-8 p-0 m-0 backGold br25 border border-warning text-center justify-content-center align-items-center">
-            <li class="text-truncate"><a class="link text-truncate" [routerLink]="['work']" routerLinkActive="router-link-active">{{"Nav.Work" | translate}}</a></li>
-          </div>
-        </div>
-
-        <div class="col-12 col-lg-3 px-3 m-0 d-flex justify-content-center align-items-center">
-          <div class="col-8 p-0 m-0 backGold br25 border border-warning text-center justify-content-center align-items-center">
-            <li><a class="link" [routerLink]="['contact']" routerLinkActive="router-link-active">{{"Nav.Contact" | translate}}</a></li>
-          </div>
-        </div>
-
-        <div class="col-12 col-lg-3 px-3 m-0 d-flex justify-content-center align-items-center">
-          <div class="col-8 p-0 m-0 backGold br25 border border-warning text-center justify-content-center align-items-center">
-            <li><a class="link" data-bs-toggle="modal" href="#language" role="button">{{"Language.Languages" | translate}}</a></li>
-          </div>
-        </div>
-
       </ul>
     </div>
   </div>
@@ -60,26 +60,26 @@
       <ul class="navbar-nav mb-2 mb-lg-0 d-flex justify-content-center w-100">
 
         <div class="col-12 col-lg-3 px-3 m-0 d-flex justify-content-center align-items-center">
-          <div class="col-8 p-0 m-0 backGold br25 border border-warning text-center">
-            <li><a class="link" [routerLink]="['/']" routerLinkActive="router-link-active">{{"Nav.Home" | translate}}</a></li>
+          <div class="col col-md-6 p-0 m-0 backGold br25 border border-warning text-center">
+            <li><a class="link fw-bold" [routerLink]="['/']" routerLinkActive="router-link-active">{{"Nav.Home" | translate}}</a></li>
           </div>
         </div>
 
         <div class="col-12 col-lg-3 px-3 m-0 d-flex justify-content-center align-items-center">
-          <div class="col-8 p-0 m-0 backGold br25 border border-warning text-center justify-content-center align-items-center">
-            <li><a class="link" [routerLink]="['work']" routerLinkActive="router-link-active">{{"Nav.Work" | translate}}</a></li>
+          <div class="col col-md-6 p-0 m-0 backGold br25 border border-warning text-center justify-content-center align-items-center">
+            <li><a class="link fw-bold" [routerLink]="['work']" routerLinkActive="router-link-active">{{"Nav.Work" | translate}}</a></li>
           </div>
         </div>
 
         <div class="col-12 col-lg-3 px-3 m-0 d-flex justify-content-center align-items-center">
-          <div class="col-8 p-0 m-0 backGold br25 border border-warning text-center justify-content-center align-items-center">
-            <li><a class="link" [routerLink]="['contact']" routerLinkActive="router-link-active">{{"Nav.Contact" | translate}}</a></li>
+          <div class="col col-md-6 p-0 m-0 backGold br25 border border-warning text-center justify-content-center align-items-center">
+            <li><a class="link fw-bold" [routerLink]="['contact']" routerLinkActive="router-link-active">{{"Nav.Contact" | translate}}</a></li>
           </div>
         </div>
 
         <div class="col-12 col-lg-3 px-3 m-0 d-flex justify-content-center align-items-center">
-          <div class="col-8 p-0 m-0 backGold br25 border border-warning text-center justify-content-center align-items-center">
-            <li><a class="link" data-bs-toggle="modal" href="#language" role="button">{{"Language.Languages" | translate}}</a></li>
+          <div class="col col-md-6 p-0 m-0 backGold br25 border border-warning text-center justify-content-center align-items-center">
+            <li><a class="link fw-bold" data-bs-toggle="modal" href="#language" role="button">{{"Language.Languages" | translate}}</a></li>
           </div>
         </div>
 

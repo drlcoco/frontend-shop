@@ -46,6 +46,7 @@ h1{
 
 .br25{
   border-radius: 25px;
+  box-shadow: 10px 5px 5px rgb(8, 13, 23);
 }
 
 .custom-toggler {
