@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 import { HowWeDoItComponent } from "../how-we-do-it/how-we-do-it.component";
-import {TranslateModule} from '@ngx-translate/core';
+import { TranslateModule } from '@ngx-translate/core';
 import { CrystalComponent } from '../crystal/crystal.component';
 import { SlidingComponent } from '../sliding/sliding.component';
 import { RollerComponent } from '../roller/roller.component';
@@ -23,6 +23,7 @@ import { BioclimaticComponent } from '../bioclimatic/bioclimatic.component';
 import { LedComponent } from '../led/led.component';
 import { TraditionalComponent } from '../traditional/traditional.component';
 import { FooterSlimComponent } from '../footer-slim/footer-slim.component';
+import { RouterModule } from '@angular/router';
 
 @Component({
     selector: 'app-home',
@@ -64,7 +65,8 @@ import { FooterSlimComponent } from '../footer-slim/footer-slim.component';
       LedComponent,
       TraditionalComponent,
       FooterSlimComponent,
-      TranslateModule
+      TranslateModule,
+      RouterModule
     ]
 })
 export class HomeComponent {

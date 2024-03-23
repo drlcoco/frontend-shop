@@ -2,11 +2,13 @@ import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { FooterSlimComponent } from '../footer-slim/footer-slim.component';
+import { RouterModule } from '@angular/router';
+import { AwningSystemComponent } from '../awning-system/awning-system.component';
 
 @Component({
   selector: 'app-outdoor',
   standalone: true,
-  imports: [TranslateModule, CommonModule, FooterSlimComponent],
+  imports: [TranslateModule, CommonModule, RouterModule, FooterSlimComponent, AwningSystemComponent],
   templateUrl: './outdoor.component.html',
   styleUrl: './outdoor.component.css'
 })

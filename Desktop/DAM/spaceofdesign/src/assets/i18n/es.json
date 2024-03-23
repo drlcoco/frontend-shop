@@ -33,7 +33,7 @@
   },
   "Indoor": {
     "Title": "Protección solar y decoración textil para interiores",
-    "Titlesm": "Protección solar y decoración textil",
+    "Titlesm": "Protección solar cortinas interior",
     "SlidingPanels": "Paneles deslizables",
     "RollerBlind": "Cortinas enrollables",
     "Pleated": "Cortinas plisadas",
@@ -45,13 +45,13 @@
   },
   "Outdoor": {
     "Title": "Protección solar exterior y estructuras para jardín y terraza",
-    "Titlesm": "Estructuras para jardín y terraza",
-    "SunProtect": "Toldos de protección solar",
-    "Garden": "Estructuras jardines y terrazas",
+    "Titlesm": "Protección solar exterior",
+    "SunProtect": "Sistema de toldos",
+    "Garden": "Estructuras jardines",
     "Photovoltaic": "Pérgola fotovoltáica",
     "Bioclimatic": "Pérgola bioclimática",
-    "Led": "Pérgola cristal led",
-    "Microclimatized": "Pérgola microclimatizada"
+    "Led": "Parasoles",
+    "Microclimatized": "Espacios Chillout"
   },
   "Crystal": {
     "Title": "Cerramientos de cristal abatibles y deslizables",
@@ -79,7 +79,7 @@
   "Roller": {
     "Title": "Cortinas enrrollables para la decoración de interiores",
     "Titlesm": "Cortinas enrrollables",
-    "Crystal": "Enrollable cristal",
+    "Crystal": "Cristal de Swarovski",
     "Night": "Enrollable noche y día",
     "Lino": "Enrollable screen o lino",
     "Digital": "Impresión digital",
@@ -90,8 +90,8 @@
     "ContactText":"Personalización y Diseño: Las Cortinas Enrollables están disponibles en una amplia gama de colores, estampados y texturas para adaptarse a cualquier estilo de decoración de interiores. Además, ofrecen opciones de personalización  a través de la impresión digital para satisfacer las preferencias individuales del usuario."
   },
   "Slated": {
-    "Title": "Cortinas de lamas verticales para la decoración de interiores",
-    "Titlesm": "Cortinas de lamas verticales",
+    "Title": "Cortinas de Lamas verticales para la decoración de interiores",
+    "Titlesm": "Lamas verticales",
     "Duomo": "Sistema duomo",
     "Ondas": "Vertical con ondas",
     "Bandas": "Vertical con bandas",
@@ -102,7 +102,7 @@
   },
   "Venetian": {
     "Title": "Venecianas de madera o aluminio para la decoración de interiores",
-    "Titlesm": "Venecianas de madera o aluminio",
+    "Titlesm": "Cortinas venecianas madera o aluminio",
     "Contact": "!Descubre la elegancia y el confort con nuestras cortinas venecianas decorativas para interiores en madera o aluminio!",
     "Advice": "En nuestra colección ofrecemos una solución de decoración incomparable.  Nuestras cortinas venecianas no solo añaden un toque de calidez y confort a cualquier espacio, sino que también son increíblemente fáciles de mantener, lo que las convierte en la elección perfecta para tu hogar u oficina.",
     "Installation": "Las cortinas venecianas de madera o aluminio están elaboradas con los mejores materiales, resaltando su belleza y textura.  Estos materiales son cuidadosamente tratados para garantizar su resistencia al paso del tiempo, mientras que su acabado suave y lujoso crea una atmósfera acogedora y elegante en cualquier espacio.  Además, la madera y el aluminio destacan por su facilidad de limpiar y mantener, lo que te permite disfrutar de su belleza durante años con un mantenimiento mínimo.",
@@ -119,7 +119,7 @@
   },
   "Textile": {
     "Title": "Cortinas textiles y confección para la decoración de interiores",
-    "Titlesm": "Cortinas textiles y confección",
+    "Titlesm": "Cortinas y confección",
     "Contact": "Contamos con un amplio surtido de tejidos que confeccionamos en nuestros propios talleres con diferentes acabados y grados de opacidad solar. Nos gusta combinar cortinas técnicas de enrollable o panel deslizante  complementándolos con caídas de tejidos naturales consiguiendo dotar a nuestros espacios de una muy reconfortante calidez   con un estilo y diseño únicos.",
     "Advice": "Además nuestros sistemas de instalación cuentan con los materiales más innovadores cuidando hasta el último detalle en nuestros acabados,                               Nuestra línea de productos se distingue por su versatilidad y capacidad de personalización. Desde colores y patrones hasta tamaños y estilos, puedes crear un espacio verdaderamente único y personalizado que refleje su estilo y personalidad.:",
     "Installation": "Nuestra colección de tejidos para cortinas y confecciones combina la última tecnología con un diseño excepcional para ofrecerle una experiencia de decoración de interiores sin igual. Con la posibilidad de motorizar nuestros sistemas y una amplia gama de opciones de personalización, estamos seguros de que encontrarás todo lo que necesitas para transformar tus espacios con estilo y funcionalidad."
@@ -136,7 +136,7 @@
   },
   "CustomStructures": {
     "Title": "ESTRUCTURAS DE DISEÑO PERSONALIZADO PARA JARDINES Y TERRAZAS",
-    "Titlesm": "ESTRUCTURAS PARA JARDINES Y TERRAZAS",
+    "Titlesm": "ESTRUCTURAS DE JARDÍN",
     "Contact": "Nuestras estructuras para jardines ofrece una combinación perfecta de funcionalidad y estética, permitiéndote transformar tu espacio exterior en un oasis de relajación y entretenimiento. Con opciones fijas o con brazos extensibles, nuestra estructuras se adaptan a tus necesidades y preferencias, brindándote flexibilidad para aprovechar al máximo tu área al aire libre.",
     "Advice": "Ofrecemos la posibilidad de añadir iluminación LED integrada, nuestras estructuras no solo crean un ambiente acogedor y sofisticado, sino que también te permite disfrutar de tus espacios exteriores incluso después de que caiga la noche. La iluminación LED proporciona una luz suave y agradable, perfecta para reuniones sociales, cenas al aire libre o simplemente para relajarte bajo las estrellas.:",
     "Installation": "Construida con materiales de alta calidad y un diseño duradero, nuestra estructuras para jardines garantizan resistencia a la intemperie y fácil mantenimiento, para que puedas disfrutar de su belleza y comodidad durante muchos años.",
@@ -145,7 +145,7 @@
   },
   "Pergolas": {
     "Title": "PÉRGOLAS Y ESTRUCTURAS PARA PARKING CON SISTEMA FOTOVOLTÁICO",
-    "Titlesm": "PARKING CON SISTEMA FOTOVOLTÁICO",
+    "Titlesm": "PÉRGOLAS FOTOVOLTÁICAS",
     "Contact": "¡Bienvenido al futuro de la energía solar y la funcionalidad inteligente con nuestra innovadora solución de pérgola fotovoltaica y estructura de parking fotovoltaico!",
     "Advice": "Nuestra pérgola fotovoltaica y estructura de parking representan la convergencia perfecta entre sostenibilidad, eficiencia energética y diseño moderno. Imagina un espacio que no solo proporciona sombra y protección para vehículos, sino que también genera energía limpia y renovable donde poder recargar tu vehículo eléctrico con paneles adaptables de manera inteligente a las condiciones cambiantes del sol.",
     "Installation": "Con paneles solares altamente eficientes integrados en el techo de la pérgola y la estructura de estacionamiento, cada rayo de luz solar se convierte en electricidad utilizable, ayudando a reducir la dependencia de fuentes de energía no renovables y disminuyendo la huella de carbono.",
@@ -163,7 +163,7 @@
   },
   "Coffee": {
     "Title": "SISTEMAS DE TOLDO COFRE",
-    "Titlesm": "TOLDO COFRE",
+    "Titlesm": "TOLDOS COFRE",
     "Contact": "Nuestras estructuras para jardines ofrece una combinación perfecta de funcionalidad y estética, permitiéndote transformar tu espacio exterior en un oasis de relajación y entretenimiento. Con opciones fijas o con brazos extensibles, nuestra estructuras se adaptan a tus necesidades y preferencias, brindándote flexibilidad para aprovechar al máximo tu área al aire libre.",
     "Advice": "Ofrecemos la posibilidad de añadir iluminación LED integrada, nuestras estructuras no solo crean un ambiente acogedor y sofisticado, sino que también te permite disfrutar de tus espacios exteriores incluso después de que caiga la noche. La iluminación LED proporciona una luz suave y agradable, perfecta para reuniones sociales, cenas al aire libre o simplemente para relajarte bajo las estrellas.",
     "Installation": "Construida con materiales de alta calidad y un diseño duradero, nuestra estructuras para jardines garantizan resistencia a la intemperie y fácil mantenimiento, para que puedas disfrutar de su belleza y comodidad durante muchos años.",
@@ -172,7 +172,7 @@
   },
   "Retractable": {
     "Title": "SISTEMAS DE TOLDO RETRÁCTIL",
-    "Titlesm": "TOLDO RETRÁCTIL",
+    "Titlesm": "TOLDOS RETRÁCTILES",
     "Contact": "¡Disfruta del aire libre con estilo y comodidad sin igual gracias a nuestro Toldo Retráctil en Estructura! Diseñado meticulosamente para crear espacios únicos y confortables al aire libre, este innovador sistema es la solución perfecta para quienes buscan aprovechar al máximo sus áreas al aire libre, ya sea en jardines, terrazas o patios.",
     "Advice": "Con una estructura robusta y elegante, nuestro toldo retráctil no solo brinda protección contra los elementos, sino que también agrega un toque de sofisticación a cualquier entorno. Fabricado con materiales de alta calidad, garantiza durabilidad y resistencia a la intemperie, asegurando años de uso confiable.",
     "Installation": "Con la opción de motorizar el sistema, podrás desplegar o retraer tu toldo con solo tocar un botón, proporcionando una conveniencia incomparable. Ya sea que desees disfrutar del cálido sol o refugiarte bajo la sombra fresca, nuestro toldo retráctil te ofrece el control total sobre tu espacio al aire libre.",
@@ -181,7 +181,7 @@
   },
   "Flat": {
     "Title": "SISTEMAS DE TOLDO PLANO",
-    "Titlesm": "TOLDO PLANO",
+    "Titlesm": "TOLDOS PLANOS",
     "Contact": "Sumérgete en el lujo y la comodidad al aire libre con nuestro Toldo Plano para Jardines y Terrazas. Diseñado con la premisa de crear espacios únicos y confortables, este elegante sistema de protección solar eleva instantáneamente el encanto de cualquier área exterior, ofreciéndote un refugio perfecto para relajarte y disfrutar del aire libre.",
     "Advice": "Con su diseño minimalista y contemporáneo, nuestro toldo plano transforma el espacio en un refugio acogedor y elegante. Este producto garantiza resistencia a la intemperie y durabilidad a largo plazo, asegurando que puedas disfrutar de tu oasis al aire libre durante años sin preocupaciones.",
     "Installation": "Con la opción de motorizar el sistema, puedes controlar fácilmente la extensión y retracción del toldo con solo pulsar un botón, brindándote un nivel incomparable de conveniencia y confort. Ya sea que desees disfrutar del cálido sol o crear una sombra fresca y relajante, nuestro toldo plano te ofrece el control total sobre tu entorno al aire libre.",
@@ -190,7 +190,7 @@
   },
   "OutdoorVertical": {
     "Title": "SISTEMAS DE TOLDO VERTICAL EXTERIOR",
-    "Titlesm": "TOLDO VERTICAL EXTERIOR",
+    "Titlesm": "TOLDOS VERTICALES",
     "Contact": "¡Bienvenido a nuestra línea de productos innovadores para exteriores! Presentamos nuestro toldo vertical, una solución inteligente diseñada para crear espacios confortables en tu hogar mientras te protege de las inclemencias del tiempo y te permite controlar la intensidad de la luz.",
     "Advice": "Nuestro toldo vertical ofrece un diseño elegante y funcional que se integra perfectamente en cualquier entorno exterior, ya sea en tu terraza, jardín o patio. Con su capacidad para regular la intensidad de la luz, puedes disfrutar de un ambiente agradable y personalizado en cualquier momento del día.",
     "Installation": "Este producto está fabricado con materiales de alta calidad que garantizan durabilidad y resistencia a las condiciones climáticas adversas. Su sistema de regulación te permite ajustar la posición del toldo según tus necesidades, brindándote la privacidad y protección que deseas en cada momento.",
@@ -199,7 +199,7 @@
   },
   "Led": {
     "Title": "SISTEMAS DE TOLDO CON ILUMINACIÓN LED INTEGRADA",
-    "Titlesm": "TOLDO CON ILUMINACIÓN LED",
+    "Titlesm": "TOLDOS CON LED",
     "Contact": "¡Presentamos nuestra última innovación en protección solar exterior: la integración de sistemas de LED en todos nuestros productos! Ahora, no solo te ofrecemos soluciones para protegerte del sol y las inclemencias del tiempo, sino que también te brindamos la oportunidad de crear atmósferas únicas y exclusivas en tus espacios exteriores.",
     "Advice": "Imagina poder transformar tu terraza, jardín o patio en un lugar mágico y acogedor con solo tocar un botón. Nuestros sistemas de LED integrados te permiten personalizar la iluminación de tu área exterior según tu estado de ánimo, el ambiente que deseas crear o la ocasión especial que estés celebrando.",
     "Installation": "Desde suaves luces cálidas que crean una atmósfera relajante para una cena romántica hasta luces brillantes y coloridas que animan una fiesta al aire libre, las posibilidades son infinitas. Además, la integración de los sistemas de LED en nuestros productos de protección solar garantiza un diseño elegante y discreto que realza la belleza de tu espacio exterior.",
@@ -207,7 +207,7 @@
   },
   "Traditional": {
     "Title": "SISTEMAS DE TOLDO TRADICIONAL",
-    "Titlesm": "TOLDO TRADICIONAL",
+    "Titlesm": "TOLDOS TRADICIONALES",
     "Contact": "¡Descubre la elegancia y funcionalidad de nuestros toldos tradicionales para exteriores, perfectos para pequeñas ventanas en altura! Ofrecemos una amplia gama de modelos, incluyendo el clásico modelo capota y el versátil modelo de brazo punto fijo, diseñados para satisfacer todas tus necesidades de protección solar y embellecimiento de tu hogar.",
     "Advice": "El modelo capota es una opción encantadora y atemporal que agrega un toque de estilo a cualquier fachada. Su diseño curvo crea un aspecto distintivo y acogedor, mientras que su estructura resistente garantiza una protección efectiva contra el sol y la lluvia. Este modelo es especialmente adecuado para pequeñas ventanas en altura, ya que su diseño compacto se adapta perfectamente a espacios reducidos.",
     "Installation": "Por otro lado, el modelo de brazo punto fijo ofrece una solución práctica y versátil para tus necesidades de protección solar. Su diseño modular y ajustable permite una instalación sencilla en una variedad de ubicaciones, incluyendo ventanas en altura. Con su sistema de brazos fijos, este toldo proporciona una cobertura estable y duradera, garantizando la comodidad y la protección que necesitas."

@@ -1,7 +1,7 @@
 {
   "Home": {
-    "Indoor": "INTÉRIEURS",
-    "Outdoor": "EXTÉRIEURS"
+    "Indoor": "Intérieur",
+    "Outdoor": "Extérieur"
   },
   "Nav": {
     "Home": "Accueil",
@@ -23,22 +23,45 @@
   },
   "Work": {
     "Title": "Notre méthode de travail",
-    "Contact": "1. Contact initial",
+    "Contact": "1. Premier contact",
     "Advice": "2. Conseils à domicile",
     "Installation": "3. Installation à domicile",
-    "Concept": "Notre méthode de travail chez Space of Design, spécialisée dans la décoration et la protection solaire intérieure et extérieure, vise à offrir à nos clients une expérience complète et satisfaisante du premier contact à l'installation finale. Voici les détails de chaque étape de notre processus :",
-    "ContactText": "1. CONTACT INITIAL : Dans cette première étape, nous recevons l'appel d'un client intéressé par nos services. Notre équipe de service client est hautement qualifiée pour écouter les besoins et les spécifications de chaque client, offrant une attention personnalisée et répondant à toutes les questions, fixant un rendez-vous pour une visite à domicile sans aucun coût pour vous.",
-    "AdviceText": "2. CONSEILS PERSONNALISÉS : Lors de la visite chez le client, notre équipe d'experts en décoration et protection solaire fournit des conseils complets et personnalisés. Nous présentons une large gamme de produits et de matériaux, expliquant les caractéristiques, les avantages et les possibilités de chacun. Nous nous assurons également de comprendre les préférences esthétiques du client et ses besoins spécifiques en termes de fonctionnalité et de confort.",
-    "InstallationText": "3. INSTALLATION, professionnelle, ordonnée et propre : Une fois que le client a choisi les produits et les matériaux souhaités, nous procédons à l'installation professionnelle. Notre équipe d'installateurs hautement qualifiés et expérimentés réalise le travail avec minutie et souci du détail, garantissant une finition impeccable et durable. Nous nous engageons à effectuer l'installation de manière ordonnée et propre, en respectant l'espace et le mobilier du client, et en laissant l'endroit en parfait état une fois le travail terminé. Chez Space of Design, nous nous efforçons d'offrir un service complet et de haute qualité, du premier contact à l'installation finale, assurant une satisfaction totale de nos clients à chaque étape du processus."
+    "Concept": "Notre méthode de travail chez Space of Design, spécialisée dans la décoration et la protection solaire pour intérieurs et extérieurs, vise à offrir à nos clients une expérience complète et satisfaisante du premier contact à l'installation finale. Voici chaque étape de notre processus :",
+    "ContactText": "1. PREMIER CONTACT : Dans cette première étape, nous recevons l'appel du client intéressé par nos services. Notre équipe de service client est hautement qualifiée pour écouter les besoins spécifiques de chaque client, fournir une assistance personnalisée et répondre à toutes leurs questions et demandes, en fixant un rendez-vous pour une visite à domicile sans frais pour vous.",
+    "AdviceText": "2. CONSEILS PERSONNALISÉS : Lors de la visite chez le client, notre équipe d'experts en décoration et en protection solaire fournit des conseils complets et personnalisés. Nous présentons une large gamme de produits et de matériaux, expliquant les caractéristiques, les avantages et les possibilités de chacun. De plus, nous nous assurons de comprendre les préférences esthétiques du client et ses besoins spécifiques en termes de fonctionnalité et de confort.",
+    "InstallationText": "3. INSTALLATION, professionnelle, ordonnée et propre : Une fois que le client a sélectionné les produits et matériaux souhaités, nous procédons à leur installation professionnelle. Notre équipe d'installateurs hautement qualifiés et expérimentés réalise le travail avec minutie et souci du détail, garantissant une finition impeccable et durable. Nous nous engageons à effectuer l'installation de manière ordonnée et propre, en respectant l'espace et le mobilier du client, et en laissant l'endroit en parfait état une fois le travail terminé. Chez Space of Design, nous nous efforçons d'offrir un service complet et de haute qualité, de la première prise de contact à l'installation finale, garantissant la satisfaction complète de nos clients à chaque étape du processus."
+  },
+  "Indoor": {
+    "Title": "Protection solaire et décoration textile pour intérieurs",
+    "Titlesm": "Protection solaire rideaux intérieur",
+    "SlidingPanels": "Panneaux coulissants",
+    "RollerBlind": "Stores enrouleurs",
+    "Pleated": "Stores plissés",
+    "Slated": "Stores à lamelles verticales",
+    "Venetian": "Stores vénitiens en bois et en aluminium",
+    "Venetiansm": "Stores vénitiens en bois",
+    "Textile": "Tissus rideaux et confection",
+    "Textilesm": "Rideaux et confection"
+  },
+  "Outdoor": {
+    "Title": "Protection solaire extérieure et structures pour jardin et terrasse",
+    "Titlesm": "Protection solaire extérieure",
+    "SunProtect": "Système de auvents",
+    "Garden": "Structures de jardin",
+    "Photovoltaic": "Pergola photovoltaïque",
+    "Bioclimatic": "Pergola bioclimatique",
+    "Led": "Parasols",
+    "Microclimatized": "Espaces Chillout"
   },
   "Crystal": {
-    "Title": "Enceintes en verre pliantes et coulissantes",
-    "Contact": "Découvrez l'élégance et l'exclusivité avec nos rideaux en verre pour l'encapsulation d'espaces!",
-    "Advice": "Nos rideaux en verre offrent une solution innovante et sophistiquée pour créer des environnements distincts et uniques dans votre maison ou votre entreprise. Avec un design moderne et minimaliste, ces rideaux transforment vos espaces extérieurs en zones fonctionnelles et élégantes, idéales pour en profiter toute l'année.",
-    "Installation": "Grâce à leur design sans cadre et à leur système de coulissement fluide, nos rideaux en verre offrent une vue panoramique sans obstruction, permettant à la lumière naturelle d'entrer dans vos espaces et créant une sensation d'espace et de luminosité. De plus, leur polyvalence vous permet d'ouvrir ou de fermer les rideaux selon vos besoins, en s'adaptant aux conditions météorologiques et à l'ambiance à tout moment.",
+    "Title": "Fermetures en verre pliantes et coulissantes",
+    "Titlesm": "Fermetures en verre",
+    "Contact": "Découvrez l'élégance et l'exclusivité avec nos rideaux en verre pour les fermetures d'espaces!",
+    "Advice": "Nos rideaux en verre offrent une solution innovante et sophistiquée pour créer des environnements distinctifs et uniques dans votre maison ou votre entreprise. Avec un design moderne et minimaliste, ces rideaux transforment vos espaces extérieurs en zones fonctionnelles et élégantes, idéales pour profiter toute l'année.",
+    "Installation": "Grâce à leur conception sans cadre et à leur système de glissement doux, nos rideaux en verre offrent une vue panoramique sans obstruction, permettant à la lumière naturelle d'entrer dans vos espaces et créant une sensation d'espace et de luminosité. De plus, leur polyvalence vous permet d'ouvrir ou de fermer les rideaux selon vos besoins, s'adaptant au climat et à l'ambiance à tout moment.",
     "Concept": "Fabriqués avec du verre trempé de haute qualité, nos rideaux offrent une résistance et une durabilité exceptionnelles, garantissant une protection efficace contre les éléments extérieurs tels que le vent, la pluie et la poussière, sans compromettre l'esthétique ni la transparence.",
-    "ContactText": "Que vous souhaitiez créer une élégante salle à manger en plein air, un salon confortable près de la piscine ou un luxueux espace événementiel pour votre entreprise, nos rideaux en verre sont le choix parfait pour ajouter une touche de distinction et d'exclusivité à n'importe quel environnement.",
-    "AdviceText": "Transformez vos espaces extérieurs en lieux uniques et exclusifs avec nos rideaux en verre et réalisez vos rêves de design et de confort. Osez vous démarquer avec l'élégance inégalée de nos solutions d'encapsulation!"
+    "ContactText": "Que vous souhaitiez créer un élégant coin repas en plein air, un salon confortable près de la piscine ou un luxueux espace événementiel pour votre entreprise, nos rideaux en verre sont le choix parfait pour ajouter une touche de distinction et d'exclusivité à n'importe quel environnement.",
+    "AdviceText": "Transformez vos espaces extérieurs en lieux uniques et exclusifs avec nos rideaux en verre et réalisez vos rêves de design et de confort. Osez vous démarquer avec l'élégance incomparable de nos solutions de fermeture!"
   },
   "Sliding": {
     "Title": "Panneaux coulissants pour la décoration intérieure",

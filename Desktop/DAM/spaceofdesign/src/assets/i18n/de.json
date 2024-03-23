@@ -1,10 +1,10 @@
 {
   "Home": {
     "Indoor": "INNENRÄUME",
-    "Outdoor": "AUSSENRÄUME"
+    "Outdoor": "AUSSENBEREICH"
   },
   "Nav": {
-    "Home": "Zuhause",
+    "Home": "Startseite",
     "Work": "Unsere Arbeit",
     "Contact": "Kontakt",
     "Languages": "Sprachen"
@@ -26,19 +26,42 @@
     "Contact": "1. Erstkontakt",
     "Advice": "2. Beratung bei Ihnen zu Hause",
     "Installation": "3. Installation bei Ihnen zu Hause",
-    "Concept": "Unsere Arbeitsweise bei Space of Design, spezialisiert auf Dekoration und Sonnenschutz für Innen- und Außenbereiche, konzentriert sich darauf, unseren Kunden eine vollständige und zufriedenstellende Erfahrung vom ersten Kontakt bis zur endgültigen Installation zu bieten. Im Folgenden erläutere ich jeden Schritt unseres Prozesses:",
-    "ContactText": "1. ERSTKONTAKT, In diesem ersten Schritt erhalten wir den Anruf vom Kunden, der an unseren Dienstleistungen interessiert ist. Unser Kundenserviceteam ist hochqualifiziert, um auf die spezifischen Bedürfnisse und Anforderungen jedes Kunden einzugehen, bietet eine persönliche Betreuung und beantwortet alle Fragen und Anfragen, vereinbart einen Termin für einen kostenlosen Besuch bei Ihnen zu Hause.",
-    "AdviceText": "2. PERSÖNLICHE BERATUNG, Während des Besuchs beim Kunden zu Hause bietet unser Team von Experten für Dekoration und Sonnenschutz umfassende und persönliche Beratung. Wir präsentieren eine breite Palette von Produkten und Materialien, erklären die Merkmale, Vorteile und Möglichkeiten jedes einzelnen. Außerdem stellen wir sicher, die ästhetischen Vorlieben des Kunden und seine spezifischen Anforderungen an Funktionalität und Komfort zu verstehen.",
-    "InstallationText": "3. INSTALLATION, professionell, ordentlich und sauber: Sobald der Kunde die gewünschten Produkte und Materialien ausgewählt hat, gehen wir zur professionellen Installation über. Unser Team hochqualifizierter und erfahrener Installateure führt die Arbeit mit Sorgfalt und Liebe zum Detail durch, um ein makelloses und langlebiges Finish zu gewährleisten. Wir verpflichten uns, die Installation ordentlich und sauber durchzuführen, respektieren den Raum und die Möbel des Kunden und hinterlassen den Ort in einwandfreiem Zustand, wenn die Arbeit abgeschlossen ist. Bei Space of Design bemühen wir uns, einen umfassenden und qualitativ hochwertigen Service vom ersten Kontakt bis zur endgültigen Installation zu bieten und die volle Zufriedenheit unserer Kunden in jeder Phase des Prozesses sicherzustellen."
+    "Concept": "Unsere Arbeitsweise bei Space of Design, spezialisiert auf Dekoration und Sonnenschutz für Innen- und Außenbereiche, konzentriert sich darauf, unseren Kunden vom ersten Kontakt bis zur endgültigen Installation eine vollständige und zufriedenstellende Erfahrung zu bieten. Im Folgenden erläutere ich jeden Schritt unseres Prozesses:",
+    "ContactText": "1. ERSTKONTAKT: In diesem ersten Schritt erhalten wir den Anruf des Kunden, der an unseren Dienstleistungen interessiert ist. Unser Kundenserviceteam ist hochqualifiziert, um die spezifischen Bedürfnisse und Anforderungen jedes Kunden zu hören, eine persönliche Betreuung zu bieten und auf alle Fragen und Anfragen zu antworten. Wir vereinbaren einen Termin, um Sie zu Hause kostenlos zu besuchen.",
+    "AdviceText": "2. INDIVIDUELLE BERATUNG: Während des Besuchs bei Ihnen zu Hause bietet unser Team von Experten für Dekoration und Sonnenschutz eine umfassende und individuelle Beratung. Wir präsentieren eine breite Palette von Produkten und Materialien, erläutern die Merkmale, Vorteile und Möglichkeiten jeder einzelnen. Darüber hinaus stellen wir sicher, dass wir die ästhetischen Vorlieben des Kunden und seine spezifischen Anforderungen an Funktionalität und Komfort verstehen.",
+    "InstallationText": "3. INSTALLATION: professionell, ordentlich und sauber: Sobald der Kunde die gewünschten Produkte und Materialien ausgewählt hat, führen wir die professionelle Installation durch. Unser hochqualifiziertes und erfahrenes Installateurteam arbeitet sorgfältig und mit Liebe zum Detail und garantiert ein makelloses und dauerhaftes Ergebnis. Wir verpflichten uns, die Installation ordentlich und sauber durchzuführen, den Platz und die Möbel des Kunden zu respektieren und den Ort bei Abschluss der Arbeit in einwandfreiem Zustand zu hinterlassen. Bei Space of Design setzen wir uns für einen umfassenden und qualitativ hochwertigen Service ein, vom ersten Kontakt bis zur endgültigen Installation, um die volle Zufriedenheit unserer Kunden in jedem Stadium des Prozesses zu gewährleisten."
+  },
+  "Indoor": {
+    "Title": "Sonnenschutz und Textildekoration für Innenbereiche",
+    "Titlesm": "Sonnenschutz für Innenräume",
+    "SlidingPanels": "Schiebevorhänge",
+    "RollerBlind": "Rollos",
+    "Pleated": "Plisseevorhänge",
+    "Slated": "Vertikal-Lamellen",
+    "Venetian": "Holz- und Aluminiumjalousien",
+    "Venetiansm": "Holzjalousien",
+    "Textile": "Vorhangstoffe und Konfektion",
+    "Textilesm": "Vorhänge und Konfektion"
+  },
+  "Outdoor": {
+    "Title": "Sonnenschutz im Freien und Strukturen für Garten und Terrasse",
+    "Titlesm": "Sonnenschutz im Freien",
+    "SunProtect": "Markisensystem",
+    "Garden": "Gartenstrukturen",
+    "Photovoltaic": "Photovoltaik-Pergola",
+    "Bioclimatic": "Bioklimatische Pergola",
+    "Led": "Sonnenschirme",
+    "Microclimatized": "Chillout-Bereiche"
   },
   "Crystal": {
-    "Title": "Falt- und Schiebeglasumhüllungen",
-    "Contact": "Entdecken Sie Eleganz und Exklusivität mit unseren Glasvorhängen für Raumumhüllungen!",
-    "Advice": "Unsere Glasvorhänge bieten eine innovative und anspruchsvolle Lösung, um distinctive und einzigartige Umgebungen in Ihrem Zuhause oder Geschäft zu schaffen. Mit einem modernen und minimalistischen Design verwandeln diese Vorhänge Ihre Außenbereiche in funktionale und elegante Bereiche, ideal für das ganze Jahr über.",
-    "Installation": "Dank ihres rahmenlosen Designs und des reibungslosen Schiebesystems bieten unsere Glasvorhänge unbehinderte Panoramablicke, lassen natürliches Licht in Ihre Räume und schaffen ein Gefühl von Weite und Helligkeit. Darüber hinaus ermöglicht ihre Vielseitigkeit das Öffnen oder Schließen der Vorhänge nach Bedarf und die Anpassung an das Wetter und die Atmosphäre zu jeder Zeit.",
-    "Concept": "Hergestellt aus hochwertigem Einscheibensicherheitsglas bieten unsere Vorhänge außergewöhnliche Festigkeit und Haltbarkeit und gewährleisten effektiven Schutz gegen externe Elemente wie Wind, Regen und Staub, ohne die Ästhetik oder Transparenz zu beeinträchtigen.",
-    "ContactText": "Egal, ob Sie einen eleganten Außenspeisebereich, eine gemütliche Lounge am Pool oder einen luxuriösen Veranstaltungsraum für Ihr Geschäft schaffen möchten, unsere Glasvorhänge sind die perfekte Wahl, um jedem Umfeld einen Hauch von Distinktion und Exklusivität zu verleihen.",
-    "AdviceText": "Verwandeln Sie Ihre Außenbereiche in einzigartige und exklusive Orte mit unseren Glasvorhängen und verwirklichen Sie Ihre Design- und Komfortträume. Trauen Sie sich, mit der unvergleichlichen Eleganz unserer Umhüllungslösungen herauszustechen!"
+    "Title": "Klapp- und Schiebeglasverkleidungen",
+    "Titlesm": "Glasverkleidungen",
+    "Contact": "Entdecken Sie die Eleganz und Exklusivität unserer Glasvorhänge für Raumverkleidungen!",
+    "Advice": "Unsere Glasvorhänge bieten eine innovative und anspruchsvolle Lösung, um einzigartige und markante Umgebungen in Ihrem Zuhause oder Geschäft zu schaffen. Mit einem modernen und minimalistischen Design verwandeln diese Vorhänge Ihre Außenbereiche in funktionale und elegante Räume, ideal zum Genießen das ganze Jahr über.",
+    "Installation": "Dank ihres rahmenlosen Designs und ihres sanften Gleitsystems bieten unsere Glasvorhänge eine ungehinderte Panoramaansicht, ermöglichen es, dass natürliches Licht in Ihre Räume gelangt und ein Gefühl von Weite und Helligkeit erzeugt wird. Darüber hinaus ermöglicht ihre Vielseitigkeit das Öffnen oder Schließen der Vorhänge je nach Bedarf, und passt sich so jederzeit an das Klima und die Umgebung an.",
+    "Concept": "Hergestellt aus hochwertigem gehärtetem Glas bieten unsere Vorhänge außergewöhnliche Widerstandsfähigkeit und Langlebigkeit, garantieren einen effektiven Schutz vor externen Elementen wie Wind, Regen und Staub, ohne die Ästhetik oder Transparenz zu beeinträchtigen.",
+    "ContactText": "Ob Sie einen eleganten Speisesaal im Freien, ein gemütliches Wohnzimmer am Pool oder einen luxuriösen Veranstaltungsbereich für Ihr Unternehmen schaffen möchten, unsere Glasvorhänge sind die perfekte Wahl, um jedem Ambiente einen Hauch von Distinktion und Exklusivität zu verleihen.",
+    "AdviceText": "Verwandeln Sie Ihre Außenbereiche in einzigartige und exklusive Orte mit unseren Glasvorhängen und verwirklichen Sie Ihre Design- und Komfortträume. Trauen Sie sich, sich mit der unvergleichlichen Eleganz unserer Verkleidungslösungen zu unterscheiden!"
   },
   "Sliding": {
     "Title": "Schiebepaneele für die Innenraumdekoration",
@@ -84,43 +107,82 @@
     "Installation": "Unsere Kollektion von Stoffen für Vorhänge und Konfektion vereint neueste Technologie mit herausragendem Design, um Ihnen ein unvergleichliches Erlebnis bei der Innendekoration zu bieten. Mit der Möglichkeit, unsere Systeme zu motorisieren, und einer breiten Palette von Anpassungsoptionen sind wir zuversichtlich, dass Sie alles finden werden, was Sie brauchen, um Ihre Räume mit Stil und Funktionalität zu verwandeln."
   },
   "CustomStructures": {
-    "Title": "MAßGESCHNEIDERTE STRUKTUREN FÜR GÄRTEN UND TERRASSEN",
-    "Contact": "Unsere Gartenstrukturen bieten die perfekte Kombination aus Funktionalität und Ästhetik und ermöglichen es Ihnen, Ihren Außenbereich in eine Oase der Entspannung und Unterhaltung zu verwandeln. Mit festen oder ausfahrbaren Optionen passen sich unsere Strukturen Ihren Bedürfnissen und Vorlieben an und bieten Ihnen die Flexibilität, das Beste aus Ihrem Außenbereich herauszuholen.",
-    "Advice": "Wir bieten die Möglichkeit, integrierte LED-Beleuchtung hinzuzufügen. Unsere Strukturen schaffen nicht nur eine gemütliche und anspruchsvolle Atmosphäre, sondern ermöglichen es Ihnen auch, Ihre Außenbereiche auch nach Sonnenuntergang zu genießen. Die LED-Beleuchtung sorgt für ein weiches und angenehmes Licht, ideal für gesellige Treffen, Abendessen im Freien oder einfach zum Entspannen unter den Sternen.",
-    "Installation": "Gebaut mit hochwertigen Materialien und einem langlebigen Design garantieren unsere Gartenstrukturen Witterungsbeständigkeit und einfache Pflege, damit Sie viele Jahre lang Freude an ihrer Schönheit und ihrem Komfort haben.",
-    "Concept": "Egal, ob Sie eine ruhige Leseecke, einen lebendigen Unterhaltungsbereich oder einfach nur einen Raum im Freien zum Genießen suchen, unsere Gartenstrukturen sind die perfekte Wahl, um Ihrem Zuhause einen Hauch von Eleganz und Komfort zu verleihen.",
-    "ContactText": "Verwandeln Sie Ihren Garten, Ihre Terrasse oder Ihren Innenhof in ein Traumziel mit unseren Gartenstrukturen und erleben Sie die Schönheit und Gelassenheit Ihrer Außenbereiche wie nie zuvor."
+    "Title": "MAßGEFERTIGTE STRUKTUREN FÜR GÄRTEN UND TERRASSEN",
+    "Titlesm": "GARTENSTRUKTUREN",
+    "Contact": "Unsere Gartenstrukturen bieten eine perfekte Kombination aus Funktionalität und Ästhetik und ermöglichen es Ihnen, Ihren Außenbereich in eine Oase der Entspannung und Unterhaltung zu verwandeln. Mit festen oder ausfahrbaren Armen passen sich unsere Strukturen Ihren Bedürfnissen und Vorlieben an und bieten Ihnen die Flexibilität, Ihren Außenbereich optimal zu nutzen.",
+    "Advice": "Wir bieten die Möglichkeit, integrierte LED-Beleuchtung hinzuzufügen. Unsere Strukturen schaffen nicht nur eine gemütliche und anspruchsvolle Atmosphäre, sondern ermöglichen es Ihnen auch, Ihre Außenbereiche selbst nach Einbruch der Nacht zu genießen. Die LED-Beleuchtung sorgt für weiches und angenehmes Licht, perfekt für gesellige Treffen, Abendessen im Freien oder einfach nur zum Entspannen unter den Sternen.",
+    "Installation": "Gebaut aus hochwertigen Materialien und mit langlebigem Design garantieren unsere Gartenstrukturen Witterungsbeständigkeit und einfache Wartung, damit Sie ihre Schönheit und Komfort viele Jahre lang genießen können.",
+    "Concept": "Ob Sie eine ruhige Leseecke, einen lebendigen Unterhaltungsbereich oder einfach nur einen Raum im Freien genießen möchten, unsere Gartenstrukturen sind die perfekte Wahl, um Ihrem Zuhause einen Hauch von Eleganz und Komfort zu verleihen.",
+    "ContactText": "Verwandeln Sie Ihren Garten, Ihre Terrasse oder Ihren Patio in ein Traumziel mit unseren Gartenstrukturen und erleben Sie die Schönheit und Gelassenheit Ihrer Außenbereiche wie nie zuvor."
   },
   "Pergolas": {
-    "Title": "PERGOLEN UND STRUKTUREN FÜR PARKPLÄTZE MIT PHOTOVOLTAIKSYSTEM",
-    "Contact": "Willkommen in der Zukunft der Solarenergie und intelligenten Funktionalität mit unserer innovativen Lösung für eine photovoltaische Pergola und Parkplatzstruktur!",
-    "Advice": "Unsere photovoltaische Pergola und Parkplatzstruktur repräsentieren die perfekte Verbindung von Nachhaltigkeit, Energieeffizienz und modernem Design. Stellen Sie sich einen Raum vor, der nicht nur Schatten und Schutz für Fahrzeuge bietet, sondern auch saubere und erneuerbare Energie erzeugt, mit anpassbaren Paneelen, die intelligent auf die sich ändernden Bedingungen der Sonne reagieren.",
-    "Installation": "Mit hoch effizienten Solarpaneelen, die in das Dach der Pergola und die Parkplatzstruktur integriert sind, wird jeder Sonnenstrahl in nutzbaren Strom umgewandelt. Dies trägt dazu bei, die Abhängigkeit von nicht erneuerbaren Energiequellen zu reduzieren und den CO2-Fußabdruck zu verringern.",
-    "Concept": "Aber das ist noch nicht alles. Unsere Technologie der motorisierten, verstellbaren Solarpaneele fügt unserem System eine zusätzliche intelligente Schicht hinzu. Diese Paneele können sich automatisch an die Sonnenbahn im Laufe des Tages anpassen und die Aufnahme von Solarenergie in Echtzeit optimieren. Ein bewölkter oder schattiger Tag? Kein Problem. Unser System kann sich anpassen, um die verfügbare Sonneneinstrahlung zu maximieren.",
-    "ContactText": "Neben ihrer energetischen Funktionalität sind unsere Pergolen und Parkplatzstrukturen ein Zeugnis für elegantes Design und Vielseitigkeit. Mit einer Vielzahl von Anpassungsoptionen, von Materialien bis zu Farben und Oberflächen, können wir unser Produkt an jede architektonische und ästhetische Umgebung anpassen."
+    "Title": "PERGOLAS UND PARKSTRUKTUREN MIT PHOTOVOLTAIKSYSTEM",
+    "Titlesm": "PHOTOVOLTAIK-PERGOLAS",
+    "Contact": "Willkommen in der Zukunft der Solarenergie und intelligenten Funktionalität mit unserer innovativen Lösung für Photovoltaik-Pergolas und Parkstrukturen!",
+    "Advice": "Unsere Photovoltaik-Pergola und Parkstruktur repräsentieren die perfekte Verbindung von Nachhaltigkeit, Energieeffizienz und modernem Design. Stellen Sie sich einen Raum vor, der nicht nur Schatten und Schutz für Fahrzeuge bietet, sondern auch saubere und erneuerbare Energie erzeugt, um Ihr Elektrofahrzeug mit intelligent anpassbaren Paneelen unter wechselnden Sonnenbedingungen aufzuladen.",
+    "Installation": "Mit hoch effizienten Solarpaneelen, die in das Dach der Pergola und der Parkstruktur integriert sind, wird jeder Sonnenstrahl in nutzbaren Strom umgewandelt und trägt dazu bei, die Abhängigkeit von nicht erneuerbaren Energiequellen zu verringern und den CO2-Fußabdruck zu reduzieren.",
+    "Concept": "Aber das ist noch nicht alles. Unsere motorisierte, ausrichtbare Solartechnologie bietet eine zusätzliche Ebene der Intelligenz für unser System. Diese Paneele können sich automatisch an die Sonnenbahn im Laufe des Tages anpassen und die Solarenergiegewinnung in Echtzeit optimieren. Ein bewölkter oder schattiger Tag? Kein Problem. Unser System kann angepasst werden, um die verfügbare Sonnenexposition zu maximieren.",
+    "ContactText": "Neben ihrer energetischen Funktionalität sind unsere Photovoltaik-Pergolas und Parkstrukturen ein Zeugnis für elegantes Design und Vielseitigkeit. Mit einer Vielzahl von Anpassungsoptionen, von Materialien bis hin zu Farben und Oberflächen, können wir unser Produkt an jede architektonische und ästhetische Umgebung anpassen."
+  },
+  "Bioclimatic": {
+    "Title": "BIOKLIMATISCHE PERGOLAS FÜR GÄRTEN UND TERRASSEN",
+    "Titlesm": "BIOKLIMATISCHE PERGOLAS",
+    "Contact": "Entdecken Sie die innovative bioklimatische Pergola mit versenkbaren Lamellen, die perfekte Wahl, um Ihre Außenbereiche in eine Oase einzigartigen Designs und Komforts zu verwandeln!",
+    "Advice": "Unsere bioklimatische Pergola vereint fortschrittliche Funktionalität mit elegantem und zeitgemäßem Design und bietet Ihnen die volle Kontrolle über Ihre Außenumgebung. Dank ihrer motorisierten, versenkbaren Lamellen können Sie ganz einfach die Menge an Sonnenlicht, Schatten und Belüftung anpassen, um die ideale Atmosphäre zu jeder Tageszeit zu schaffen.",
+    "Installation": "Hergestellt aus hochwertigen Materialien in verschiedenen Farben und Oberflächen mit modernster Ingenieurskunst garantiert unsere bioklimatische Pergola Langlebigkeit und Wetterbeständigkeit und ermöglicht es Ihnen, Ihre Außenbereiche das ganze Jahr über zu genießen.",
+    "Concept": "Egal, ob Sie einen ruhigen Rückzugsort in Ihrem Garten, einen Unterhaltungsbereich für gesellschaftliche Zusammenkünfte oder eine ruhige Oase zum Entspannen nach einem langen Tag suchen, unsere bioklimatische Pergola ist die perfekte Lösung für Ihre Design- und Komfortbedürfnisse im Freien.",
+    "ContactText": "Verwandeln Sie Ihren Garten, Ihre Terrasse oder Ihren Patio in ein maßgeschneidertes Refugium mit unserer bioklimatischen Pergola und erleben Sie die perfekte Kombination aus Stil, Funktionalität und Komfort, die nur wir bieten können."
   },
   "Coffee": {
-    "Title": "SYSTEME FÜR KASSETTENMARKISEN",
-    "Contact": "Unsere Strukturen für Gärten bieten die perfekte Kombination aus Funktionalität und Ästhetik und ermöglichen es Ihnen, Ihren Außenbereich in eine Oase der Entspannung und Unterhaltung zu verwandeln. Mit festen Optionen oder ausfahrbaren Armen passen sich unsere Strukturen Ihren Bedürfnissen und Vorlieben an und bieten Ihnen die Flexibilität, das Beste aus Ihrem Außenbereich zu machen.",
-    "Advice": "Wir bieten die Möglichkeit, integrierte LED-Beleuchtung hinzuzufügen. Unsere Strukturen schaffen nicht nur eine gemütliche und anspruchsvolle Atmosphäre, sondern ermöglichen es Ihnen auch, Ihre Außenbereiche auch nach Einbruch der Dunkelheit zu genießen. Die LED-Beleuchtung sorgt für weiches und angenehmes Licht, perfekt für gesellschaftliche Treffen, Abendessen im Freien oder einfach zum Entspannen unter den Sternen.",
-    "Installation": "Hergestellt aus hochwertigen Materialien und einem langlebigen Design garantieren unsere Strukturen für Gärten Witterungsbeständigkeit und einfache Pflege, damit Sie viele Jahre lang ihre Schönheit und Bequemlichkeit genießen können.",
-    "Concept": "Egal, ob Sie eine ruhige Leseecke, einen lebendigen Unterhaltungsbereich oder einfach nur einen Raum im Freien gestalten möchten, unsere Strukturen für Gärten sind die perfekte Wahl, um Ihrem Zuhause Eleganz und Komfort zu verleihen.",
-    "ContactText": "Verwandeln Sie Ihren Garten, Ihre Terrasse oder Ihren Patio mit unseren Strukturen für Gärten in ein Traumziel und erleben Sie die Schönheit und Gelassenheit Ihrer Außenbereiche wie nie zuvor."
+    "Title": "MARKISEN MIT KASSETTENSYSTEM",
+    "Titlesm": "KASSETTENMARKISEN",
+    "Contact": "Unsere Gartenstrukturen bieten eine perfekte Kombination aus Funktionalität und Ästhetik und ermöglichen es Ihnen, Ihren Außenbereich in eine Oase der Entspannung und Unterhaltung zu verwandeln. Mit festen oder ausfahrbaren Armen passen sich unsere Strukturen Ihren Bedürfnissen und Vorlieben an und bieten Ihnen die Flexibilität, Ihren Außenbereich optimal zu nutzen.",
+    "Advice": "Wir bieten die Möglichkeit, integrierte LED-Beleuchtung hinzuzufügen, unsere Strukturen schaffen nicht nur eine gemütliche und anspruchsvolle Atmosphäre, sondern ermöglichen es Ihnen auch, Ihre Außenbereiche selbst nach Einbruch der Nacht zu genießen. Die LED-Beleuchtung sorgt für weiches und angenehmes Licht, perfekt für gesellige Treffen, Abendessen im Freien oder einfach nur zum Entspannen unter den Sternen.",
+    "Installation": "Gebaut aus hochwertigen Materialien und mit langlebigem Design garantieren unsere Gartenstrukturen Witterungsbeständigkeit und einfache Wartung, damit Sie ihre Schönheit und Komfort viele Jahre lang genießen können.",
+    "Concept": "Ob Sie eine ruhige Leseecke, einen lebendigen Unterhaltungsbereich oder einfach nur einen Raum im Freien genießen möchten, unsere Gartenstrukturen sind die perfekte Wahl, um Ihrem Zuhause einen Hauch von Eleganz und Komfort zu verleihen.",
+    "ContactText": "Verwandeln Sie Ihren Garten, Ihre Terrasse oder Ihren Patio in ein Traumziel mit unseren Gartenstrukturen und erleben Sie die Schönheit und Gelassenheit Ihrer Außenbereiche wie nie zuvor."
   },
   "Retractable": {
-    "Title": "RETRAKTABLE MARKISENSYSTEME",
-    "Contact": "Genießen Sie das Leben im Freien mit Stil und unvergleichlichem Komfort dank unserer innovativen Lösung für ein ausfahrbares Markisensystem auf einer Struktur! Sorgfältig entwickelt, um einzigartige und komfortable Außenbereiche zu schaffen, ist dieses innovative System die perfekte Lösung für alle, die das Beste aus ihren Außenbereichen herausholen möchten, sei es im Garten, auf der Terrasse oder dem Patio.",
-    "Advice": "Mit einer robusten und eleganten Struktur bietet unsere ausfahrbare Markise nicht nur Schutz vor den Elementen, sondern verleiht auch jedem Umfeld eine Hauch von Raffinesse. Hergestellt aus hochwertigen Materialien, garantiert sie Langlebigkeit und Wetterbeständigkeit, was Jahre zuverlässiger Nutzung sichert.",
-    "Installation": "Mit der Option, das System zu motorisieren, können Sie Ihre Markise mit nur einem Knopfdruck ausfahren oder einfahren und erhalten dabei eine beispiellose Bequemlichkeit. Egal, ob Sie die warme Sonne genießen oder sich im kühlen Schatten aufhalten möchten, unsere ausfahrbare Markise gibt Ihnen die vollständige Kontrolle über Ihren Außenbereich.",
-    "Concept": "Darüber hinaus passt sich ihr vielseitiges Design verschiedenen Konfigurationen und architektonischen Stilen an und gewährleistet so eine nahtlose Integration in Ihre bestehende Umgebung."
+    "Title": "AUSFAHRENDE MARKISENSYSTEME",
+    "Titlesm": "AUSFAHRENBARE MARKISEN",
+    "Contact": "Genießen Sie das Leben im Freien mit Stil und unübertroffenem Komfort dank unserer Ausfahrbaren Markise mit Struktur! Sorgfältig gestaltet, um einzigartige und komfortable Außenbereiche zu schaffen, ist dieses innovative System die perfekte Lösung für diejenigen, die ihre Außenbereiche optimal nutzen möchten, sei es im Garten, auf der Terrasse oder dem Patio.",
+    "Advice": "Mit einem robusten und eleganten Design bietet unsere ausfahrbare Markise nicht nur Schutz vor den Elementen, sondern verleiht auch jedem Umfeld einen Hauch von Raffinesse. Hergestellt aus hochwertigen Materialien, garantiert sie Langlebigkeit und Witterungsbeständigkeit, was jahrelangen zuverlässigen Einsatz gewährleistet.",
+    "Installation": "Mit der Möglichkeit, das System zu motorisieren, können Sie die Markise mit nur einem Knopfdruck aus- oder einfahren und bieten damit eine unvergleichliche Bequemlichkeit. Egal, ob Sie die warme Sonne genießen oder im kühlen Schatten Schutz suchen, unsere ausfahrbare Markise bietet Ihnen die volle Kontrolle über Ihren Außenbereich.",
+    "Concept": "Darüber hinaus passt sich ihr vielseitiges Design einer Vielzahl von Konfigurationen und architektonischen Stilen an und gewährleistet eine nahtlose Integration in Ihre vorhandene Umgebung.",
+    "ContactText": "Kompromittieren Sie nicht die Qualität oder den Komfort im Freien. Entdecken Sie eine neue Art, Ihre Außenbereiche mit unserer Ausfahrbaren Markise mit Struktur zu genießen. Machen Sie jeden Moment im Freien zu einem unvergesslichen Erlebnis!"
   },
   "Flat": {
-      "Title": "FLACHE MARKISENSYSTEME",
-      "Contact": "Tauchen Sie ein in Luxus und Komfort im Freien mit unserer flachen Markise für Gärten und Terrassen. Entwickelt unter der Prämisse, einzigartige und komfortable Außenbereiche zu schaffen, hebt dieses elegante System für Sonnenschutz sofort den Charme jeder Außenzone und bietet Ihnen einen perfekten Rückzugsort zum Entspannen und Genießen der frischen Luft.",
-      "Advice": "Mit ihrem minimalistischen und zeitgenössischen Design verwandelt unsere flache Markise den Raum in einen gemütlichen und eleganten Rückzugsort. Dieses Produkt garantiert Wetterbeständigkeit und langfristige Haltbarkeit, sodass Sie Ihre grüne Oase jahrelang sorgenfrei genießen können.",
-      "Installation": "Mit der Möglichkeit, das System zu motorisieren, können Sie die Ausdehnung und Rücknahme der Markise bequem per Knopfdruck steuern und erhalten so ein unvergleichliches Maß an Bequemlichkeit und Komfort. Egal, ob Sie die warme Sonne genießen oder einen kühlen, entspannenden Schatten schaffen möchten, unsere flache Markise gibt Ihnen die vollständige Kontrolle über Ihre Umgebung im Freien.",
-      "Concept": "Stellen Sie sich die Möglichkeiten vor: von intimen Abenden im Freien bis hin zu lebhaften Treffen mit Freunden und Familie. Unsere flache Markise für Gärten und Terrassen bietet Ihnen die Freiheit, zu jeder Zeit die perfekte Atmosphäre zu schaffen.",
-      "ContactText": "Entdecken Sie eine neue Möglichkeit, Ihre Außenbereiche mit unserer flachen Markise für Gärten und Terrassen zu genießen. Machen Sie jeden Moment im Freien zu einem unvergesslichen Erlebnis!"
+    "Title": "FLACHE MARKISENSYSTEME",
+    "Titlesm": "FLACHE MARKISEN",
+    "Contact": "Tauchen Sie ein in Luxus und Komfort im Freien mit unserer Flachen Markise für Gärten und Terrassen. Entworfen mit dem Ziel, einzigartige und komfortable Außenbereiche zu schaffen, hebt dieses elegante Sonnenschutzsystem sofort den Charme jeder Außenfläche und bietet Ihnen einen perfekten Rückzugsort zum Entspannen und Genießen des Lebens im Freien.",
+    "Advice": "Mit ihrem minimalistischen und zeitgenössischen Design verwandelt unsere flache Markise den Raum in einen gemütlichen und eleganten Rückzugsort. Dieses Produkt garantiert Witterungsbeständigkeit und Langzeitdauerhaftigkeit, so dass Sie Ihren Außenbereich jahrelang sorgenfrei genießen können.",
+    "Installation": "Mit der Möglichkeit, das System zu motorisieren, können Sie die Aus- und Einfahrt der Markise ganz einfach per Knopfdruck steuern und erhalten damit ein unvergleichliches Maß an Bequemlichkeit und Komfort. Egal, ob Sie die warme Sonne genießen oder einen kühlen und entspannenden Schatten schaffen möchten, unsere flache Markise bietet Ihnen die volle Kontrolle über Ihre Außenumgebung.",
+    "Concept": "Stellen Sie sich die Möglichkeiten vor: von intimen Abenden im Freien bis hin zu lebhaften Treffen mit Freunden und Familie bietet unsere Flache Markise für Gärten und Terrassen Ihnen die Freiheit, die perfekte Atmosphäre zu jeder Zeit zu schaffen.",
+    "ContactText": "Entdecken Sie eine neue Art, Ihre Außenbereiche mit unserer Flachen Markise für Gärten und Terrassen zu genießen. Machen Sie jeden Moment im Freien zu einem unvergesslichen Erlebnis!"
+  },
+  "OutdoorVertical": {
+    "Title": "AUSSENVERTIKALE MARKISENSYSTEME",
+    "Titlesm": "VERTIKALE MARKISEN",
+    "Contact": "Willkommen in unserer innovativen Produktlinie für den Außenbereich! Wir präsentieren unsere vertikale Markise, eine intelligente Lösung, die entwickelt wurde, um komfortable Räume in Ihrem Zuhause zu schaffen, während Sie vor den Elementen geschützt sind und die Intensität des Lichts kontrollieren können.",
+    "Advice": "Unsere vertikale Markise bietet ein elegantes und funktionales Design, das sich nahtlos in jede Außenumgebung einfügt, sei es auf Ihrer Terrasse, in Ihrem Garten oder auf Ihrem Patio. Mit ihrer Fähigkeit, die Lichtintensität zu regulieren, können Sie zu jeder Tageszeit eine angenehme und maßgeschneiderte Atmosphäre genießen.",
+    "Installation": "Dieses Produkt besteht aus hochwertigen Materialien, die Langlebigkeit und Widerstandsfähigkeit gegen widrige Wetterbedingungen garantieren. Ihr Regulierungssystem ermöglicht es Ihnen, die Position der Markise nach Bedarf anzupassen und bietet Ihnen die Privatsphäre und den Schutz, den Sie sich wünschen.",
+    "Concept": "Ob Sie ein Frühstück im Freien an einem sonnigen Morgen genießen oder sich an einem regnerischen Nachmittag auf Ihrer Terrasse entspannen möchten, unsere vertikale Markise bietet Ihnen die Flexibilität und den Komfort, die Sie benötigen, um die perfekte Atmosphäre in Ihrem Zuhause zu schaffen.",
+    "ContactText": "Entdecken Sie, wie unsere vertikale Markise Ihren Außenbereich in eine Oase des Komforts und des Stils verwandeln kann. Machen Sie Ihr Zuhause mit unserer innovativen Lösung für den Außenbereich noch gemütlicher!"
+  },
+  "Led": {
+    "Title": "MARKISENSYSTEME MIT INTEGRIERTER LED-BELEUCHTUNG",
+    "Titlesm": "MARKISEN MIT LED",
+    "Contact": "Wir präsentieren unsere neueste Innovation im Bereich des äußeren Sonnenschutzes: die Integration von LED-Systemen in all unsere Produkte! Jetzt bieten wir nicht nur Lösungen zum Schutz vor Sonne und Wetter, sondern auch die Möglichkeit, einzigartige und exklusive Atmosphären in Ihren Außenbereichen zu schaffen.",
+    "Advice": "Stellen Sie sich vor, Sie könnten Ihre Terrasse, Ihren Garten oder Ihren Patio mit nur einem Knopfdruck in einen magischen und gemütlichen Ort verwandeln. Unsere integrierten LED-Systeme ermöglichen es Ihnen, die Beleuchtung Ihres Außenbereichs nach Ihrer Stimmung, der Atmosphäre, die Sie schaffen möchten, oder dem besonderen Anlass, den Sie feiern, zu personalisieren.",
+    "Installation": "Von sanften, warmen Lichtern, die eine entspannende Atmosphäre für ein romantisches Abendessen schaffen, bis hin zu hellen und bunten Lichtern, die eine Outdoor-Party beleben, sind die Möglichkeiten endlos. Darüber hinaus garantiert die Integration von LED-Systemen in unsere Sonnenschutzprodukte ein elegantes und unauffälliges Design, das die Schönheit Ihres Außenbereichs hervorhebt.",
+    "Concept": "Mit unserer modernen Technologie investieren Sie nicht nur in Schutz und Funktionalität, sondern auch in Stil und Atmosphäre. Entdecken Sie, wie unsere Sonnenschutzprodukte im Freien mit LED-Systemen Ihre Outdoor-Erlebnisse vollständig verändern und Ihr Zuhause zu einem noch spezielleren und exklusiveren Ort machen können."
+  },
+  "Traditional": {
+    "Title": "TRADITIONELLE MARKISENSYSTEME",
+    "Titlesm": "TRADITIONELLE MARKISEN",
+    "Contact": "Entdecken Sie die Eleganz und Funktionalität unserer traditionellen Markisen für den Außenbereich, perfekt für kleine Fenster in der Höhe! Wir bieten eine Vielzahl von Modellen, darunter das klassische Kappensystem und das vielseitige Modell mit festem Arm, die entwickelt wurden, um alle Ihre Bedürfnisse in Bezug auf Sonnenschutz und Verschönerung Ihres Hauses zu erfüllen.",
+    "Advice": "Das Kappensystem ist eine charmante und zeitlose Wahl, die jedem Fassaden einen Hauch von Stil verleiht. Ihr gebogenes Design schafft ein unverwechselbares und einladendes Aussehen, während ihre robuste Struktur effektiven Schutz vor Sonne und Regen bietet. Dieses Modell ist besonders geeignet für kleine Fenster in der Höhe, da sein kompaktes Design perfekt in enge Räume passt.",
+    "Installation": "Das Modell mit festem Arm bietet andererseits eine praktische und vielseitige Lösung für Ihre Sonnenschutzbedürfnisse. Dank seines modularen und anpassbaren Designs kann es einfach an einer Vielzahl von Orten installiert werden, einschließlich Fenstern in der Höhe. Mit seinem System aus festen Armen bietet diese Markise eine stabile und dauerhafte Abdeckung und garantiert den Komfort und Schutz, den Sie benötigen."
   },
   "HELLO": "Hallo"
 }

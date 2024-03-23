@@ -1,17 +1,17 @@
 <main class="container-fluid d-flex justify-content-center align-items-around mx-0 p-2">
-  <section class="row justify-content-center align-items-center mx-0 text-center">
-    <div class="col-12 px-3 mx-0 mt-4">
-      <div class="col-12 p-0 m-0 backGold br25 border border-warning text-center align-items-center d-none d-lg-block">
-        <h1 class="">{{ "Outdoor.Title" | translate | uppercase | uppercase }}</h1>
+  <section class="row justify-content-center align-items-center mx-0 text-center mt-5">
+    <div class="col-12 px-3 mt-lg-4">
+      <div class="d-flex justify-content-center align-items-center backGold br25 border border-warning d-none d-lg-block">
+        <h1 class="text-center my-auto">{{ "Outdoor.Title" | translate | uppercase }}</h1>
       </div>
-      <div class="col-12 p-0 m-0 backGold br25 border border-warning text-center align-items-center d-lg-none">
-        <h1 class="">{{ "Outdoor.Titlesm" | translate | uppercase | uppercase }}</h1>
+      <div class="d-flex justify-content-center align-items-center backGold br25 border border-warning d-lg-none">
+        <h1 class="text-center my-auto">{{ "Outdoor.Titlesm" | translate | uppercase }}</h1>
       </div>
     </div>
     <div class="col mt-2 backGold thin-separator"></div>
     <div class="col-12 m-0 justify-content-center align-items-center p-4">
       <div class="row d-flex justify-content-center g-5 mx-auto">
-        <div class="col-sm-12 col-md-4 d-flex justify-content-center align-items-center rounded-image-container">
+        <a class="col-sm-12 col-md-4 d-flex justify-content-center align-items-center rounded-image-container" [routerLink]="['/awning']">
           <img
             src="{{img1}}"
             class="border border-warning img-fluid w-100 flyr border border-warning"
@@ -20,8 +20,8 @@
           <div class="overlay-text txt backGold mb-4 w-75 border border-warning">
             <h6 class="mb-0 p-2">{{ "Outdoor.SunProtect" | translate | uppercase }}</h6>
           </div>
-        </div>
-        <div class="col-sm-12 col-md-4 d-flex justify-content-center align-items-center rounded-image-container">
+        </a>
+        <a class="col-sm-12 col-md-4 d-flex justify-content-center align-items-center rounded-image-container" [routerLink]="['/customstructures']">
           <img
             src="{{img2}}"
             class="border border-warning img-fluid w-100 flyr border border-warning"
@@ -30,8 +30,8 @@
           <div class="overlay-text txt backGold mb-4 w-75 border border-warning">
             <h6 class="mb-0 p-2">{{ "Outdoor.Garden" | translate | uppercase }}</h6>
           </div>
-        </div>
-        <div class="col-sm-12 col-md-4 d-flex justify-content-center align-items-center rounded-image-container">
+        </a>
+        <a class="col-sm-12 col-md-4 d-flex justify-content-center align-items-center rounded-image-container" [routerLink]="['/pergolas']">
           <img
             src="{{img3}}"
             class="border border-warning img-fluid w-100 flyr"
@@ -40,12 +40,12 @@
           <div class="overlay-text txt backGold mb-4 w-75 border border-warning">
             <h6 class="mb-0 p-2">{{ "Outdoor.Photovoltaic" | translate | uppercase }}</h6>
           </div>
-        </div>
+        </a>
       </div>
     </div>
     <div class="col-12 m-0 justify-content-center align-items-center p-4">
       <div class="row d-flex justify-content-center g-5 mx-auto">
-        <div class="col-sm-12 col-md-4 d-flex justify-content-center align-items-center rounded-image-container">
+        <a class="col-sm-12 col-md-4 d-flex justify-content-center align-items-center rounded-image-container" [routerLink]="['/bioclimatic']">
           <img
             src="{{img4}}"
             class="border border-warning img-fluid w-100 flyr border border-warning"
@@ -54,8 +54,8 @@
           <div class="overlay-text txt backGold mb-4 w-75 border border-warning">
             <h6 class="mb-0 p-2">{{ "Outdoor.Bioclimatic" | translate | uppercase }}</h6>
           </div>
-        </div>
-        <div class="col-sm-12 col-md-4 d-flex justify-content-center align-items-center rounded-image-container">
+        </a>
+        <a class="col-sm-12 col-md-4 d-flex justify-content-center align-items-center rounded-image-container" [routerLink]="['/led']">
           <img
           src="{{img5}}"
           class="border border-warning img-fluid w-100 flyr border border-warning"
@@ -64,8 +64,8 @@
           <div class="overlay-text txt backGold mb-4 w-75 border border-warning">
             <h6 class="mb-0 p-2">{{ "Outdoor.Led" | translate | uppercase }}</h6>
           </div>
-        </div>
-        <div class="col-sm-12 col-md-4 d-flex justify-content-center align-items-center rounded-image-container">
+        </a>
+        <a class="col-sm-12 col-md-4 d-flex justify-content-center align-items-center rounded-image-container" [routerLink]="['/venetian']">
           <img
           src="{{img6}}"
           class="border border-warning img-fluid w-100 flyr"
@@ -74,10 +74,10 @@
           <div class="overlay-text txt backGold mb-4 w-75 border border-warning">
             <h6 class="mb-0 p-2">{{ "Outdoor.Microclimatized" | translate | uppercase }}</h6>
           </div>
-        </div>
+        </a>
       </div>
+      <app-footer-slim></app-footer-slim>
     </div>
-    <app-footer-slim></app-footer-slim>
   </section>
 </main>
 

@@ -1,7 +1,7 @@
 {
   "Home": {
     "Indoor": "INNE",
-    "Outdoor": "UTE"
+    "Outdoor": "UTENDØRS"
   },
   "Nav": {
     "Home": "Hjem",
@@ -15,7 +15,7 @@
     "FullName": "Fullt navn",
     "Email": "E-post",
     "Phone": "Telefon",
-    "Message": "Melding"
+    "Message": "Beskjed"
   },
   "Language": {
     "Languages": "Språk",
@@ -24,21 +24,44 @@
   "Work": {
     "Title": "Vår arbeidsmetode",
     "Contact": "1. Innledende kontakt",
-    "Advice": "2. Rådgivning hjemme hos deg",
+    "Advice": "2. Veiledning hjemme hos deg",
     "Installation": "3. Installasjon hjemme hos deg",
-    "Concept": "Vår arbeidsmetode i Space of Design, spesialisert på dekorasjon og solbeskyttelse for både innendørs og utendørs bruk, fokuserer på å gi våre kunder en komplett og tilfredsstillende opplevelse fra første kontakt til endelig installasjon. Her er detaljene for hvert trinn i vår prosess:",
-    "ContactText": "1. INNLEDENDE KONTAKT: I dette første trinnet mottar vi samtalen fra en interessert kunde. Vårt kundeserviceteam er svært opplært for å lytte til behovene og spesifikasjonene til hver kunde, gir personlig oppmerksomhet og svarer på alle spørsmål, avtaler en avtale for å besøke deg hjemme uten kostnad for deg.",
-    "AdviceText": "2. PERSONLIG RÅDGIVNING: Under besøket hos kunden gir vårt team av eksperter innen dekorasjon og solbeskyttelse grundig og personlig rådgivning. Vi presenterer et bredt utvalg av produkter og materialer, forklarer egenskapene, fordelene og mulighetene med hver. Vi sikrer også at vi forstår kundens estetiske preferanser og spesifikke behov for funksjonalitet og komfort.",
-    "InstallationText": "3. INSTALLASJON, profesjonell, ryddig og ren: Når kunden har valgt ønskede produkter og materialer, går vi videre med profesjonell installasjon. Vårt team av høyt kvalifiserte og erfarne installatører utfører arbeidet med omhu og oppmerksomhet på detaljer, og sikrer en feilfri og varig finish. Vi forplikter oss til å utføre installasjonen på en ryddig og ren måte, respekterer kundens plass og møbler, og forlater stedet i perfekt stand etter at arbeidet er ferdig. I Space of Design streber vi etter å tilby en helhetlig og høykvalitetstjeneste fra første kontakt til endelig installasjon, og sikrer full tilfredshet for våre kunder gjennom hver fase av prosessen."
+    "Concept": "Vår arbeidsmetode på Space of Design, som er spesialisert på dekor og solbeskyttelse for innendørs og utendørs områder, fokuserer på å gi våre kunder en komplett og tilfredsstillende opplevelse fra første kontakt til endelig installasjon. Nedenfor beskriver jeg hvert trinn i vår prosess:",
+    "ContactText": "1. INNLEDENDE KONTAKT: På dette stadiet mottar vi samtalen fra interesserte kunder. Vårt kundeserviceteam er godt trent til å lytte til hver kundes spesifikke behov og krav, og gir personlig oppmerksomhet og svarer på alle spørsmål og henvendelser, avtaler et møte for å besøke dem hjemme uten ekstra kostnader for deg.",
+    "AdviceText": "2. PERSONLIG VEILEDNING: Under besøket hos kunden hjemme gir vårt team av eksperter innen dekor og solbeskyttelse fullstendig og personlig veiledning. Vi presenterer et bredt utvalg av produkter og materialer, forklarer egenskapene, fordelene og mulighetene til hver enkelt. Vi sørger også for å forstå kundens estetiske preferanser og deres spesifikke behov for funksjonalitet og komfort.",
+    "InstallationText": "3. INSTALLASJON, profesjonell, ryddig og ren: Når kunden har valgt ønskede produkter og materialer, går vi videre med profesjonell installasjon av dem. Vårt team av høyt kvalifiserte og erfarne installatører utfører arbeidet grundig og med fokus på detaljer, og garanterer en feilfri og varig finish. Vi forplikter oss til å utføre installasjonen på en ryddig og ren måte, med respekt for kundens plass og møbler, og forlater stedet i perfekt stand når arbeidet er ferdig. På Space of Design streber vi etter å tilby en omfattende og kvalitetsrik service, fra første kontakt til endelig installasjon, og sikrer full tilfredshet hos våre kunder på hvert trinn av prosessen."
+  },
+  "Indoor": {
+    "Title": "Innvendig solbeskyttelse og tekstildekorasjon",
+    "Titlesm": "Innvendige solskjermer",
+    "SlidingPanels": "Skyvedører",
+    "RollerBlind": "Rullegardiner",
+    "Pleated": "Plisségardiner",
+    "Slated": "Loddrette gardiner",
+    "Venetian": "Tre- og aluminiumsjalusi",
+    "Venetiansm": "Trejalusi",
+    "Textile": "Tekstiler til gardiner og søm",
+    "Textilesm": "Gardiner og søm"
+  },
+  "Outdoor": {
+    "Title": "Utvendig solbeskyttelse og konstruksjoner for hage og terrasse",
+    "Titlesm": "Utvendig solskjerming",
+    "SunProtect": "Markisesystem",
+    "Garden": "Hagestrukturer",
+    "Photovoltaic": "Fotovoltaiske pergolaer",
+    "Bioclimatic": "Bioklimatiske pergolaer",
+    "Led": "Parasoller",
+    "Microclimatized": "Chillout-områder"
   },
   "Crystal": {
-    "Title": "Foldbare og skyvbare glassinnkapslinger",
-    "Contact": "Oppdag elegansen og eksklusiviteten med våre glassgardiner for innkapsling av plasser!",
-    "Advice": "Våre glassgardiner tilbyr en innovativ og sofistikert løsning for å skape distinkte og unike miljøer i hjemmet eller bedriften din. Med moderne og minimalistisk design transformerer disse gardinene utendørsområdene dine til funksjonelle og elegante områder, ideelle for å nyte året rundt.",
-    "Installation": "Takket være sitt ramme-løse design og glatte skyvesystem gir våre glassgardiner uhindret panoramautsikt, lar naturlig lys strømme inn i rommene dine og skaper en følelse av romslighet og lys. I tillegg gir deres allsidighet deg muligheten til å åpne eller lukke gardinene etter behov, tilpasse seg værforholdene og atmosfæren når som helst.",
-    "Concept": "Laget med høykvalitets herdet glass, gir våre glassgardiner enestående styrke og holdbarhet, og garanterer effektiv beskyttelse mot eksterne elementer som vind, regn og støv, uten å kompromittere estetikk eller gjennomsiktighet.",
-    "ContactText": "Enten du ønsker å skape en elegant utendørsspisesal, en koselig stue ved bassenget eller et luksuriøst arrangementsområde for virksomheten din, er våre glassgardiner det perfekte valget for å legge til en touch av distinksjon og eksklusivitet til ethvert miljø.",
-    "AdviceText": "Transformér dine utendørsområder til unike og eksklusive steder med våre glassgardiner og gjør dine design- og komfortdrømmer til virkelighet. Våg å skille deg ut med den uovertrufne elegansen til våre innkapslingsløsninger!"
+    "Title": "Glassbrett og skyvbare glassvegger",
+    "Titlesm": "Glassbrett",
+    "Contact": "Oppdag elegansen og eksklusiviteten med våre glassgardiner for romavslutninger!",
+    "Advice": "Våre glassgardiner tilbyr en innovativ og sofistikert løsning for å skape særegne og unike miljøer i ditt hjem eller virksomhet. Med et moderne og minimalistisk design transformerer disse gardinene utendørsområdene dine til funksjonelle og elegante områder, ideelle for å nyte hele året.",
+    "Installation": "Takket være sitt ramme- og glidende design gir våre glassgardiner en panoramautsikt uten hindringer, slik at naturlig lys kan strømme inn i dine omgivelser og skape en følelse av romslighet og lys. Deres allsidighet gjør det mulig å åpne eller lukke gardinene etter behov, og tilpasse seg vær og omgivelser når som helst.",
+    "Concept": "Produsert med høykvalitets herdet glass, tilbyr våre gardiner enestående styrke og holdbarhet, og garanterer effektiv beskyttelse mot eksterne elementer som vind, regn og støv, uten å kompromittere estetikk eller gjennomsiktighet.",
+    "ContactText": "Enten du ønsker å skape en elegant utendørs spiseplass, en koselig stue ved siden av bassenget eller et luksuriøst arrangementsområde for din virksomhet, er våre glassgardiner det perfekte valget for å legge til en touch av distinksjon og eksklusivitet til ethvert miljø.",
+    "AdviceText": "Gjør dine utendørsområder unike og eksklusive med våre glassgardiner, og realiser dine drømmer om design og komfort. Våg å skille deg ut med den uovertrufne elegansen av våre avslutningsløsninger!"
   },
   "Sliding": {
     "Title": "Skyvbare paneler for interiørdekorasjon",

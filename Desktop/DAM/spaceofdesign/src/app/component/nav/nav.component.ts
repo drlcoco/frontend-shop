@@ -1,7 +1,8 @@
-import { Component, HostListener } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { RouterModule, Routes } from '@angular/router';
 import { animate, style, transition, trigger } from '@angular/animations';
+import { BehaviorSubject, Observable } from 'rxjs';
 
 @Component({
   selector: 'app-nav',
@@ -19,15 +20,20 @@ import { animate, style, transition, trigger } from '@angular/animations';
     ])
   ]
 })
-export class NavComponent {
+export class NavComponent implements OnInit{
+
+  public isNavbarVisible: boolean = false;
+  private lastScrollTop: number = 0;
+  private scrollThreshold: number = 50;
+  isToggle: boolean = false;
+
   constructor(private translate: TranslateService) {
     translate.setDefaultLang('es');
   }
 
-  public isNavbarVisible: boolean = true;
-  private lastScrollTop: number = 0;
-  private scrollThreshold: number = 50;
-  isToggle: boolean = false;
+  ngOnInit(): void {
+    this.isNavbarVisible = true;
+  }
 
   @HostListener('window:scroll', [])
   onWindowScroll() {
@@ -39,22 +45,21 @@ export class NavComponent {
     }
   }
 
-  /* isHide():boolean {
-    if(this.isNavbarVisible) {
-      this.isNavbarVisible = false;
-    } else {
-      this.isNavbarVisible = true;
-    }
-    console.log(this.isNavbarVisible);
-    return this.isNavbarVisible;
-  } */
-
   isHide(): void {
-    this.isNavbarVisible = !this.isNavbarVisible;
+    this.isNavbarVisible = true;
+    //this.isNavbarVisible = !this.isNavbarVisible;
+
   }
 
   changeToggle() {
     this.isToggle = !this.isToggle;
+  }
+
+  closeCollapse() {
+    this.isNavbarVisible = false;
+    setTimeout(() => {
+      this.isNavbarVisible = true;
+    },1000);
   }
 
 }
