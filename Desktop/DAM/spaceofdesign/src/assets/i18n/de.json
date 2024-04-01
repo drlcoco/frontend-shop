@@ -4,25 +4,68 @@
     "Outdoor": "AUSSENBEREICH"
   },
   "Nav": {
-    "Home": "Startseite",
-    "Work": "Unsere Arbeit",
+    "Home": "Produkte",
+    "Work": "Wie wir arbeiten",
     "Contact": "Kontakt",
     "Languages": "Sprachen"
   },
   "Contact": {
-    "Title": "Kontaktiere uns",
+    "Title": "Kontaktformular",
     "Solutions": "Wir haben alle Lösungen für dich",
     "FullName": "Vollständiger Name",
     "Email": "E-Mail",
     "Phone": "Telefon",
-    "Message": "Nachricht"
-  },
+    "Message": "Nachricht",
+    "SuccessMessage": "Nachricht gesendet",
+    "ErrorMessage": "Fehler beim Senden der Nachricht",
+    "Send": "SENDEN",
+    "Required": "Das Feld ist erforderlich",
+    "Pattern": "Die Daten sind ungültig",
+    "Valid": "Gültige Daten",
+    "SendMessage": "Nachricht senden"
+},
   "Language": {
     "Languages": "Sprachen",
     "Header": "Wählen Sie Ihre Sprache"
   },
+  "Landing": {
+    "Zero": "Textildekoration",
+    "Textil": "Vorhänge und Maßanfertigung",
+    "One": "Raffrollos",
+    "Two": "Schiebepaneele",
+    "Three": "Holzjalousien",
+    "Four": "Aluminiumjalousien",
+    "Five": "Faltenvorhänge",
+    "Six": "Laden-Vorhänge",
+    "Seven": "Verdunklungsvorhänge",
+    "Eight": "Vertikale Lamellen",
+    "Nine": "Markisensysteme",
+    "Ten": "Kassettenmarkisen",
+    "Eleven": "Flachmarkisen",
+    "Twelve": "Ausfahrbare Markisen",
+    "TwentyOne": "Monoblock-Markisen",
+    "TwentyTwo": "Gelenkarm-Markisen",
+    "TwentyThree": "Kappen-Markisen",
+    "TwentyFour": "Motorisierte Markisen",
+    "TwentyFive": "Vertikale Markisen",
+    "TwentySeven": "LED-Beleuchtung Markisen",
+    "TwentyEight": "Chillout-Räume",
+    "TwentyNine": "Bioklimatische Pergolen",
+    "ThertyOne": "Drehbare Pergolen",
+    "ThertyTwo": "Photovoltaik-Pergolen",
+    "ThertyThree": "Gartenstrukturen",
+    "ThertyFour": "Gespannte Strukturen",
+    "ThertyFive": "Sonnenschirme",
+    "ThertySix": "Außenverkleidungen",
+    "ThertySeven": "Terrassenverkleidungen",
+    "ThertyEight": "Balkonverkleidungen",
+    "ThertyNine": "Schiebesysteme",
+    "Forty": "Klappsysteme",
+    "FortyOne": "Unsichtbare Rahmen-Systeme",
+    "FortyTwo": "Glasverkleidungen"
+  },
   "Work": {
-    "Title": "Unsere Arbeitsweise",
+    "Title": "Wie wir arbeiten",
     "Contact": "1. Erstkontakt",
     "Advice": "2. Beratung bei Ihnen zu Hause",
     "Installation": "3. Installation bei Ihnen zu Hause",
@@ -64,29 +107,45 @@
     "AdviceText": "Verwandeln Sie Ihre Außenbereiche in einzigartige und exklusive Orte mit unseren Glasvorhängen und verwirklichen Sie Ihre Design- und Komfortträume. Trauen Sie sich, sich mit der unvergleichlichen Eleganz unserer Verkleidungslösungen zu unterscheiden!"
   },
   "Sliding": {
-    "Title": "Schiebepaneele für die Innenraumdekoration",
-    "Contact": "Schiebepaneele für die textile Innenraumdekoration mit modernsten Materialien sind eine moderne und elegante Lösung, um jeden Raum zu verschönern und das Licht zu steuern. Dieses Produkt kombiniert zeitgenössisches Design mit fortschrittlicher Technologie und bietet eine vielseitige und funktionale Option für die Dekoration Ihres Zuhauses, wobei jedes Design nach Ihrem individuellen Geschmack angepasst wird.",
-    "Advice": "Materialien auf dem neuesten Stand der Technik: Schiebepaneele sind aus hochwertigen Materialien und fortschrittlicher Technologie gefertigt, die Langlebigkeit und Widerstandsfähigkeit garantieren. Diese Materialien können innovative Stoffe, flecken- und verschleißfeste, wie Fiberglas, Screen oder harzbeschichtete Leinenstoffe, umfassen.",
-    "Installation": "Einfache Wartung: Die Oberfläche der Schiebepaneele ist so konzipiert, dass sie leicht zu pflegen ist und eine ständige Reinigung überflüssig macht. Die Materialien stoßen Staub und Flecken ab, was eine gelegentliche Reinigung mit einem weichen, feuchten Tuch erleichtert.",
-    "Concept": "Motorisierte Systeme: Dieses Produkt verfügt über motorisierte Systeme, die eine bequeme und effiziente Steuerung der Paneele ermöglichen. Mit einer Fernbedienung oder sogar über mobile Anwendungen können Sie die Position der Paneele anpassen, um den Lichteinfall zu regulieren und mit einem einfachen Touch die Privatsphäre zu gewährleisten.",
-    "ContactText": "Personalisierung und Design: Schiebepaneele sind in einer Vielzahl von Farben, Mustern und Texturen erhältlich, um sich jedem Stil der Innenraumdekoration anzupassen. Darüber hinaus bieten sie Möglichkeiten zur Personalisierung durch den digitalen Druck, um individuellen Benutzerpräferenzen gerecht zu werden."
-  },
+    "Title": "Schiebepaneelen für die Innenraumdekoration",
+    "Titlesm": "Schiebepaneelen",
+    "Fibra": "Glasfaserpaneel",
+    "Screen": "Sonnenschutz-Schiebepaneel",
+    "Digital": "Digitaldruckpaneel",
+    "Lino": "Harzbeschichtetes Leinenpaneel",
+    "Contact": "Schiebepaneelen für die textile Innenraumdekoration mit hochmodernen Materialien sind eine moderne und elegante Lösung, um jeden Raum zu verschönern und das Licht zu kontrollieren. Dieses Produkt vereint zeitgenössisches Design mit fortschrittlicher Technologie und bietet eine vielseitige und funktionale Option für die Dekoration Ihres Zuhauses, wobei jedes Design nach Ihrem persönlichen Geschmack angepasst werden kann.",
+    "Advice": "Hochmoderne Materialien: Die Schiebepaneelen werden aus hochwertigen Materialien und fortschrittlicher Technologie hergestellt, die Langlebigkeit und Widerstandsfähigkeit garantieren. Diese Materialien können innovative, flecken- und abriebfeste Stoffe umfassen, die eine dauerhafte Lösung bieten, wie Glasfaser, Sonnenschutzstoffe oder harzbeschichtete Leinenstoffe.",
+    "Installation": "Einfache Wartung: Die Oberfläche der Schiebepaneelen ist so konzipiert, dass sie leicht zu reinigen ist, was die ständige Reinigung überflüssig macht. Die Materialien stoßen Staub und Flecken ab, was eine gelegentliche Reinigung mit einem weichen, feuchten Tuch erleichtert.",
+    "Concept": "Motorisierte Systeme: Dieses Produkt verfügt über motorisierte Systeme, die eine bequeme und effiziente Steuerung der Paneele ermöglichen. Mit einer Fernbedienung oder sogar über mobile Apps können Sie die Position der Paneele anpassen, um das Licht einzustellen und mit einer einfachen Berührung die Privatsphäre zu gewährleisten.",
+    "ContactText": "Individualisierung und Design: Die Schiebepaneelen sind in einer breiten Palette von Farben, Mustern und Texturen erhältlich, um jeden Einrichtungsstil anzupassen. Darüber hinaus bieten sie Individualisierungsoptionen durch den Digitaldruck, um den individuellen Vorlieben des Benutzers gerecht zu werden."
+},
   "Roller": {
-    "Title": "Raffrollos für die Innenraumdekoration",
-    "Contact": "Raffrollos für die textile Innenraumdekoration mit modernsten Materialien sind eine moderne und elegante Lösung, um jeden Raum zu verschönern und das Licht zu steuern. Dieses Produkt kombiniert zeitgenössisches Design mit fortschrittlicher Technologie und bietet eine vielseitige und funktionale Option für die Dekoration Ihres Zuhauses, wobei jedes Design nach Ihrem individuellen Geschmack angepasst wird.",
-    "Advice": "Materialien auf dem neuesten Stand der Technik: Raffrollos sind aus hochwertigen Materialien und fortschrittlicher Technologie gefertigt, die Langlebigkeit und Widerstandsfähigkeit garantieren. Diese Materialien können innovative Stoffe, flecken- und verschleißfeste, wie Fiberglas, Screen oder harzbeschichtete Leinenstoffe, umfassen.",
-    "Installation": "Einfache Wartung: Die Oberfläche der Raffrollos ist so konzipiert, dass sie leicht zu pflegen ist und eine ständige Reinigung überflüssig macht. Die Materialien stoßen Staub und Flecken ab, was eine gelegentliche Reinigung mit einem weichen, feuchten Tuch erleichtert.",
-    "Concept": "Motorisierte Systeme: Dieses Produkt verfügt über motorisierte Systeme, die eine bequeme und effiziente Steuerung der Paneele ermöglichen. Mit einer Fernbedienung oder sogar über mobile Anwendungen können Sie die Position der Paneele anpassen, um den Lichteinfall zu regulieren und mit einem einfachen Touch die Privatsphäre zu gewährleisten.",
-    "ContactText": "Personalisierung und Design: Raffrollos sind in einer Vielzahl von Farben, Mustern und Texturen erhältlich, um sich jedem Stil der Innenraumdekoration anzupassen. Darüber hinaus bieten sie Möglichkeiten zur Personalisierung durch den digitalen Druck, um individuellen Benutzerpräferenzen gerecht zu werden."
-  },
+    "Title": "Rollladen für die Innenraumdekoration",
+    "Titlesm": "Rollladen",
+    "Crystal": "Swarovski-Kristall",
+    "Night": "Tag-Nacht-Rollladen",
+    "Lino": "Screen- oder Leinen-Rollladen",
+    "Digital": "Digitaldruck",
+    "Contact": "Rollläden für die textile Innenraumdekoration mit hochmodernen Materialien sind eine moderne und elegante Lösung, um jeden Raum zu verschönern und das Licht zu kontrollieren. Dieses Produkt vereint zeitgenössisches Design mit fortschrittlicher Technologie und bietet eine vielseitige und funktionale Option für die Dekoration Ihres Zuhauses, wobei jedes Design nach Ihrem persönlichen Geschmack angepasst werden kann.",
+    "Advice": "Hochmoderne Materialien: Rollläden werden aus hochwertigen Materialien und fortschrittlicher Technologie hergestellt, die Langlebigkeit und Widerstandsfähigkeit garantieren. Diese Materialien können innovative, flecken- und abriebfeste Stoffe umfassen, die eine dauerhafte Lösung bieten.",
+    "Installation": "Einfache Wartung: Die Oberfläche der Rollläden ist so konzipiert, dass sie leicht zu reinigen ist, was die ständige Reinigung überflüssig macht. Die Materialien stoßen Staub und Flecken ab, was eine gelegentliche Reinigung mit einem weichen, feuchten Tuch erleichtert.",
+    "Concept": "Motorisierte Systeme: Dieses Produkt verfügt über motorisierte Systeme, die eine bequeme und effiziente Steuerung der Paneele ermöglichen. Mit einer Fernbedienung oder sogar über mobile Apps können Sie die Position der Paneele anpassen, um das Licht einzustellen und mit einer einfachen Berührung die Privatsphäre zu gewährleisten.",
+    "ContactText": "Individualisierung und Design: Rollläden sind in einer breiten Palette von Farben, Mustern und Texturen erhältlich, um jeden Einrichtungsstil anzupassen. Darüber hinaus bieten sie Individualisierungsoptionen durch den Digitaldruck, um den individuellen Vorlieben des Benutzers gerecht zu werden."
+},
   "Slated": {
-    "Title": "Vertikale Lamellenvorhänge für die Innendekoration.",
-    "Contact": "Unser Produkt von vertikalen Lamellenvorhängen kombiniert modernste Technologie mit hochwertigen Materialien, um Ihnen ein unvergleichliches Erlebnis des Sonnenschutzes zu bieten. Hergestellt aus Materialien wie Screen, Fiberglas und natürlichen Stoffen bieten diese Vorhänge effektiven Schutz vor Sonnenlicht und schaffen eine gemütliche und komfortable Innenatmosphäre.",
-    "Advice": "Was unsere Vorhänge wirklich einzigartig macht, ist die Möglichkeit, sie durch den digitalen Druck zu personalisieren. Möchten Sie Ihren Vorhängen einen Hauch von Farbe oder ein individuelles Design hinzufügen? Mit unserer Option für den digitalen Druck können Sie Ihre Vorhänge in ein wahres Kunstwerk verwandeln, das Ihren Stil und Ihre Persönlichkeit widerspiegelt.",
-    "Installation": "Aber das ist noch nicht alles. Wir stellen das Duomo-System vor, eine revolutionäre Innovation, die Leichtigkeit und Eleganz in einem Produkt vereint. Das Duomo-System ist unglaublich leicht, was die Installation und Handhabung erleichtert, aber es opfert nichts in Bezug auf Stil und Raffinesse. Mit Duomo erhalten Sie das Beste aus beiden Welten: Funktionalität und Schönheit."
+    "Title": "Vertikale Lamellenvorhänge zur Innenraumgestaltung",
+    "Titlesm": "Vertikale Lamellen",
+    "Duomo": "Duomo-System",
+    "Ondas": "Vertikal mit Wellen",
+    "Bandas": "Vertikal mit Bändern",
+    "Digital": "Digitale Drucke",
+    "Contact": "Unser Produkt der vertikalen Lamellenvorhänge kombiniert modernste Technologie mit hochwertigen Materialien, um Ihnen ein unvergleichliches Erlebnis des Sonnenschutzes zu bieten. Hergestellt aus Materialien wie Screen, Glasfaser und natürlichen Stoffen bieten diese Vorhänge einen effektiven Schutz vor Sonnenstrahlen und schaffen gleichzeitig eine gemütliche und komfortable Innenraumatmosphäre.",
+    "Advice": "Was unsere Vorhänge wirklich einzigartig macht, ist die Möglichkeit der Individualisierung durch den digitalen Druck. Möchten Sie Ihren Vorhängen eine farbige Note oder ein individuelles Design hinzufügen? Mit unserer Option für den digitalen Druck können Sie Ihre Vorhänge in ein echtes Kunstwerk verwandeln, das Ihren Stil und Ihre Persönlichkeit widerspiegelt.",
+    "Installation": "Aber das ist noch nicht alles. Wir präsentieren das Duomo-System, eine revolutionäre Innovation, die Leichtigkeit und Eleganz in einem einzigen Produkt vereint. Das Duomo-System ist unglaublich leicht, was die Installation und Handhabung erleichtert, aber dabei nichts an Stil und Raffinesse einbüßt. Mit Duomo erhalten Sie das Beste aus beiden Welten: Funktionalität und Schönheit."
   },
   "Venetian": {
     "Title": "Holz- oder Aluminium-Jalousien zur Innendekoration",
+    "Titlesm": "Holz- oder Aluminium-Jalousien",
     "Contact": "Entdecken Sie Eleganz und Komfort mit unseren dekorativen venezianischen Jalousien für den Innenbereich aus Holz oder Aluminium!",
     "Advice": "In unserer Kollektion bieten wir eine unvergleichliche dekorative Lösung. Unsere venezianischen Jalousien verleihen nicht nur jedem Raum eine warme und gemütliche Note, sondern sind auch unglaublich einfach zu pflegen, was sie zur perfekten Wahl für Ihr Zuhause oder Büro macht.",
     "Installation": "Venezianische Jalousien aus Holz oder Aluminium werden aus den besten Materialien hergestellt, die ihre Schönheit und Textur betonen. Diese Materialien werden sorgfältig behandelt, um ihre Beständigkeit im Laufe der Zeit zu gewährleisten, während ihre glatte und luxuriöse Oberfläche eine gemütliche und elegante Atmosphäre in jedem Raum schafft. Zudem sind Holz und Aluminium bekannt für ihre einfache Reinigung und Pflege, sodass Sie ihre Schönheit viele Jahre lang mit minimalem Aufwand genießen können.",
@@ -94,6 +153,7 @@
   },
   "Pleated": {
     "Title": "Plissierte Vorhänge für die Inneneinrichtung",
+    "Titlesm": "Plisseevorhänge",
     "Contact": "Plissierte Vorhänge sind eine elegante und funktionale Lösung für die Inneneinrichtung und den Sonnenschutz. Sie zeichnen sich durch ihr faltbares Design aus, das es ermöglicht, die Menge an einfallendem Licht einfach anzupassen und je nach Bedarf Privatsphäre zu bieten.",
     "Advice": "Eigenschaften:",
     "Installation": "Vielfalt an Materialien: Diese Vorhänge sind in einer breiten Palette von Materialien erhältlich, darunter transparente, halbtransparente und undurchsichtige Stoffe sowie Optionen, die UV-Schutz bieten, um Möbel zu erhalten und Blendung zu verhindern.",
@@ -102,9 +162,20 @@
   },
   "Textile": {
     "Title": "Textilvorhänge und Konfektion für die Innendekoration",
+    "Titlesm": "Vorhänge und Konfektion",
     "Contact": "Wir bieten eine breite Palette von Stoffen an, die wir in unseren eigenen Werkstätten mit verschiedenen Oberflächen und Grade der Sonnenundurchlässigkeit verarbeiten. Wir kombinieren gerne technische Vorhänge mit Rollos oder Schiebepaneelen und ergänzen sie mit natürlichen Stoffen, um unseren Räumen eine sehr beruhigende Wärme mit einem einzigartigen Stil und Design zu verleihen.",
     "Advice": "Zusätzlich sind unsere Montagesysteme mit den innovativsten Materialien ausgestattet, und wir achten auf jedes Detail unserer Verarbeitung. Unsere Produktpalette zeichnet sich durch ihre Vielseitigkeit und Anpassungsfähigkeit aus. Von Farben und Mustern bis hin zu Größen und Stilen können Sie einen wirklich einzigartigen und persönlichen Raum schaffen, der Ihren Stil und Ihre Persönlichkeit widerspiegelt.",
     "Installation": "Unsere Kollektion von Stoffen für Vorhänge und Konfektion vereint neueste Technologie mit herausragendem Design, um Ihnen ein unvergleichliches Erlebnis bei der Innendekoration zu bieten. Mit der Möglichkeit, unsere Systeme zu motorisieren, und einer breiten Palette von Anpassungsoptionen sind wir zuversichtlich, dass Sie alles finden werden, was Sie brauchen, um Ihre Räume mit Stil und Funktionalität zu verwandeln."
+  },
+  "AwningSystem": {
+    "Title": "Sonnenschutzsysteme",
+    "Titlesm": "Sonnenschutzsysteme",
+    "Chest": "Kassettenmarkise",
+    "Retractable": "Ausfahrbare Markise",
+    "Flat": "Flache Markise",
+    "Vertical": "Vertikale Markise",
+    "Led": "Sonnenschirme",
+    "Traditional": "Traditionelle Markise"
   },
   "CustomStructures": {
     "Title": "MAßGEFERTIGTE STRUKTUREN FÜR GÄRTEN UND TERRASSEN",
@@ -184,5 +255,37 @@
     "Advice": "Das Kappensystem ist eine charmante und zeitlose Wahl, die jedem Fassaden einen Hauch von Stil verleiht. Ihr gebogenes Design schafft ein unverwechselbares und einladendes Aussehen, während ihre robuste Struktur effektiven Schutz vor Sonne und Regen bietet. Dieses Modell ist besonders geeignet für kleine Fenster in der Höhe, da sein kompaktes Design perfekt in enge Räume passt.",
     "Installation": "Das Modell mit festem Arm bietet andererseits eine praktische und vielseitige Lösung für Ihre Sonnenschutzbedürfnisse. Dank seines modularen und anpassbaren Designs kann es einfach an einer Vielzahl von Orten installiert werden, einschließlich Fenstern in der Höhe. Mit seinem System aus festen Armen bietet diese Markise eine stabile und dauerhafte Abdeckung und garantiert den Komfort und Schutz, den Sie benötigen."
   },
+  "Parasols": {
+    "Title": "SONNENSCHIRME FÜR GÄRTEN UND TERRASSEN",
+    "Titlesm": "SONNENSCHIRME FÜR DEN GARTEN",
+    "Contact": "HAUPTMERKMALE:",
+    "Advice": "1. Fortschrittlicher UV-Schutz: Unser Sonnenschirm ist aus hochwertigen Stoffen gefertigt, die UV-Strahlen effektiv blockieren.",
+    "Installation": "2. Überlegene Haltbarkeit: Hergestellt aus wetter- und korrosionsbeständigen Materialien, sind sie für anspruchsvollste Bedingungen ausgelegt.",
+    "Concept": "3. Intelligentes Design: Mit einem leicht zu bedienenden Öffnungs- und Schließmechanismus, schnellem Aufbau und kompakter Schließung.",
+    "ContactText": "4. Anpassungsoptionen: Breite Palette von Farben und Materialien.",
+    "Five": "5. Optionales Zubehör: Erweitern Sie Ihr Outdoor-Erlebnis mit unseren optionalen Zubehörteilen wie integrierten LED-Lichtern, die eine warme Atmosphäre schaffen.",
+    "Six": "6. Qualitätsgarantie: Unterstützt durch unsere Qualitätsgarantie, können Sie auf Langlebigkeit und überlegene Leistung in jeder Umgebung vertrauen.",
+    "Seven": "7. Kundenerfahrung: Unser Ziel ist es, Ihnen die bestmögliche Kundenerfahrung zu bieten. Von der Bestellung bis zur kontinuierlichen Nutzung stehen wir Ihnen zur Verfügung, um alle Ihre Bedürfnisse und Fragen zu erfüllen."
+  },
+  "Rotating": {
+    "Title": "DREHARE PERGOLAS",
+    "Titlesm": "DREHARE PERGOLA",
+    "Contact": "Entdecken Sie die innovative drehbare Pergola, die perfekte Wahl, um Ihre Außenbereiche in eine Oase einzigartigen Designs und Komforts zu verwandeln!",
+    "Advice": "HAUPTMERKMALE:",
+    "Installation": "1. DREHÖFFNUNG: Das markante Merkmal dieser Pergola ist ihr drehbares Öffnungssystem. Dies ermöglicht es, dass die Pergolabespannung leicht angepasst werden kann, um die Menge an Sonnenlicht zu kontrollieren.",
+    "Concept": "2. LANGLEBIGKEIT UND WIDERSTANDSFÄHIGKEIT: Hergestellt aus hochwertigen und langlebigen Materialien ist die Pergola so konzipiert, dass sie widrigen Wetterbedingungen wie Regen, Wind und langanhaltender Sonneneinstrahlung standhält, ohne ihre strukturelle Integrität oder Ästhetik zu beeinträchtigen.",
+    "ContactText": "3. MODERNES UND ÄSTHETISCHES DESIGN: Das zeitgenössische Design der Pergola ergänzt eine Vielzahl von architektonischen und dekorativen Stilen. Ihr elegantes und sauberes Erscheinungsbild verleiht dem Außenbereich eine Note von Raffinesse und macht ihn zu einem attraktiven und einladenden Ort für Unterhaltung und Entspannung.",
+    "Four": "4. ANPASSUNG: Die Pergola ist in einer Vielzahl von Größen, Ausführungen und Anpassungsoptionen erhältlich, um den individuellen Vorlieben und Bedürfnissen der Benutzer gerecht zu werden. Von Farben bis hin zu Materialien haben Kunden die Möglichkeit, ihre Pergola entsprechend ihren Geschmacks- und spezifischen Anforderungen anzupassen.",
+    "Five": "5. EINFACHE INSTALLATION UND WARTUNG: Die Pergola lässt sich relativ einfach installieren und erfordert nur minimale Wartung. Die verwendeten Materialien sind so konzipiert, dass sie Korrosion und Verfall widerstehen, was eine lange Lebensdauer bei minimaler Wartung gewährleistet."
+  },
+  "About": {
+    "Title": "UNSER UNTERNEHMEN",
+    "Titlesm": "UNSER UNTERNEHMEN",
+    "Contact": "Die Geschichte dieses Textildesign-Unternehmens, das 1970 gegründet wurde, ist eine Geschichte von Hingabe, Leidenschaft und ständiger Weiterentwicklung. Gegründet zu einer Zeit, als das Innenarchitektur-Design einen signifikanten Wandel durchlief und die Nachfrage nach hochwertigen Dekorationsprodukten stieg, entstand dieses Unternehmen als Antwort auf diese wachsende Notwendigkeit.",
+    "Advice": "Von Anfang an zeichnete sich das Unternehmen durch sein Engagement für Qualität und elegantes Design aus. Mit einer klaren Vision und einer sorgfältigen Aufmerksamkeit für Details gewann es schnell einen Ruf als führender Anbieter im Textildesign-Markt. Die Produkte des Unternehmens waren nicht nur funktional, sondern zeichneten sich auch durch Stil und Raffinesse aus.",
+    "Installation": "Im Laufe der Zeit hat sich das Unternehmen an die Veränderungen im Markt und an neue Trends angepasst. Einer der bedeutendsten Meilensteine in seiner Entwicklung war die Ausweitung auf den Bereich des externen Sonnenschutzes. Angesichts der wachsenden Bedeutung gut gestalteter und vor Sonneneinstrahlung geschützter Außenbereiche erweiterte das Unternehmen seine Produktpalette, um Sonnenschutzlösungen anzubieten, die dieselben Qualitäts- und Eleganzstandards wie seine Innenraumtextilprodukte erfüllen.",
+    "Concept": "Die Nachfolger des Unternehmens, die sich des geerbten Erbes bewusst waren, verpflichteten sich, den Ruf der Marke für Exzellenz zu erhalten und zu verbessern. Sie setzten ihre Investitionen in Forschung und Entwicklung neuer Produkte und Technologien fort, um sicherzustellen, dass jedes Produkt, das das Siegel des Unternehmens trug, für Qualität, Langlebigkeit und Stil stand.",
+    "ContactText": "Im Laufe der Jahre hat sich das Unternehmen als Marktführer im Bereich Textildesign und externer Sonnenschutz etabliert. Sein Name steht für Innovation, Eleganz und Zuverlässigkeit. Durch jahrzehntelange harte Arbeit und unerschütterliches Engagement für Exzellenz hat dieses Unternehmen eine unauslöschliche Marke in der Welt des Innen- und Außendesigns hinterlassen."
+    },
   "HELLO": "Hallo"
 }

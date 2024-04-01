@@ -4,25 +4,68 @@
     "Outdoor": "EXTERIORES"
   },
   "Nav": {
-    "Home": "Inicio",
-    "Work": "Nuestro trabajo",
+    "Home": "Productos",
+    "Work": "Cómo trabajamos",
     "Contact": "Contacto",
     "Languages": "Idiomas"
   },
   "Contact": {
-    "Title": "Contacta con nosotros",
+    "Title": "Formulario de contacto",
     "Solutions": "Tenemos todas las soluciones para tí",
     "FullName": "Nombre completo",
     "Email": "Correo electrónico",
     "Phone": "Teléfono",
-    "Message": "Mensaje"
+    "Message": "Mensaje",
+    "SuccessMessage": "Mensaje enviado",
+    "ErrorMessage" : "Error enviando mensaje",
+    "Send": "ENVIAR",
+    "Required" : "El campo es requerido",
+    "Pattern": "Los datos no son válidos",
+    "Valid": "Datos válidos",
+    "SendMessage": "Envía un mensaje"
   },
   "Language": {
     "Languages": "Idiomas",
     "Header": "Escoja su idioma"
   },
+  "Landing": {
+    "Zero": "Decoración textil",
+    "Textil": "Cortinaje y confección",
+    "One": "Cortinas enrollables",
+    "Two": "Paneles deslizables",
+    "Three": "Venecianas de madera",
+    "Four": "Venecianas de aluminio",
+    "Five": "Cortinas plisadas",
+    "Six": "Cortinar stor",
+    "Seven": "Cortinas opacantes",
+    "Eight": "Lamas verticales",
+    "Nine": "Sistemas de toldos",
+    "Ten": "Toldos cofre",
+    "Eleven": "Toldos planos",
+    "Twelve": "Toldos retráctiles",
+    "TwentyOne": "Toldos monoblock",
+    "TwentyTwo": "Toldos brazo articulado",
+    "TwentyThree": "Toldos capota",
+    "TwentyFour": "Toldos motorizados",
+    "TwentyFive": "Toldos verticales",
+    "TwentySeven": "Toldos iluminación led",
+    "TwentyEight": "Espacios Chillout",
+    "TwentyNine": "Pérgolas bioclimáticas",
+    "ThertyOne": "Pérgolas giratorias",
+    "ThertyTwo": "Pérgolas fotovoltaicas",
+    "ThertyThree": "Estructuras de jardín",
+    "ThertyFour": "Estructuras tensadas",
+    "ThertyFive": "Parasoles",
+    "ThertySix": "Cerramientos exteriores",
+    "ThertySeven": "Cerramientos terrazas",
+    "ThertyEight": "Cerramientos balcones",
+    "ThertyNine": "Sistemas deslizables",
+    "Forty": "Sistemas abatibles",
+    "FortyOne": "Sistemas marco invisible",
+    "FortyTwo": "Cerramientos cristal"
+  },
   "Work": {
-    "Title": "Nuestro método de trabajo",
+    "Title": "Cómo trabajamos",
     "Contact": "1.Contacto inicial",
     "Advice": "2.Asesoramiento en su domicilio",
     "Installation": "3.Instalación en su domicilio",
@@ -77,8 +120,8 @@
     "ContactText":"Personalización y Diseño: Los Paneles Deslizantes están disponibles en una amplia gama de colores, estampados y texturas para adaptarse a cualquier estilo de decoración de interiores. Además, ofrecen opciones de personalización a través de la impresión digital para satisfacer las preferencias individuales del usuario."
   },
   "Roller": {
-    "Title": "Cortinas enrrollables para la decoración de interiores",
-    "Titlesm": "Cortinas enrrollables",
+    "Title": "Cortinas enrollables para la decoración de interiores",
+    "Titlesm": "Cortinas enrollables",
     "Crystal": "Cristal de Swarovski",
     "Night": "Enrollable noche y día",
     "Lino": "Enrollable screen o lino",
@@ -131,7 +174,7 @@
     "Retractable": "Toldo retráctil",
     "Flat": "Toldo plano",
     "Vertical": "Toldo vertical",
-    "Led": "Iluminación led",
+    "Led": "Parasoles",
     "Traditional": "Toldo tradicional"
   },
   "CustomStructures": {
@@ -211,6 +254,38 @@
     "Contact": "¡Descubre la elegancia y funcionalidad de nuestros toldos tradicionales para exteriores, perfectos para pequeñas ventanas en altura! Ofrecemos una amplia gama de modelos, incluyendo el clásico modelo capota y el versátil modelo de brazo punto fijo, diseñados para satisfacer todas tus necesidades de protección solar y embellecimiento de tu hogar.",
     "Advice": "El modelo capota es una opción encantadora y atemporal que agrega un toque de estilo a cualquier fachada. Su diseño curvo crea un aspecto distintivo y acogedor, mientras que su estructura resistente garantiza una protección efectiva contra el sol y la lluvia. Este modelo es especialmente adecuado para pequeñas ventanas en altura, ya que su diseño compacto se adapta perfectamente a espacios reducidos.",
     "Installation": "Por otro lado, el modelo de brazo punto fijo ofrece una solución práctica y versátil para tus necesidades de protección solar. Su diseño modular y ajustable permite una instalación sencilla en una variedad de ubicaciones, incluyendo ventanas en altura. Con su sistema de brazos fijos, este toldo proporciona una cobertura estable y duradera, garantizando la comodidad y la protección que necesitas."
+  },
+  "Parasols": {
+    "Title": "PARASOLES PARA JARDINES Y TERRAZAS",
+    "Titlesm": "PARASOLES PARA JARDÍN",
+    "Contact": "CARACTERÍSTICAS PRINCIPALES:",
+    "Advice": "1.Protección UV Avanzada: Nuestro parasol está diseñado con tejidos de alta calidad que bloquean eficazmente los rayos ultravioletas.",
+    "Installation": "2.Durabilidad Superior: Construido con materiales resistentes a la intemperie y a la corrosión, están diseñados para soportar las condiciones más exigentes.",
+    "Concept": "3.Diseño Inteligente: Con un mecanismo de apertura y cierre fácil de usar, desplegado rápido y cierre de manera compacta.",
+    "ContactText": "4.Opciones de Personalización:  Amplia gama de colores y materiales.",
+    "Five": "5.Accesorios Opcionales: Potencia tu experiencia al aire libre con nuestros accesorios opcionales, como luces LED integradas, generando ambientes cálidos.",
+    "Six": "6.Calidad Garantizada: Respaldo por nuestra garantía de calidad, puedes confiar en la durabilidad y el rendimiento superior en cualquier entorno.",
+    "Seven": "7.Experiencia del Cliente: Nuestro compromiso es brindarte la mejor experiencia del cliente, desde la compra hasta el uso continuo, estamos aquí para satisfacer todas tus necesidades y preguntas."
+  },
+  "Rotating": {
+    "Title": "PÉRGOLAS DE SISTEMA GIRATORIO",
+    "Titlesm": "PÉRGOLA GIRATORIA",
+    "Contact": "Descubre la innovadora pérgola de apertura giratoria, la elección perfecta para transformar tus espacios exteriores en un oasis de diseño y confort único!.",
+    "Advice": "CARATERÍSTICAS PRINCIPALES:",
+    "Installation": "1.APERTURA GIRATORIA: La característica distintiva de esta pérgola es su sistema de apertura giratoria.  esto permite que la lona de la Pérgola se ajuste fácilmente, permitiendo controlar la cantidad de  luz solar.",
+    "Concept": "2.DURABILIDAD Y RESISTENCIA: Fabricada con materiales de alta calidad y durabilidad, la pérgola está diseñada para resistir condiciones climáticas adversas, como lluvia, viento y exposición prolongada al sol, sin comprometer su integridad estructural o estética.",
+    "ContactText": "3.DISEÑO MODERNO Y ESTÉTICO: El diseño contemporáneo de la Pérgola complementa una amplia gana de estilos arquitectónicos y decorativos. Su aspecto elegante y limpio agrega un toque de sofisticación al espacio exterior. convirtíendolo en un lugar atractivo y acogedor para el entretenimiento y el relax.",
+    "Four": "4.PERSONALIZACIÓN: La Pérgola está disponible en una variedad de tamaños, acabados y opciones de personalización para adaptarse a las preferencias y necesidades individuales de los usuarios. Desde colores hasta materiales, los clientes tienen la posisibiada de personalizar su Pérgola según sus gustos y requisitos específicos.",
+    "Five": "5.FÁCIL INSTALACIÓN Y MANTENIMIENTO: La Pérgola se instala de manera relativamente sencilla y su mantenimiento es mínimo. Los materiales utilizados están diseñados para resistir la corrosión y el deterioro, lo que garantiza una larga vida útil con un mantenimiento mínimo."
+  },
+  "About": {
+    "Title": "NUESTRA EMPRESA",
+    "Titlesm": "NUESTRA EMPRESA",
+    "Contact": "La historia de esta empresa de decoración textil que se inició en 1970 es un relato de dedicación, pasión y evolución constante. Fundada en un momento en el que el diseño de interiores estaba experimentando un cambio significativo y la demanda de productos de decoración de alta calidad estaba en aumento, esta empresa surgió como una respuesta a esa necesidad creciente.",
+    "Advice": "Desde sus inicios, la empresa se destacó por su compromiso con la calidad y el diseño elegante. Con una visión clara y una atención meticulosa a los detalles, se ganó rápidamente una reputación como un referente en el mercado de decoración textil. Los productos fabricados por la empresa no solo eran funcionales, sino que también se distinguían por su estilo y sofisticación.",
+    "Installation": "Con el tiempo, la empresa se adaptó a los cambios en el mercado y a las nuevas tendencias. Uno de los hitos más significativos en su evolución fue la expansión hacia la protección solar exterior, espacio al que ahora la empresa le dedica  especial atención reconociendo la creciente importancia de espacios al aire libre bien diseñados y protegidos del sol, la empresa amplió su línea de productos para incluir soluciones de protección solar que mantuvieran los mismos estándares de calidad y elegancia que sus productos textiles interiores.",
+    "Concept": "Los sucesores de la empresa, conscientes del legado que habían heredado, se comprometieron a mantener y mejorar la reputación de excelencia de la marca. Continuaron invirtiendo en la investigación y el desarrollo de nuevos productos y tecnologías, asegurándose de que cada artículo que llevaba el sello de la empresa fuera sinónimo de calidad, durabilidad y estilo.",
+    "ContactText": "Con el paso de los años, la empresa ha logrado consolidarse como líder en el sector de la decoración textil y la protección solar exterior. Su nombre es sinónimo de innovación, elegancia y fiabilidad. A través de décadas de trabajo arduo y un compromiso inquebrantable con la excelencia, esta empresa ha dejado una marca indeleble en el mundo del diseño de interiores y exteriores."
   },
   "HELLO": "Hola"
 }

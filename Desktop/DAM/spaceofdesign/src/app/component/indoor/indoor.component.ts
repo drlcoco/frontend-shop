@@ -3,6 +3,7 @@ import { Component } from '@angular/core';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { FooterSlimComponent } from '../footer-slim/footer-slim.component';
 import { RouterModule } from '@angular/router';
+import { ClientService } from '../../service/client.service';
 
 @Component({
   selector: 'app-indoor',
@@ -13,8 +14,8 @@ import { RouterModule } from '@angular/router';
 })
 export class IndoorComponent {
 
-  constructor(private translate: TranslateService) {
-    translate.setDefaultLang('es');
+  constructor(private translate: TranslateService, private service: ClientService) {
+    translate.setDefaultLang(this.service.language);
   }
 
 }

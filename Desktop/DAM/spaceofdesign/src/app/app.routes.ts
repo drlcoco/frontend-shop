@@ -21,6 +21,9 @@ import { OutdoorVerticalComponent } from './component/outdoor-vertical/outdoor-v
 import { TraditionalComponent } from './component/traditional/traditional.component';
 import { IndoorComponent } from './component/indoor/indoor.component';
 import { OutdoorComponent } from './component/outdoor/outdoor.component';
+import { ParasolsComponent } from './component/parasols/parasols.component';
+import { RotatingComponent } from './component/rotating/rotating.component';
+import { CrystalComponent } from './component/crystal/crystal.component';
 
 export const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -45,4 +48,7 @@ export const routes: Routes = [
   { path: 'traditional', component: TraditionalComponent },
   { path: 'indoor', component: IndoorComponent },
   { path: 'outdoor', component: OutdoorComponent },
+  { path: 'parasols', component: ParasolsComponent },
+  { path: 'rotating', component: RotatingComponent },
+  { path: 'crystal', component: CrystalComponent }
 ];

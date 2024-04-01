@@ -1,68 +1,160 @@
 <main class="container-fluid d-flex justify-content-center align-items-center mx-0">
   <section class="row justify-content-center align-items-center mx-0">
-    <div class="col-12 col-md-6 p-0 m-0 left">
+    <div class="col-6 p-0 m-0 left d-none d-lg-block mb-4 w-100">
       <img @animateList
-          src="/assets/image/sps.jpeg"
-          class="img-fluid w-100 h-100"
+          src="./assets/image/sps.jpeg"
+          class="img-fluid w-100 h-100 mb-4"
           alt="landing page"
       />
     </div>
-    <div class="col-12 col-md-6 p-0 d-flex flex-column justify-content-around align-items-center right text-center mx-0">
-      <div class="row m-0">
-        <a class="col-12 mb-2" [routerLink]="['indoor']">
-          <h1 class="text-center fw-bold fst-italic text-decoration-underline gold">{{"Home.Indoor" | translate}}</h1>
-        </a>
-        <div class="col-12 d-flex justify-content-center flex-start">
-          <a class="col-6 d-flex justify-content-center align-items-center rounded-image-container" [routerLink]="['indoor']">
+    <div class="col-12 col-lg-6 p-0 m-0 leftmd d-block mb-5 d-lg-none mb-4">
+      <img @animateList
+          src="./assets/image/sps.jpeg"
+          class="img-fluid w-100 mb-4"
+          alt="landing page"
+      />
+    </div>
+    <div class="col-12 col-lg-6 p-0 d-flex flex-column justify-content-around align-items-center right text-center mx-0 mt-md-5">
+      <div class="row m-0 mt-md-4 d-none d-lg-block w-100">
+        <div class="col-12 d-flex justify-content-center flex-start mb-5">
+          <a class="col-12 col-lg-6 d-flex justify-content-center align-items-center rounded-image-container mx-auto w-100" [routerLink]="['indoor']">
             <img
-              src="/assets/image/diapositiva4/POINTSvertical.jpg"
-              class="img-fluid  flyr"
+              src="./assets/image/sfa.png"
+              class="img-fluid flyr border border-warning"
               alt="landing page"
             />
-            <div class="overlay-text txt backGold mb-4 w-75 border border-warning">
-              <h6 class="mb-0 p-2 text-truncate">{{ "Indoor.SlidingPanels" | translate }}</h6>
+            <div class="overlay-text txtLandingTitle mb-4 border border-warning">
+              <p class="mb-0 p-2 imgTileLg gold">{{ "Landing.Zero" | translate | uppercase}}</p>
+            </div>
+            <div class="text-start p-2 overlay-text txtLanding backGoldLanding mb-4 border border-warning">
+              <p class="p-0 m-0 imgTileLg point">{{ "Landing.Textil" | translate | uppercase }}</p>
+              <p class="p-0 m-0 imgTileLg point">{{ "Landing.One" | translate | uppercase }}</p>
+              <p class="p-0 m-0 imgTileLg point">{{ "Landing.Two" | translate | uppercase }}</p>
+              <p class="p-0 m-0 imgTileLg point">{{ "Landing.Three" | translate | uppercase }}</p>
+              <p class="p-0 m-0 imgTileLg point">{{ "Landing.Four" | translate | uppercase }}</p>
+              <p class="p-0 m-0 imgTileLg point">{{ "Landing.Five" | translate | uppercase }}</p>
+              <p class="p-0 m-0 imgTileLg point">{{ "Landing.Six" | translate | uppercase }}</p>
+              <p class="p-0 m-0 imgTileLg point">{{ "Landing.Seven" | translate | uppercase }}</p>
+              <p class="p-0 m-0 imgTileLg point">{{ "Landing.Eight" | translate | uppercase }}</p>
             </div>
           </a>
-          <a class="col-6 d-flex justify-content-center align-items-center rounded-image-container" [routerLink]="['indoor']">
+        </div>
+        <div class="col-12 d-flex justify-content-center flex-start mb-5">
+          <a class="col-12 col-lg-6 d-flex justify-content-center align-items-center rounded-image-container mx-auto w-100" [routerLink]="['outdoor']">
             <img
-              src="/assets/image/diapositiva4/ondamadera.png"
-              class="img-fluid  flyr"
+              src="./assets/image/visillostres.png"
+              class="img-fluid flyr border border-warning"
               alt="landing page"
             />
-            <div class="overlay-text txt backGold mb-4 w-75 border border-warning">
-              <h6 class="mb-0 p-2 text-truncate">{{ "Indoor.Textilesm" | translate }}</h6>
+            <div class="overlay-text txtLandingTitle mb-4 border border-warning">
+              <p class="mb-0 p-2 imgTileLg gold">{{ "Landing.Nine" | translate | uppercase}}</p>
+            </div>
+            <div class="text-start p-2 overlay-text txtLanding backGoldLanding mb-4 border border-warning">
+              <p class="p-0 m-0 imgTileLg point">{{ "Landing.Ten" | translate | uppercase }}</p>
+              <p class="p-0 m-0 imgTileLg point">{{ "Landing.Eleven" | translate | uppercase }}</p>
+              <p class="p-0 m-0 imgTileLg point">{{ "Landing.Twelve" | translate | uppercase }}</p>
+              <p class="p-0 m-0 imgTileLg point">{{ "Landing.TwentyOne" | translate | uppercase }}</p>
+              <p class="p-0 m-0 imgTileLg point">{{ "Landing.TwentyTwo" | translate | uppercase }}</p>
+              <p class="p-0 m-0 imgTileLg point">{{ "Landing.TwentyThree" | translate | uppercase }}</p>
+              <p class="p-0 m-0 imgTileLg point">{{ "Landing.TwentyFour" | translate | uppercase }}</p>
+              <p class="p-0 m-0 imgTileLg point">{{ "Landing.TwentyFive" | translate | uppercase }}</p>
+              <p class="p-0 m-0 imgTileLg point">{{ "Landing.TwentySeven" | translate | uppercase }}</p>
             </div>
           </a>
         </div>
       </div>
-      <div class="row m-0">
-        <a class="col-12 mb-2" [routerLink]="['outdoor']">
-          <h1 class="text-center fw-bold fst-italic text-decoration-underline gold">{{"Home.Outdoor" | translate}}</h1>
-        </a>
-        <div class="col-12 d-flex justify-content-center flex-start">
-          <a class="col-6 d-flex justify-content-center align-items-center rounded-image-container" [routerLink]="['outdoor']">
+      <div class="row m-0 mt-4 d-lg-none">
+        <div class="col-12 d-flex justify-content-center flex-start mb-5">
+          <a class="col-12 col-sm-12 col-md-6 col-lg-6 d-flex justify-content-center align-items-center rounded-image-container mx-auto w-100" [routerLink]="['indoor']">
             <img
-              src="/assets/image/monoblock.png"
-              class="img-fluid  flyr"
+              src="./assets/image/sfa.png"
+              class="img-fluid flyr border border-warning"
               alt="landing page"
             />
-            <div class="overlay-text txt backGold mb-4 w-75 border border-warning">
-              <h6 class="mb-0 p-2 text-truncate">{{ "Outdoor.SunProtect" | translate }}</h6>
+            <div class="overlay-text txtLandingTitle mb-4 border border-warning">
+              <p class="mb-0 p-2 imgTileLg gold">{{ "Landing.Zero" | translate | uppercase}}</p>
+            </div>
+            <div class="text-start p-2 overlay-text txtLanding backGoldLanding mb-4 border border-warning">
+              <p class="p-0 m-0 imgTileLg point">{{ "Landing.Textil" | translate | uppercase }}</p>
+              <p class="p-0 m-0 imgTileLg point">{{ "Landing.One" | translate | uppercase }}</p>
+              <p class="p-0 m-0 imgTileLg point">{{ "Landing.Two" | translate | uppercase }}</p>
+              <p class="p-0 m-0 imgTileLg point">{{ "Landing.Three" | translate | uppercase }}</p>
+              <p class="p-0 m-0 imgTileLg point">{{ "Landing.Four" | translate | uppercase }}</p>
+              <p class="p-0 m-0 imgTileLg point">{{ "Landing.Five" | translate | uppercase }}</p>
+              <p class="p-0 m-0 imgTileLg point">{{ "Landing.Six" | translate | uppercase }}</p>
+              <p class="p-0 m-0 imgTileLg point">{{ "Landing.Seven" | translate | uppercase }}</p>
+              <p class="p-0 m-0 imgTileLg point">{{ "Landing.Eight" | translate | uppercase }}</p>
             </div>
           </a>
-          <a class="col-6 d-flex justify-content-center align-items-center rounded-image-container" [routerLink]="['outdoor']">
+        </div>
+        <div class="col-12 d-flex justify-content-center flex-start mb-5">
+          <a class="col-12 col-sm-12 col-md-6 col-lg-6 d-flex justify-content-center align-items-center rounded-image-container mx-auto w-100" [routerLink]="['outdoor']">
             <img
-              src="/assets/image/bioclimatic.png"
-              class="img-fluid  flyr"
+              src="./assets/image/monoblock.png"
+              class="img-fluid flyr border border-warning"
               alt="landing page"
             />
-            <div class="overlay-text txt backGold mb-4 w-75 border border-warning">
-              <h6 class="mb-0 p-2 text-truncate">{{ "Outdoor.Bioclimatic" | translate }}</h6>
+            <div class="overlay-text txtLandingTitle mb-4 border border-warning">
+              <p class="mb-0 p-2 imgTileLg gold">{{ "Landing.Nine" | translate | uppercase}}</p>
+            </div>
+            <div class="text-start p-2 overlay-text txtLanding backGoldLanding mb-4 border border-warning">
+              <p class="p-0 m-0 imgTileLg point">{{ "Landing.Ten" | translate | uppercase }}</p>
+              <p class="p-0 m-0 imgTileLg point">{{ "Landing.Eleven" | translate | uppercase }}</p>
+              <p class="p-0 m-0 imgTileLg point">{{ "Landing.Twelve" | translate | uppercase }}</p>
+              <p class="p-0 m-0 imgTileLg point">{{ "Landing.TwentyOne" | translate | uppercase }}</p>
+              <p class="p-0 m-0 imgTileLg point">{{ "Landing.TwentyTwo" | translate | uppercase }}</p>
+              <p class="p-0 m-0 imgTileLg point">{{ "Landing.TwentyThree" | translate | uppercase }}</p>
+              <p class="p-0 m-0 imgTileLg point">{{ "Landing.TwentyFour" | translate | uppercase }}</p>
+              <p class="p-0 m-0 imgTileLg point">{{ "Landing.TwentyFive" | translate | uppercase }}</p>
+              <p class="p-0 m-0 imgTileLg point">{{ "Landing.TwentySeven" | translate | uppercase }}</p>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div class="row m-0 d-lg-none">
+        <div class="col-12 d-flex justify-content-center flex-start mb-5">
+          <a class="col-12 col-sm-12 col-md-6 col-lg-6 d-flex justify-content-center align-items-center rounded-image-container mx-auto w-100" [routerLink]="['outdoor']">
+            <img
+              src="./assets/image/4.png"
+              class="img-fluid flyr border border-warning"
+              alt="landing page"
+            />
+            <div class="overlay-text txtLandingTitle mb-4 border border-warning">
+              <p class="mb-0 p-2 imgTileLg gold">{{ "Landing.TwentyEight" | translate | uppercase}}</p>
+            </div>
+            <div class="text-start p-2 overlay-text txtLanding backGoldLanding mb-4 border border-warning">
+              <p class="p-0 m-0 imgTileLg point">{{ "Landing.TwentyNine" | translate | uppercase }}</p>
+              <p class="p-0 m-0 imgTileLg point">{{ "Landing.ThertyOne" | translate | uppercase }}</p>
+              <p class="p-0 m-0 imgTileLg point">{{ "Landing.ThertyTwo" | translate | uppercase }}</p>
+              <p class="p-0 m-0 imgTileLg point">{{ "Landing.ThertyThree" | translate | uppercase }}</p>
+              <p class="p-0 m-0 imgTileLg point">{{ "Landing.ThertyFour" | translate | uppercase }}</p>
+              <p class="p-0 m-0 imgTileLg point">{{ "Landing.ThertyFive" | translate | uppercase }}</p>
+            </div>
+          </a>
+        </div>
+        <div class="col-12 d-flex justify-content-center flex-start">
+          <a class="col-12 col-sm-12 col-md-6 col-lg-6 d-flex justify-content-center align-items-center rounded-image-container mx-auto w-100" [routerLink]="['crystal']">
+            <img
+              src="./assets/image/nuda.jpg"
+              class="img-fluid flyr border border-warning"
+              alt="landing page"
+            />
+            <div class="overlay-text txtLandingTitle mb-4 border border-warning">
+              <p class="mb-0 p-2 imgTileLg gold">{{ "Landing.FortyTwo" | translate | uppercase}}</p>
+            </div>
+            <div class="text-start p-2 overlay-text txtLanding backGoldLanding mb-4 border border-warning">
+              <p class="p-0 m-0 imgTileLg point">{{ "Landing.ThertySix" | translate | uppercase }}</p>
+              <p class="p-0 m-0 imgTileLg point">{{ "Landing.ThertySeven" | translate | uppercase }}</p>
+              <p class="p-0 m-0 imgTileLg point">{{ "Landing.ThertyEight" | translate | uppercase }}</p>
+              <p class="p-0 m-0 imgTileLg point">{{ "Landing.ThertyNine" | translate | uppercase }}</p>
+              <p class="p-0 m-0 imgTileLg point">{{ "Landing.Forty" | translate | uppercase }}</p>
+              <p class="p-0 m-0 imgTileLg point">{{ "Landing.FortyOne" | translate | uppercase }}</p>
             </div>
           </a>
         </div>
       </div>
     </div>
+    <app-footer-slim></app-footer-slim>
   </section>
 </main>
 <app-how-we-do-it></app-how-we-do-it>
@@ -77,11 +169,12 @@
 <app-textile></app-textile>
 <app-awning-system></app-awning-system>
 <app-custom-structures></app-custom-structures>
+<app-rotating></app-rotating>
+<app-parasols></app-parasols>
 <app-pergolas></app-pergolas>
 <app-bioclimatic></app-bioclimatic>
 <app-coffee></app-coffee>
 <app-retractable></app-retractable>
 <app-flat></app-flat>
 <app-outdoor-vertical></app-outdoor-vertical>
-<app-led></app-led>
 <app-traditional></app-traditional>

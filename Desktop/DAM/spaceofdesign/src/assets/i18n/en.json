@@ -4,25 +4,68 @@
     "Outdoor": "OUTDOORS"
   },
   "Nav": {
-    "Home": "Home",
-    "Work": "Our Work",
+    "Home": "Products",
+    "Work": "How we work",
     "Contact": "Contact",
     "Languages": "Languages"
   },
   "Contact": {
-    "Title": "Contact Us",
-    "Solutions": "We Have All the Solutions for You",
+    "Title": "Contact Form",
+    "Solutions": "We have all the solutions for you",
     "FullName": "Full Name",
     "Email": "Email",
     "Phone": "Phone",
-    "Message": "Message"
+    "Message": "Message",
+    "SuccessMessage": "Message sent",
+    "ErrorMessage": "Error sending message",
+    "Send": "SEND",
+    "Required": "Field is required",
+    "Pattern": "Invalid data",
+    "Valid": "Valid data",
+    "SendMessage": "Send a message"
   },
   "Language": {
     "Languages": "Languages",
     "Header": "Choose Your Language"
   },
+  "Landing": {
+    "Zero": "Textile Decoration",
+    "Textil": "Curtains and Tailoring",
+    "One": "Roller Curtains",
+    "Two": "Sliding Panels",
+    "Three": "Wooden Venetian Blinds",
+    "Four": "Aluminum Venetian Blinds",
+    "Five": "Pleated Curtains",
+    "Six": "Store Curtains",
+    "Seven": "Blackout Curtains",
+    "Eight": "Vertical Slats",
+    "Nine": "Awning Systems",
+    "Ten": "Cassette Awnings",
+    "Eleven": "Flat Awnings",
+    "Twelve": "Retractable Awnings",
+    "TwentyOne": "Monoblock Awnings",
+    "TwentyTwo": "Articulated Arm Awnings",
+    "TwentyThree": "Canopy Awnings",
+    "TwentyFour": "Motorized Awnings",
+    "TwentyFive": "Vertical Awnings",
+    "TwentySeven": "LED Lighting Awnings",
+    "TwentyEight": "Chillout Spaces",
+    "TwentyNine": "Bioclimatic Pergolas",
+    "ThertyOne": "Rotating Pergolas",
+    "ThertyTwo": "Photovoltaic Pergolas",
+    "ThertyThree": "Garden Structures",
+    "ThertyFour": "Tensioned Structures",
+    "ThertyFive": "Parasols",
+    "ThertySix": "Exterior Enclosures",
+    "ThertySeven": "Terrace Enclosures",
+    "ThertyEight": "Balcony Enclosures",
+    "ThertyNine": "Sliding Systems",
+    "Forty": "Folding Systems",
+    "FortyOne": "Invisible Frame Systems",
+    "FortyTwo": "Glass Enclosures"
+  },
   "Work": {
-    "Title": "Our Working Method",
+    "Title": "How we work",
     "Contact": "1. Initial Contact",
     "Advice": "2. Home Consultation",
     "Installation": "3. Installation",
@@ -131,7 +174,7 @@
     "Retractable": "Retractable awning",
     "Flat": "Flat awning",
     "Vertical": "Vertical awning",
-    "Led": "LED lighting",
+    "Led": "Parasols",
     "Traditional": "Traditional awning"
   },
   "CustomStructures": {
@@ -203,8 +246,7 @@
     "Contact": "Introducing our latest innovation in outdoor sun protection: the integration of LED systems into all our products! Now, we not only offer solutions to protect you from the sun and the elements but also give you the opportunity to create unique and exclusive atmospheres in your outdoor spaces.",
     "Advice": "Imagine being able to transform your terrace, garden, or patio into a magical and cozy place with just the touch of a button. Our integrated LED systems allow you to customize the lighting of your outdoor area according to your mood, the atmosphere you want to create, or the special occasion you're celebrating.",
     "Installation": "From soft warm lights that create a relaxing atmosphere for a romantic dinner to bright and colorful lights that liven up an outdoor party, the possibilities are endless. Plus, the integration of LED systems into our sun protection products ensures an elegant and discreet design that enhances the beauty of your outdoor space.",
-    "Concept": "With our cutting-edge technology, you're not only investing in protection and functionality but also in style and atmosphere. Discover how our outdoor sun protection products with LED systems can completely transform your outdoor experiences and turn your home into an even more special and exclusive place.",
-    "ContactText": "Transform your outdoor spaces with our LED awnings. Make every moment outdoors an unforgettable experience!"
+    "Concept": "With our cutting-edge technology, you're not only investing in protection and functionality but also in style and atmosphere. Discover how our outdoor sun protection products with LED systems can completely transform your outdoor experiences and turn your home into an even more special and exclusive place."
   },
   "Traditional": {
     "Title": "TRADITIONAL AWNING SYSTEMS",
@@ -212,6 +254,38 @@
     "Contact": "Discover the elegance and functionality of our traditional outdoor awnings, perfect for small high windows! We offer a wide range of models, including the classic hood model and the versatile fixed-point arm model, designed to meet all your sun protection and home beautification needs.",
     "Advice": "The hood model is a charming and timeless choice that adds a touch of style to any facade. Its curved design creates a distinctive and cozy look, while its sturdy structure ensures effective protection against the sun and rain. This model is particularly suitable for small high windows, as its compact design fits perfectly into limited spaces.",
     "Installation": "On the other hand, the fixed-point arm model offers a practical and versatile solution for your sun protection needs. Its modular and adjustable design allows for easy installation in a variety of locations, including high windows. With its fixed arm system, this awning provides stable and durable coverage, ensuring the comfort and protection you need."
+  },
+  "Parasols": {
+    "Title": "GARDEN AND TERRACE PARASOLS",
+    "Titlesm": "GARDEN PARASOLS",
+    "Contact": "KEY FEATURES:",
+    "Advice": "1. Advanced UV Protection: Our parasol is designed with high-quality fabrics that effectively block ultraviolet rays.",
+    "Installation": "2. Superior Durability: Constructed with weather-resistant and corrosion-resistant materials, they are designed to withstand the most demanding conditions.",
+    "Concept": "3. Smart Design: With an easy-to-use opening and closing mechanism, quick deployment, and compact closure.",
+    "ContactText": "4. Customization Options: Wide range of colors and materials.",
+    "Five": "5. Optional Accessories: Enhance your outdoor experience with our optional accessories, such as integrated LED lights, creating warm environments.",
+    "Six": "6. Guaranteed Quality: Backed by our quality guarantee, you can trust in durability and superior performance in any environment.",
+    "Seven": "7. Customer Experience: Our commitment is to provide you with the best customer experience, from purchase to continuous use, we are here to meet all your needs and questions."
+    },
+  "Rotating": {
+    "Title": "ROTATING SYSTEM PERGOLAS",
+    "Titlesm": "ROTATING PERGOLA",
+    "Contact": "Discover the innovative rotating opening pergola, the perfect choice to transform your outdoor spaces into a unique oasis of design and comfort!",
+    "Advice": "KEY FEATURES:",
+    "Installation": "1. ROTATING OPENING: The distinctive feature of this pergola is its rotating opening system. This allows the pergola's canvas to be easily adjusted, enabling control over the amount of sunlight.",
+    "Concept": "2. DURABILITY AND RESISTANCE: Made with high-quality and durable materials, the pergola is designed to withstand adverse weather conditions such as rain, wind, and prolonged exposure to the sun, without compromising its structural integrity or aesthetics.",
+    "ContactText": "3. MODERN AND AESTHETIC DESIGN: The contemporary design of the pergola complements a wide range of architectural and decorative styles. Its sleek and clean appearance adds a touch of sophistication to the outdoor space, making it an attractive and inviting place for entertainment and relaxation.",
+    "Four": "4. CUSTOMIZATION: The pergola is available in a variety of sizes, finishes, and customization options to suit the individual preferences and needs of users. From colors to materials, customers have the possibility to customize their pergola according to their specific tastes and requirements.",
+    "Five": "5. EASY INSTALLATION AND MAINTENANCE: The pergola is relatively easy to install, and its maintenance is minimal. The materials used are designed to resist corrosion and deterioration, ensuring a long lifespan with minimal maintenance."
+    },
+  "About": {
+    "Title": "OUR COMPANY",
+    "Titlesm": "OUR COMPANY",
+    "Contact": "The story of this textile decoration company that began in 1970 is a tale of dedication, passion, and constant evolution. Founded at a time when interior design was experiencing significant change and the demand for high-quality decoration products was on the rise, this company emerged as a response to that growing need.",
+    "Advice": "From its inception, the company stood out for its commitment to quality and elegant design. With a clear vision and meticulous attention to detail, it quickly gained a reputation as a leader in the textile decoration market. The products manufactured by the company were not only functional but also distinguished by their style and sophistication.",
+    "Installation": "Over time, the company adapted to changes in the market and new trends. One of the most significant milestones in its evolution was the expansion into exterior sun protection, an area to which the company now dedicates special attention, recognizing the growing importance of well-designed outdoor spaces protected from the sun. The company expanded its product line to include sun protection solutions that maintained the same standards of quality and elegance as its interior textile products.",
+    "Concept": "The company's successors, aware of the legacy they had inherited, committed themselves to maintaining and enhancing the brand's reputation for excellence. They continued to invest in research and development of new products and technologies, ensuring that each item bearing the company's seal was synonymous with quality, durability, and style.",
+    "ContactText": "Over the years, the company has established itself as a leader in the textile decoration and exterior sun protection sector. Its name is synonymous with innovation, elegance, and reliability. Through decades of hard work and unwavering commitment to excellence, this company has left an indelible mark on the world of interior and exterior design."
   },
   "HELLO": "Hello"
 }

@@ -20,10 +20,14 @@ import { IndoorComponent } from '../indoor/indoor.component';
 import { OutdoorComponent } from '../outdoor/outdoor.component';
 import { AwningSystemComponent } from '../awning-system/awning-system.component';
 import { BioclimaticComponent } from '../bioclimatic/bioclimatic.component';
-import { LedComponent } from '../led/led.component';
 import { TraditionalComponent } from '../traditional/traditional.component';
 import { FooterSlimComponent } from '../footer-slim/footer-slim.component';
 import { RouterModule } from '@angular/router';
+import { ParasolsComponent } from '../parasols/parasols.component';
+import { RotatingComponent } from '../rotating/rotating.component';
+import { AboutComponent } from '../about/about.component';
+import { ClientService } from '../../service/client.service';
+import { CommonModule } from '@angular/common';
 
 @Component({
     selector: 'app-home',
@@ -62,16 +66,19 @@ import { RouterModule } from '@angular/router';
       RetractableComponent,
       FlatComponent,
       OutdoorVerticalComponent,
-      LedComponent,
+      ParasolsComponent,
+      RotatingComponent,
+      AboutComponent,
       TraditionalComponent,
       FooterSlimComponent,
       TranslateModule,
-      RouterModule
+      RouterModule,
+      CommonModule
     ]
 })
 export class HomeComponent {
-  constructor(private translate: TranslateService) {
-    translate.setDefaultLang('es');
+  constructor(private translate: TranslateService, private service: ClientService) {
+    translate.setDefaultLang(this.service.language);
   }
 
   switchLanguage(language: string) {

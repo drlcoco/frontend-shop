@@ -3,6 +3,7 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { RouterModule, Routes } from '@angular/router';
 import { animate, style, transition, trigger } from '@angular/animations';
 import { BehaviorSubject, Observable } from 'rxjs';
+import { ClientService } from '../../service/client.service';
 
 @Component({
   selector: 'app-nav',
@@ -14,7 +15,6 @@ import { BehaviorSubject, Observable } from 'rxjs';
     trigger('animateList', [
       transition(':enter', [
         style({ opacity: 0, transform: 'translateY(-500px)'}),
-        /* animate('1000ms ease-out', style({opacity: 1, transform: 'rotate(20deg)'})) */
         animate("2s 10ms cubic-bezier(.17,.67,.88,.1)")
       ])
     ])
@@ -27,8 +27,8 @@ export class NavComponent implements OnInit{
   private scrollThreshold: number = 50;
   isToggle: boolean = false;
 
-  constructor(private translate: TranslateService) {
-    translate.setDefaultLang('es');
+  constructor(private translate: TranslateService, private service: ClientService) {
+    translate.setDefaultLang(this.service.language);
   }
 
   ngOnInit(): void {
@@ -47,8 +47,6 @@ export class NavComponent implements OnInit{
 
   isHide(): void {
     this.isNavbarVisible = true;
-    //this.isNavbarVisible = !this.isNavbarVisible;
-
   }
 
   changeToggle() {

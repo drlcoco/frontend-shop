@@ -36,7 +36,7 @@ h1{
   /* font-family: 'Alegreya', serif; */
   font-family: "Montserrat", sans-serif;
   color: rgb(5, 8, 8) !important;
-  text-shadow: -0.5px 0.5px 0.5px rgba(242, 240, 240, 0.908);
+  /* text-shadow: -0.5px 0.5px 0.5px rgba(242, 240, 240, 0.908); */
 }
 
 h6{
@@ -46,13 +46,18 @@ h6{
 .gold{
   color: #9b7012 !important;
 }
-/* .gold{
+.gold-mantein{
   color: rgb(128, 86, 15) !important;
-} */
+  font-size: 24px;
+}
 
 .backGold{
-  /* background: linear-gradient(to right, black, rgb(147, 125, 2), rgb(128, 86, 15), rgb(67, 58, 6)); */
-  background: linear-gradient(to right, black, #c89116, #543c07, #4d3a10);
+  background: linear-gradient(to right, rgb(25, 24, 24), #c89116, #543c07, #4d3a10);
+  /* background: linear-gradient(to right, black, #c89116, #543c07, #4d3a10); */
+}
+.backGoldTop{
+  background: linear-gradient(to bottom, rgb(0, 0, 0), #8b640f, #8b640f, rgb(0, 0, 0));
+  /* background: linear-gradient(to right, black, #c89116, #543c07, #4d3a10); */
 }
 
 .br25{
@@ -79,9 +84,37 @@ h6{
 }
 
 img{
+  width: 100%;
+  height: 100%;
   transition: transform 0.4s ease;
 }
 
 img:hover{
   transform: scale(1.04);
 }
+
+.title{
+  font-size: 22px;
+  /* color: rgb(5, 8, 8); */
+  padding: 10px;
+}
+
+/* .frontPage {
+  mask-image: linear-gradient(to right, black 90%, transparent);
+} */
+/* .frontPage {
+  mask-image: linear-gradient(to right, transparent, rgb(0, 0, 0), #8b640f, #8b640f, rgb(0, 0, 0), transparent);
+} */
+
+.imgTile{
+  font-size: 11px;
+  color: black;
+  font-weight: bold;
+}
+
+.imgTileLg{
+  font-size: 11px;
+  color: black;
+  font-weight: bold;
+}
+

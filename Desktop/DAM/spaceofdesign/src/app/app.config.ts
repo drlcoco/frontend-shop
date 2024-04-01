@@ -6,8 +6,8 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { HttpClient, HttpClientModule, provideHttpClient } from '@angular/common/http';
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { BrowserAnimationsModule, provideAnimations } from '@angular/platform-browser/animations';
+import { IMAGE_CONFIG } from '@angular/common';
 
-// AoT requires an exported function for factories
 export function HttpLoaderFactory(httpClient: HttpClient) {
   return  new  TranslateHttpLoader(httpClient, './assets/i18n/', '.json');
 }
@@ -23,7 +23,14 @@ export const provideTranslation = () => ({
 
 export const appConfig: ApplicationConfig = {
   providers: [
-    provideAnimations(), // required animations providers
+    {
+      provide: IMAGE_CONFIG,
+      useValue: {
+        disableImageSizeWarning: true,
+        disableImageLazyLoadWarning: true
+      }
+    },
+    provideAnimations(),
     provideHttpClient(),
     importProvidersFrom([
       RouterModule.forRoot(routes, {preloadingStrategy: PreloadAllModules, scrollPositionRestoration:'enabled'}),
@@ -34,7 +41,5 @@ export const appConfig: ApplicationConfig = {
       routes,
       withPreloading(PreloadAllModules)
     )
-    /* provideRouter(routes), */
-
   ]
 };

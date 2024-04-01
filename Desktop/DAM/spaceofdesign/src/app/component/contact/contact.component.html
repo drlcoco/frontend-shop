@@ -1,65 +1,190 @@
-<main class="flex-shrink-0 backGold">
-  <section class="py-5">
-      <div class="container px-5 backGold rounded-4">
+<main class="container-fluid backGold">
+  <section class="row justify-content-center align-items-center m-0 p-0 backGold">
+      <div class="col-12 col-md-8 p-0 m-0 bg-transparent">
           <div class="bg-transparent rounded-4 py-5 px-4 px-md-5 mt-5">
               <div class="text-center mb-5">
                   <div class="feature bg-primary bg-gradient-primary-to-secondary text-white rounded-3 mb-3"><i class="bi bi-envelope"></i></div>
-                  <h1 class="fw-bolder">Estamos en contacto</h1>
-                  <p class="lead fw-normal text-muted mb-0">Vamos a trabajar juntos!</p>
+                  <h1 class="fw-bolder">{{"Contact.Title" | translate}}</h1>
+                  <p class="lead fw-normal text-muted mb-0">{{"Contact.SendMessage" | translate}}</p>
               </div>
               <div class="row gx-5 justify-content-center">
                   <div class="col-lg-8 col-xl-6">
-                      <form id="contactForm" action="https://formsubmit.co/6f5946374eaaaeef9a2ebfbbfe9750ae" method="POST">
-                          <div class="form-floating mb-3">
-                              <input class="form-control" id="name" name="name" type="text" placeholder="Enter your name..." data-sb-validations="required" />
-                              <label for="name">Nombre completo</label>
-                              <div class="invalid-feedback" data-sb-feedback="name:required">A name is required.</div>
+                    @if(successMessage) {
+                      <div class="mb-4 bg-transparent text-center">
+                        <p class="lead fw-normal text-muted mb-0">{{ successMessage }}</p>
+                      </div>
+                    }
+                    @if(errorMessage) {
+                      <div class="mb-4 bg-transparent text-center">
+                        <p class="lead fw-normal text-muted mb-0">{{ errorMessage }}</p>
+                      </div>
+                    }
+                    <form class="needs-validation" novalidate>
+                      <div class="form-floating mb-3">
+                          <!-- <input class="form-control" name="name" type="text" id="name" [(ngModel)]="user.name" required /> -->
+                          <input
+                            type="text"
+                            name="name"
+                            id="name"
+                            [ngClass]="{'is-valid': name.valid, 'is-invalid': !name.valid && name.touched}"
+                            class="form-control"
+                            placeholder="Introduzca el nombre"
+                            #name="ngModel"
+                            [(ngModel)]="user.name"
+                            required
+                            pattern="[a-zA-ZÀ-ÿ\s]{1,40}"
+                          />
+                          <label for="name">{{"Contact.FullName" | translate}}</label>
+                          @if(!name.valid && name.touched) {
+                            <!-- <div class="invalid-feedback">{{"Contact.Required" | translate}}</div> -->
+                          }
+                          <div class="valid-feedback"></div>
+
+                      </div>
+                      <div class="form-floating mb-3">
+                          <input
+                            class="form-control"
+                            name="email"
+                            id="email"
+                            #email="ngModel"
+                            [ngClass]="{'is-valid': email.valid, 'is-invalid': !email.valid && email.touched}"
+                            email
+                            placeholder="Introduzca el nombre"
+                            type="email"
+                            id="email"
+                            [(ngModel)]="user.email"
+                            required
+                            pattern="[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])"
+                          />
+                          <label for="email">{{"Contact.Email" | translate}}</label>
+                          @if(!email.valid && email.touched) {
+                            <!-- <div class="invalid-feedback">{{"Contact.Required" | translate}}</div> -->
+                          }
+                          <div class="valid-feedback"></div>
+                      </div>
+                      <div class="form-floating mb-3">
+                          <input
+                            class="form-control"
+                            name="phone"
+                            type="text"
+                            id="phone"
+                            #phone="ngModel"
+                            placeholder="Introduzca el nombre"
+                            [ngClass]="{'is-valid': phone.valid, 'is-invalid': !phone.valid && phone.touched}"
+                            pattern="[0-9\s]{1,40}"
+                            [(ngModel)]="user.phone"
+                            required
+                          />
+                          <label for="phone">{{"Contact.Phone" | translate}}</label>
+                          <div class="valid-feedback"></div>
+                          <!-- <div class="invalid-feedback">{{"Contact.Required" | translate}}</div> -->
+                      </div>
+                      <div class="form-floating mb-3">
+                          <textarea
+                            class="form-control"
+                            name="message"
+                            type="text"
+                            id="message"
+                            placeholder="Introduzca el nombre"
+                            [(ngModel)]="user.message"
+                            [ngClass]="{'is-valid': message.valid, 'is-invalid': !message.valid && message.touched}"
+                            #message="ngModel"
+                            pattern="[a-zA-ZÀ-ÿ\s]{1,150}"
+                            required
+                            style="height: 10rem">
+                          </textarea>
+                          <label for="message">{{"Contact.Message" | translate}}</label>
+                          <div class="valid-feedback"></div>
+                          <!-- <div class="invalid-feedback">{{"Contact.Required" | translate}}</div> -->
+                      </div>
+                      <div class="d-grid">
+                          <button class="btn backGold btn-lg" type="button" (click)="submitForm()">{{"Contact.Send" | translate}}</button>
+                      </div>
+                  </form>
+
+                      <!-- <form class="needs-validation" action="https://formsubmit.co/info@spaceofdesign.es" method="POST">
+                         <div class="form-floating mb-3">
+                              <input
+                                class="form-control"
+                                name="name"
+                                type="text"
+                                id="name"
+                                #name
+                                required
+                                />
+                              <label for="name">{{"Contact.FullName" | translate}}</label>
+                              <div class="valid-feedback">{{"Contact.Valid" | translate}}</div>
+                              <div class="invalid-feedback">{{"Contact.Required" | translate}}</div>
                           </div>
                           <div class="form-floating mb-3">
-                              <input class="form-control" id="email" name="email" type="email" placeholder="name@example.com" data-sb-validations="required,email" />
-                              <label for="email">Email</label>
-                              <div class="invalid-feedback" data-sb-feedback="email:required">An email is required.</div>
-                              <div class="invalid-feedback" data-sb-feedback="email:email">Email is not valid.</div>
+                              <input
+                                class="form-control"
+                                name="email"
+                                email
+                                type="email"
+                                id="email"
+                                required
+                                #email
+                              />
+                              <label for="email">{{"Contact.Email" | translate}}</label>
+                              <div class="valid-feedback">{{"Contact.Valid" | translate}}</div>
+                              <div class="invalid-feedback">{{"Contact.Required" | translate}}</div>
                           </div>
                           <div class="form-floating mb-3">
-                              <input class="form-control" id="phone" name="phone" type="tel" placeholder="(123) 456-7890" data-sb-validations="required" />
-                              <label for="phone">Teléfono</label>
-                              <div class="invalid-feedback" data-sb-feedback="phone:required">A phone number is required.</div>
+                              <input
+                                class="form-control"
+                                name="phone"
+                                type="tel"
+                                id="phone"
+                                required
+                                #phone
+                              />
+                              <label for="phone">{{"Contact.Phone" | translate}}</label>
+                              <div class="valid-feedback">{{"Contact.Valid" | translate}}</div>
+                              <div class="invalid-feedback">{{"Contact.Required" | translate}}</div>
                           </div>
                           <div class="form-floating mb-3">
-                              <textarea class="form-control" id="message" name="message" type="text" placeholder="Enter your message here..." style="height: 10rem" data-sb-validations="required"></textarea>
-                              <label for="message">Mensaje</label>
-                              <div class="invalid-feedback" data-sb-feedback="message:required">A message is required.</div>
+                              <textarea
+                                class="form-control"
+                                name="message"
+                                type="text"
+                                id="message"
+                                required
+                                #message
+                                style="height: 10rem"
+                              ></textarea>
+                              <label for="message">{{"Contact.Message" | translate}}</label>
+                              <div class="valid-feedback">{{"Contact.Valid" | translate}}</div>
+                              <div class="invalid-feedback">{{"Contact.Required" | translate}}</div>
                           </div>
-                          <div class="d-none" id="submitSuccessMessage">
-                              <div class="text-center mb-3">
-                                  <div class="fw-bolder">Form submission successful!</div>
-                                  To activate this form, sign up at
-                                  <br />
-                                  <a href="https://startbootstrap.com/solution/contact-forms">https://startbootstrap.com/solution/contact-forms</a>
-                              </div>
-                          </div>
-                          <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3">Error sending message!</div></div>
-                          <div class="d-grid"><button class="btn btn-primary btn-lg" id="submitButton" type="submit">Enviar</button></div>
-                      </form>
+                          <div class="d-grid"><button class="btn backGold btn-lg" type="submit">{{"Contact.Send" | translate}}</button></div>
+                          <div class="d-grid"><button class="btn backGold btn-lg" type="submit">{{"Contact.Send" | translate}}</button></div>
+                      </form> -->
                   </div>
               </div>
           </div>
       </div>
+      <div class="col-12 col-md-4 p-0 m-0 mx-auto px-4 text-center">
+        <img
+            src="./assets/image/sps.jpeg"
+            class="img-fluid"
+            alt="landing page"
+        />
+        <div class="card text-center bg-transparent">
+          <div class="card-body mx-2">
+            <h5 class="card-title mb-0">SPACE OF DESIGN LEVANTE JLI, S.L.</h5>
+            <p class="card-text">CIF: B70865217</p>
+            <p class="card-text mb-0">OFICINA CENTRAL</p>
+            <p class="card-text mb-0">Avenida Callosa d´nsarriá</p>
+            <p class="card-text mb-0">Nº12, Bq 5, 3ºA</p>
+            <p class="card-text mb-0">Benidorm (Alicante)</p>
+            <p class="card-text">03502</p>
+            <p class="card-text mb-0">TELÉFONO DE CONTACTO</p>
+            <p class="card-text"><a href="tel:+34722861019">+34 722-861-019</a></p>
+            <p class="card-text mb-0">CORREO ELECTRÓNICO</p>
+            <p class="card-text"><a href="mailto:drlcoco@hotmail.com">info<span>&#64;</span>spaceofdesign<span>.</span>es</a></p>
+          </div>
+        </div>
+      </div>
   </section>
 </main>
-<footer class="backGold py-4 mt-auto">
-  <div class="container px-5">
-      <div class="row align-items-center justify-content-between flex-column flex-sm-row">
-          <div class="col-auto"><div class="small m-0">Copyright &copy; Diseño Web Benidorm TCM 2023 <span class="mx-1">&middot;</span>
-              <a class="small" href="tel:+34722861019">722861019</a></div></div>
-          <div class="col-auto">
-              <a class="small" href="#!">Privacy</a>
-              <span class="mx-1">&middot;</span>
-              <a class="small" href="#!">Terms</a>
-              <span class="mx-1">&middot;</span>
-              <a class="small" href="#!">Contact</a>
-          </div>
-      </div>
-  </div>
-</footer>
