@@ -4,10 +4,10 @@
     "Outdoor": "UTENDØRS"
   },
   "Nav": {
-    "Home": "Produkter",
-    "Work": "Hvordan vi jobber",
-    "Contact": "Kontakt",
-    "Languages": "Språk"
+    "Home": "PRODUKTER",
+    "Work": "HVORDAN VI JOBBER",
+    "Contact": "KONTAKT",
+    "Languages": "SPRÅK"
   },
   "Contact": {
     "Title": "Kontaktskjema",

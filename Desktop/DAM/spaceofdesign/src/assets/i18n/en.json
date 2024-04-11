@@ -4,10 +4,10 @@
     "Outdoor": "OUTDOORS"
   },
   "Nav": {
-    "Home": "Products",
-    "Work": "How we work",
-    "Contact": "Contact",
-    "Languages": "Languages"
+    "Home": "PRODUCTS",
+    "Work": "HOW WE WORK",
+    "Contact": "CONTACT",
+    "Languages": "LANGUAGES"
   },
   "Contact": {
     "Title": "Contact Form",
