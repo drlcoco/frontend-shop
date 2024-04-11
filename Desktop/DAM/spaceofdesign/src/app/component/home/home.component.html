@@ -7,14 +7,14 @@
           alt="landing page"
       />
     </div>
-    <div class="col-12 col-lg-6 p-0 m-0 leftmd d-block mb-5 d-lg-none mb-4">
+    <div class="col-12 col-lg-6 p-0 m-0 leftmd d-block d-lg-none mb-4">
       <img @animateList
           src="./assets/image/sps.jpeg"
           class="img-fluid w-100 mb-4"
           alt="landing page"
       />
     </div>
-    <div class="col-12 col-lg-6 p-0 d-flex flex-column justify-content-around align-items-center right text-center mx-0 mt-md-5">
+    <div class="col-12 col-lg-6 p-0 d-flex flex-column justify-content-around align-items-center right text-center mx-0 mt-sm-5 mt-md-5">
       <div class="row m-0 mt-md-4 d-none d-lg-block w-100">
         <div class="col-12 d-flex justify-content-center flex-start mb-5">
           <a class="col-12 col-lg-6 d-flex justify-content-center align-items-center rounded-image-container mx-auto w-100" [routerLink]="['indoor']">
@@ -42,7 +42,7 @@
         <div class="col-12 d-flex justify-content-center flex-start mb-5">
           <a class="col-12 col-lg-6 d-flex justify-content-center align-items-center rounded-image-container mx-auto w-100" [routerLink]="['outdoor']">
             <img
-              src="./assets/image/visillostres.png"
+              src="./assets/image/monoblock.png"
               class="img-fluid flyr border border-warning"
               alt="landing page"
             />
@@ -63,7 +63,7 @@
           </a>
         </div>
       </div>
-      <div class="row m-0 mt-4 d-lg-none">
+      <div class="row mt-4 d-lg-none">
         <div class="col-12 d-flex justify-content-center flex-start mb-5">
           <a class="col-12 col-sm-12 col-md-6 col-lg-6 d-flex justify-content-center align-items-center rounded-image-container mx-auto w-100" [routerLink]="['indoor']">
             <img
@@ -157,24 +157,108 @@
     <app-footer-slim></app-footer-slim>
   </section>
 </main>
-<app-how-we-do-it></app-how-we-do-it>
-<app-indoor></app-indoor>
-<app-outdoor></app-outdoor>
-<app-crystal></app-crystal>
-<app-sliding></app-sliding>
-<app-roller></app-roller>
-<app-slated></app-slated>
-<app-venetian></app-venetian>
-<app-pleated></app-pleated>
-<app-textile></app-textile>
-<app-awning-system></app-awning-system>
-<app-custom-structures></app-custom-structures>
-<app-rotating></app-rotating>
-<app-parasols></app-parasols>
-<app-pergolas></app-pergolas>
-<app-bioclimatic></app-bioclimatic>
-<app-coffee></app-coffee>
-<app-retractable></app-retractable>
-<app-flat></app-flat>
-<app-outdoor-vertical></app-outdoor-vertical>
-<app-traditional></app-traditional>
+@defer (on viewport; on timer(2s)) {
+  <app-how-we-do-it/>
+} @placeholder {
+  <p>Loading...</p>
+}
+@defer (on viewport; on timer(5s)) {
+  <app-indoor/>
+} @placeholder {
+  <p>Loading...</p>
+}
+@defer (on viewport; on timer(10s)) {
+  <app-outdoor/>
+} @placeholder {
+  <p>Loading...</p>
+}
+@defer (on viewport; on timer(15s)) {
+  <app-crystal/>
+} @placeholder {
+  <p>Loading...</p>
+}
+@defer (on viewport; on timer(20s)) {
+  <app-sliding/>
+} @placeholder {
+  <p>Loading...</p>
+}
+@defer (on viewport; on timer(30s)) {
+  <app-roller/>
+} @placeholder {
+  <p>Loading...</p>
+}
+@defer (on viewport; on timer(40s)) {
+  <app-slated/>
+} @placeholder {
+  <p>Loading...</p>
+}
+@defer (on viewport; on timer(50s)) {
+  <app-venetian/>
+} @placeholder {
+  <p>Loading...</p>
+}
+@defer (on viewport; on timer(60s)) {
+  <app-pleated/>
+} @placeholder {
+  <p>Loading...</p>
+}
+@defer (on viewport; on timer(70s)) {
+  <app-textile/>
+} @placeholder {
+  <p>Loading...</p>
+}
+@defer (on viewport; on timer(80s)) {
+  <app-awning-system/>
+} @placeholder {
+  <p>Loading...</p>
+}
+@defer (on viewport; on timer(90s)) {
+  <app-custom-structures/>
+} @placeholder {
+  <p>Loading...</p>
+}
+@defer (on viewport; on timer(100s)) {
+  <app-rotating/>
+} @placeholder {
+  <p>Loading...</p>
+}
+@defer (on viewport; on timer(110s)) {
+  <app-parasols/>
+} @placeholder {
+  <p>Loading...</p>
+}
+@defer (on viewport; on timer(120s)) {
+  <app-pergolas/>
+} @placeholder {
+  <p>Loading...</p>
+}
+@defer (on viewport; on timer(130s)) {
+  <app-bioclimatic/>
+} @placeholder {
+  <p>Loading...</p>
+}
+@defer (on viewport; on timer(140s)) {
+  <app-coffee/>
+} @placeholder {
+  <p>Loading...</p>
+}
+@defer (on viewport; on timer(150s)) {
+  <app-retractable/>
+} @placeholder {
+  <p>Loading...</p>
+}
+@defer (on viewport; on timer(160s)) {
+  <app-flat/>
+} @placeholder {
+  <p>Loading...</p>
+}
+@defer (on viewport; on timer(170s)) {
+  <app-outdoor-vertical/>
+} @placeholder {
+  <p>Loading...</p>
+}
+@defer (on viewport; on timer(180s)) {
+  <app-traditional/>
+} @placeholder {
+  <p>Loading...</p>
+}

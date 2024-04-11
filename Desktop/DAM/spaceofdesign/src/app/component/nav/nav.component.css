@@ -37,6 +37,14 @@ ul {
   position: relative;
 }
 
+.linksm {
+  width: 100%;
+  text-decoration: none;
+  color: rgb(11, 10, 7);
+  padding: 0px 2px 0px 2px;
+  position: relative;
+}
+
 .link::before,
 .link::after {
   content: "";

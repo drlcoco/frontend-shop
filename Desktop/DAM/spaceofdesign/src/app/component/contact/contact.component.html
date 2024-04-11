@@ -21,7 +21,6 @@
                     }
                     <form class="needs-validation" novalidate>
                       <div class="form-floating mb-3">
-                          <!-- <input class="form-control" name="name" type="text" id="name" [(ngModel)]="user.name" required /> -->
                           <input
                             type="text"
                             name="name"
@@ -35,9 +34,6 @@
                             pattern="[a-zA-ZÀ-ÿ\s]{1,40}"
                           />
                           <label for="name">{{"Contact.FullName" | translate}}</label>
-                          @if(!name.valid && name.touched) {
-                            <!-- <div class="invalid-feedback">{{"Contact.Required" | translate}}</div> -->
-                          }
                           <div class="valid-feedback"></div>
 
                       </div>
@@ -57,9 +53,6 @@
                             pattern="[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])"
                           />
                           <label for="email">{{"Contact.Email" | translate}}</label>
-                          @if(!email.valid && email.touched) {
-                            <!-- <div class="invalid-feedback">{{"Contact.Required" | translate}}</div> -->
-                          }
                           <div class="valid-feedback"></div>
                       </div>
                       <div class="form-floating mb-3">
@@ -77,7 +70,6 @@
                           />
                           <label for="phone">{{"Contact.Phone" | translate}}</label>
                           <div class="valid-feedback"></div>
-                          <!-- <div class="invalid-feedback">{{"Contact.Required" | translate}}</div> -->
                       </div>
                       <div class="form-floating mb-3">
                           <textarea
@@ -95,71 +87,11 @@
                           </textarea>
                           <label for="message">{{"Contact.Message" | translate}}</label>
                           <div class="valid-feedback"></div>
-                          <!-- <div class="invalid-feedback">{{"Contact.Required" | translate}}</div> -->
                       </div>
                       <div class="d-grid">
                           <button class="btn backGold btn-lg" type="button" (click)="submitForm()">{{"Contact.Send" | translate}}</button>
                       </div>
                   </form>
-
-                      <!-- <form class="needs-validation" action="https://formsubmit.co/info@spaceofdesign.es" method="POST">
-                         <div class="form-floating mb-3">
-                              <input
-                                class="form-control"
-                                name="name"
-                                type="text"
-                                id="name"
-                                #name
-                                required
-                                />
-                              <label for="name">{{"Contact.FullName" | translate}}</label>
-                              <div class="valid-feedback">{{"Contact.Valid" | translate}}</div>
-                              <div class="invalid-feedback">{{"Contact.Required" | translate}}</div>
-                          </div>
-                          <div class="form-floating mb-3">
-                              <input
-                                class="form-control"
-                                name="email"
-                                email
-                                type="email"
-                                id="email"
-                                required
-                                #email
-                              />
-                              <label for="email">{{"Contact.Email" | translate}}</label>
-                              <div class="valid-feedback">{{"Contact.Valid" | translate}}</div>
-                              <div class="invalid-feedback">{{"Contact.Required" | translate}}</div>
-                          </div>
-                          <div class="form-floating mb-3">
-                              <input
-                                class="form-control"
-                                name="phone"
-                                type="tel"
-                                id="phone"
-                                required
-                                #phone
-                              />
-                              <label for="phone">{{"Contact.Phone" | translate}}</label>
-                              <div class="valid-feedback">{{"Contact.Valid" | translate}}</div>
-                              <div class="invalid-feedback">{{"Contact.Required" | translate}}</div>
-                          </div>
-                          <div class="form-floating mb-3">
-                              <textarea
-                                class="form-control"
-                                name="message"
-                                type="text"
-                                id="message"
-                                required
-                                #message
-                                style="height: 10rem"
-                              ></textarea>
-                              <label for="message">{{"Contact.Message" | translate}}</label>
-                              <div class="valid-feedback">{{"Contact.Valid" | translate}}</div>
-                              <div class="invalid-feedback">{{"Contact.Required" | translate}}</div>
-                          </div>
-                          <div class="d-grid"><button class="btn backGold btn-lg" type="submit">{{"Contact.Send" | translate}}</button></div>
-                          <div class="d-grid"><button class="btn backGold btn-lg" type="submit">{{"Contact.Send" | translate}}</button></div>
-                      </form> -->
                   </div>
               </div>
           </div>
